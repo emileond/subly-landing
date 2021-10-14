@@ -31,7 +31,7 @@ export default function Nav() {
       borderStyle={'solid'}
       borderColor={useColorModeValue('gray.200', 'gray.900')}
     >
-      <Flex w={['100%', '100%', '80%']} align={'center'} mx="auto">
+      <Flex w={['100%', '100%', '70%']} align={'center'} mx="auto">
         <Flex
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
@@ -51,11 +51,11 @@ export default function Nav() {
         >
           <Button
             as="a"
+            size="lg"
             variant="ghost"
             href="/"
             fontWeight="bold"
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            fontFamily={'heading'}
             color={useColorModeValue('gray.800', 'white')}
           >
             Subly
@@ -75,7 +75,6 @@ export default function Nav() {
           <Button
             as="a"
             href="https://web.subly.app"
-            fontSize={'sm'}
             fontWeight={400}
             variant={'ghost'}
           >
@@ -85,7 +84,6 @@ export default function Nav() {
             as="a"
             href="https://web.subly.app/signup"
             display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'sm'}
             fontWeight={600}
             color={'white'}
             bg={'gray.700'}
@@ -119,7 +117,7 @@ const DesktopNav = () => {
               <Link
                 p={2}
                 href={navItem.href ?? '#'}
-                fontSize={'sm'}
+                fontSize={'md'}
                 fontWeight={500}
                 color={linkColor}
                 _hover={{

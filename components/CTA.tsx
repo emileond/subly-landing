@@ -13,7 +13,7 @@ import {
 
 export default function CTA() {
   return (
-    <Box px={4} py={24}>
+    <Box px={4} pt={14} pb={32}>
       <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
         <Heading fontSize={'3xl'}>Get started today</Heading>
         <Text color={'gray.600'} fontSize={'xl'}>

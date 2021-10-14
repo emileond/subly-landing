@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Container,
   Link,
   SimpleGrid,
@@ -12,6 +13,7 @@ import {
 } from '@chakra-ui/react'
 
 export default function LargeWithLogoCentered() {
+  const currentYear = new Date().getFullYear
   return (
     <Box
       as="footer"
@@ -37,9 +39,14 @@ export default function LargeWithLogoCentered() {
           <Link href={'#'}>Terms & Privacy Policy</Link>
         </SimpleGrid>
       </Container>
-      <Box pb={10}>
-        <Text pt={6} fontSize={'sm'} textAlign={'center'}>
-          Subly - Created by Emilio. © 2021 All rights reserved.
+      <Box pb={8}>
+        <Text pt={2} fontSize={'sm'} textAlign={'center'}>
+          Subly - Created by{' '}
+          <Button colorScheme="blue" variant="link">
+            {' '}
+            Emilio{' '}
+          </Button>
+          . © {currentYear} 2021
         </Text>
       </Box>
     </Box>
