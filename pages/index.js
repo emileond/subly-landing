@@ -18,17 +18,17 @@ export default function Home() {
       <Hero />
       <FeatureBig
         id="features"
-        heading="Manage your subscriptions"
-        desc="Lorem ipsum dolo"
+        heading="Keep track of all your subscriptions"
+        desc="Subly brings all your subscriptions together in a single place so you never lose track of what you're paying for."
       />
       <FeatureBig
         heading="Get insights of your costs"
-        desc="Lorem ipsum dolo"
+        desc="Get reports of your subscriptions to see were you are spending the most and how to improve."
         inverted
       />
       <FeatureBig
         heading="Never pay for an unwanted subscription again"
-        desc="Get reminded before a subscription hits your card"
+        desc="Subly will remind you of upcoming payments before they hit your card so you're never caught off guard."
       />
       <CTA />
       <Footer />

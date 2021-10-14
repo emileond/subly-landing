@@ -20,10 +20,10 @@ export default function Hero() {
         py={{ base: 20, md: 28 }}
       >
         <Heading fontWeight={600} fontSize="5xl">
-          Keep track of all your subscriptions
+          All of your subscriptions in one place
         </Heading>
         <Text fontSize="xl" color={'gray.700'} maxW={'3xl'}>
-          Subly helps you get control over your subscriptions.
+          Subly helps you take control over your subscriptions.
         </Text>
         <Stack spacing={6} direction={'row'} align="center">
           <Button
