@@ -102,9 +102,9 @@ export default function FeatureBig({ heading, desc, inverted, id }) {
         <Flex>
           <Image
             rounded={'md'}
-            alt={'feature image'}
-            src={'./feature.png'}
-            objectFit={'cover'}
+            alt="feature image"
+            src="./feature.png"
+            objectFit="cover"
           />
         </Flex>
       </SimpleGrid>
