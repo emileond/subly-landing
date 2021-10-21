@@ -12,7 +12,7 @@ import {
   Icon,
   useColorModeValue,
 } from '@chakra-ui/react'
-import { IoAnalyticsSharp, IoLogoBitcoin, IoSearchSharp } from 'react-icons/io5'
+import { FiArrowRight } from 'react-icons/fi'
 import { ReactElement } from 'react'
 
 interface FeatureProps {
@@ -41,7 +41,7 @@ const Feature = ({ text, icon, iconBg }: FeatureProps) => {
 
 export default function FeatureBig({ heading, desc, inverted, id }) {
   return (
-    <Container id={id} maxW={'5xl'} py={20}>
+    <Container id={id} maxW={'6xl'} py={32}>
       <SimpleGrid
         columns={{ base: 1, md: 2 }}
         rows={{ base: 2, md: 1 }}
@@ -66,8 +66,18 @@ export default function FeatureBig({ heading, desc, inverted, id }) {
             {desc}
           </Text>
           <Box>
-            <Button rounded="full" px={8} colorScheme="blue" variant="ghost">
-              Get started for free ➡
+            <Button
+              as="a"
+              rounded="full"
+              px={8}
+              colorScheme="purple"
+              variant="ghost"
+              color="#6F55FF"
+              cursor="pointer"
+              rightIcon={<FiArrowRight />}
+              href="https://web.subly.app/signup"
+            >
+              Get started for free
             </Button>
           </Box>
           <Stack
@@ -99,13 +109,34 @@ export default function FeatureBig({ heading, desc, inverted, id }) {
             /> */}
           </Stack>
         </Stack>
-        <Flex>
+        <Flex justify={inverted ? 'start' : 'end'} pos="relative">
           <Image
             rounded={'md'}
             alt="feature image"
             src="./feature.png"
             objectFit="cover"
           />
+          {inverted ? (
+            <Image
+              rounded={'md'}
+              alt="background shape"
+              src="./shape1.svg"
+              pos="absolute"
+              top="-25%"
+              left="0"
+              zIndex={-1}
+            />
+          ) : (
+            <Image
+              rounded={'md'}
+              alt="background shape"
+              src="./shape3.svg"
+              pos="absolute"
+              top="-50%"
+              right="0"
+              zIndex={-1}
+            />
+          )}
         </Flex>
       </SimpleGrid>
     </Container>

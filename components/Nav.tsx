@@ -1,13 +1,13 @@
 import {
   Box,
-  Flex,
-  Text,
-  IconButton,
   Button,
-  Stack,
   Collapse,
+  Flex,
   Icon,
   Link,
+  Text,
+  IconButton,
+  Stack,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -25,13 +25,13 @@ export default function Nav() {
       bg={useColorModeValue('white', 'gray.800')}
       color={useColorModeValue('gray.600', 'white')}
       minH={'60px'}
-      py={{ base: 2 }}
+      py={{ base: 4 }}
       px={{ base: 4 }}
       borderBottom={1}
       borderStyle={'solid'}
-      borderColor={useColorModeValue('gray.200', 'gray.900')}
+      borderColor="gray.100"
     >
-      <Flex w={['100%', '100%', '70%']} align={'center'} mx="auto">
+      <Flex w={['100%', '100%', '75%']} align={'center'} mx="auto">
         <Flex
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
@@ -52,11 +52,12 @@ export default function Nav() {
           <Button
             as="a"
             size="lg"
-            variant="ghost"
+            variant="link"
             href="/"
             fontWeight="bold"
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             color={useColorModeValue('gray.800', 'white')}
+            _hover={{ textDecoration: 'none' }}
           >
             Subly
           </Button>
@@ -72,14 +73,18 @@ export default function Nav() {
           direction={'row'}
           spacing={6}
         >
-          <Button
-            as="a"
-            href="https://web.subly.app"
-            fontWeight={400}
-            variant={'ghost'}
+          <Link
+            p={2}
+            href="https://web.subly.app/"
+            fontSize={'md'}
+            fontWeight={500}
+            _hover={{
+              textDecoration: 'none',
+              color: '#5842d8',
+            }}
           >
             Login
-          </Button>
+          </Link>
           <Button
             as="a"
             href="https://web.subly.app/signup"
@@ -105,7 +110,7 @@ export default function Nav() {
 
 const DesktopNav = () => {
   const linkColor = useColorModeValue('gray.600', 'gray.200')
-  const linkHoverColor = useColorModeValue('gray.800', 'white')
+  const linkHoverColor = useColorModeValue('#5842d8', 'white')
   const popoverContentBgColor = useColorModeValue('white', 'gray.800')
 
   return (
@@ -266,7 +271,7 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Features',
-    href: '#features',
+    href: '/#features',
   },
   {
     label: 'Donate',
