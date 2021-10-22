@@ -51,6 +51,7 @@ export default function LargeWithLogoCentered() {
             <Box
               as="a"
               target="_blank"
+              rel="noopener"
               href="https://www.buymeacoffee.com/emiliosanchez"
             >
               <Image maxW="80%" src="./bmac-yellow.png" alt="Buy me a coffee" />
