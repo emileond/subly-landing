@@ -21,7 +21,13 @@ export default function CTA() {
         bg="linear-gradient(
       45deg,#fffbf2,#edfffd)"
       >
-        <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
+        <Stack
+          spacing={4}
+          as={Container}
+          maxW={'3xl'}
+          textAlign={'center'}
+          data-aos="fade-up"
+        >
           <Heading fontSize={'4xl'}>Get started today</Heading>
           <Text color={'gray.600'} fontSize={'xl'}>
             Signup now and take back control over your subscriptions.

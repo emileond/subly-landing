@@ -39,7 +39,7 @@ const Feature = ({ text, icon, iconBg }: FeatureProps) => {
   )
 }
 
-export default function FeatureBig({ heading, desc, inverted, id }) {
+export default function FeatureBig({ heading, desc, inverted, id, img }) {
   return (
     <Container id={id} maxW={'6xl'} py={32}>
       <SimpleGrid
@@ -48,7 +48,11 @@ export default function FeatureBig({ heading, desc, inverted, id }) {
         spacing={10}
         alignItems="center"
       >
-        <Stack spacing={4} gridArea={[1, 1, inverted ? '1/2' : 1]}>
+        <Stack
+          spacing={4}
+          gridArea={[1, 1, inverted ? '1/2' : 1]}
+          data-aos="fade-left"
+        >
           {/* <Text
             textTransform={'uppercase'}
             color={'blue.400'}
@@ -109,11 +113,15 @@ export default function FeatureBig({ heading, desc, inverted, id }) {
             /> */}
           </Stack>
         </Stack>
-        <Flex justify={inverted ? 'start' : 'end'} pos="relative">
+        <Flex
+          justify={inverted ? 'start' : 'end'}
+          pos="relative"
+          data-aos="fade-right"
+        >
           <Image
             rounded={'md'}
             alt="feature image"
-            src="./feature.png"
+            src={img ? `./${img}.png` : './feature.png'}
             objectFit="cover"
           />
           {inverted ? (

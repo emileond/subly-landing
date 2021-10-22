@@ -30,7 +30,7 @@ export default function LargeWithLogoCentered() {
             </Text>
             <Link href="https://web.subly.app/signup">Get Started</Link>
             <Link href={'/#features'}>Features</Link>
-            <Link href={'#'}>FAQ</Link>
+            <Link href={'/#faq'}>FAQ</Link>
           </Stack>
           <Stack>
             <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
@@ -51,7 +51,7 @@ export default function LargeWithLogoCentered() {
             <Box
               as="a"
               target="_blank"
-              href="https://www.buymeacoffee.com/agney"
+              href="https://www.buymeacoffee.com/emiliosanchez"
             >
               <Image maxW="80%" src="./bmac-yellow.png" alt="Buy me a coffee" />
             </Box>
@@ -73,7 +73,7 @@ export default function LargeWithLogoCentered() {
       <Box py={6} bg="gray.50">
         <Text pt={2} fontSize={'sm'} textAlign={'center'}>
           Subly - Created by{' '}
-          <Button colorScheme="blue" variant="link">
+          <Button color="#5842d8" colorScheme="blue" variant="link">
             {' '}
             Emilio{' '}
           </Button>

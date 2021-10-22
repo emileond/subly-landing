@@ -244,12 +244,19 @@ export default function Hero() {
         textAlign={'center'}
         align={'center'}
         spacing={{ base: 8, md: 10 }}
-        py={{ base: 20, md: 40 }}
+        pt={{ base: 20, md: 40 }}
+        pb={{ base: 20, md: 20 }}
       >
-        <Heading fontWeight={600} fontSize="6xl" zIndex={5}>
+        <Heading fontWeight={600} fontSize="6xl" zIndex={5} data-aos="fade-up">
           All your subscriptions in one place
         </Heading>
-        <Text fontSize="xl" color={'gray.700'} maxW={'3xl'} zIndex={5}>
+        <Text
+          fontSize="xl"
+          color={'gray.700'}
+          maxW={'3xl'}
+          zIndex={5}
+          data-aos="fade-up"
+        >
           Subly helps you take control over your subscriptions.
         </Text>
         <Stack
@@ -259,6 +266,9 @@ export default function Hero() {
           pb={{ base: 8, md: 32 }}
         >
           <Button
+            data-aos="fade-up"
+            as="a"
+            href="https://web.subly.app/signup"
             size="lg"
             rounded={'full'}
             px={6}
@@ -268,16 +278,25 @@ export default function Hero() {
           >
             Get started for free
           </Button>
-          <Button as="a" size="lg" href="#features" rounded={'full'} px={6}>
+          <Button
+            as="a"
+            size="lg"
+            href="#features"
+            rounded={'full'}
+            px={6}
+            data-aos="fade-up"
+          >
             Learn more
           </Button>
         </Stack>
         {/* <Flex w={'full'}> */}
-        <Image
-          src="./main.png"
-          alt="Screenshot of Subly UI"
-          maxW={['100%', '100%', '4xl']}
-        />
+        <Box data-aos="zoom-out-up" data-aos-delay="500">
+          <Image
+            src="./main.png"
+            alt="Screenshot of Subly UI"
+            maxW={['100%', '100%', '4xl']}
+          />
+        </Box>
         {/* </Flex> */}
       </Stack>
     </Container>

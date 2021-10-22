@@ -4,6 +4,7 @@ import Hero from '../components/Hero'
 import Nav from '../components/Nav'
 import FeatureBig from '../components/FeatureBig'
 import CTA from '../components/CTA'
+import FAQ from '../components/FAQ'
 import Footer from '../components/Footer'
 
 export default function Home() {
@@ -17,20 +18,24 @@ export default function Home() {
       <Nav />
       <Hero />
       <FeatureBig
+        img="features1"
         id="features"
         heading="Keep track of all your subscriptions"
         desc="Subly brings all your subscriptions together in a single place so you never lose track of what you're paying for."
       />
       <FeatureBig
+        img="features2"
         heading="Get insights of your costs"
         desc="Get reports of your subscriptions to see were you are spending the most and how to improve."
         inverted
       />
       <FeatureBig
+        img="features3"
         heading="Never pay for an unwanted subscription again"
         desc="Subly will remind you of upcoming payments before they hit your card so you're never caught off guard."
       />
       <CTA />
+      <FAQ />
       <Footer />
     </div>
   )
