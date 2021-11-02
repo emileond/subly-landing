@@ -9,6 +9,7 @@ import {
   Divider,
   Heading,
 } from '@chakra-ui/react'
+import Link from 'next/link'
 
 export default function FAQ() {
   return (
@@ -25,11 +26,12 @@ export default function FAQ() {
               </Box>
               <AccordionIcon />
             </AccordionButton>
-            <AccordionPanel pb={8} color="gray.600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+            <AccordionPanel pb={8} color="gray.700">
+              Having gone through the frustration of forgetting about a
+              subscription trial and having to pay for the full membership. I
+              realized that a simple, practical software to track my
+              subscriptions would be extremely useful. As a result, I came up
+              with Subly. I hope you find it as useful as I do.
             </AccordionPanel>
           </AccordionItem>
           <AccordionItem>
@@ -41,11 +43,9 @@ export default function FAQ() {
               </Box>
               <AccordionIcon />
             </AccordionButton>
-            <AccordionPanel pb={8} color="gray.600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+            <AccordionPanel pb={8} color="gray.700">
+              Absolutely. Subly can be used to track and manage any recurring
+              payments.
             </AccordionPanel>
           </AccordionItem>
           <AccordionItem>
@@ -57,11 +57,8 @@ export default function FAQ() {
               </Box>
               <AccordionIcon />
             </AccordionButton>
-            <AccordionPanel pb={8} color="gray.600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+            <AccordionPanel pb={8} color="gray.700">
+              The number of subscriptions you can track is unlimited.
             </AccordionPanel>
           </AccordionItem>
           <AccordionItem>
@@ -73,11 +70,17 @@ export default function FAQ() {
               </Box>
               <AccordionIcon />
             </AccordionButton>
-            <AccordionPanel pb={8} color="gray.600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+            <AccordionPanel pb={8} color="gray.700">
+              If you want to support the project, you can do so through our{' '}
+              <Link href="https://www.buymeacoffee.com/emiliosanchez">
+                <a target="_blank" rel="noopener">
+                  Buy me a coffe page
+                </a>
+              </Link>
+              , where you can make a one-time donation or set up recurring
+              payments. If you have tech skills and would like to contribute to
+              Subly, please contact us via the app's "Send feedback" form.
+              Another way to help Subly is to spread the word about it.
             </AccordionPanel>
           </AccordionItem>
         </Accordion>

@@ -1,13 +1,14 @@
+import Link from 'next/link'
 import {
   Box,
   Button,
   Collapse,
   Flex,
   Icon,
-  Link,
   Text,
   IconButton,
   Stack,
+  VStack,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -22,20 +23,28 @@ export default function Nav() {
 
   return (
     <Box
-      bg={useColorModeValue('white', 'gray.800')}
+      as="nav"
+      // bg={useColorModeValue('white', 'gray.800')}
+      backdropFilter="saturate(180%) blur(15px)"
+      backgroundColor="rgba(255, 255, 255, .7)"
       color={useColorModeValue('gray.600', 'white')}
-      minH={'60px'}
+      // minH={'60px'}
       py={{ base: 4 }}
       px={{ base: 4 }}
       borderBottom={1}
       borderStyle={'solid'}
       borderColor="gray.100"
+      pos="sticky"
+      top={0}
+      // w="100%"
+      zIndex={8}
     >
       <Flex w={['100%', '100%', '75%']} align={'center'} mx="auto">
         <Flex
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
           display={{ base: 'flex', md: 'none' }}
+          Flo
         >
           <IconButton
             onClick={onToggle}
@@ -59,7 +68,7 @@ export default function Nav() {
             color={useColorModeValue('gray.800', 'white')}
             _hover={{ textDecoration: 'none' }}
           >
-            Subly
+            <a>Subly</a>
           </Button>
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={8}>
@@ -72,18 +81,19 @@ export default function Nav() {
           justify={'flex-end'}
           direction={'row'}
           spacing={6}
+          align="center"
         >
           <Link
-            p={2}
             href="https://web.subly.app/"
-            fontSize={'md'}
-            fontWeight={500}
-            _hover={{
-              textDecoration: 'none',
-              color: '#5842d8',
-            }}
+            // p={2}
+            // fontSize={'md'}
+            // fontWeight={500}
+            // _hover={{
+            //   textDecoration: 'none',
+            //   color: '#5842d8',
+            // }}
           >
-            Login
+            <a>Login</a>
           </Link>
           <Button
             as="a"
@@ -116,41 +126,20 @@ const DesktopNav = () => {
   return (
     <Stack direction={'row'} spacing={8}>
       {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label}>
-          <Popover trigger={'hover'} placement={'bottom-start'}>
-            <PopoverTrigger>
-              <Link
-                p={2}
-                href={navItem.href ?? '#'}
-                fontSize={'md'}
-                fontWeight={500}
-                color={linkColor}
-                _hover={{
-                  textDecoration: 'none',
-                  color: linkHoverColor,
-                }}
-              >
-                {navItem.label}
-              </Link>
-            </PopoverTrigger>
-
-            {navItem.children && (
-              <PopoverContent
-                border={0}
-                boxShadow={'xl'}
-                bg={popoverContentBgColor}
-                p={4}
-                rounded={'xl'}
-                minW={'sm'}
-              >
-                <Stack>
-                  {navItem.children.map((child) => (
-                    <DesktopSubNav key={child.label} {...child} />
-                  ))}
-                </Stack>
-              </PopoverContent>
-            )}
-          </Popover>
+        <Box
+          key={navItem.label}
+          p={2}
+          fontSize={'md'}
+          fontWeight={500}
+          color={linkColor}
+          _hover={{
+            textDecoration: 'none',
+            color: linkHoverColor,
+          }}
+        >
+          <Link href={navItem.href} scroll={false}>
+            <a>{navItem.label}</a>
+          </Link>
         </Box>
       ))}
     </Stack>
@@ -161,50 +150,57 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
     <Link
       href={href}
-      role={'group'}
-      display={'block'}
-      p={2}
-      rounded={'md'}
-      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
+      // role={'group'}
+      // display={'block'}
+      // p={2}
+      // rounded={'md'}
+      // _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
     >
-      <Stack direction={'row'} align={'center'}>
-        <Box>
-          <Text
+      <a>
+        <Stack direction={'row'} align={'center'}>
+          <Box>
+            <Text
+              transition={'all .3s ease'}
+              _groupHover={{ color: 'pink.400' }}
+              fontWeight={500}
+            >
+              {label}
+            </Text>
+            <Text fontSize={'sm'}>{subLabel}</Text>
+          </Box>
+          <Flex
             transition={'all .3s ease'}
-            _groupHover={{ color: 'pink.400' }}
-            fontWeight={500}
+            transform={'translateX(-10px)'}
+            opacity={0}
+            _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
+            justify={'flex-end'}
+            align={'center'}
+            flex={1}
           >
-            {label}
-          </Text>
-          <Text fontSize={'sm'}>{subLabel}</Text>
-        </Box>
-        <Flex
-          transition={'all .3s ease'}
-          transform={'translateX(-10px)'}
-          opacity={0}
-          _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
-          justify={'flex-end'}
-          align={'center'}
-          flex={1}
-        >
-          <Icon color={'pink.400'} w={5} h={5} as={BiChevronRight} />
-        </Flex>
-      </Stack>
+            <Icon color={'pink.400'} w={5} h={5} as={BiChevronRight} />
+          </Flex>
+        </Stack>
+      </a>
     </Link>
   )
 }
 
 const MobileNav = () => {
   return (
-    <Stack
+    <VStack
+      spacing={12}
       bg={useColorModeValue('white', 'gray.800')}
       p={4}
       display={{ md: 'none' }}
     >
       {NAV_ITEMS.map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
+        <Box key={navItem.label}>
+          <Link href={navItem.href}>
+            <a>{navItem.label}</a>
+          </Link>
+        </Box>
       ))}
-    </Stack>
+    </VStack>
   )
 }
 
@@ -252,7 +248,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
           {children &&
             children.map((child) => (
               <Link key={child.label} py={2} href={child.href}>
-                {child.label}
+                <a>{child.label}</a>
               </Link>
             ))}
         </Stack>
@@ -276,19 +272,6 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Donate',
     href: '/donate',
-    //   children: [
-    //     {
-    //       label: 'Job Board',
-    //       subLabel: 'Find your dream design job',
-    //       href: '#',
-    //     },
-    //     {
-    //       label: 'Freelance Projects',
-    //       subLabel: 'An exclusive list for contract work',
-    //       href: '#',
-    //     },
-    //   ],
-    // },
   },
   {
     label: 'FAQ',

@@ -3,6 +3,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 // import splitbee from '@splitbee/web'
+import './styles.css'
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
