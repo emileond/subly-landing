@@ -85,13 +85,6 @@ export default function Nav() {
         >
           <Link
             href="https://web.subly.app/"
-            // p={2}
-            // fontSize={'md'}
-            // fontWeight={500}
-            // _hover={{
-            //   textDecoration: 'none',
-            //   color: '#5842d8',
-            // }}
           >
             <a>Login</a>
           </Link>
@@ -150,11 +143,6 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
     <Link
       href={href}
-      // role={'group'}
-      // display={'block'}
-      // p={2}
-      // rounded={'md'}
-      // _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
     >
       <a>
         <Stack direction={'row'} align={'center'}>
@@ -247,7 +235,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         >
           {children &&
             children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
+              <Link key={child.label} href={child.href}>
                 <a>{child.label}</a>
               </Link>
             ))}
