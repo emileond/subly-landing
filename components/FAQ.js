@@ -79,7 +79,7 @@ export default function FAQ() {
               </Link>
               , where you can make a one-time donation or set up recurring
               payments. If you have tech skills and would like to contribute to
-              Subly, please contact us via the app's "Send feedback" form.
+              Subly, please contact us via the app&apos;s Send feedback form.
               Another way to help Subly is to spread the word about it.
             </AccordionPanel>
           </AccordionItem>
