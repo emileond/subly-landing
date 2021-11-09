@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import {
   Box,
   Button,
@@ -28,15 +29,14 @@ export default function Nav() {
       backdropFilter="saturate(180%) blur(15px)"
       backgroundColor="rgba(255, 255, 255, .7)"
       color={useColorModeValue('gray.600', 'white')}
-      // minH={'60px'}
-      py={{ base: 4 }}
+      py={{ base: 3 }}
       px={{ base: 4 }}
       borderBottom={1}
       borderStyle={'solid'}
       borderColor="gray.100"
-      pos="sticky"
+      pos="fixed"
       top={0}
-      // w="100%"
+      w="100%"
       zIndex={8}
     >
       <Flex w={['100%', '100%', '75%']} align={'center'} mx="auto">
@@ -44,7 +44,6 @@ export default function Nav() {
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
           display={{ base: 'flex', md: 'none' }}
-          Flo
         >
           <IconButton
             onClick={onToggle}
@@ -68,7 +67,13 @@ export default function Nav() {
             color={useColorModeValue('gray.800', 'white')}
             _hover={{ textDecoration: 'none' }}
           >
-            <a>Subly</a>
+            <Image
+              src="/logo.svg"
+              alt="subly logo"
+              width="20px"
+              height="30px"
+            />
+            <Text pl={3}>Subly</Text>
           </Button>
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={8}>
@@ -83,9 +88,7 @@ export default function Nav() {
           spacing={6}
           align="center"
         >
-          <Link
-            href="https://web.subly.app/"
-          >
+          <Link href="https://web.subly.app/">
             <a>Login</a>
           </Link>
           <Button
@@ -141,9 +144,7 @@ const DesktopNav = () => {
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
-    <Link
-      href={href}
-    >
+    <Link href={href}>
       <a>
         <Stack direction={'row'} align={'center'}>
           <Box>

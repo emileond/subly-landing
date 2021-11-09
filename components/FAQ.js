@@ -6,6 +6,7 @@ import {
   AccordionPanel,
   Box,
   Container,
+  VStack,
   Divider,
   Heading,
 } from '@chakra-ui/react'
@@ -14,11 +15,20 @@ import Link from 'next/link'
 export default function FAQ() {
   return (
     <>
-      <Container as="section" maxW="5xl" pt={18} pb={24} id="faq">
+      <Container as="section" maxW="5xl" pt="4rem" pb={24} id="faq">
         <Heading py={12}>Frequently Asked Questions</Heading>
         <Accordion defaultIndex={[0]} allowMultiple>
-          <AccordionItem>
-            <AccordionButton>
+          <AccordionItem
+            mb={4}
+            border="1px solid #eaeaea"
+            borderRadius={8}
+            data-aos="flip-down"
+          >
+            <AccordionButton
+              _expanded={{ borderBottomRadius: 0 }}
+              _hover={{ bg: 'gray.50' }}
+              borderRadius={8}
+            >
               <Box flex="1" textAlign="left">
                 <Heading size="md" color="gray.700" py={2}>
                   Why Subly?
@@ -26,7 +36,7 @@ export default function FAQ() {
               </Box>
               <AccordionIcon />
             </AccordionButton>
-            <AccordionPanel pb={8} color="gray.700">
+            <AccordionPanel pb={8} color="gray.700" borderBottomRadius={8}>
               Having gone through the frustration of forgetting about a
               subscription trial and having to pay for the full membership. I
               realized that a simple, practical software to track my
@@ -34,8 +44,18 @@ export default function FAQ() {
               with Subly. I hope you find it as useful as I do.
             </AccordionPanel>
           </AccordionItem>
-          <AccordionItem>
-            <AccordionButton>
+          <AccordionItem
+            mb={4}
+            border="1px solid #eaeaea"
+            borderRadius={8}
+            data-aos="flip-down"
+            data-aos-delay="100"
+          >
+            <AccordionButton
+              _expanded={{ borderBottomRadius: 0 }}
+              _hover={{ bg: 'gray.50' }}
+              borderRadius={8}
+            >
               <Box flex="1" textAlign="left">
                 <Heading size="md" color="gray.700" py={2}>
                   Can I use Subly to track payments other than subscriptions?
@@ -48,8 +68,18 @@ export default function FAQ() {
               payments.
             </AccordionPanel>
           </AccordionItem>
-          <AccordionItem>
-            <AccordionButton>
+          <AccordionItem
+            mb={4}
+            border="1px solid #eaeaea"
+            borderRadius={8}
+            data-aos="flip-down"
+            data-aos-delay="200"
+          >
+            <AccordionButton
+              _expanded={{ borderBottomRadius: 0 }}
+              _hover={{ bg: 'gray.50' }}
+              borderRadius={8}
+            >
               <Box flex="1" textAlign="left">
                 <Heading size="md" color="gray.700" py={2}>
                   How many subscriptions can I track?
@@ -61,8 +91,18 @@ export default function FAQ() {
               The number of subscriptions you can track is unlimited.
             </AccordionPanel>
           </AccordionItem>
-          <AccordionItem>
-            <AccordionButton>
+          <AccordionItem
+            mb={4}
+            border="1px solid #eaeaea"
+            borderRadius={8}
+            data-aos="flip-down"
+            data-aos-delay="300"
+          >
+            <AccordionButton
+              _expanded={{ borderBottomRadius: 0 }}
+              _hover={{ bg: 'gray.50' }}
+              borderRadius={8}
+            >
               <Box flex="1" textAlign="left">
                 <Heading size="md" color="gray.700" py={2}>
                   How can contribute to Subly?

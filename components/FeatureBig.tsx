@@ -41,19 +41,25 @@ const Feature = ({ text, icon, iconBg }: FeatureProps) => {
 
 export default function FeatureBig({ heading, desc, inverted, id, img }) {
   return (
-    <Container id={id} maxW={'6xl'} py={32}>
-      <SimpleGrid
-        columns={{ base: 1, md: 2 }}
-        rows={{ base: 2, md: 1 }}
-        spacing={10}
-        alignItems="center"
+    <Box bg={inverted ? 'none' : '#F1F5F9'}>
+      <Container
+        id={id}
+        maxW={'6xl'}
+        pb={inverted ? 32 : 32}
+        pt={inverted ? 60 : 32}
       >
-        <Stack
-          spacing={4}
-          gridArea={[1, 1, inverted ? '1/2' : 1]}
-          data-aos="fade-left"
+        <SimpleGrid
+          columns={{ base: 1, md: 2 }}
+          rows={{ base: 2, md: 1 }}
+          spacing={10}
+          alignItems="center"
         >
-          {/* <Text
+          <Stack
+            spacing={4}
+            gridArea={[1, 1, inverted ? '1/2' : 1]}
+            data-aos="fade-left"
+          >
+            {/* <Text
             textTransform={'uppercase'}
             color={'blue.400'}
             fontWeight={600}
@@ -65,34 +71,34 @@ export default function FeatureBig({ heading, desc, inverted, id, img }) {
           >
             Our Story
           </Text> */}
-          <Heading>{heading}</Heading>
-          <Text color={'gray.700'} fontSize={'lg'}>
-            {desc}
-          </Text>
-          <Box>
-            <Button
-              as="a"
-              rounded="full"
-              px={8}
-              colorScheme="purple"
-              variant="ghost"
-              color="#6F55FF"
-              cursor="pointer"
-              rightIcon={<FiArrowRight />}
-              href="https://web.subly.app/signup"
+            <Heading>{heading}</Heading>
+            <Text color={'gray.700'} fontSize={'lg'}>
+              {desc}
+            </Text>
+            <Box>
+              <Button
+                as="a"
+                rounded="full"
+                px={8}
+                colorScheme="purple"
+                variant="ghost"
+                color="#6F55FF"
+                cursor="pointer"
+                rightIcon={<FiArrowRight />}
+                href="https://web.subly.app/signup"
+              >
+                Get started for free
+              </Button>
+            </Box>
+            <Stack
+              spacing={4}
+              divider={
+                <StackDivider
+                  borderColor={useColorModeValue('gray.100', 'gray.700')}
+                />
+              }
             >
-              Get started for free
-            </Button>
-          </Box>
-          <Stack
-            spacing={4}
-            divider={
-              <StackDivider
-                borderColor={useColorModeValue('gray.100', 'gray.700')}
-              />
-            }
-          >
-            {/* <Feature
+              {/* <Feature
               icon={
                 <Icon as={IoAnalyticsSharp} color={'yellow.500'} w={5} h={5} />
               }
@@ -111,42 +117,44 @@ export default function FeatureBig({ heading, desc, inverted, id, img }) {
               iconBg={useColorModeValue('purple.100', 'purple.900')}
               text={'Market Analysis'}
             /> */}
+            </Stack>
           </Stack>
-        </Stack>
-        <Flex
-          justify={inverted ? 'start' : 'end'}
-          pos="relative"
-          data-aos="fade-right"
-        >
-          <Image
-            rounded={'md'}
-            alt="feature image"
-            src={img ? `./${img}.png` : './feature.png'}
-            objectFit="cover"
-          />
-          {inverted ? (
+          <Flex
+            justify={inverted ? 'start' : 'end'}
+            pos="relative"
+            data-aos="fade-right"
+          >
             <Image
               rounded={'md'}
-              alt="background shape"
-              src="./shape1.svg"
-              pos="absolute"
-              top="-25%"
-              left="0"
-              zIndex={-1}
+              alt="feature image"
+              src={img ? `./${img}.png` : './feature.png'}
+              objectFit="cover"
+              zIndex={2}
             />
-          ) : (
-            <Image
-              rounded={'md'}
-              alt="background shape"
-              src="./shape3.svg"
-              pos="absolute"
-              top="-50%"
-              right="0"
-              zIndex={-1}
-            />
-          )}
-        </Flex>
-      </SimpleGrid>
-    </Container>
+            {inverted ? (
+              <Image
+                rounded={'md'}
+                alt="background shape"
+                src="./shape1.svg"
+                pos="absolute"
+                top="-25%"
+                left="0"
+                zIndex={-1}
+              />
+            ) : null
+            // <Image
+            //   rounded={'md'}
+            //   alt="background shape"
+            //   src="./shape3.svg"
+            //   pos="absolute"
+            //   top="-50%"
+            //   right="0"
+            //   zIndex={1}
+            // />
+            }
+          </Flex>
+        </SimpleGrid>
+      </Container>
+    </Box>
   )
 }

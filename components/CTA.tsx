@@ -14,22 +14,21 @@ import {
 
 export default function CTA() {
   return (
-    <>
+    <Container maxW={'6xl'}>
       <Box
-        pt={32}
-        pb={32}
+        mt={-20}
+        py="4rem"
         bg="linear-gradient(
-      45deg,#fffbf2,#edfffd)"
+      45deg,#8E2DE2,#4A00E0)"
+        borderRadius={32}
+        shadow="xl"
+        data-aos="fade-up"
       >
-        <Stack
-          spacing={4}
-          as={Container}
-          maxW={'3xl'}
-          textAlign={'center'}
-          data-aos="fade-up"
-        >
-          <Heading fontSize={'4xl'}>Get started today</Heading>
-          <Text color={'gray.600'} fontSize={'xl'}>
+        <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
+          <Heading color="white" fontSize={'4xl'}>
+            Get started today
+          </Heading>
+          <Text color="whiteAlpha.900" fontSize={'xl'}>
             Signup now and take back control over your subscriptions.
           </Text>
           <Box>
@@ -47,6 +46,6 @@ export default function CTA() {
         </Stack>
       </Box>
       <Divider />
-    </>
+    </Container>
   )
 }

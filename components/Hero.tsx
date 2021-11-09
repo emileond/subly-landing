@@ -17,7 +17,7 @@ import useScript from '../hooks/useScript'
 export default function Hero() {
   const MotionBox = motion(Box)
   return (
-    <Container maxW="100%" pos="relative">
+    <Container maxW="100%" pos="relative" pt={{ base: 0, md: 10 }}>
       <MotionBox
         width="120px"
         height="120px"
@@ -132,15 +132,17 @@ export default function Hero() {
           position: 'absolute',
         }}
       />
-      <Box
+      <MotionBox
         display={['none', 'none', 'flex']}
         width="58px"
         height="58px"
-        top="5%"
+        top="10%"
         left="17%"
         pos="absolute"
         borderRadius="50%"
         boxShadow="0 20px 50px rgba(31, 36, 44, 8%)"
+        animate={{ y: [0, 20, 0] }}
+        transition={{ ease: 'linear', loop: 'Infinity', duration: 3.5 }}
       >
         <Image
           borderRadius="full"
@@ -149,16 +151,18 @@ export default function Hero() {
           boxSize="38px"
           m="auto"
         />
-      </Box>
-      <Box
+      </MotionBox>
+      <MotionBox
         display={['none', 'none', 'flex']}
         width="90px"
         height="90px"
-        top="20%"
+        top="22%"
         left="10%"
         pos="absolute"
         borderRadius="50%"
         boxShadow="0 20px 50px rgba(31, 36, 44, 8%)"
+        animate={{ y: [0, 25, 0] }}
+        transition={{ ease: 'linear', loop: 'Infinity', duration: 4 }}
       >
         <Image
           borderRadius="full"
@@ -167,16 +171,18 @@ export default function Hero() {
           boxSize="64px"
           m="auto"
         />
-      </Box>
-      <Box
+      </MotionBox>
+      <MotionBox
         display={['none', 'none', 'flex']}
         width="70px"
         height="70px"
-        top="30%"
+        top="33%"
         left="25%"
         pos="absolute"
         borderRadius="50%"
         boxShadow="0 20px 50px rgba(31, 36, 44, 8%)"
+        animate={{ y: [25, 0, 25] }}
+        transition={{ ease: 'linear', loop: 'Infinity', duration: 3.4 }}
       >
         <Image
           borderRadius="full"
@@ -185,8 +191,8 @@ export default function Hero() {
           boxSize="42px"
           m="auto"
         />
-      </Box>
-      <Box
+      </MotionBox>
+      <MotionBox
         display={['none', 'none', 'flex']}
         width="58px"
         height="58px"
@@ -195,6 +201,8 @@ export default function Hero() {
         pos="absolute"
         borderRadius="50%"
         boxShadow="0 20px 50px rgba(31, 36, 44, 8%)"
+        animate={{ y: [20, 0, 20] }}
+        transition={{ ease: 'linear', loop: 'Infinity', duration: 3.4 }}
       >
         <Image
           borderRadius="full"
@@ -203,8 +211,8 @@ export default function Hero() {
           boxSize="42px"
           m="auto"
         />
-      </Box>
-      <Box
+      </MotionBox>
+      <MotionBox
         display={['none', 'none', 'flex']}
         width="90px"
         height="90px"
@@ -213,6 +221,8 @@ export default function Hero() {
         pos="absolute"
         borderRadius="50%"
         boxShadow="0 20px 50px rgba(31, 36, 44, 8%)"
+        animate={{ y: [28, 0, 28] }}
+        transition={{ ease: 'linear', loop: 'Infinity', duration: 3.8 }}
       >
         <Image
           borderRadius="full"
@@ -221,8 +231,8 @@ export default function Hero() {
           boxSize="78px"
           m="auto"
         />
-      </Box>
-      <Box
+      </MotionBox>
+      <MotionBox
         display={['none', 'none', 'flex']}
         width="70px"
         height="70px"
@@ -231,6 +241,8 @@ export default function Hero() {
         pos="absolute"
         borderRadius="50%"
         boxShadow="0 20px 50px rgba(31, 36, 44, 8%)"
+        animate={{ y: [0, 20, 0] }}
+        transition={{ ease: 'linear', loop: 'Infinity', duration: 3.5 }}
       >
         <Image
           borderRadius="full"
@@ -239,7 +251,7 @@ export default function Hero() {
           boxSize="58px"
           m="auto"
         />
-      </Box>
+      </MotionBox>
       <Stack
         textAlign={'center'}
         align={'center'}

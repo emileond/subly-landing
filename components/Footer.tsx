@@ -1,10 +1,10 @@
+import Link from 'next/link'
 import {
   Box,
   Button,
   Container,
   Divider,
   Image,
-  Link,
   SimpleGrid,
   Stack,
   Text,
@@ -17,7 +17,11 @@ import {
 export default function LargeWithLogoCentered() {
   const currentYear = new Date().getFullYear
   return (
-    <Box as="footer" color={useColorModeValue('gray.700', 'gray.200')}>
+    <Box
+      as="footer"
+      color={useColorModeValue('gray.700', 'gray.200')}
+      bg="#F1F5F9"
+    >
       <Container as={Stack} maxW={'6xl'} py={24}>
         <SimpleGrid
           columns={[2, 2, 4, 4]}
@@ -42,7 +46,13 @@ export default function LargeWithLogoCentered() {
             <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
               Legal
             </Text>
-            <Link href={'#'}>Terms & Privacy Policy</Link>
+            <Link
+              href={'https://audaxly.com/privacy-policy?code=kvrat5atan8jj7'}
+            >
+              <a target="_blank" rel="noopener">
+                Terms & Privacy Policy
+              </a>
+            </Link>
           </Stack>
           <Stack>
             <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
@@ -71,10 +81,10 @@ export default function LargeWithLogoCentered() {
         </SimpleGrid>
       </Container>
       <Divider />
-      <Box py={6} bg="gray.50">
+      <Box py={4} bg="gray.200">
         <Text pt={2} fontSize={'sm'} textAlign={'center'}>
           Subly - Created by{' '}
-          <Button color="#5842d8" colorScheme="blue" variant="link">
+          <Button colorScheme="purple" variant="link">
             {' '}
             Emilio{' '}
           </Button>
