@@ -33,6 +33,8 @@ export default function CTA() {
           </Text>
           <Box>
             <Button
+              as="a"
+              href="https://web.subly.app/signup"
               size="lg"
               rounded="full"
               px={6}

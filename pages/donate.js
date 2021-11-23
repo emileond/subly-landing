@@ -18,6 +18,7 @@ import {
 } from '@chakra-ui/react'
 
 export default function Home() {
+  const iframePath = 'https://www.buymeacoffee.com/widget/page/emiliosanchez'
   return (
     <div>
       <Head>
@@ -26,19 +27,31 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <Box as="main" minH="80vh">
-        <Heading fontWeight={600} fontSize="3xl" textAlign="center" py={12}>
+      <Box as="main" minH="80vh" py={24}>
+        <Heading
+          fontWeight={600}
+          fontSize="3xl"
+          textAlign="center"
+          pt="2rem"
+          pb={12}
+        >
           Donate to Subly
         </Heading>
         <Flex
           direction={['column', 'column', 'column', 'row']}
           w={['100%', '100%', '100%', '70%']}
           mx="auto"
-          justifyContent="space-evenly"
+          justifyContent="center"
+          alignItems={['center', 'center', 'center', 'start']}
         >
-          <Box p={20} bg="gray.400" w="400px">
-            AAA
-          </Box>
+          <Box
+            as="iframe"
+            src={iframePath}
+            p={0}
+            bg="gray.400"
+            w="400px"
+            h="520px"
+          ></Box>
           <VStack align="start" py={8} px={8} maxW="700px">
             <Text>
               Subly was developed with the mission of developing free and
@@ -51,7 +64,7 @@ export default function Home() {
             </Text>
             <br />
             <Text>
-              Every bit of support helps us improve Subly and tackle more
+              Every bit of support helps to improve Subly and tackle more
               ambitious problems.
             </Text>
             <br />

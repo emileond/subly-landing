@@ -114,7 +114,7 @@ export default function FAQ() {
               If you want to support the project, you can do so through our{' '}
               <Link href="https://www.buymeacoffee.com/emiliosanchez">
                 <a target="_blank" rel="noopener">
-                  Buy me a coffe page
+                  Buy-me-a-coffee-page
                 </a>
               </Link>
               , where you can make a one-time donation or set up recurring

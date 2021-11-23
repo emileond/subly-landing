@@ -32,27 +32,70 @@ export default function LargeWithLogoCentered() {
             <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
               Product
             </Text>
-            <Link href="https://web.subly.app/signup">Get Started</Link>
-            <Link href={'/#features'}>Features</Link>
-            <Link href={'/#faq'}>FAQ</Link>
+            <Button
+              as="a"
+              href="https://web.subly.app/signup"
+              variant="link"
+              fontWeight="400"
+              colorScheme="black"
+              justifyContent="start"
+            >
+              Get Started
+            </Button>
+            <Button
+              as="a"
+              href={'/#features'}
+              variant="link"
+              fontWeight="400"
+              colorScheme="black"
+              justifyContent="start"
+            >
+              Features
+            </Button>
+            <Button
+              as="a"
+              href={'/#faq'}
+              variant="link"
+              fontWeight="400"
+              colorScheme="black"
+              justifyContent="start"
+            >
+              FAQ
+            </Button>
           </Stack>
           <Stack>
             <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
               Social
             </Text>
-            <Link href={'#'}>Twitter</Link>
+            <Button
+              as="a"
+              href="https://twitter.com/sublyweb"
+              variant="link"
+              target="_blank"
+              rel="noopener noreferrer"
+              fontWeight="400"
+              colorScheme="black"
+              justifyContent="start"
+            >
+              <a>Twitter</a>
+            </Button>
           </Stack>
           <Stack>
             <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
               Legal
             </Text>
-            <Link
+            <Button
+              as="a"
               href={'https://audaxly.com/privacy-policy?code=kvrat5atan8jj7'}
+              variant="link"
+              target="_blank"
+              rel="noopener noreferrer"
+              fontWeight="400"
+              colorScheme="black"
+              justifyContent="start"
             >
-              <a target="_blank" rel="noopener">
-                Terms & Privacy Policy
-              </a>
-            </Link>
+              Terms & Privacy Policy
+            </Button>
           </Stack>
           <Stack>
             <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
@@ -61,7 +104,7 @@ export default function LargeWithLogoCentered() {
             <Box
               as="a"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               href="https://www.buymeacoffee.com/emiliosanchez"
             >
               <Image maxW="80%" src="./bmac-yellow.png" alt="Buy me a coffee" />
@@ -84,9 +127,15 @@ export default function LargeWithLogoCentered() {
       <Box py={4} bg="gray.200">
         <Text pt={2} fontSize={'sm'} textAlign={'center'}>
           Subly - Created by{' '}
-          <Button colorScheme="purple" variant="link">
-            {' '}
-            Emilio{' '}
+          <Button
+            as="a"
+            href="https://twitter.com/emileond"
+            target="_blank"
+            rel="noopener noreferrer"
+            colorScheme="blue"
+            variant="link"
+          >
+            Emilio
           </Button>
           . © {currentYear} 2021
         </Text>
