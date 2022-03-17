@@ -30,13 +30,13 @@ export default function FAQ() {
               borderRadius={8}
             >
               <Box flex="1" textAlign="left">
-                <Heading size="md" color="gray.700" py={2}>
+                <Heading size="md" color="gray.800" py={2}>
                   Why Subly?
                 </Heading>
               </Box>
               <AccordionIcon />
             </AccordionButton>
-            <AccordionPanel pb={8} color="gray.700" borderBottomRadius={8}>
+            <AccordionPanel pb={8} color="gray.800" borderBottomRadius={8}>
               Having gone through the frustration of forgetting about a
               subscription trial and having to pay for the full membership. I
               realized that a simple, practical software to track my
@@ -57,13 +57,13 @@ export default function FAQ() {
               borderRadius={8}
             >
               <Box flex="1" textAlign="left">
-                <Heading size="md" color="gray.700" py={2}>
+                <Heading size="md" color="gray.800" py={2}>
                   Can I use Subly to track payments other than subscriptions?
                 </Heading>
               </Box>
               <AccordionIcon />
             </AccordionButton>
-            <AccordionPanel pb={8} color="gray.700">
+            <AccordionPanel pb={8} color="gray.800">
               Absolutely. Subly can be used to track and manage any recurring
               payments.
             </AccordionPanel>
@@ -81,13 +81,13 @@ export default function FAQ() {
               borderRadius={8}
             >
               <Box flex="1" textAlign="left">
-                <Heading size="md" color="gray.700" py={2}>
+                <Heading size="md" color="gray.800" py={2}>
                   How many subscriptions can I track?
                 </Heading>
               </Box>
               <AccordionIcon />
             </AccordionButton>
-            <AccordionPanel pb={8} color="gray.700">
+            <AccordionPanel pb={8} color="gray.800">
               The number of subscriptions you can track is unlimited.
             </AccordionPanel>
           </AccordionItem>
@@ -104,13 +104,13 @@ export default function FAQ() {
               borderRadius={8}
             >
               <Box flex="1" textAlign="left">
-                <Heading size="md" color="gray.700" py={2}>
+                <Heading size="md" color="gray.800" py={2}>
                   How can contribute to Subly?
                 </Heading>
               </Box>
               <AccordionIcon />
             </AccordionButton>
-            <AccordionPanel pb={8} color="gray.700">
+            <AccordionPanel pb={8} color="gray.800">
               If you want to support the project, you can do so through our{' '}
               <Link href="https://www.buymeacoffee.com/emiliosanchez">
                 <a target="_blank" rel="noopener">

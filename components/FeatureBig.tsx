@@ -44,7 +44,7 @@ export default function FeatureBig({ heading, desc, inverted, id, img }) {
     <Box bg={inverted ? 'none' : '#F1F5F9'}>
       <Container
         id={id}
-        maxW={'6xl'}
+        maxW={'7xl'}
         pb={inverted ? 32 : 32}
         pt={inverted ? 60 : 32}
       >
@@ -71,7 +71,7 @@ export default function FeatureBig({ heading, desc, inverted, id, img }) {
           >
             Our Story
           </Text> */}
-            <Heading>{heading}</Heading>
+            <Heading size="2xl">{heading}</Heading>
             <Text color={'gray.700'} fontSize={'lg'}>
               {desc}
             </Text>
@@ -131,26 +131,27 @@ export default function FeatureBig({ heading, desc, inverted, id, img }) {
               objectFit="cover"
               zIndex={2}
             />
-            {inverted ? (
-              <Image
-                rounded={'md'}
-                alt="background shape"
-                src="./shape1.svg"
-                pos="absolute"
-                top="-25%"
-                left="0"
-                zIndex={-1}
-              />
-            ) : null
-            // <Image
-            //   rounded={'md'}
-            //   alt="background shape"
-            //   src="./shape3.svg"
-            //   pos="absolute"
-            //   top="-50%"
-            //   right="0"
-            //   zIndex={1}
-            // />
+            {
+              inverted ? (
+                <Image
+                  rounded={'md'}
+                  alt="background shape"
+                  src="./shape1.svg"
+                  pos="absolute"
+                  top="-25%"
+                  left="0"
+                  zIndex={-1}
+                />
+              ) : null
+              // <Image
+              //   rounded={'md'}
+              //   alt="background shape"
+              //   src="./shape3.svg"
+              //   pos="absolute"
+              //   top="-50%"
+              //   right="0"
+              //   zIndex={1}
+              // />
             }
           </Flex>
         </SimpleGrid>
