@@ -1,18 +1,22 @@
-import Link from 'next/link'
 import {
   Box,
   Button,
   Container,
   Divider,
-  Image,
   SimpleGrid,
   Stack,
   Text,
+  Image,
   Flex,
   Tag,
   useColorModeValue,
   HStack,
+  VStack,
+  Heading,
+  IconButton,
 } from '@chakra-ui/react'
+import { FaTwitter } from 'react-icons/fa'
+import { SiBuymeacoffee } from 'react-icons/si'
 
 export default function LargeWithLogoCentered() {
   const currentYear = new Date().getFullYear
@@ -22,16 +26,57 @@ export default function LargeWithLogoCentered() {
       color={useColorModeValue('gray.700', 'gray.200')}
       bg="#F1F5F9"
     >
-      <Container as={Stack} maxW={'6xl'} py={24}>
+      <Container as={Stack} maxW={'6xl'} py={16}>
         <SimpleGrid
           columns={[2, 2, 4, 4]}
-          spacing={[16, 24, 32]}
+          spacing={[16, 24, 24]}
           alignSelf="center"
         >
-          <Stack>
-            <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
-              Product
+          <VStack align="left">
+            <HStack>
+              <Image src="./logo.svg" alt="Logo" width="20px" height="30px" />
+              <Heading size="md" ml={2}>
+                Subly
+              </Heading>
+            </HStack>
+            <Text>
+              All your subscriptions and recurring payments in one place.
             </Text>
+            <HStack>
+              <IconButton
+                as="a"
+                aria-label="twitter"
+                size="lg"
+                borderRadius="full"
+                icon={<FaTwitter />}
+                href="https://twitter.com/sublyweb"
+                target="_blank"
+                rel="noopener noreferrer"
+              ></IconButton>
+              <IconButton
+                as="a"
+                aria-label="buy me a coffee"
+                size="lg"
+                borderRadius="full"
+                icon={<SiBuymeacoffee />}
+                href="https://www.buymeacoffee.com/emiliosanchez"
+                target="_blank"
+                rel="noopener noreferrer"
+              ></IconButton>
+            </HStack>
+          </VStack>
+          <Stack>
+            <Heading size="md">About Subly</Heading>
+            <Button
+              as="a"
+              href="/manifesto"
+              variant="link"
+              fontWeight="400"
+              colorScheme="black"
+              justifyContent="start"
+            >
+              Manifesto
+            </Button>
             <Button
               as="a"
               href="https://web.subly.app/signup"
@@ -64,26 +109,7 @@ export default function LargeWithLogoCentered() {
             </Button>
           </Stack>
           <Stack>
-            <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
-              Social
-            </Text>
-            <Button
-              as="a"
-              href="https://twitter.com/sublyweb"
-              variant="link"
-              target="_blank"
-              rel="noopener noreferrer"
-              fontWeight="400"
-              colorScheme="black"
-              justifyContent="start"
-            >
-              <a>Twitter</a>
-            </Button>
-          </Stack>
-          <Stack>
-            <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
-              Legal
-            </Text>
+            <Heading size="md">Legal</Heading>
             <Button
               as="a"
               href={'https://audaxly.com/privacy-policy?code=kvrat5atan8jj7'}
@@ -98,9 +124,7 @@ export default function LargeWithLogoCentered() {
             </Button>
           </Stack>
           <Stack>
-            <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
-              Support Subly
-            </Text>
+            <Heading size="md">Support Subly</Heading>
             <Box
               as="a"
               target="_blank"

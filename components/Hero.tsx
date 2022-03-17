@@ -259,7 +259,7 @@ export default function Hero() {
         pt={{ base: 20, md: 40 }}
         pb={{ base: 20, md: 20 }}
       >
-        <Heading fontWeight={600} fontSize="6xl" zIndex={5} data-aos="fade-up">
+        <Heading fontWeight={700} fontSize="6xl" zIndex={5} data-aos="fade-up">
           All your subscriptions in one place
         </Heading>
         <Text
