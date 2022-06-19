@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-// import splitbee from '@splitbee/web'
+import splitbee from '@splitbee/web'
 import './styles.css'
 
 function MyApp({ Component, pageProps }) {
@@ -12,7 +12,9 @@ function MyApp({ Component, pageProps }) {
       offset: 100,
     })
   }, [])
-  // splitbee.init()
+  splitbee.init({
+    token: 'SLLB2C20R4FI',
+  })
   return (
     <ChakraProvider>
       <Component {...pageProps} />
