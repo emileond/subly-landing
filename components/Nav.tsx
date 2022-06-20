@@ -259,8 +259,8 @@ const NAV_ITEMS: Array<NavItem> = [
     href: '/#features',
   },
   {
-    label: 'Donate',
-    href: '/donate',
+    label: 'Pricing',
+    href: '/#pricing',
   },
   {
     label: 'FAQ',

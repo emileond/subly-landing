@@ -31,7 +31,7 @@ function PriceWrapper({ children }: { children: ReactNode }) {
 
 export default function Pricing() {
   return (
-    <Box py={12} bg="#F1F5F9">
+    <Box pt="6rem" pb="4rem" bg="#F1F5F9" id="pricing">
       <VStack spacing={3} textAlign="center">
         <Heading as="h1" fontSize="4xl" mb={1}>
           Simplified Pricing
@@ -39,7 +39,7 @@ export default function Pricing() {
         <Text fontSize="lg" color={'gray.500'}>
           Subly Free is recommended for personal use.
           <br />
-          If you manage more than 10 subscriptions or have multiple projects,
+          If you manage more than 8 subscriptions or have multiple projects,
           Subly Pro is for you.
         </Text>
       </VStack>
@@ -74,12 +74,11 @@ export default function Pricing() {
           >
             <List spacing={3} textAlign="start" px={12}>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                10 subscriptions
+                <ListIcon as={FaCheckCircle} color="green.500" />8 subscriptions
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                10 Payment alerts
+                <ListIcon as={FaCheckCircle} color="green.500" />8 Payment
+                alerts
               </ListItem>
               <ListItem>
                 <ListIcon as={FaTimesCircle} color="gray.500" />

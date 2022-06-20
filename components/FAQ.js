@@ -88,10 +88,12 @@ export default function FAQ() {
               <AccordionIcon />
             </AccordionButton>
             <AccordionPanel pb={8} color="gray.800">
-              The number of subscriptions you can track is unlimited.
+              The Free version of Subly allows you to track up to 8
+              subscriptions. If you would like to track more than 8
+              subscriptions, please consider upgrading to the Pro version.
             </AccordionPanel>
           </AccordionItem>
-          <AccordionItem
+          {/* <AccordionItem
             mb={4}
             border="1px solid #eaeaea"
             borderRadius={8}
@@ -122,7 +124,7 @@ export default function FAQ() {
               Subly, please contact us via the app&apos;s Send feedback form.
               Another way to help Subly is to spread the word about it.
             </AccordionPanel>
-          </AccordionItem>
+          </AccordionItem> */}
         </Accordion>
       </Container>
       <Divider />
