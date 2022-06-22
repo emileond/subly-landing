@@ -19,7 +19,7 @@ import { FaTwitter } from 'react-icons/fa'
 import { SiBuymeacoffee } from 'react-icons/si'
 
 export default function LargeWithLogoCentered() {
-  const currentYear = new Date().getFullYear
+  const currentYear = new Date().getFullYear()
   return (
     <Box
       as="footer"
@@ -150,18 +150,7 @@ export default function LargeWithLogoCentered() {
       <Divider />
       <Box py={4} bg="gray.200">
         <Text pt={2} fontSize={'sm'} textAlign={'center'}>
-          Subly - Created by{' '}
-          <Button
-            as="a"
-            href="https://twitter.com/emileond"
-            target="_blank"
-            rel="noopener noreferrer"
-            colorScheme="blue"
-            variant="link"
-          >
-            Emilio
-          </Button>
-          . © {currentYear} 2021
+          Subly - © {currentYear}
         </Text>
       </Box>
     </Box>

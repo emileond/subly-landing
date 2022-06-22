@@ -14,9 +14,8 @@ import {
 
 export default function CTA() {
   return (
-    <Container maxW={'6xl'}>
+    <Container maxW={'6xl'} pb={8}>
       <Box
-        mt={-20}
         py="4rem"
         bg="linear-gradient(
       45deg,#8E2DE2,#4A00E0)"

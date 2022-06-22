@@ -39,15 +39,17 @@ const Feature = ({ text, icon, iconBg }: FeatureProps) => {
   )
 }
 
-export default function FeatureBig({ heading, desc, inverted, id, img }) {
+export default function FeatureBig({
+  heading,
+  desc,
+  inverted,
+  id,
+  img,
+  width,
+}) {
   return (
     <Box bg={inverted ? 'none' : '#F1F5F9'}>
-      <Container
-        id={id}
-        maxW={'7xl'}
-        pb={inverted ? 32 : 32}
-        pt={inverted ? 60 : 32}
-      >
+      <Container id={id} maxW={'7xl'} pb={32} pt={32}>
         <SimpleGrid
           columns={{ base: 1, md: 2 }}
           rows={{ base: 2, md: 1 }}
@@ -79,7 +81,7 @@ export default function FeatureBig({ heading, desc, inverted, id, img }) {
               <Button
                 as="a"
                 rounded="full"
-                px={8}
+                px={6}
                 colorScheme="purple"
                 variant="ghost"
                 color="#6F55FF"
@@ -123,36 +125,27 @@ export default function FeatureBig({ heading, desc, inverted, id, img }) {
             justify={inverted ? 'start' : 'end'}
             pos="relative"
             data-aos="fade-right"
+            justifyContent="center"
           >
             <Image
               rounded={'md'}
               alt="feature image"
               src={img ? `./${img}.png` : './feature.png'}
               objectFit="cover"
+              w={width}
               zIndex={2}
             />
-            {
-              inverted ? (
-                <Image
-                  rounded={'md'}
-                  alt="background shape"
-                  src="./shape1.svg"
-                  pos="absolute"
-                  top="-25%"
-                  left="0"
-                  zIndex={-1}
-                />
-              ) : null
-              // <Image
-              //   rounded={'md'}
-              //   alt="background shape"
-              //   src="./shape3.svg"
-              //   pos="absolute"
-              //   top="-50%"
-              //   right="0"
-              //   zIndex={1}
-              // />
-            }
+            {/* {inverted ? (
+              <Image
+                rounded={'md'}
+                alt="background shape"
+                src="./shape1.svg"
+                pos="absolute"
+                top="-25%"
+                left="0"
+                zIndex={-1}
+              />
+            ) : null} */}
           </Flex>
         </SimpleGrid>
       </Container>

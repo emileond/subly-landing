@@ -22,6 +22,52 @@ import { BiMenu, BiX, BiChevronDown, BiChevronRight } from 'react-icons/bi'
 export default function Nav() {
   const { isOpen, onToggle } = useDisclosure()
 
+  const MobileNav = () => {
+    return (
+      <VStack
+        spacing={12}
+        bg={useColorModeValue('white', 'gray.800')}
+        p={4}
+        display={{ md: 'none' }}
+      >
+        {NAV_ITEMS.map((navItem) => (
+          <MobileNavItem
+            key={navItem.label}
+            label={navItem.label}
+            href={navItem.href}
+          ></MobileNavItem>
+        ))}
+      </VStack>
+    )
+  }
+
+  const MobileNavItem = ({ label, children, href }: NavItem) => {
+    return (
+      <Stack
+        spacing={4}
+        onClick={onToggle}
+        _hover={{ cursor: 'pointer', color: 'purple.600' }}
+      >
+        <Flex
+          py={2}
+          as={Link}
+          href={href ?? '#'}
+          justify={'space-between'}
+          align={'center'}
+          _hover={{
+            textDecoration: 'none',
+          }}
+        >
+          <Text
+            fontWeight={600}
+            // color={useColorModeValue('gray.600', 'gray.200')}
+          >
+            {label}
+          </Text>
+        </Flex>
+      </Stack>
+    )
+  }
   return (
     <Box
       as="nav"
@@ -106,7 +152,6 @@ export default function Nav() {
           </Button>
         </Stack>
       </Flex>
-
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
       </Collapse>
@@ -174,78 +219,6 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   )
 }
 
-const MobileNav = () => {
-  return (
-    <VStack
-      spacing={12}
-      bg={useColorModeValue('white', 'gray.800')}
-      p={4}
-      display={{ md: 'none' }}
-    >
-      {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label}>
-          <Link href={navItem.href}>
-            <a>{navItem.label}</a>
-          </Link>
-        </Box>
-      ))}
-    </VStack>
-  )
-}
-
-const MobileNavItem = ({ label, children, href }: NavItem) => {
-  const { isOpen, onToggle } = useDisclosure()
-
-  return (
-    <Stack spacing={4} onClick={children && onToggle}>
-      <Flex
-        py={2}
-        as={Link}
-        href={href ?? '#'}
-        justify={'space-between'}
-        align={'center'}
-        _hover={{
-          textDecoration: 'none',
-        }}
-      >
-        <Text
-          fontWeight={600}
-          color={useColorModeValue('gray.600', 'gray.200')}
-        >
-          {label}
-        </Text>
-        {children && (
-          <Icon
-            as={BiChevronDown}
-            transition={'all .25s ease-in-out'}
-            transform={isOpen ? 'rotate(180deg)' : ''}
-            w={6}
-            h={6}
-          />
-        )}
-      </Flex>
-
-      <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
-        <Stack
-          mt={2}
-          pl={4}
-          borderLeft={1}
-          borderStyle={'solid'}
-          borderColor={useColorModeValue('gray.200', 'gray.700')}
-          align={'start'}
-        >
-          {children &&
-            children.map((child) => (
-              <Link key={child.label} href={child.href}>
-                <a>{child.label}</a>
-              </Link>
-            ))}
-        </Stack>
-      </Collapse>
-    </Stack>
-  )
-}
-
 interface NavItem {
   label: string
   subLabel?: string
@@ -265,5 +238,9 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'FAQ',
     href: '/#faq',
+  },
+  {
+    label: 'Releases',
+    href: '/releases',
   },
 ]

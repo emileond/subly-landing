@@ -23,28 +23,32 @@ export default function Home() {
       <Hero />
       <FeatureBig
         img="features1"
+        width={['100%', '80%', '70%', '65%']}
         id="features"
         heading="Keep track of all your subscriptions"
         desc="Subly brings all your subscriptions together in a single place so you never lose track of what you're paying for."
       />
       <FeatureBig
-        img="features2"
+        img="insights"
+        width={['100%', '100%', '80%', '80%']}
         heading="Get insights of your costs"
         desc="Get reports of your subscriptions to see were you are spending the most and how to improve."
         inverted
       />
+      <CTA />
       <FeatureBig
         img="features3"
+        width={['100%', '100%', '90%', '90%']}
         heading="Never pay for an unwanted subscription again"
         desc="Subly will remind you of upcoming payments before they hit your card so you're never caught off guard."
       />
       <FeatureBig
         img="features4"
+        width={['100%', '100%', '80%', '80%']}
         heading="Smart Recommendations"
         desc="Subly provides alternatives to the services you're using, so you can determine if you're using the right solution or if there are better options."
         inverted
       />
-      <CTA />
       <Pricing />
       <FAQ />
       <Footer />
