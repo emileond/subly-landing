@@ -74,11 +74,12 @@ export default function Pricing() {
           >
             <List spacing={3} textAlign="start" px={12}>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />8 subscriptions
+                <ListIcon as={FaCheckCircle} color="green.500" />
+                10 subscriptions
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />8 Payment
-                alerts
+                <ListIcon as={FaCheckCircle} color="green.500" />
+                10 Payment alerts
               </ListItem>
               <ListItem>
                 <ListIcon as={FaTimesCircle} color="gray.500" />
