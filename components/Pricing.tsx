@@ -138,7 +138,7 @@ export default function Pricing() {
                   $
                 </Text>
                 <Text fontSize="5xl" fontWeight="900">
-                  24
+                  29
                 </Text>
                 <Text fontSize="3xl" color="gray.500">
                   /year
