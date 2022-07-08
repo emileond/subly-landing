@@ -39,7 +39,7 @@ export default function Pricing() {
         <Text fontSize="lg" color={'gray.500'}>
           Subly Free is recommended for personal use.
           <br />
-          If you manage more than 8 subscriptions or have multiple projects,
+          If you manage more than 10 subscriptions or have multiple projects,
           Subly Pro is for you.
         </Text>
       </VStack>
