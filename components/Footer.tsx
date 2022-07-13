@@ -66,17 +66,7 @@ export default function LargeWithLogoCentered() {
             </HStack>
           </VStack>
           <Stack>
-            <Heading size="md">About Subly</Heading>
-            <Button
-              as="a"
-              href="/manifesto"
-              variant="link"
-              fontWeight="400"
-              colorScheme="black"
-              justifyContent="start"
-            >
-              Manifesto
-            </Button>
+            <Heading size="md">About</Heading>
             <Button
               as="a"
               href="https://web.subly.app/signup"
@@ -86,6 +76,16 @@ export default function LargeWithLogoCentered() {
               justifyContent="start"
             >
               Get Started
+            </Button>
+            <Button
+              as="a"
+              href="/manifesto"
+              variant="link"
+              fontWeight="400"
+              colorScheme="black"
+              justifyContent="start"
+            >
+              Manifesto
             </Button>
             <Button
               as="a"
@@ -99,7 +99,7 @@ export default function LargeWithLogoCentered() {
             </Button>
             <Button
               as="a"
-              href={'/#faq'}
+              href="/#faq"
               variant="link"
               fontWeight="400"
               colorScheme="black"
@@ -112,7 +112,7 @@ export default function LargeWithLogoCentered() {
             <Heading size="md">Legal</Heading>
             <Button
               as="a"
-              href={'https://audaxly.com/privacy-policy?code=kvrat5atan8jj7'}
+              href="https://audaxly.com/privacy-policy?code=kvrat5atan8jj7"
               variant="link"
               target="_blank"
               rel="noopener noreferrer"
@@ -124,15 +124,45 @@ export default function LargeWithLogoCentered() {
             </Button>
           </Stack>
           <Stack>
-            <Heading size="md">Support Subly</Heading>
-            <Box
+            <Heading size="md">Product</Heading>
+            <Button
+              as="a"
+              href="https://roadmap.subly.app"
+              variant="link"
+              fontWeight="400"
+              colorScheme="black"
+              justifyContent="start"
+            >
+              Roadmap
+            </Button>
+            <Button
+              as="a"
+              href="https://roadmap.subly.app/feature-requests"
+              variant="link"
+              fontWeight="400"
+              colorScheme="black"
+              justifyContent="start"
+            >
+              Suggest a Feature
+            </Button>
+            <Button
+              as="a"
+              href="https://status.subly.app"
+              variant="link"
+              fontWeight="400"
+              colorScheme="black"
+              justifyContent="start"
+            >
+              Status
+            </Button>
+            {/* <Box
               as="a"
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.buymeacoffee.com/emiliosanchez"
             >
               <Image maxW="80%" src="./bmac-yellow.png" alt="Buy me a coffee" />
-            </Box>
+            </Box> */}
             {/* <Stack direction={'row'} align={'center'} spacing={2}>
               <Link href={'#'}>Donate</Link>
               <Tag
