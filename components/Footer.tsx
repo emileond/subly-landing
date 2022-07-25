@@ -109,22 +109,17 @@ export default function LargeWithLogoCentered() {
             </Button>
           </Stack>
           <Stack>
-            <Heading size="md">Legal</Heading>
+            <Heading size="md">Product</Heading>
             <Button
               as="a"
-              href="https://audaxly.com/privacy-policy?code=kvrat5atan8jj7"
+              href="https://subly.app/releases"
               variant="link"
-              target="_blank"
-              rel="noopener noreferrer"
               fontWeight="400"
               colorScheme="black"
               justifyContent="start"
             >
-              Terms & Privacy Policy
+              Releases
             </Button>
-          </Stack>
-          <Stack>
-            <Heading size="md">Product</Heading>
             <Button
               as="a"
               href="https://roadmap.subly.app"
@@ -174,6 +169,21 @@ export default function LargeWithLogoCentered() {
                 New
               </Tag>
             </Stack> */}
+          </Stack>
+          <Stack>
+            <Heading size="md">Legal</Heading>
+            <Button
+              as="a"
+              href="https://audaxly.com/privacy-policy?code=kvrat5atan8jj7"
+              variant="link"
+              target="_blank"
+              rel="noopener noreferrer"
+              fontWeight="400"
+              colorScheme="black"
+              justifyContent="start"
+            >
+              Terms & Privacy Policy
+            </Button>
           </Stack>
         </SimpleGrid>
       </Container>
