@@ -11,7 +11,7 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react'
-import { motion } from 'framer-motion'
+const { motion } = require('framer-motion')
 import useScript from '../hooks/useScript'
 
 export default function Hero() {
