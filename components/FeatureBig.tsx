@@ -52,7 +52,6 @@ export default function FeatureBig({
       <Container id={id} maxW={'7xl'} pb={32} pt={32}>
         <SimpleGrid
           columns={{ base: 1, md: 2 }}
-          rows={{ base: 2, md: 1 }}
           spacing={10}
           alignItems="center"
         >
