@@ -80,7 +80,8 @@ export default function Nav() {
       borderBottom={1}
       borderStyle={'solid'}
       borderColor="gray.100"
-      pos="fixed"
+      pos="sticky"
+      h="100%"
       top={0}
       w="100%"
       zIndex={8}

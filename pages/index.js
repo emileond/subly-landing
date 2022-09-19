@@ -7,10 +7,11 @@ import CTA from '../components/CTA'
 import FAQ from '../components/FAQ'
 import Footer from '../components/Footer'
 import Pricing from '../components/Pricing'
+import { Box } from '@chakra-ui/react'
 
 export default function Home() {
   return (
-    <div style={{ overflowX: 'hidden' }}>
+    <Box maxW="100vw">
       <Head>
         <title>Subly - Subscriptions Tracker</title>
         <meta
@@ -52,6 +53,6 @@ export default function Home() {
       <Pricing />
       <FAQ />
       <Footer />
-    </div>
+    </Box>
   )
 }

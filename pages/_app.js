@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
+import theme from '../theme'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import splitbee from '@splitbee/web'
@@ -16,7 +17,7 @@ function MyApp({ Component, pageProps }) {
     token: 'SLLB2C20R4FI',
   })
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Component {...pageProps} />
     </ChakraProvider>
   )
