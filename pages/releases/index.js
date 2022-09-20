@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Head from 'next/head'
 import Nav from '../../components/Nav'
+import dayjs from 'dayjs'
 import {
   Button,
   Container,
@@ -32,6 +33,13 @@ const Posts = ({ posts }) => {
   const hoverBg = useColorModeValue('gray.200', 'gray.700')
   const primaryText = useColorModeValue('blackAlpha.900', 'whiteAlpha.900')
   const secondaryText = useColorModeValue('blackAlpha.700', 'whiteAlpha.700')
+
+  const sortedPosts = posts.sort((a, b) => {
+    const aDate = dayjs(a.frontmatter.date).format('MMM DD, YYYY')
+    const bDate = dayjs(b.frontmatter.date).format('MMM DD, YYYY')
+    return dayjs(bDate).isAfter(dayjs(aDate)) ? 1 : -1
+  })
+
   return (
     <>
       <Head>
@@ -54,7 +62,7 @@ const Posts = ({ posts }) => {
           _hover={{ cursor: 'pointer' }}
           role="group"
         >
-          {posts.map(({ slug, frontmatter }, index) => (
+          {sortedPosts?.map(({ slug, frontmatter }, index) => (
             <Link key={slug} href={`/releases/${slug}`}>
               <a>
                 <Box
@@ -68,8 +76,6 @@ const Posts = ({ posts }) => {
                   <Image
                     layout="fill"
                     objectFit="cover"
-                    width="100%"
-                    height="100%"
                     alt="cover"
                     src={`/release-notes/covers/${frontmatter?.cover}`}
                   />
@@ -97,21 +103,9 @@ const Posts = ({ posts }) => {
                     </Text>
                   </VStack>
                   <HStack w="100%" justify="space-between" pt={4} pb={8}>
-                    <HStack align="start">
-                      <Avatar
-                        name="Ryan Florence"
-                        src={frontmatter?.userAvatar}
-                        size="sm"
-                      />
-                      <VStack align="start" spacing={0}>
-                        <Text fontSize="sm" fontWeight="bold">
-                          {frontmatter?.author}
-                        </Text>
-                        <Text fontSize="xs" color="gray.500">
-                          {frontmatter?.date}
-                        </Text>
-                      </VStack>
-                    </HStack>
+                    <Text fontSize="md" color="gray.600">
+                      {frontmatter?.date}
+                    </Text>
                   </HStack>
                   {posts.length - 1 !== index && <Divider />}
                 </VStack>
