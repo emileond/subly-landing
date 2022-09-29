@@ -1,0 +1,70 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Subly - Product Updates",
+    "home_page_url": "http://localhost:3000",
+    "feed_url": "http://localhost:3000/rss/feed.json",
+    "description": "Your Blog description",
+    "icon": "http://localhost:3000/favicon.ico",
+    "author": {
+        "name": "Subly",
+        "url": "https://twitter.com/sublyweb"
+    },
+    "items": [
+        {
+            "id": "http://localhost:3000/releases/charts-projects-updates",
+            "url": "http://localhost:3000/releases/charts-projects-updates",
+            "title": "Updates to charts, projects and bug fixes",
+            "summary": "Added a new chart in the home page that shows you a comparison between the current expenses and your last month expenses. This provides a quick an easy way to get some insights on your expenses without leaving the home page.",
+            "date_modified": "2022-07-23T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "http://localhost:3000/releases/dark-mode",
+            "url": "http://localhost:3000/releases/dark-mode",
+            "title": "New dark mode",
+            "summary": "We are excited to announce that Subly now has a dark mode!\nTo activate the dark mode, simply go to settings and select \"dark mode\".",
+            "date_modified": "2022-08-03T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "http://localhost:3000/releases/introducing-projects",
+            "url": "http://localhost:3000/releases/introducing-projects",
+            "title": "Introducing: Projects, List View and more",
+            "summary": "You can now organize your subscriptions by Projects, each project has its own set of reports and statistics",
+            "date_modified": "2022-06-19T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "http://localhost:3000/releases/multi-currency-subscriptions",
+            "url": "http://localhost:3000/releases/multi-currency-subscriptions",
+            "title": "Add subscriptions in your preferred currency",
+            "summary": "Sometimes we have subscriptions in different currencies, and it can make tracking our subscription expenses even more difficult.\nSubly can now help you with this; when you edit or add a subscription, you will be able to select the currency in which it is paid",
+            "date_modified": "2021-11-25T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "http://localhost:3000/releases/notifications-and-ui-improvements",
+            "url": "http://localhost:3000/releases/notifications-and-ui-improvements",
+            "title": "Updates to charts, projects and bug fixes",
+            "summary": "The subscription reminders have been updated, now you can set when you want to receive them",
+            "date_modified": "2022-07-30T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "http://localhost:3000/releases/one-time-payments",
+            "url": "http://localhost:3000/releases/one-time-payments",
+            "title": "One time payments, custom categories and more",
+            "summary": "You can now add services for which you do not pay on a recurring basis. With this feature now you can use Subly to keep track of the software licenses and lifetime deals that you have",
+            "date_modified": "2022-08-25T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "http://localhost:3000/releases/payment-methods",
+            "url": "http://localhost:3000/releases/payment-methods",
+            "title": "Payment Methods",
+            "summary": "Now you can add the payment methods you are using to your subscriptions. This will allow you to get more insightful data in your reports and more ways to organize all of your recurring expenses.",
+            "date_modified": "2022-09-20T00:00:00.000Z",
+            "author": {}
+        }
+    ]
+}

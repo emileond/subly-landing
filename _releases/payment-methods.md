@@ -1,7 +1,7 @@
 ---
 title: 'Payment Methods'
 metaTitle: 'Payment Methods'
-metaDesc: 'At Subly we’re always looking at ways to make your experience better. Here are a few updates you might want to know about:'
+metaDesc: 'Now you can add the payment methods you are using to your subscriptions. This will allow you to get more insightful data in your reports and more ways to organize all of your recurring expenses.'
 author: 'Emilio S'
 date: 'Sep 20, 2022'
 tags:

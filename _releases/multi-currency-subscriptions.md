@@ -1,7 +1,9 @@
 ---
 title: 'Add subscriptions in your preferred currency'
 metaTitle: 'Add subscriptions in your preferred currency'
-metaDesc: 'Track your subscriptions in any currency'
+metaDesc: 'Sometimes we have subscriptions in different currencies, and it can make tracking our subscription expenses even more difficult.
+
+Subly can now help you with this; when you edit or add a subscription, you will be able to select the currency in which it is paid'
 author: 'Emilio S'
 date: 'Nov 25, 2021'
 tags:

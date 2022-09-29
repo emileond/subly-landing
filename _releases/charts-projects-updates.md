@@ -1,7 +1,7 @@
 ---
 title: 'Updates to charts, projects and bug fixes'
 metaTitle: 'Updates to charts, projects and bug fixes'
-metaDesc: 'at Subly we’re always looking at ways to make your experience better. Here are a few updates you might want to know about:'
+metaDesc: 'Added a new chart in the home page that shows you a comparison between the current expenses and your last month expenses. This provides a quick an easy way to get some insights on your expenses without leaving the home page.'
 author: 'Emilio S'
 date: 'Jul 23, 2022'
 tags:

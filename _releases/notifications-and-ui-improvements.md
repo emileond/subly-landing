@@ -1,7 +1,7 @@
 ---
 title: 'Updates to charts, projects and bug fixes'
 metaTitle: 'Updates to charts, projects and bug fixes'
-metaDesc: 'at Subly we’re always looking at ways to make your experience better. Here are a few updates you might want to know about:'
+metaDesc: 'The subscription reminders have been updated, now you can set when you want to receive them'
 author: 'Emilio S'
 date: 'Jul 30, 2022'
 tags:

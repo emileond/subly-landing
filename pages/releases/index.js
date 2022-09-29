@@ -27,6 +27,7 @@ import {
   TabList,
   TabPanel,
 } from '@chakra-ui/react'
+import generateRssFeed from '../../lib/generateRssFeed'
 
 const Posts = ({ posts }) => {
   const tagColor = useColorModeValue('blackAlpha', 'gray')
@@ -133,6 +134,9 @@ export async function getStaticProps() {
       frontmatter,
     }
   })
+
+  await generateRssFeed(posts)
+
   return {
     props: {
       posts,
