@@ -177,6 +177,10 @@ export default function Pricing() {
               </ListItem>
               <ListItem>
                 <ListIcon as={BiCheck} color="green.500" />
+                2FA / MFA <Badge colorScheme="green">Soon</Badge>
+              </ListItem>
+              <ListItem>
+                <ListIcon as={BiCheck} color="green.500" />
                 API Access <Badge colorScheme="green">Soon</Badge>
               </ListItem>
             </List>
