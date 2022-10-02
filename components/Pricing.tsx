@@ -11,18 +11,28 @@ import {
   ListItem,
   ListIcon,
   Button,
+  Badge,
 } from '@chakra-ui/react'
-import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa'
+import {
+  BiArrowToRight,
+  BiCheck,
+  BiRightArrow,
+  BiRightArrowAlt,
+  BiX,
+} from 'react-icons/bi'
 
 function PriceWrapper({ children }: { children: ReactNode }) {
   return (
     <Box
-      mb={4}
+      textAlign="left"
+      py={0}
+      overflow="hidden"
+      maxW="360px"
       shadow="base"
       borderWidth="1px"
       alignSelf={{ base: 'center', lg: 'flex-start' }}
       borderColor={useColorModeValue('gray.200', 'gray.500')}
-      borderRadius={'xl'}
+      borderRadius={'lg'}
     >
       {children}
     </Box>
@@ -31,16 +41,13 @@ function PriceWrapper({ children }: { children: ReactNode }) {
 
 export default function Pricing() {
   return (
-    <Box pt="6rem" pb="4rem" bg="#F1F5F9" id="pricing">
+    <VStack pt="6rem" pb="4rem" bg="#F1F5F9" id="pricing">
       <VStack spacing={3} textAlign="center">
         <Heading as="h1" fontSize="4xl" mb={1}>
           Simplified Pricing
         </Heading>
         <Text fontSize="lg" color={'gray.500'}>
-          Subly Free is recommended for personal use.
-          <br />
-          If you manage more than 10 subscriptions or have multiple projects,
-          Subly Pro is for you.
+          Pay once a year, cancel anytime
         </Text>
       </VStack>
       <Stack
@@ -51,52 +58,58 @@ export default function Pricing() {
         py={10}
       >
         <PriceWrapper>
-          <Box py={4} px={12}>
-            <Text fontWeight="500" fontSize="2xl">
-              Free
-            </Text>
-            <HStack justifyContent="center">
+          <VStack pt={8} pb={4} px={12}>
+            <VStack align="start">
+              <Heading>Basic</Heading>
+              <Text>Recommended for personal use</Text>
+            </VStack>
+            <HStack align="center">
               <Text fontSize="3xl" fontWeight="600">
                 $
               </Text>
               <Text fontSize="5xl" fontWeight="900">
                 0
               </Text>
-              <Text fontSize="3xl" color="gray.500">
+              <Text fontSize="2xl" color="gray.600">
                 forever
               </Text>
             </HStack>
-          </Box>
+          </VStack>
           <VStack
             bg={useColorModeValue('gray.50', 'gray.700')}
             py={4}
             borderBottomRadius={'xl'}
           >
-            <List spacing={3} textAlign="start" px={12}>
+            <List spacing={3} textAlign="start" px={12} fontSize="lg">
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
+                <ListIcon as={BiCheck} color="green.500" />
                 10 subscriptions
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                10 Payment alerts
+                <ListIcon as={BiCheck} color="green.500" />
+                Payment alerts
               </ListItem>
               <ListItem>
-                <ListIcon as={FaTimesCircle} color="gray.500" />
+                <ListIcon as={BiCheck} color="green.500" />
+                Email Support 3-5 days
+              </ListItem>
+              <ListItem>
+                <ListIcon as={BiX} color="gray.500" />
                 Ad-free experience
               </ListItem>
               <ListItem>
-                <ListIcon as={FaTimesCircle} color="gray.500" />
+                <ListIcon as={BiX} color="gray.500" />
                 Projects
               </ListItem>
               <ListItem>
-                <ListIcon as={FaTimesCircle} color="gray.500" />
+                <ListIcon as={BiX} color="gray.500" />
                 Integrations
               </ListItem>
             </List>
             <Box w="80%" pt={7}>
               <Button
                 as="a"
+                size="lg"
                 rounded="full"
                 w="full"
                 colorScheme="grey"
@@ -108,90 +121,20 @@ export default function Pricing() {
             </Box>
           </VStack>
         </PriceWrapper>
-
         <PriceWrapper>
-          <Box position="relative">
-            <Box
-              position="absolute"
-              top="-16px"
-              left="50%"
-              style={{ transform: 'translate(-50%)' }}
-            >
-              <Text
-                textTransform="uppercase"
-                bg={useColorModeValue('yellow.400', 'yellow.700')}
-                px={3}
-                py={1}
-                color={useColorModeValue('gray.900', 'gray.300')}
-                fontSize="sm"
-                fontWeight="600"
-                rounded="xl"
-              >
-                ALL FEATURES
-              </Text>
-            </Box>
-            <Box py={4} px={12}>
-              <Text fontWeight="500" fontSize="2xl">
-                Pro
-              </Text>
-              <HStack justifyContent="center">
-                <Text fontSize="3xl" fontWeight="600">
-                  $
-                </Text>
-                <Text fontSize="5xl" fontWeight="900">
-                  29
-                </Text>
-                <Text fontSize="3xl" color="gray.500">
-                  /year
-                </Text>
+          <VStack
+            pt={8}
+            pb={4}
+            px={12}
+            bgGradient="linear(to-r, #8E2DE2, #4A00E0)"
+            color="white"
+          >
+            <VStack align="start">
+              <HStack align="center">
+                <Heading>Pro</Heading>
               </HStack>
-            </Box>
-            <VStack
-              bg={useColorModeValue('gray.50', 'gray.700')}
-              py={4}
-              borderBottomRadius={'xl'}
-            >
-              <List spacing={3} textAlign="start" px={12}>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  100 subscriptions
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  100 Payment alerts
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  Ad-free experience
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  Unlimited Projects
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  Integrations
-                </ListItem>
-              </List>
-              <Box w="80%" pt={7}>
-                <Button
-                  as="a"
-                  rounded="full"
-                  w="full"
-                  colorScheme="orange"
-                  href="https://web.subly.app/signup"
-                >
-                  Get started with Pro
-                </Button>
-              </Box>
+              <Text>Best for individuals with multiple projects and SMBs</Text>
             </VStack>
-          </Box>
-        </PriceWrapper>
-        {/* <PriceWrapper>
-          <Box py={4} px={12}>
-            <Text fontWeight="500" fontSize="2xl">
-              Enterprise
-            </Text>
             <HStack justifyContent="center">
               <Text fontSize="3xl" fontWeight="600">
                 $
@@ -199,38 +142,71 @@ export default function Pricing() {
               <Text fontSize="5xl" fontWeight="900">
                 29
               </Text>
-              <Text fontSize="3xl" color="gray.500">
-                /month
-              </Text>
+              <Text fontSize="2xl">/ year</Text>
             </HStack>
-          </Box>
+          </VStack>
           <VStack
             bg={useColorModeValue('gray.50', 'gray.700')}
             py={4}
             borderBottomRadius={'xl'}
           >
-            <List spacing={3} textAlign="start" px={12}>
+            <List spacing={3} textAlign="start" px={12} fontSize="lg">
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                unlimited build minutes
+                <ListIcon as={BiCheck} color="green.500" />
+                Unlimited subscriptions
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Lorem, ipsum dolor.
+                <ListIcon as={BiCheck} color="green.500" />
+                Payment alerts
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                5TB Lorem, ipsum dolor.
+                <ListIcon as={BiCheck} color="green.500" />
+                Email Support 1-2 days
+              </ListItem>
+              <ListItem>
+                <ListIcon as={BiCheck} color="green.500" />
+                Ad-free experience
+              </ListItem>
+              <ListItem>
+                <ListIcon as={BiCheck} color="green.500" />
+                Projects
+              </ListItem>
+              <ListItem>
+                <ListIcon as={BiCheck} color="green.500" />
+                Integrations
+              </ListItem>
+              <ListItem>
+                <ListIcon as={BiCheck} color="green.500" />
+                API Access <Badge colorScheme="green">Soon</Badge>
               </ListItem>
             </List>
             <Box w="80%" pt={7}>
-              <Button w="full" colorScheme="red" variant="outline">
-                Start trial
+              <Button
+                size="lg"
+                as="a"
+                rounded="full"
+                w="full"
+                colorScheme="purple"
+                bg="#4A00E0"
+                href="https://web.subly.app/signup"
+              >
+                Get started with Pro
               </Button>
             </Box>
           </VStack>
-        </PriceWrapper> */}
+        </PriceWrapper>
       </Stack>
-    </Box>
+      {/* <Box>
+        <Button
+          as="a"
+          href="/pricing"
+          variant="link"
+          colorScheme="blue"
+          rightIcon={<BiRightArrowAlt />}
+        >
+          Compare all features
+        </Button>
+      </Box> */}
+    </VStack>
   )
 }
