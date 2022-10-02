@@ -83,7 +83,7 @@ export default function Pricing() {
             <List spacing={3} textAlign="start" px={12} fontSize="lg">
               <ListItem>
                 <ListIcon as={BiCheck} color="green.500" />
-                10 subscriptions
+                Track 10 subscriptions
               </ListItem>
               <ListItem>
                 <ListIcon as={BiCheck} color="green.500" />
@@ -153,7 +153,7 @@ export default function Pricing() {
             <List spacing={3} textAlign="start" px={12} fontSize="lg">
               <ListItem>
                 <ListIcon as={BiCheck} color="green.500" />
-                Unlimited subscriptions
+                Track 100 subscriptions
               </ListItem>
               <ListItem>
                 <ListIcon as={BiCheck} color="green.500" />
@@ -161,7 +161,7 @@ export default function Pricing() {
               </ListItem>
               <ListItem>
                 <ListIcon as={BiCheck} color="green.500" />
-                Email Support 1-2 days
+                Priority Support
               </ListItem>
               <ListItem>
                 <ListIcon as={BiCheck} color="green.500" />
@@ -177,11 +177,11 @@ export default function Pricing() {
               </ListItem>
               <ListItem>
                 <ListIcon as={BiCheck} color="green.500" />
-                2FA / MFA <Badge colorScheme="green">Soon</Badge>
+                API Access <Badge colorScheme="green">Soon</Badge>
               </ListItem>
               <ListItem>
                 <ListIcon as={BiCheck} color="green.500" />
-                API Access <Badge colorScheme="green">Soon</Badge>
+                2FA / MFA <Badge colorScheme="green">Soon</Badge>
               </ListItem>
             </List>
             <Box w="80%" pt={7}>
