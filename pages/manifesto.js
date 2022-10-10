@@ -1,12 +1,10 @@
 import Head from 'next/head'
-// import Image from 'next/image'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 
 import { Box, Flex, Heading, Image, VStack, Text } from '@chakra-ui/react'
 
 export default function Home() {
-  const iframePath = 'https://www.buymeacoffee.com/widget/page/emiliosanchez'
   return (
     <div>
       <Head>
