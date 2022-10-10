@@ -7,14 +7,13 @@ import {
   Stack,
   Text,
   Image,
-  Flex,
-  Tag,
   useColorModeValue,
   HStack,
   VStack,
   Heading,
   IconButton,
 } from '@chakra-ui/react'
+import Link from 'next/link'
 import { FaTwitter } from 'react-icons/fa'
 import { SiBuymeacoffee } from 'react-icons/si'
 
@@ -150,40 +149,24 @@ export default function LargeWithLogoCentered() {
             >
               Status
             </Button>
-            {/* <Box
-              as="a"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.buymeacoffee.com/emiliosanchez"
-            >
-              <Image maxW="80%" src="./bmac-yellow.png" alt="Buy me a coffee" />
-            </Box> */}
-            {/* <Stack direction={'row'} align={'center'} spacing={2}>
-              <Link href={'#'}>Donate</Link>
-              <Tag
-                size={'sm'}
-                bg={useColorModeValue('green.300', 'green.800')}
-                ml={2}
-                color={'white'}
-              >
-                New
-              </Tag>
-            </Stack> */}
           </Stack>
           <Stack>
             <Heading size="md">Legal</Heading>
-            <Button
-              as="a"
-              href="https://audaxly.com/privacy-policy?code=kvrat5atan8jj7"
-              variant="link"
-              target="_blank"
-              rel="noopener noreferrer"
-              fontWeight="400"
-              colorScheme="black"
-              justifyContent="start"
-            >
-              Terms & Privacy Policy
-            </Button>
+            <Link href="/legal/privacy-policy#intro">
+              <Text cursor="pointer" _hover={{ textDecor: 'underline' }}>
+                Privacy Policy
+              </Text>
+            </Link>
+            <Link href="/legal/terms#intro">
+              <Text cursor="pointer" _hover={{ textDecor: 'underline' }}>
+                Terms of Service
+              </Text>
+            </Link>
+            <Link href="/legal/cookie-policy#intro">
+              <Text cursor="pointer" _hover={{ textDecor: 'underline' }}>
+                Cookie Policy
+              </Text>
+            </Link>
           </Stack>
         </SimpleGrid>
       </Container>

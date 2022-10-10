@@ -13,13 +13,7 @@ import {
   Button,
   Badge,
 } from '@chakra-ui/react'
-import {
-  BiArrowToRight,
-  BiCheck,
-  BiRightArrow,
-  BiRightArrowAlt,
-  BiX,
-} from 'react-icons/bi'
+import { BiCheck, BiRightArrowAlt, BiX } from 'react-icons/bi'
 
 function PriceWrapper({ children }: { children: ReactNode }) {
   return (
@@ -200,17 +194,17 @@ export default function Pricing() {
           </VStack>
         </PriceWrapper>
       </Stack>
-      {/* <Box>
+      <Box>
         <Button
           as="a"
-          href="/pricing"
+          href="/pricing#comparison"
           variant="link"
           colorScheme="blue"
           rightIcon={<BiRightArrowAlt />}
         >
           Compare all features
         </Button>
-      </Box> */}
+      </Box>
     </VStack>
   )
 }
