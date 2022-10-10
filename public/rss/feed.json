@@ -43,6 +43,14 @@
             "author": {}
         },
         {
+            "id": "http://localhost:3000/releases/multiple-alerts",
+            "url": "http://localhost:3000/releases/multiple-alerts",
+            "title": "Multiple alerts, spending projection and upcoming payments",
+            "summary": "Now you can add the payment methods you are using to your subscriptions. This will allow you to get more insightful data in your reports and more ways to organize all of your recurring expenses.",
+            "date_modified": "2022-10-10T00:00:00.000Z",
+            "author": {}
+        },
+        {
             "id": "http://localhost:3000/releases/notifications-and-ui-improvements",
             "url": "http://localhost:3000/releases/notifications-and-ui-improvements",
             "title": "Updates to charts, projects and bug fixes",

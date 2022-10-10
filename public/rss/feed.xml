@@ -4,7 +4,7 @@
         <title>Subly - Product Updates</title>
         <link>http://localhost:3000</link>
         <description>Your Blog description</description>
-        <lastBuildDate>Thu, 29 Sep 2022 02:53:41 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 10 Oct 2022 23:24:28 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -42,6 +42,13 @@ To activate the dark mode, simply go to settings and select "dark mode".]]></des
             <pubDate>Thu, 25 Nov 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Sometimes we have subscriptions in different currencies, and it can make tracking our subscription expenses even more difficult.
 Subly can now help you with this; when you edit or add a subscription, you will be able to select the currency in which it is paid]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Multiple alerts, spending projection and upcoming payments]]></title>
+            <link>http://localhost:3000/releases/multiple-alerts</link>
+            <guid>http://localhost:3000/releases/multiple-alerts</guid>
+            <pubDate>Mon, 10 Oct 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Now you can add the payment methods you are using to your subscriptions. This will allow you to get more insightful data in your reports and more ways to organize all of your recurring expenses.]]></description>
         </item>
         <item>
             <title><![CDATA[Updates to charts, projects and bug fixes]]></title>
