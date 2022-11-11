@@ -29,7 +29,7 @@ export default function Home() {
       </Head>
       <Nav />
       <Pricing />
-      <Box id="comparison" maxW="3xl" m="0 auto" py={20} px={2}>
+      {/* <Box id="comparison" maxW="3xl" m="0 auto" py={20} px={2}>
         <HStack
           w="100%"
           justify="space-between"
@@ -316,7 +316,7 @@ export default function Home() {
           </HStack>
           <Divider />
         </VStack>
-      </Box>
+      </Box> */}
       <Footer />
     </div>
   )

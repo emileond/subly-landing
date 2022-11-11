@@ -194,7 +194,7 @@ export default function Pricing() {
           </VStack>
         </PriceWrapper>
       </Stack>
-      <Box>
+      {/* <Box>
         <Button
           as="a"
           href="/pricing#comparison"
@@ -204,7 +204,7 @@ export default function Pricing() {
         >
           Compare all features
         </Button>
-      </Box>
+      </Box> */}
     </VStack>
   )
 }
