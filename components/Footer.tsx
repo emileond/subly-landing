@@ -111,7 +111,7 @@ export default function LargeWithLogoCentered() {
             <Heading size="md">Product</Heading>
             <Button
               as="a"
-              href="https://subly.app/releases"
+              href="/releases"
               variant="link"
               fontWeight="400"
               colorScheme="black"

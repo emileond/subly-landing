@@ -1,6 +1,6 @@
 ---
 title: 'Multiple alerts, spending projection and upcoming payments'
-metaTitle: 'Payment Methods'
+metaTitle: 'Multiple alerts, spending projection and upcoming payments'
 metaDesc: 'Now you can add the payment methods you are using to your subscriptions. This will allow you to get more insightful data in your reports and more ways to organize all of your recurring expenses.'
 author: 'Emilio S'
 date: 'Oct 10, 2022'
