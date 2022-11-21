@@ -116,11 +116,22 @@ export default function Pricing() {
           </VStack>
         </PriceWrapper>
         <PriceWrapper>
+          <Box
+            bg="linear-gradient(179.4deg, rgb(12, 20, 69) -16.9%, rgb(71, 30, 84) 119.9%)"
+            color="white"
+            textAlign="center"
+            p={3}
+          >
+            <Heading size="sm">
+              Limited time offer: <Badge colorScheme="red">50% off</Badge>
+            </Heading>
+          </Box>
           <VStack
             pt={8}
             pb={4}
             px={12}
-            bgGradient="linear(to-r, #8E2DE2, #4A00E0)"
+            // bgGradient="linear(to-r, #8E2DE2, #4A00E0)"
+            bg="radial-gradient(circle at 10% 20%, rgb(251, 106, 12) 0%, rgb(193, 11, 135) 97.4%)"
             color="white"
           >
             <VStack align="start">
@@ -129,14 +140,21 @@ export default function Pricing() {
               </HStack>
               <Text>Best for individuals with multiple projects and SMBs</Text>
             </VStack>
-            <HStack justifyContent="center">
-              <Text fontSize="3xl" fontWeight="600">
-                $
-              </Text>
-              <Text fontSize="5xl" fontWeight="900">
-                29
-              </Text>
-              <Text fontSize="2xl">/ year</Text>
+            <HStack align="center" justify="space-around" w="100%">
+              <HStack justifyContent="center" textDecor="line-through">
+                <Text fontSize="4xl" fontWeight="600">
+                  $ 39
+                </Text>
+              </HStack>
+              <HStack justifyContent="center">
+                <Text fontSize="3xl" fontWeight="600">
+                  $
+                </Text>
+                <Text fontSize="5xl" fontWeight="900">
+                  19
+                </Text>
+                <Text fontSize="2xl">/ year</Text>
+              </HStack>
             </HStack>
           </VStack>
           <VStack
@@ -147,7 +165,7 @@ export default function Pricing() {
             <List spacing={3} textAlign="start" px={12} fontSize="lg">
               <ListItem>
                 <ListIcon as={BiCheck} color="green.500" />
-                Track 100 subscriptions
+                Unlimited subscriptions
               </ListItem>
               <ListItem>
                 <ListIcon as={BiCheck} color="green.500" />
@@ -185,7 +203,8 @@ export default function Pricing() {
                 rounded="full"
                 w="full"
                 colorScheme="purple"
-                bg="#4A00E0"
+                // bg="#4A00E0"
+                bg="radial-gradient(circle at 10% 20%, rgb(251, 106, 12) 0%, rgb(193, 11, 135) 97.4%)"
                 href="https://web.subly.app/signup"
               >
                 Get started with Pro

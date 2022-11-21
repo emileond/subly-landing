@@ -8,6 +8,7 @@ import FAQ from '../components/FAQ'
 import Footer from '../components/Footer'
 import Pricing from '../components/Pricing'
 import { Box } from '@chakra-ui/react'
+import AnnouncementBanner from '../components/AnnouncementBanner'
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <AnnouncementBanner />
       <Nav />
       <Hero />
       <FeatureBig
