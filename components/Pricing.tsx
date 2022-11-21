@@ -165,11 +165,12 @@ export default function Pricing() {
             <List spacing={3} textAlign="start" px={12} fontSize="lg">
               <ListItem>
                 <ListIcon as={BiCheck} color="green.500" />
-                Unlimited subscriptions
+                <Text as="span" fontWeight="bold">
+                  Unlimited Subscriptions
+                </Text>
               </ListItem>
               <ListItem>
-                <ListIcon as={BiCheck} color="green.500" />
-                Payment alerts
+                <ListIcon as={BiCheck} color="green.500" />3 team members
               </ListItem>
               <ListItem>
                 <ListIcon as={BiCheck} color="green.500" />
