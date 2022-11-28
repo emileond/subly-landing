@@ -75,6 +75,14 @@
             "author": {}
         },
         {
+            "id": "http://localhost:3000/releases/teams-budgets",
+            "url": "http://localhost:3000/releases/teams-budgets",
+            "title": "Invite team members and set project budgets",
+            "summary": "Introducing our telegram integration and the new calendar view to visualize subscriptions",
+            "date_modified": "2022-11-28T00:00:00.000Z",
+            "author": {}
+        },
+        {
             "id": "http://localhost:3000/releases/telegram-integration",
             "url": "http://localhost:3000/releases/telegram-integration",
             "title": "Telegram integration & calendar view",

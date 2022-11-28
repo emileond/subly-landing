@@ -4,7 +4,7 @@
         <title>Subly - Product Updates</title>
         <link>http://localhost:3000</link>
         <description>Your Blog description</description>
-        <lastBuildDate>Sat, 12 Nov 2022 19:06:21 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 28 Nov 2022 20:24:06 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -70,6 +70,13 @@ Subly can now help you with this; when you edit or add a subscription, you will 
             <guid>http://localhost:3000/releases/payment-methods</guid>
             <pubDate>Tue, 20 Sep 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Now you can add the payment methods you are using to your subscriptions. This will allow you to get more insightful data in your reports and more ways to organize all of your recurring expenses.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Invite team members and set project budgets]]></title>
+            <link>http://localhost:3000/releases/teams-budgets</link>
+            <guid>http://localhost:3000/releases/teams-budgets</guid>
+            <pubDate>Mon, 28 Nov 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Introducing our telegram integration and the new calendar view to visualize subscriptions]]></description>
         </item>
         <item>
             <title><![CDATA[Telegram integration & calendar view]]></title>
