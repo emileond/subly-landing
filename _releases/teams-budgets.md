@@ -1,7 +1,7 @@
 ---
-title: 'Invite team members and set project budgets'
-metaTitle: 'Invite team members and set project budgets'
-metaDesc: 'Introducing our telegram integration and the new calendar view to visualize subscriptions'
+title: 'Introducing: Team members and project budgets'
+metaTitle: 'Introducing: Team members and project budgets'
+metaDesc: 'Invite team members to join your Subly workspace'
 author: 'Emilio S'
 date: 'Nov 28, 2022'
 tags:
