@@ -116,7 +116,7 @@ export default function Pricing() {
           </VStack>
         </PriceWrapper>
         <PriceWrapper>
-          <Box
+          {/* <Box
             bg="linear-gradient(179.4deg, rgb(12, 20, 69) -16.9%, rgb(71, 30, 84) 119.9%)"
             color="white"
             textAlign="center"
@@ -125,13 +125,13 @@ export default function Pricing() {
             <Heading size="sm">
               Limited time offer: <Badge colorScheme="red">50% off</Badge>
             </Heading>
-          </Box>
+          </Box> */}
           <VStack
             pt={8}
             pb={4}
             px={12}
-            // bgGradient="linear(to-r, #8E2DE2, #4A00E0)"
-            bg="radial-gradient(circle at 10% 20%, rgb(251, 106, 12) 0%, rgb(193, 11, 135) 97.4%)"
+            // bg="radial-gradient(circle at 10% 20%, rgb(251, 106, 12) 0%, rgb(193, 11, 135) 97.4%)"
+            bgGradient="linear(to-r, #8E2DE2, #4A00E0)"
             color="white"
           >
             <VStack align="start">
@@ -140,21 +140,14 @@ export default function Pricing() {
               </HStack>
               <Text>Best for individuals with multiple projects and SMBs</Text>
             </VStack>
-            <HStack align="center" justify="space-around" w="100%">
-              <HStack justifyContent="center" textDecor="line-through">
-                <Text fontSize="4xl" fontWeight="600">
-                  $ 39
-                </Text>
-              </HStack>
-              <HStack justifyContent="center">
-                <Text fontSize="3xl" fontWeight="600">
-                  $
-                </Text>
-                <Text fontSize="5xl" fontWeight="900">
-                  19
-                </Text>
-                <Text fontSize="2xl">/ year</Text>
-              </HStack>
+            <HStack justifyContent="center">
+              <Text fontSize="3xl" fontWeight="600">
+                $
+              </Text>
+              <Text fontSize="5xl" fontWeight="900">
+                39
+              </Text>
+              <Text fontSize="2xl">/ year</Text>
             </HStack>
           </VStack>
           <VStack
@@ -204,8 +197,9 @@ export default function Pricing() {
                 rounded="full"
                 w="full"
                 colorScheme="purple"
-                // bg="#4A00E0"
-                bg="radial-gradient(circle at 10% 20%, rgb(251, 106, 12) 0%, rgb(193, 11, 135) 97.4%)"
+                // bg="radial-gradient(circle at 10% 20%, rgb(251, 106, 12) 0%, rgb(193, 11, 135) 97.4%)"
+                bg="linear-gradient(
+                  45deg,#8E2DE2,#4A00E0)"
                 href="https://web.subly.app/signup"
               >
                 Get started with Pro
