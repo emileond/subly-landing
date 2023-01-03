@@ -26,6 +26,14 @@
             "author": {}
         },
         {
+            "id": "undefined/releases/discord-integration",
+            "url": "undefined/releases/discord-integration",
+            "title": "Discord integration",
+            "summary": "Connect your Discord server to Subly to receive payment reminders and never miss a payment.",
+            "date_modified": "2023-01-01T00:00:00.000Z",
+            "author": {}
+        },
+        {
             "id": "undefined/releases/introducing-projects",
             "url": "undefined/releases/introducing-projects",
             "title": "Introducing: Projects, List View and more",

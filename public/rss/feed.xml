@@ -4,7 +4,7 @@
         <title>Subly - Product Updates</title>
         <link>undefined</link>
         <description>Your Blog description</description>
-        <lastBuildDate>Tue, 03 Jan 2023 03:41:37 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 03 Jan 2023 03:53:18 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -27,6 +27,13 @@
             <pubDate>Wed, 03 Aug 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[We are excited to announce that Subly now has a dark mode!
 To activate the dark mode, simply go to settings and select "dark mode".]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Discord integration]]></title>
+            <link>undefined/releases/discord-integration</link>
+            <guid>undefined/releases/discord-integration</guid>
+            <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Connect your Discord server to Subly to receive payment reminders and never miss a payment.]]></description>
         </item>
         <item>
             <title><![CDATA[Introducing: Projects, List View and more]]></title>
