@@ -9,8 +9,6 @@ tags:
 cover: '23-01-01.png'
 ---
 
-## Telegram integration
-
 We are thrilled to announce a new integration with Discord that allows our users to receive payment reminders on their preferred Discord channel. With this integration, you'll never miss a payment again.
 
 To set up the integration, simply navigate to the **Integrations** section in the **Settings** page. Then, enable the Discord integration and paste the **channel webhook provided by Discord** where you want to receive alerts . It's that easy!
