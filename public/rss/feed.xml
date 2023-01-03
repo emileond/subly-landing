@@ -2,86 +2,100 @@
 <rss version="2.0">
     <channel>
         <title>Subly - Product Updates</title>
-        <link>http://localhost:3000</link>
+        <link>undefined</link>
         <description>Your Blog description</description>
-        <lastBuildDate>Mon, 28 Nov 2022 20:24:06 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 03 Jan 2023 03:41:37 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
             <title>Subly - Product Updates</title>
-            <url>http://localhost:3000/favicon.ico</url>
-            <link>http://localhost:3000</link>
+            <url>undefined/favicon.ico</url>
+            <link>undefined</link>
         </image>
-        <copyright>All rights reserved 2022, Subly</copyright>
+        <copyright>All rights reserved 2023, Subly</copyright>
         <item>
             <title><![CDATA[Updates to charts, projects and bug fixes]]></title>
-            <link>http://localhost:3000/releases/charts-projects-updates</link>
-            <guid>http://localhost:3000/releases/charts-projects-updates</guid>
+            <link>undefined/releases/charts-projects-updates</link>
+            <guid>undefined/releases/charts-projects-updates</guid>
             <pubDate>Sat, 23 Jul 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Added a new chart in the home page that shows you a comparison between the current expenses and your last month expenses. This provides a quick an easy way to get some insights on your expenses without leaving the home page.]]></description>
         </item>
         <item>
             <title><![CDATA[New dark mode]]></title>
-            <link>http://localhost:3000/releases/dark-mode</link>
-            <guid>http://localhost:3000/releases/dark-mode</guid>
+            <link>undefined/releases/dark-mode</link>
+            <guid>undefined/releases/dark-mode</guid>
             <pubDate>Wed, 03 Aug 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[We are excited to announce that Subly now has a dark mode!
 To activate the dark mode, simply go to settings and select "dark mode".]]></description>
         </item>
         <item>
             <title><![CDATA[Introducing: Projects, List View and more]]></title>
-            <link>http://localhost:3000/releases/introducing-projects</link>
-            <guid>http://localhost:3000/releases/introducing-projects</guid>
+            <link>undefined/releases/introducing-projects</link>
+            <guid>undefined/releases/introducing-projects</guid>
             <pubDate>Sun, 19 Jun 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[You can now organize your subscriptions by Projects, each project has its own set of reports and statistics]]></description>
         </item>
         <item>
             <title><![CDATA[Add subscriptions in your preferred currency]]></title>
-            <link>http://localhost:3000/releases/multi-currency-subscriptions</link>
-            <guid>http://localhost:3000/releases/multi-currency-subscriptions</guid>
+            <link>undefined/releases/multi-currency-subscriptions</link>
+            <guid>undefined/releases/multi-currency-subscriptions</guid>
             <pubDate>Thu, 25 Nov 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Sometimes we have subscriptions in different currencies, and it can make tracking our subscription expenses even more difficult.
 Subly can now help you with this; when you edit or add a subscription, you will be able to select the currency in which it is paid]]></description>
         </item>
         <item>
             <title><![CDATA[Multiple alerts, spending projection and upcoming payments]]></title>
-            <link>http://localhost:3000/releases/multiple-alerts</link>
-            <guid>http://localhost:3000/releases/multiple-alerts</guid>
+            <link>undefined/releases/multiple-alerts</link>
+            <guid>undefined/releases/multiple-alerts</guid>
             <pubDate>Mon, 10 Oct 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Now you can add the payment methods you are using to your subscriptions. This will allow you to get more insightful data in your reports and more ways to organize all of your recurring expenses.]]></description>
         </item>
         <item>
             <title><![CDATA[Updates to charts, projects and bug fixes]]></title>
-            <link>http://localhost:3000/releases/notifications-and-ui-improvements</link>
-            <guid>http://localhost:3000/releases/notifications-and-ui-improvements</guid>
+            <link>undefined/releases/notifications-and-ui-improvements</link>
+            <guid>undefined/releases/notifications-and-ui-improvements</guid>
             <pubDate>Sat, 30 Jul 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[The subscription reminders have been updated, now you can set when you want to receive them]]></description>
         </item>
         <item>
             <title><![CDATA[One time payments, custom categories and more]]></title>
-            <link>http://localhost:3000/releases/one-time-payments</link>
-            <guid>http://localhost:3000/releases/one-time-payments</guid>
+            <link>undefined/releases/one-time-payments</link>
+            <guid>undefined/releases/one-time-payments</guid>
             <pubDate>Thu, 25 Aug 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[You can now add services for which you do not pay on a recurring basis. With this feature now you can use Subly to keep track of the software licenses and lifetime deals that you have]]></description>
         </item>
         <item>
             <title><![CDATA[Payment Methods]]></title>
-            <link>http://localhost:3000/releases/payment-methods</link>
-            <guid>http://localhost:3000/releases/payment-methods</guid>
+            <link>undefined/releases/payment-methods</link>
+            <guid>undefined/releases/payment-methods</guid>
             <pubDate>Tue, 20 Sep 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Now you can add the payment methods you are using to your subscriptions. This will allow you to get more insightful data in your reports and more ways to organize all of your recurring expenses.]]></description>
         </item>
         <item>
-            <title><![CDATA[Invite team members and set project budgets]]></title>
-            <link>http://localhost:3000/releases/teams-budgets</link>
-            <guid>http://localhost:3000/releases/teams-budgets</guid>
+            <title><![CDATA[Search & custom icons]]></title>
+            <link>undefined/releases/search-custom-icons</link>
+            <guid>undefined/releases/search-custom-icons</guid>
+            <pubDate>Wed, 21 Dec 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[New features make it easier to manage subscriptions with quick search, custom icons, and "add to calendar" button for payment dates.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Slack integration]]></title>
+            <link>undefined/releases/slack-integration</link>
+            <guid>undefined/releases/slack-integration</guid>
+            <pubDate>Sun, 04 Dec 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[We are excited to announce a new integration with Slack! Now, users on paid plans will be able to receive payment reminders on their preferred Slack channel.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Introducing: Team members and project budgets]]></title>
+            <link>undefined/releases/teams-budgets</link>
+            <guid>undefined/releases/teams-budgets</guid>
             <pubDate>Mon, 28 Nov 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[Introducing our telegram integration and the new calendar view to visualize subscriptions]]></description>
+            <description><![CDATA[Invite team members to join your Subly workspace]]></description>
         </item>
         <item>
             <title><![CDATA[Telegram integration & calendar view]]></title>
-            <link>http://localhost:3000/releases/telegram-integration</link>
-            <guid>http://localhost:3000/releases/telegram-integration</guid>
+            <link>undefined/releases/telegram-integration</link>
+            <guid>undefined/releases/telegram-integration</guid>
             <pubDate>Tue, 01 Nov 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Introducing our telegram integration and the new calendar view to visualize subscriptions]]></description>
         </item>
