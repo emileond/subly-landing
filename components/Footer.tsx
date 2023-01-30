@@ -121,6 +121,16 @@ export default function LargeWithLogoCentered() {
             </Button>
             <Button
               as="a"
+              href="/affiliates"
+              variant="link"
+              fontWeight="400"
+              colorScheme="black"
+              justifyContent="start"
+            >
+              Affiliate Program
+            </Button>
+            <Button
+              as="a"
               href="https://roadmap.subly.app"
               variant="link"
               fontWeight="400"

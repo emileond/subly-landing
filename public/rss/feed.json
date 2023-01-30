@@ -26,6 +26,17 @@
             "author": {}
         },
         {
+<<<<<<< HEAD
+=======
+            "id": "undefined/releases/discord-integration",
+            "url": "undefined/releases/discord-integration",
+            "title": "Discord integration",
+            "summary": "Connect your Discord server to Subly to receive payment reminders and never miss a payment.",
+            "date_modified": "2023-01-01T00:00:00.000Z",
+            "author": {}
+        },
+        {
+>>>>>>> 74c490e1bbcf428697a559b3cf783bf2a911d9d3
             "id": "undefined/releases/introducing-projects",
             "url": "undefined/releases/introducing-projects",
             "title": "Introducing: Projects, List View and more",
@@ -74,6 +85,17 @@
             "author": {}
         },
         {
+<<<<<<< HEAD
+=======
+            "id": "undefined/releases/search-custom-icons",
+            "url": "undefined/releases/search-custom-icons",
+            "title": "Search & custom icons",
+            "summary": "New features make it easier to manage subscriptions with quick search, custom icons, and \"add to calendar\" button for payment dates.",
+            "date_modified": "2022-12-21T00:00:00.000Z",
+            "author": {}
+        },
+        {
+>>>>>>> 74c490e1bbcf428697a559b3cf783bf2a911d9d3
             "id": "undefined/releases/slack-integration",
             "url": "undefined/releases/slack-integration",
             "title": "Slack integration",

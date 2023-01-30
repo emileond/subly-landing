@@ -4,7 +4,11 @@
         <title>Subly - Product Updates</title>
         <link>undefined</link>
         <description>Your Blog description</description>
+<<<<<<< HEAD
         <lastBuildDate>Mon, 30 Jan 2023 00:31:52 GMT</lastBuildDate>
+=======
+        <lastBuildDate>Tue, 03 Jan 2023 04:03:11 GMT</lastBuildDate>
+>>>>>>> 74c490e1bbcf428697a559b3cf783bf2a911d9d3
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -27,6 +31,13 @@
             <pubDate>Wed, 03 Aug 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[We are excited to announce that Subly now has a dark mode!
 To activate the dark mode, simply go to settings and select "dark mode".]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Discord integration]]></title>
+            <link>undefined/releases/discord-integration</link>
+            <guid>undefined/releases/discord-integration</guid>
+            <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Connect your Discord server to Subly to receive payment reminders and never miss a payment.]]></description>
         </item>
         <item>
             <title><![CDATA[Introducing: Projects, List View and more]]></title>
@@ -72,6 +83,16 @@ Subly can now help you with this; when you edit or add a subscription, you will 
             <description><![CDATA[Now you can add the payment methods you are using to your subscriptions. This will allow you to get more insightful data in your reports and more ways to organize all of your recurring expenses.]]></description>
         </item>
         <item>
+<<<<<<< HEAD
+=======
+            <title><![CDATA[Search & custom icons]]></title>
+            <link>undefined/releases/search-custom-icons</link>
+            <guid>undefined/releases/search-custom-icons</guid>
+            <pubDate>Wed, 21 Dec 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[New features make it easier to manage subscriptions with quick search, custom icons, and "add to calendar" button for payment dates.]]></description>
+        </item>
+        <item>
+>>>>>>> 74c490e1bbcf428697a559b3cf783bf2a911d9d3
             <title><![CDATA[Slack integration]]></title>
             <link>undefined/releases/slack-integration</link>
             <guid>undefined/releases/slack-integration</guid>

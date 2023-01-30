@@ -28,7 +28,7 @@ export default function PostPage({ frontmatter, content }) {
             variant="link"
             colorScheme="blue"
             leftIcon={<BiArrowBack fontSize="1rem" />}
-            onClick={() => router.back()}
+            onClick={() => router.push('/releases')}
           >
             Back
           </Button>
