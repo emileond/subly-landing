@@ -4,11 +4,7 @@
         <title>Subly - Product Updates</title>
         <link>undefined</link>
         <description>Your Blog description</description>
-<<<<<<< HEAD
-        <lastBuildDate>Mon, 30 Jan 2023 00:31:52 GMT</lastBuildDate>
-=======
-        <lastBuildDate>Tue, 03 Jan 2023 04:03:11 GMT</lastBuildDate>
->>>>>>> 74c490e1bbcf428697a559b3cf783bf2a911d9d3
+        <lastBuildDate>Wed, 15 Mar 2023 18:39:37 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -83,8 +79,6 @@ Subly can now help you with this; when you edit or add a subscription, you will 
             <description><![CDATA[Now you can add the payment methods you are using to your subscriptions. This will allow you to get more insightful data in your reports and more ways to organize all of your recurring expenses.]]></description>
         </item>
         <item>
-<<<<<<< HEAD
-=======
             <title><![CDATA[Search & custom icons]]></title>
             <link>undefined/releases/search-custom-icons</link>
             <guid>undefined/releases/search-custom-icons</guid>
@@ -92,7 +86,6 @@ Subly can now help you with this; when you edit or add a subscription, you will 
             <description><![CDATA[New features make it easier to manage subscriptions with quick search, custom icons, and "add to calendar" button for payment dates.]]></description>
         </item>
         <item>
->>>>>>> 74c490e1bbcf428697a559b3cf783bf2a911d9d3
             <title><![CDATA[Slack integration]]></title>
             <link>undefined/releases/slack-integration</link>
             <guid>undefined/releases/slack-integration</guid>
@@ -112,6 +105,13 @@ Subly can now help you with this; when you edit or add a subscription, you will 
             <guid>undefined/releases/telegram-integration</guid>
             <pubDate>Tue, 01 Nov 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Introducing our telegram integration and the new calendar view to visualize subscriptions]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Two-factor authentication (2FA)]]></title>
+            <link>undefined/releases/two-factor-authentication</link>
+            <guid>undefined/releases/two-factor-authentication</guid>
+            <pubDate>Wed, 15 Mar 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Webhooks allows you to connect Subly to other applications and automate tasks based on events within Subly]]></description>
         </item>
         <item>
             <title><![CDATA[Introducing Webhooks]]></title>

@@ -26,8 +26,6 @@
             "author": {}
         },
         {
-<<<<<<< HEAD
-=======
             "id": "undefined/releases/discord-integration",
             "url": "undefined/releases/discord-integration",
             "title": "Discord integration",
@@ -36,7 +34,6 @@
             "author": {}
         },
         {
->>>>>>> 74c490e1bbcf428697a559b3cf783bf2a911d9d3
             "id": "undefined/releases/introducing-projects",
             "url": "undefined/releases/introducing-projects",
             "title": "Introducing: Projects, List View and more",
@@ -85,8 +82,6 @@
             "author": {}
         },
         {
-<<<<<<< HEAD
-=======
             "id": "undefined/releases/search-custom-icons",
             "url": "undefined/releases/search-custom-icons",
             "title": "Search & custom icons",
@@ -95,7 +90,6 @@
             "author": {}
         },
         {
->>>>>>> 74c490e1bbcf428697a559b3cf783bf2a911d9d3
             "id": "undefined/releases/slack-integration",
             "url": "undefined/releases/slack-integration",
             "title": "Slack integration",
@@ -118,6 +112,13 @@
             "summary": "Introducing our telegram integration and the new calendar view to visualize subscriptions",
             "date_modified": "2022-11-01T00:00:00.000Z",
             "author": {}
+        },
+        {
+            "id": "undefined/releases/two-factor-authentication",
+            "url": "undefined/releases/two-factor-authentication",
+            "title": "Two-factor authentication (2FA)",
+            "summary": "Webhooks allows you to connect Subly to other applications and automate tasks based on events within Subly",
+            "date_modified": "2023-03-15T00:00:00.000Z"
         },
         {
             "id": "undefined/releases/webhooks",
