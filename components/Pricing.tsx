@@ -88,6 +88,10 @@ export default function Pricing() {
                 Email Support 3-5 days
               </ListItem>
               <ListItem>
+                <ListIcon as={BiCheck} color="green.500" />
+                500 Mb Storage
+              </ListItem>
+              <ListItem>
                 <ListIcon as={BiX} color="gray.500" />
                 Ad-free experience
               </ListItem>
@@ -183,11 +187,14 @@ export default function Pricing() {
               </ListItem>
               <ListItem>
                 <ListIcon as={BiCheck} color="green.500" />
-                API Access <Badge colorScheme="green">Soon</Badge>
+                2FA / MFA
+              </ListItem>
+              <ListItem>
+                <ListIcon as={BiCheck} color="green.500" />1 Gb Storage
               </ListItem>
               <ListItem>
                 <ListIcon as={BiCheck} color="green.500" />
-                2FA / MFA <Badge colorScheme="green">Soon</Badge>
+                API Access <Badge colorScheme="green">Soon</Badge>
               </ListItem>
             </List>
             <Box w="80%" pt={7}>

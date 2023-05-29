@@ -1,12 +1,12 @@
 ---
-title: 'Say Hello to Our New and Improved Notes!'
-metaTitle: 'Say Hello to Our New and Improved Notes!'
-metaDesc: 'Experience an upgraded note-taking game on Subly. Format notes related to your subscriptions and recurring expenses with ease and flexibility using the enhanced block-styled notes engine.'
+title: 'Direct File Uploads'
+metaTitle: 'Direct File Uploads'
+metaDesc: 'Now you can directly upload files to subscriptions. Enhance your subscription and recurring expense management by attaching relevant files directly to your subscriptions.'
 author: 'Emilio S'
-date: 'Mar 28, 2023'
+date: 'May 29, 2023'
 tags:
-  - Enhancement
-cover: '23-03-28.png'
+  - New Feature
+cover: '23-05-29.png'
 ---
 
 ## File storage

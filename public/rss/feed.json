@@ -42,6 +42,14 @@
             "author": {}
         },
         {
+            "id": "undefined/releases/file-storage",
+            "url": "undefined/releases/file-storage",
+            "title": "Direct File Uploads",
+            "summary": "Now you can directly upload files to subscriptions. Enhance your subscription and recurring expense management by attaching relevant files directly to your subscriptions.",
+            "date_modified": "2023-05-29T00:00:00.000Z",
+            "author": {}
+        },
+        {
             "id": "undefined/releases/introducing-projects",
             "url": "undefined/releases/introducing-projects",
             "title": "Introducing: Projects, List View and more",
