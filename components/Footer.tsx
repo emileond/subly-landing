@@ -159,6 +159,16 @@ export default function LargeWithLogoCentered() {
             >
               Status
             </Button>
+            <Button
+              as="a"
+              href="/currency-converter"
+              variant="link"
+              fontWeight="400"
+              colorScheme="black"
+              justifyContent="start"
+            >
+              Currency Converter
+            </Button>
           </Stack>
           <Stack>
             <Heading size="md">Legal</Heading>
