@@ -215,8 +215,8 @@ export default function CurrencyConverter() {
             Want to manage multi-currency expenses?
           </Heading>
           <Text fontSize="lg">
-            Subly brings all your business expenses in a single place so you
-            never lose track of what you're paying for.
+            {`Subly brings all your business expenses in a single place so you
+            never lose track of what you're paying for.`}
           </Text>
           <Button
             size="lg"
