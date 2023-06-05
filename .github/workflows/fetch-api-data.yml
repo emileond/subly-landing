@@ -1,7 +1,7 @@
 name: Update Currencies
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: 0 4 * * *
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
