@@ -24,6 +24,7 @@ import {
   useColorModeValue,
   VStack,
   SimpleGrid,
+  Flex,
 } from '@chakra-ui/react'
 import Head from 'next/head'
 import Nav from '../../components/Nav'
@@ -137,80 +138,102 @@ export default function CurrencyConverter() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <Container maxW="4xl" py={12}>
-        <VStack align="start" spacing={4} py={8}>
-          <Heading size="2xl">Currency Converter</Heading>
-          <Text fontSize="lg" color="gray.600">
-            Convert any amount from one currency to another with the latest
-            exchange rates.
-          </Text>
-        </VStack>
-        <Card p={8}>
-          <VStack align="start" spacing={8}>
-            <HStack>
-              <HStack>
-                <NumberInput
-                  value={sourceAmount}
-                  onChange={(value) => handleFirstInputChange(value)}
-                  min={0.01}
-                  max={100000000}
-                  size="lg"
-                >
-                  <NumberInputField />
-                </NumberInput>
-                <Button
-                  size="lg"
-                  onClick={() => handleCurrencyChange(1)}
-                  rightIcon={<BiChevronDown size={21} />}
-                >
-                  <Avatar
-                    src={`/flags/${firstCurrency?.cc.toLowerCase()}.svg`}
-                    size="xs"
-                    mr={2}
-                  />
-                  <Text mr={2}>{firstCurrency?.cc}</Text>
-                </Button>
-              </HStack>
-              <Icon
-                as={BiSortAlt2}
-                transform="rotate(90deg)"
-                fontSize="3xl"
-                color="gray.600"
-              />
-              <HStack>
-                <NumberInput
-                  value={targetAmount}
-                  onChange={(value) => handleSecondInputChange(value)}
-                  min={0.01}
-                  max={100000000}
-                  size="lg"
-                >
-                  <NumberInputField />
-                </NumberInput>
-                <Button
-                  size="lg"
-                  onClick={() => handleCurrencyChange(2)}
-                  rightIcon={<BiChevronDown size={21} />}
-                >
-                  <Avatar
-                    src={`/flags/${secondCurrency?.cc?.toLowerCase()}.svg`}
-                    size="xs"
-                    mr={2}
-                  />
-                  <Text mr={2}>{secondCurrency?.cc}</Text>
-                </Button>
-              </HStack>
-            </HStack>
-            <HStack align="center">
-              <Heading size="sm">Last Updated</Heading>
-              <Text fontSize="sm" color="gray.600">
-                {lastUpdated}
-              </Text>
-            </HStack>
+      <Container maxW="100%" minH="calc(100vh - 64px)" px={0} bg="gray.50">
+        <VStack
+          align="center"
+          py={24}
+          bg="linear-gradient(0deg, #02b2bc 0%, #06bebe 100%)"
+        >
+          <VStack align="center" spacing={4} px={4}>
+            <Heading size="2xl" color="blackAlpha.900">
+              Currency Converter
+            </Heading>
+            <Text fontSize="2xl" color="blackAlpha.800">
+              Convert any currency amount to real exchange rates.
+            </Text>
           </VStack>
-        </Card>
-        <Divider py={8} />
-        <VStack align="center" spacing={4} py={12}>
+          <Box h="8vh" px={4}>
+            <Card
+              p={[4, 4, 8]}
+              boxShadow="2xl"
+              pos="relative"
+              zIndex={1}
+              bottom="-5vh"
+              maxW={['100%', '100%', 'container.lg']}
+            >
+              <VStack align="start" spacing={8}>
+                <Flex
+                  w="100%"
+                  justify="space-between"
+                  align="center"
+                  direction={{ base: 'column', md: 'row' }}
+                >
+                  <HStack>
+                    <NumberInput
+                      value={sourceAmount}
+                      onChange={(value) => handleFirstInputChange(value)}
+                      min={0.01}
+                      max={100000000}
+                      size="lg"
+                    >
+                      <NumberInputField />
+                    </NumberInput>
+                    <Button
+                      size="lg"
+                      onClick={() => handleCurrencyChange(1)}
+                      rightIcon={<BiChevronDown size={21} />}
+                    >
+                      <Avatar
+                        src={`/flags/${firstCurrency?.cc.toLowerCase()}.svg`}
+                        size="xs"
+                        mr={2}
+                      />
+                      <Text mr={2}>{firstCurrency?.cc}</Text>
+                    </Button>
+                  </HStack>
+                  <Box p={4}>
+                    <Icon
+                      as={BiSortAlt2}
+                      transform="rotate(90deg)"
+                      fontSize="3xl"
+                      color="gray.600"
+                    />
+                  </Box>
+                  <HStack>
+                    <NumberInput
+                      value={targetAmount}
+                      onChange={(value) => handleSecondInputChange(value)}
+                      min={0.01}
+                      max={100000000}
+                      size="lg"
+                    >
+                      <NumberInputField />
+                    </NumberInput>
+                    <Button
+                      size="lg"
+                      onClick={() => handleCurrencyChange(2)}
+                      rightIcon={<BiChevronDown size={21} />}
+                    >
+                      <Avatar
+                        src={`/flags/${secondCurrency?.cc?.toLowerCase()}.svg`}
+                        size="xs"
+                        mr={2}
+                      />
+                      <Text mr={2}>{secondCurrency?.cc}</Text>
+                    </Button>
+                  </HStack>
+                </Flex>
+                <HStack align="center">
+                  <Heading size="sm">Last Updated</Heading>
+                  <Text fontSize="sm" color="gray.600">
+                    {lastUpdated}
+                  </Text>
+                </HStack>
+              </VStack>
+            </Card>
+          </Box>
+        </VStack>
+        <VStack align="center" spacing={4} pt="10vh" pb="5vh" px={4}>
           <Heading size="lg" mt={12} mb={4}>
             Want to manage multi-currency expenses?
           </Heading>
@@ -220,16 +243,20 @@ export default function CurrencyConverter() {
           </Text>
           <Button
             size="lg"
-            colorScheme="green"
+            colorScheme="gray"
+            bg="#06BEBE"
             variant="solid"
             as="a"
             href="https://web.subly.app"
+            _hover={{
+              bg: '#06AFBE',
+            }}
           >
             Get Started
           </Button>
         </VStack>
         <Divider py={8} />
-        <VStack align="start" spacing={4} py={8}>
+        <Container maxW="container.lg" align="start" spacing={4} py={12}>
           <Heading size="md">Convert between +100 currencies</Heading>
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
             <HStack spacing={4} py={3}>
@@ -390,7 +417,7 @@ export default function CurrencyConverter() {
               </VStack>
             </HStack>
           </SimpleGrid>
-        </VStack>
+        </Container>
       </Container>
       <Footer />
       <Modal
