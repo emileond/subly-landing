@@ -141,7 +141,8 @@ export default function CurrencyConverter() {
       <Container maxW="100%" minH="calc(100vh - 64px)" px={0} bg="gray.50">
         <VStack
           align="center"
-          py={24}
+          py={[16, 24]}
+          mb={['6vh', '3vh', '0']}
           bg="linear-gradient(0deg, #02b2bc 0%, #06bebe 100%)"
         >
           <VStack align="center" spacing={4} px={4}>
@@ -152,13 +153,13 @@ export default function CurrencyConverter() {
               Convert any currency amount to real exchange rates.
             </Text>
           </VStack>
-          <Box h="8vh" px={4}>
+          <Box h={['4vh', '6vh']} px={4}>
             <Card
               p={[4, 4, 8]}
               boxShadow="2xl"
               pos="relative"
               zIndex={1}
-              bottom="-5vh"
+              bottom={['-2vh', '-3vh', '-6vh']}
               maxW={['100%', '100%', 'container.lg']}
             >
               <VStack align="start" spacing={8}>
@@ -233,7 +234,7 @@ export default function CurrencyConverter() {
             </Card>
           </Box>
         </VStack>
-        <VStack align="center" spacing={4} pt="10vh" pb="5vh" px={4}>
+        <VStack align="center" spacing={4} pt="12vh" pb="4vh" px={4}>
           <Heading size="lg" mt={12} mb={4}>
             Want to manage multi-currency expenses?
           </Heading>
