@@ -1,7 +1,6 @@
 import { currencies } from '../data/currenciesList'
 import { useForm } from 'react-hook-form'
 import {
-  Avatar,
   Box,
   Divider,
   Input,
