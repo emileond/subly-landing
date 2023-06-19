@@ -25,11 +25,12 @@ import {
   VStack,
   SimpleGrid,
   Flex,
+  Stack,
 } from '@chakra-ui/react'
 import Head from 'next/head'
 import Nav from '../../components/Nav'
 import Footer from '../../components/Footer'
-import { BiChevronDown, BiSortAlt2 } from 'react-icons/bi'
+import { BiChart, BiChevronDown, BiSortAlt2, BiTimeFive } from 'react-icons/bi'
 import { amountConversion } from '../../utils/amountConversion'
 import dynamic from 'next/dynamic'
 
@@ -127,6 +128,13 @@ export default function CurrencyConverter() {
     onClose()
   }
 
+  // calculate rate
+  const rate = amountConversion(
+    1,
+    firstCurrency?.cc,
+    secondCurrency?.cc
+  ).toString()
+
   return (
     <Box maxW="100vw">
       <Head>
@@ -162,8 +170,8 @@ export default function CurrencyConverter() {
               bottom={['-2vh', '-3vh', '-6vh']}
               maxW={['100%', '100%', 'container.lg']}
             >
-              <VStack align="start" spacing={8}>
-                <Flex
+              <VStack align="start" spacing={10}>
+                <Stack
                   w="100%"
                   justify="space-between"
                   align="center"
@@ -223,13 +231,35 @@ export default function CurrencyConverter() {
                       <Text mr={2}>{secondCurrency?.cc}</Text>
                     </Button>
                   </HStack>
-                </Flex>
-                <HStack align="center">
-                  <Heading size="sm">Last Updated</Heading>
-                  <Text fontSize="sm" color="gray.600">
-                    {lastUpdated}
-                  </Text>
-                </HStack>
+                </Stack>
+                <Stack
+                  w="100%"
+                  justify="space-between"
+                  direction={{ base: 'column', md: 'row' }}
+                  spacing={4}
+                >
+                  <HStack align="center">
+                    <BiChart size={24} color="#06bebe" />
+                    <Heading size="md" color="gray.700">
+                      {`1 ${firstCurrency?.cc} `}
+                    </Heading>
+                    <Heading size="md" color="gray.500">
+                      =
+                    </Heading>
+                    <Heading size="md" color="gray.700">
+                      {`${rate} ${secondCurrency?.cc}`}
+                    </Heading>
+                  </HStack>
+                  <HStack>
+                    <BiTimeFive size={20} />
+                    <Heading size="xs" color="gray.600">
+                      Last Updated
+                    </Heading>
+                    <Text fontSize="sm" color="gray.600">
+                      {lastUpdated}
+                    </Text>
+                  </HStack>
+                </Stack>
               </VStack>
             </Card>
           </Box>
