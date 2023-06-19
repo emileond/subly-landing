@@ -1,4 +1,4 @@
-import * as currencies from '../data/currencies'
+import { currencies } from '../data/currenciesList'
 import { useForm } from 'react-hook-form'
 import {
   Box,
@@ -37,7 +37,7 @@ const CurrenciesList = ({ selectedCurrency }) => {
   } = useForm()
   const searchQuery = watch('search')
   const filteredData = searchQuery?.length
-    ? currencies.filter((currency) =>
+    ? currencies?.filter((currency) =>
         (currency.name + currency.cc)
           .toLocaleLowerCase()
           .includes(searchQuery?.toLocaleLowerCase())
@@ -67,12 +67,12 @@ const CurrenciesList = ({ selectedCurrency }) => {
       </Box>
       <Divider />
       <List>
-        {filteredData.length ? (
+        {filteredData?.length ? (
           <>
             <Text fontSize="sm" color={tertiaryText} py={1} casing="uppercase">
               Currencies
             </Text>
-            {filteredData.map((currency) => (
+            {filteredData?.map((currency) => (
               <ListItem
                 key={currency.cc}
                 px={4}
@@ -111,7 +111,7 @@ const CurrenciesList = ({ selectedCurrency }) => {
         ) : (
           <>
             <Box py={4} textAlign="center">
-              <Heading>No results found</Heading>
+              <Heading size="sm">No results found</Heading>
             </Box>
           </>
         )}
