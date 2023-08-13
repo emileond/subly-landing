@@ -1,7 +1,7 @@
 name: Update Currencies
 on:
   schedule:
-    - cron: 0,10,20,30,40,50 * * * *
+    - cron: 0 0,12 * * *
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -12,7 +12,7 @@ jobs:
           persist-credentials: false
 
       - name: Request
-        uses: JamesIves/fetch-api-data-action@v2.2.4
+        uses: JamesIves/fetch-api-data-action@v2.2.2
         with:
           endpoint: https://api.currencyapi.com/v3/latest?apikey=WTKRbe0vlotmLhKy4ijCpY5TW86TXGV9J42CT0LC
           save-name: currencies
