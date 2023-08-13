@@ -12,7 +12,7 @@ jobs:
           persist-credentials: false
 
       - name: Request
-        uses: JamesIves/fetch-api-data-action@v2
+        uses: JamesIves/fetch-api-data-action@v2.2.4
         with:
           endpoint: https://api.currencyapi.com/v3/latest?apikey=WTKRbe0vlotmLhKy4ijCpY5TW86TXGV9J42CT0LC
           save-name: currencies
