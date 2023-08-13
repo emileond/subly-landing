@@ -1,4 +1,4 @@
-import { currencies } from '../data/currenciesList'
+import { currencies } from '../lib/currenciesList'
 import { useForm } from 'react-hook-form'
 import {
   Box,
