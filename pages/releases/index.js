@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import fs from 'fs'
 import matter from 'gray-matter'
 import Image from 'next/image'
@@ -7,25 +7,15 @@ import Head from 'next/head'
 import Nav from '../../components/Nav'
 import dayjs from 'dayjs'
 import {
-  Button,
   Container,
   Heading,
   Box,
   HStack,
   VStack,
-  Stack,
   Text,
-  Icon,
   Tag,
   Divider,
-  Avatar,
-  AvatarGroup,
   useColorModeValue,
-  Tabs,
-  Tab,
-  TabPanels,
-  TabList,
-  TabPanel,
 } from '@chakra-ui/react'
 import generateRssFeed from '../../lib/generateRssFeed'
 

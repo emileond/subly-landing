@@ -1,146 +1,173 @@
 {
     "version": "https://jsonfeed.org/version/1",
     "title": "Subly - Product Updates",
-    "feed_url": "undefined/rss/feed.json",
+    "home_page_url": "http://localhost:3000",
+    "feed_url": "http://localhost:3000/rss/feed.json",
     "description": "Your Blog description",
-    "icon": "undefined/favicon.ico",
+    "icon": "http://localhost:3000/favicon.ico",
     "author": {
         "name": "Subly",
         "url": "https://twitter.com/sublyweb"
     },
     "items": [
         {
-            "id": "undefined/releases/charts-projects-updates",
-            "url": "undefined/releases/charts-projects-updates",
+            "id": "http://localhost:3000/releases/bulk-actions",
+            "url": "http://localhost:3000/releases/bulk-actions",
+            "title": "Introducing Bulk Actions",
+            "summary": "Gone are the days of updating, editing, or deleting your subscriptions one by one. With our new Bulk Actions feature, you can now perform various actions on multiple subscriptions all at once.",
+            "image": "http://localhost:3000/release-notes/covers/23-09-04.png",
+            "date_modified": "2023-09-04T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "http://localhost:3000/releases/charts-projects-updates",
+            "url": "http://localhost:3000/releases/charts-projects-updates",
             "title": "Updates to charts, projects and bug fixes",
             "summary": "Added a new chart in the home page that shows you a comparison between the current expenses and your last month expenses. This provides a quick an easy way to get some insights on your expenses without leaving the home page.",
+            "image": "http://localhost:3000/release-notes/covers/07-23-22.png",
             "date_modified": "2022-07-23T00:00:00.000Z",
             "author": {}
         },
         {
-            "id": "undefined/releases/dark-mode",
-            "url": "undefined/releases/dark-mode",
+            "id": "http://localhost:3000/releases/dark-mode",
+            "url": "http://localhost:3000/releases/dark-mode",
             "title": "New dark mode",
             "summary": "We are excited to announce that Subly now has a dark mode!\nTo activate the dark mode, simply go to settings and select \"dark mode\".",
+            "image": "http://localhost:3000/release-notes/covers/08-03-22.png",
             "date_modified": "2022-08-03T00:00:00.000Z",
             "author": {}
         },
         {
-            "id": "undefined/releases/discord-integration",
-            "url": "undefined/releases/discord-integration",
+            "id": "http://localhost:3000/releases/discord-integration",
+            "url": "http://localhost:3000/releases/discord-integration",
             "title": "Discord integration",
             "summary": "Connect your Discord server to Subly to receive payment reminders and never miss a payment.",
+            "image": "http://localhost:3000/release-notes/covers/23-01-01.png",
             "date_modified": "2023-01-01T00:00:00.000Z",
             "author": {}
         },
         {
-            "id": "undefined/releases/enhanced-notes",
-            "url": "undefined/releases/enhanced-notes",
+            "id": "http://localhost:3000/releases/enhanced-notes",
+            "url": "http://localhost:3000/releases/enhanced-notes",
             "title": "Say Hello to Our New and Improved Notes!",
             "summary": "Experience an upgraded note-taking game on Subly. Format notes related to your subscriptions and recurring expenses with ease and flexibility using the enhanced block-styled notes engine.",
+            "image": "http://localhost:3000/release-notes/covers/23-03-28.png",
             "date_modified": "2023-03-28T00:00:00.000Z",
             "author": {}
         },
         {
-            "id": "undefined/releases/file-storage",
-            "url": "undefined/releases/file-storage",
+            "id": "http://localhost:3000/releases/file-storage",
+            "url": "http://localhost:3000/releases/file-storage",
             "title": "Direct File Uploads",
             "summary": "Now you can directly upload files to subscriptions. Enhance your subscription and recurring expense management by attaching relevant files directly to your subscriptions.",
+            "image": "http://localhost:3000/release-notes/covers/23-05-29.png",
             "date_modified": "2023-05-29T00:00:00.000Z",
             "author": {}
         },
         {
-            "id": "undefined/releases/introducing-projects",
-            "url": "undefined/releases/introducing-projects",
+            "id": "http://localhost:3000/releases/introducing-projects",
+            "url": "http://localhost:3000/releases/introducing-projects",
             "title": "Introducing: Projects, List View and more",
             "summary": "You can now organize your subscriptions by Projects, each project has its own set of reports and statistics",
+            "image": "http://localhost:3000/release-notes/covers/06-19-22.png",
             "date_modified": "2022-06-19T00:00:00.000Z",
             "author": {}
         },
         {
-            "id": "undefined/releases/multi-currency-subscriptions",
-            "url": "undefined/releases/multi-currency-subscriptions",
+            "id": "http://localhost:3000/releases/multi-currency-subscriptions",
+            "url": "http://localhost:3000/releases/multi-currency-subscriptions",
             "title": "Add subscriptions in your preferred currency",
             "summary": "Sometimes we have subscriptions in different currencies, and it can make tracking our subscription expenses even more difficult.\nSubly can now help you with this; when you edit or add a subscription, you will be able to select the currency in which it is paid",
+            "image": "http://localhost:3000/release-notes/covers/11-25-21.png",
             "date_modified": "2021-11-25T00:00:00.000Z",
             "author": {}
         },
         {
-            "id": "undefined/releases/multiple-alerts",
-            "url": "undefined/releases/multiple-alerts",
+            "id": "http://localhost:3000/releases/multiple-alerts",
+            "url": "http://localhost:3000/releases/multiple-alerts",
             "title": "Multiple alerts, spending projection and upcoming payments",
             "summary": "Now you can add the payment methods you are using to your subscriptions. This will allow you to get more insightful data in your reports and more ways to organize all of your recurring expenses.",
+            "image": "http://localhost:3000/release-notes/covers/22-10-10.png",
             "date_modified": "2022-10-10T00:00:00.000Z",
             "author": {}
         },
         {
-            "id": "undefined/releases/notifications-and-ui-improvements",
-            "url": "undefined/releases/notifications-and-ui-improvements",
+            "id": "http://localhost:3000/releases/notifications-and-ui-improvements",
+            "url": "http://localhost:3000/releases/notifications-and-ui-improvements",
             "title": "Updates to charts, projects and bug fixes",
             "summary": "The subscription reminders have been updated, now you can set when you want to receive them",
+            "image": "http://localhost:3000/release-notes/covers/07-30-22.png",
             "date_modified": "2022-07-30T00:00:00.000Z",
             "author": {}
         },
         {
-            "id": "undefined/releases/one-time-payments",
-            "url": "undefined/releases/one-time-payments",
+            "id": "http://localhost:3000/releases/one-time-payments",
+            "url": "http://localhost:3000/releases/one-time-payments",
             "title": "One time payments, custom categories and more",
             "summary": "You can now add services for which you do not pay on a recurring basis. With this feature now you can use Subly to keep track of the software licenses and lifetime deals that you have",
+            "image": "http://localhost:3000/release-notes/covers/08-25-22.png",
             "date_modified": "2022-08-25T00:00:00.000Z",
             "author": {}
         },
         {
-            "id": "undefined/releases/payment-methods",
-            "url": "undefined/releases/payment-methods",
+            "id": "http://localhost:3000/releases/payment-methods",
+            "url": "http://localhost:3000/releases/payment-methods",
             "title": "Payment Methods",
             "summary": "Now you can add the payment methods you are using to your subscriptions. This will allow you to get more insightful data in your reports and more ways to organize all of your recurring expenses.",
+            "image": "http://localhost:3000/release-notes/covers/09-20-22.png",
             "date_modified": "2022-09-20T00:00:00.000Z",
             "author": {}
         },
         {
-            "id": "undefined/releases/search-custom-icons",
-            "url": "undefined/releases/search-custom-icons",
+            "id": "http://localhost:3000/releases/search-custom-icons",
+            "url": "http://localhost:3000/releases/search-custom-icons",
             "title": "Search & custom icons",
             "summary": "New features make it easier to manage subscriptions with quick search, custom icons, and \"add to calendar\" button for payment dates.",
+            "image": "http://localhost:3000/release-notes/covers/22-12-21.png",
             "date_modified": "2022-12-21T00:00:00.000Z",
             "author": {}
         },
         {
-            "id": "undefined/releases/slack-integration",
-            "url": "undefined/releases/slack-integration",
+            "id": "http://localhost:3000/releases/slack-integration",
+            "url": "http://localhost:3000/releases/slack-integration",
             "title": "Slack integration",
             "summary": "We are excited to announce a new integration with Slack! Now, users on paid plans will be able to receive payment reminders on their preferred Slack channel.",
+            "image": "http://localhost:3000/release-notes/covers/22-12-04.png",
             "date_modified": "2022-12-04T00:00:00.000Z",
             "author": {}
         },
         {
-            "id": "undefined/releases/teams-budgets",
-            "url": "undefined/releases/teams-budgets",
+            "id": "http://localhost:3000/releases/teams-budgets",
+            "url": "http://localhost:3000/releases/teams-budgets",
             "title": "Introducing: Team members and project budgets",
             "summary": "Invite team members to join your Subly workspace",
+            "image": "http://localhost:3000/release-notes/covers/22-11-28.png",
             "date_modified": "2022-11-28T00:00:00.000Z",
             "author": {}
         },
         {
-            "id": "undefined/releases/telegram-integration",
-            "url": "undefined/releases/telegram-integration",
+            "id": "http://localhost:3000/releases/telegram-integration",
+            "url": "http://localhost:3000/releases/telegram-integration",
             "title": "Telegram integration & calendar view",
             "summary": "Introducing our telegram integration and the new calendar view to visualize subscriptions",
+            "image": "http://localhost:3000/release-notes/covers/22-11-01.png",
             "date_modified": "2022-11-01T00:00:00.000Z",
             "author": {}
         },
         {
-            "id": "undefined/releases/two-factor-authentication",
-            "url": "undefined/releases/two-factor-authentication",
+            "id": "http://localhost:3000/releases/two-factor-authentication",
+            "url": "http://localhost:3000/releases/two-factor-authentication",
             "title": "Two-factor authentication (2FA)",
             "summary": "With 2FA, you can now add an extra layer of security to your account by requiring a time-based one-time password (TOTP) generated by your authentication app.",
+            "image": "http://localhost:3000/release-notes/covers/23-03-15.png",
             "date_modified": "2023-03-15T00:00:00.000Z"
         },
         {
-            "id": "undefined/releases/webhooks",
-            "url": "undefined/releases/webhooks",
+            "id": "http://localhost:3000/releases/webhooks",
+            "url": "http://localhost:3000/releases/webhooks",
             "title": "Introducing Webhooks",
             "summary": "Webhooks allows you to connect Subly to other applications and automate tasks based on events within Subly",
+            "image": "http://localhost:3000/release-notes/covers/23-01-29.png",
             "date_modified": "2023-01-29T00:00:00.000Z"
         }
     ]

@@ -2,137 +2,162 @@
 <rss version="2.0">
     <channel>
         <title>Subly - Product Updates</title>
-        <link>undefined</link>
+        <link>http://localhost:3000</link>
         <description>Your Blog description</description>
-        <lastBuildDate>Sat, 12 Aug 2023 21:31:11 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 04 Sep 2023 22:29:48 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
             <title>Subly - Product Updates</title>
-            <url>undefined/favicon.ico</url>
-            <link>undefined</link>
+            <url>http://localhost:3000/favicon.ico</url>
+            <link>http://localhost:3000</link>
         </image>
         <copyright>All rights reserved 2023, Subly</copyright>
         <item>
+            <title><![CDATA[Introducing Bulk Actions]]></title>
+            <link>http://localhost:3000/releases/bulk-actions</link>
+            <guid>http://localhost:3000/releases/bulk-actions</guid>
+            <pubDate>Mon, 04 Sep 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Gone are the days of updating, editing, or deleting your subscriptions one by one. With our new Bulk Actions feature, you can now perform various actions on multiple subscriptions all at once.]]></description>
+            <enclosure url="http://localhost:3000/release-notes/covers/23-09-04.png" length="0" type="image/png"/>
+        </item>
+        <item>
             <title><![CDATA[Updates to charts, projects and bug fixes]]></title>
-            <link>undefined/releases/charts-projects-updates</link>
-            <guid>undefined/releases/charts-projects-updates</guid>
+            <link>http://localhost:3000/releases/charts-projects-updates</link>
+            <guid>http://localhost:3000/releases/charts-projects-updates</guid>
             <pubDate>Sat, 23 Jul 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Added a new chart in the home page that shows you a comparison between the current expenses and your last month expenses. This provides a quick an easy way to get some insights on your expenses without leaving the home page.]]></description>
+            <enclosure url="http://localhost:3000/release-notes/covers/07-23-22.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[New dark mode]]></title>
-            <link>undefined/releases/dark-mode</link>
-            <guid>undefined/releases/dark-mode</guid>
+            <link>http://localhost:3000/releases/dark-mode</link>
+            <guid>http://localhost:3000/releases/dark-mode</guid>
             <pubDate>Wed, 03 Aug 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[We are excited to announce that Subly now has a dark mode!
 To activate the dark mode, simply go to settings and select "dark mode".]]></description>
+            <enclosure url="http://localhost:3000/release-notes/covers/08-03-22.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Discord integration]]></title>
-            <link>undefined/releases/discord-integration</link>
-            <guid>undefined/releases/discord-integration</guid>
+            <link>http://localhost:3000/releases/discord-integration</link>
+            <guid>http://localhost:3000/releases/discord-integration</guid>
             <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Connect your Discord server to Subly to receive payment reminders and never miss a payment.]]></description>
+            <enclosure url="http://localhost:3000/release-notes/covers/23-01-01.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Say Hello to Our New and Improved Notes!]]></title>
-            <link>undefined/releases/enhanced-notes</link>
-            <guid>undefined/releases/enhanced-notes</guid>
+            <link>http://localhost:3000/releases/enhanced-notes</link>
+            <guid>http://localhost:3000/releases/enhanced-notes</guid>
             <pubDate>Tue, 28 Mar 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Experience an upgraded note-taking game on Subly. Format notes related to your subscriptions and recurring expenses with ease and flexibility using the enhanced block-styled notes engine.]]></description>
+            <enclosure url="http://localhost:3000/release-notes/covers/23-03-28.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Direct File Uploads]]></title>
-            <link>undefined/releases/file-storage</link>
-            <guid>undefined/releases/file-storage</guid>
+            <link>http://localhost:3000/releases/file-storage</link>
+            <guid>http://localhost:3000/releases/file-storage</guid>
             <pubDate>Mon, 29 May 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Now you can directly upload files to subscriptions. Enhance your subscription and recurring expense management by attaching relevant files directly to your subscriptions.]]></description>
+            <enclosure url="http://localhost:3000/release-notes/covers/23-05-29.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Introducing: Projects, List View and more]]></title>
-            <link>undefined/releases/introducing-projects</link>
-            <guid>undefined/releases/introducing-projects</guid>
+            <link>http://localhost:3000/releases/introducing-projects</link>
+            <guid>http://localhost:3000/releases/introducing-projects</guid>
             <pubDate>Sun, 19 Jun 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[You can now organize your subscriptions by Projects, each project has its own set of reports and statistics]]></description>
+            <enclosure url="http://localhost:3000/release-notes/covers/06-19-22.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Add subscriptions in your preferred currency]]></title>
-            <link>undefined/releases/multi-currency-subscriptions</link>
-            <guid>undefined/releases/multi-currency-subscriptions</guid>
+            <link>http://localhost:3000/releases/multi-currency-subscriptions</link>
+            <guid>http://localhost:3000/releases/multi-currency-subscriptions</guid>
             <pubDate>Thu, 25 Nov 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Sometimes we have subscriptions in different currencies, and it can make tracking our subscription expenses even more difficult.
 Subly can now help you with this; when you edit or add a subscription, you will be able to select the currency in which it is paid]]></description>
+            <enclosure url="http://localhost:3000/release-notes/covers/11-25-21.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Multiple alerts, spending projection and upcoming payments]]></title>
-            <link>undefined/releases/multiple-alerts</link>
-            <guid>undefined/releases/multiple-alerts</guid>
+            <link>http://localhost:3000/releases/multiple-alerts</link>
+            <guid>http://localhost:3000/releases/multiple-alerts</guid>
             <pubDate>Mon, 10 Oct 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Now you can add the payment methods you are using to your subscriptions. This will allow you to get more insightful data in your reports and more ways to organize all of your recurring expenses.]]></description>
+            <enclosure url="http://localhost:3000/release-notes/covers/22-10-10.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Updates to charts, projects and bug fixes]]></title>
-            <link>undefined/releases/notifications-and-ui-improvements</link>
-            <guid>undefined/releases/notifications-and-ui-improvements</guid>
+            <link>http://localhost:3000/releases/notifications-and-ui-improvements</link>
+            <guid>http://localhost:3000/releases/notifications-and-ui-improvements</guid>
             <pubDate>Sat, 30 Jul 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[The subscription reminders have been updated, now you can set when you want to receive them]]></description>
+            <enclosure url="http://localhost:3000/release-notes/covers/07-30-22.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[One time payments, custom categories and more]]></title>
-            <link>undefined/releases/one-time-payments</link>
-            <guid>undefined/releases/one-time-payments</guid>
+            <link>http://localhost:3000/releases/one-time-payments</link>
+            <guid>http://localhost:3000/releases/one-time-payments</guid>
             <pubDate>Thu, 25 Aug 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[You can now add services for which you do not pay on a recurring basis. With this feature now you can use Subly to keep track of the software licenses and lifetime deals that you have]]></description>
+            <enclosure url="http://localhost:3000/release-notes/covers/08-25-22.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Payment Methods]]></title>
-            <link>undefined/releases/payment-methods</link>
-            <guid>undefined/releases/payment-methods</guid>
+            <link>http://localhost:3000/releases/payment-methods</link>
+            <guid>http://localhost:3000/releases/payment-methods</guid>
             <pubDate>Tue, 20 Sep 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Now you can add the payment methods you are using to your subscriptions. This will allow you to get more insightful data in your reports and more ways to organize all of your recurring expenses.]]></description>
+            <enclosure url="http://localhost:3000/release-notes/covers/09-20-22.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Search & custom icons]]></title>
-            <link>undefined/releases/search-custom-icons</link>
-            <guid>undefined/releases/search-custom-icons</guid>
+            <link>http://localhost:3000/releases/search-custom-icons</link>
+            <guid>http://localhost:3000/releases/search-custom-icons</guid>
             <pubDate>Wed, 21 Dec 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[New features make it easier to manage subscriptions with quick search, custom icons, and "add to calendar" button for payment dates.]]></description>
+            <enclosure url="http://localhost:3000/release-notes/covers/22-12-21.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Slack integration]]></title>
-            <link>undefined/releases/slack-integration</link>
-            <guid>undefined/releases/slack-integration</guid>
+            <link>http://localhost:3000/releases/slack-integration</link>
+            <guid>http://localhost:3000/releases/slack-integration</guid>
             <pubDate>Sun, 04 Dec 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[We are excited to announce a new integration with Slack! Now, users on paid plans will be able to receive payment reminders on their preferred Slack channel.]]></description>
+            <enclosure url="http://localhost:3000/release-notes/covers/22-12-04.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Introducing: Team members and project budgets]]></title>
-            <link>undefined/releases/teams-budgets</link>
-            <guid>undefined/releases/teams-budgets</guid>
+            <link>http://localhost:3000/releases/teams-budgets</link>
+            <guid>http://localhost:3000/releases/teams-budgets</guid>
             <pubDate>Mon, 28 Nov 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Invite team members to join your Subly workspace]]></description>
+            <enclosure url="http://localhost:3000/release-notes/covers/22-11-28.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Telegram integration & calendar view]]></title>
-            <link>undefined/releases/telegram-integration</link>
-            <guid>undefined/releases/telegram-integration</guid>
+            <link>http://localhost:3000/releases/telegram-integration</link>
+            <guid>http://localhost:3000/releases/telegram-integration</guid>
             <pubDate>Tue, 01 Nov 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Introducing our telegram integration and the new calendar view to visualize subscriptions]]></description>
+            <enclosure url="http://localhost:3000/release-notes/covers/22-11-01.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Two-factor authentication (2FA)]]></title>
-            <link>undefined/releases/two-factor-authentication</link>
-            <guid>undefined/releases/two-factor-authentication</guid>
+            <link>http://localhost:3000/releases/two-factor-authentication</link>
+            <guid>http://localhost:3000/releases/two-factor-authentication</guid>
             <pubDate>Wed, 15 Mar 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[With 2FA, you can now add an extra layer of security to your account by requiring a time-based one-time password (TOTP) generated by your authentication app.]]></description>
+            <enclosure url="http://localhost:3000/release-notes/covers/23-03-15.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Introducing Webhooks]]></title>
-            <link>undefined/releases/webhooks</link>
-            <guid>undefined/releases/webhooks</guid>
+            <link>http://localhost:3000/releases/webhooks</link>
+            <guid>http://localhost:3000/releases/webhooks</guid>
             <pubDate>Sun, 29 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Webhooks allows you to connect Subly to other applications and automate tasks based on events within Subly]]></description>
+            <enclosure url="http://localhost:3000/release-notes/covers/23-01-29.png" length="0" type="image/png"/>
         </item>
     </channel>
 </rss>
