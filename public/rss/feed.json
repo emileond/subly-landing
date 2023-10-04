@@ -163,6 +163,15 @@
             "date_modified": "2023-03-15T00:00:00.000Z"
         },
         {
+            "id": "http://localhost:3000/releases/ui-updates",
+            "url": "http://localhost:3000/releases/ui-updates",
+            "title": "UI Update: Enhanced Subly Experience",
+            "summary": "This update is all about refining and enhance the experience on the current features, aiming for an even more user-friendly and efficient experience.",
+            "image": "http://localhost:3000/release-notes/covers/23-10-03.png",
+            "date_modified": "2023-10-03T00:00:00.000Z",
+            "author": {}
+        },
+        {
             "id": "http://localhost:3000/releases/webhooks",
             "url": "http://localhost:3000/releases/webhooks",
             "title": "Introducing Webhooks",
