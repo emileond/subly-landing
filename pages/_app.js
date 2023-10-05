@@ -6,6 +6,11 @@ import 'aos/dist/aos.css'
 import splitbee from '@splitbee/web'
 import './styles.css'
 import { Analytics } from '@vercel/analytics/react'
+import dynamic from 'next/dynamic'
+
+const CrispWithNoSSR = dynamic(() => import('../components/CrispChat'), {
+  ssr: false,
+})
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -43,6 +48,7 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider theme={theme}>
       <Component {...pageProps} />
       <Analytics />
+      <CrispWithNoSSR />
     </ChakraProvider>
   )
 }
