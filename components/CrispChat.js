@@ -8,14 +8,18 @@ const CrispChat = () => {
 
   // send a message after 10 seconds
   useEffect(() => {
-    setTimeout(() => {
-      // push a message to the visitor
+    // check if 'crispTrigger' is in localStorage
+    if (localStorage.getItem('crispTrigger')) return
 
+    setTimeout(() => {
       Crisp.message.show(
         'text',
         `Hey there 👋, Curious about how Subly works? I'm here to help!`
       )
     }, 20000)
+
+    // save 'crispTrigger: true' to localStorage
+    localStorage.setItem('crispTrigger', true)
   }, [])
 
   return null

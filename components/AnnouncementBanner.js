@@ -1,7 +1,47 @@
 import { Box, Button, Heading, HStack, Text } from '@chakra-ui/react'
 import Link from 'next/link'
+import dayjs from 'dayjs'
+import duration from 'dayjs/plugin/duration'
+import { useState, useEffect } from 'react'
 
 const AnnouncementBanner = () => {
+  dayjs.extend(duration)
+
+  const END_DATE = dayjs('2023-11-30')
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
+
+  function calculateTimeLeft() {
+    const now = dayjs()
+    const difference = dayjs.duration(END_DATE.diff(now))
+
+    const days = difference.days()
+    const hours = difference.hours()
+    const minutes = difference.minutes()
+    const seconds = difference.seconds()
+
+    return {
+      days,
+      hours,
+      minutes,
+      seconds,
+    }
+  }
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft())
+    }, 1000)
+
+    return () => clearInterval(timer)
+  }, [])
+
+  const hasTimeLeft =
+    timeLeft.days > 0 ||
+    timeLeft.hours > 0 ||
+    timeLeft.minutes > 0 ||
+    timeLeft.seconds > 0
+
   return (
     <Link href="/pricing">
       <HStack
@@ -21,11 +61,16 @@ const AnnouncementBanner = () => {
         }}
       >
         <Heading size="sm">
-          Black Friday Sale! 🔥 - Save 50% on Subly PRO 💰
+          Black Friday Sale! 🔥 - Save 20% on Subly PRO
         </Heading>
-        {/* <Text fontWeight="bold" bg="orange.500" px={3} borderRadius={24}>
-          Get Subly PRO
-        </Text> */}
+        {hasTimeLeft ? (
+          <Text>
+            - Ends in {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m{' '}
+            {timeLeft.seconds}s
+          </Text>
+        ) : (
+          <Text>Offer Expired</Text>
+        )}
       </HStack>
     </Link>
   )

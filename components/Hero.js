@@ -2,17 +2,12 @@ import {
   Box,
   Button,
   Container,
-  Flex,
   Heading,
-  Icon,
-  IconProps,
   Image,
-  Link,
   Stack,
   Text,
 } from '@chakra-ui/react'
 const { motion } = require('framer-motion')
-import useScript from '../hooks/useScript'
 
 export default function Hero() {
   const MotionBox = motion(Box)

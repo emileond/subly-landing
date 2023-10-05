@@ -10,14 +10,11 @@ import {
   IconButton,
   Stack,
   VStack,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
 } from '@chakra-ui/react'
-import { BiMenu, BiX, BiChevronDown, BiChevronRight } from 'react-icons/bi'
+import { BiMenu, BiX, BiChevronRight } from 'react-icons/bi'
 
 export default function Nav() {
   const { isOpen, onToggle } = useDisclosure()
@@ -41,7 +38,7 @@ export default function Nav() {
     )
   }
 
-  const MobileNavItem = ({ label, children, href }: NavItem) => {
+  const MobileNavItem = ({ label, children, href }) => {
     return (
       <Stack
         spacing={4}
@@ -69,92 +66,94 @@ export default function Nav() {
     )
   }
   return (
-    <Box
-      as="nav"
-      // bg={useColorModeValue('white', 'gray.800')}
-      backdropFilter="saturate(180%) blur(15px)"
-      backgroundColor="rgba(255, 255, 255, .7)"
-      color={useColorModeValue('gray.600', 'white')}
-      py={{ base: 3 }}
-      px={{ base: 4 }}
-      borderBottom={1}
-      borderStyle={'solid'}
-      borderColor="gray.100"
-      h="100%"
-      w="100%"
-      zIndex={8}
-    >
-      <Flex w={['100%', '100%', '75%']} align={'center'} mx="auto">
-        <Flex
-          flex={{ base: 1, md: 'auto' }}
-          ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}
-        >
-          <IconButton
-            onClick={onToggle}
-            icon={isOpen ? <BiX /> : <BiMenu />}
-            variant={'ghost'}
-            aria-label={'Toggle Navigation'}
-          />
-        </Flex>
-        <Flex
-          flex={{ base: 1 }}
-          justify={{ base: 'center', md: 'start' }}
-          align="center"
-        >
-          <Button
-            as="a"
-            size="lg"
-            variant="link"
-            href="/"
-            fontWeight="bold"
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            color={useColorModeValue('gray.800', 'white')}
-            _hover={{ textDecoration: 'none' }}
+    <>
+      <Box
+        as="nav"
+        // bg={useColorModeValue('white', 'gray.800')}
+        backdropFilter="saturate(180%) blur(15px)"
+        backgroundColor="rgba(255, 255, 255, .7)"
+        color={useColorModeValue('gray.600', 'white')}
+        py={{ base: 3 }}
+        px={{ base: 4 }}
+        borderBottom={1}
+        borderStyle={'solid'}
+        borderColor="gray.100"
+        h="100%"
+        w="100%"
+        zIndex={8}
+      >
+        <Flex w={['100%', '100%', '75%']} align={'center'} mx="auto">
+          <Flex
+            flex={{ base: 1, md: 'auto' }}
+            ml={{ base: -2 }}
+            display={{ base: 'flex', md: 'none' }}
           >
-            <Image
-              src="/logo.svg"
-              alt="subly logo"
-              width="20px"
-              height="30px"
+            <IconButton
+              onClick={onToggle}
+              icon={isOpen ? <BiX /> : <BiMenu />}
+              variant={'ghost'}
+              aria-label={'Toggle Navigation'}
             />
-            <Text pl={3}>Subly</Text>
-          </Button>
-
-          <Flex display={{ base: 'none', md: 'flex' }} ml={8}>
-            <DesktopNav />
           </Flex>
-        </Flex>
-
-        <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={'flex-end'}
-          direction={'row'}
-          spacing={6}
-          align="center"
-        >
-          <Link href="https://web.subly.app/">
-            <a>Login</a>
-          </Link>
-          <Button
-            as="a"
-            href="https://web.subly.app/signup"
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontWeight={600}
-            color={'white'}
-            bg={'gray.700'}
-            _hover={{
-              bg: 'gray.800',
-            }}
+          <Flex
+            flex={{ base: 1 }}
+            justify={{ base: 'center', md: 'start' }}
+            align="center"
           >
-            Signup
-          </Button>
-        </Stack>
-      </Flex>
-      <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
-      </Collapse>
-    </Box>
+            <Button
+              as="a"
+              size="lg"
+              variant="link"
+              href="/"
+              fontWeight="bold"
+              textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
+              color={useColorModeValue('gray.800', 'white')}
+              _hover={{ textDecoration: 'none' }}
+            >
+              <Image
+                src="/logo.svg"
+                alt="subly logo"
+                width="20px"
+                height="30px"
+              />
+              <Text pl={3}>Subly</Text>
+            </Button>
+
+            <Flex display={{ base: 'none', md: 'flex' }} ml={8}>
+              <DesktopNav />
+            </Flex>
+          </Flex>
+
+          <Stack
+            flex={{ base: 1, md: 0 }}
+            justify={'flex-end'}
+            direction={'row'}
+            spacing={6}
+            align="center"
+          >
+            <Link href="https://web.subly.app/">
+              <a>Login</a>
+            </Link>
+            <Button
+              as="a"
+              href="https://web.subly.app/signup"
+              display={{ base: 'none', md: 'inline-flex' }}
+              fontWeight={600}
+              color={'white'}
+              bg={'gray.700'}
+              _hover={{
+                bg: 'gray.800',
+              }}
+            >
+              Signup
+            </Button>
+          </Stack>
+        </Flex>
+        <Collapse in={isOpen} animateOpacity>
+          <MobileNav />
+        </Collapse>
+      </Box>
+    </>
   )
 }
 
@@ -186,7 +185,7 @@ const DesktopNav = () => {
   )
 }
 
-const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
+const DesktopSubNav = ({ label, href, subLabel }) => {
   return (
     <Link href={href}>
       <a>
@@ -218,14 +217,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   )
 }
 
-interface NavItem {
-  label: string
-  subLabel?: string
-  children?: Array<NavItem>
-  href?: string
-}
-
-const NAV_ITEMS: Array<NavItem> = [
+const NAV_ITEMS = [
   {
     label: 'Features',
     href: '/#features',

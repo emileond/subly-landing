@@ -13,15 +13,8 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 import { FiArrowRight } from 'react-icons/fi'
-import { ReactElement } from 'react'
 
-interface FeatureProps {
-  text: string
-  iconBg: string
-  icon?: ReactElement
-}
-
-const Feature = ({ text, icon, iconBg }: FeatureProps) => {
+const Feature = ({ text, icon, iconBg }) => {
   return (
     <Stack direction={'row'} align={'center'}>
       <Flex

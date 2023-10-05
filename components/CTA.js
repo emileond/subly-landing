@@ -4,12 +4,8 @@ import {
   Container,
   Divider,
   Heading,
-  SimpleGrid,
-  Icon,
   Text,
   Stack,
-  HStack,
-  VStack,
 } from '@chakra-ui/react'
 
 export default function CTA() {
