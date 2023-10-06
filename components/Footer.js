@@ -52,7 +52,7 @@ export default function LargeWithLogoCentered() {
                 target="_blank"
                 rel="noopener noreferrer"
               ></IconButton>
-              <IconButton
+              {/* <IconButton
                 as="a"
                 aria-label="buy me a coffee"
                 size="lg"
@@ -61,7 +61,7 @@ export default function LargeWithLogoCentered() {
                 href="https://www.buymeacoffee.com/emiliosanchez"
                 target="_blank"
                 rel="noopener noreferrer"
-              ></IconButton>
+              ></IconButton> */}
             </HStack>
           </VStack>
           <Stack>

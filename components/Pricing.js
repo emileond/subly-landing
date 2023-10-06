@@ -37,7 +37,10 @@ function PriceWrapper(props) {
 export default function Pricing() {
   return (
     <VStack pt="6rem" pb="4rem" bg="#F1F5F9" id="pricing">
-      <PlansDisplay heading="Simplified pricing" landing={false} />
+      <PlansDisplay
+        heading="Affordable plans, priceless insights"
+        landing={false}
+      />
       {/* <Box>
         <Button
           as="a"

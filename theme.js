@@ -7,6 +7,22 @@ const config = {
   useSystemColorMode: false,
 }
 
-const theme = extendTheme({ config }, withProse())
+const styles = {
+  global: {
+    // styles for the `body`
+    body: {
+      color: 'gray.800',
+    },
+    // styles for the `a`
+    a: {
+      color: 'blue.500',
+      _hover: {
+        textDecoration: 'underline',
+      },
+    },
+  },
+}
+
+const theme = extendTheme({ config, styles }, withProse())
 
 export default theme

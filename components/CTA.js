@@ -10,9 +10,9 @@ import {
 
 export default function CTA() {
   return (
-    <Container maxW={'6xl'} pb={8}>
+    <Container maxW={'6xl'}>
       <Box
-        py="4rem"
+        py={14}
         bg="linear-gradient(
       45deg,#8E2DE2,#4A00E0)"
         borderRadius={32}

@@ -132,21 +132,24 @@ export default function Nav() {
             align="center"
           >
             <Link href="https://web.subly.app/">
-              <a>Login</a>
+              <Button size="sm" variant="ghost">
+                Login
+              </Button>
             </Link>
-            <Button
-              as="a"
-              href="https://web.subly.app/signup"
-              display={{ base: 'none', md: 'inline-flex' }}
-              fontWeight={600}
-              color={'white'}
-              bg={'gray.700'}
-              _hover={{
-                bg: 'gray.800',
-              }}
-            >
-              Signup
-            </Button>
+            <Link href="https://web.subly.app/signup">
+              <Button
+                size="sm"
+                display={{ base: 'none', md: 'inline-flex' }}
+                fontWeight={600}
+                color={'white'}
+                bg={'gray.700'}
+                _hover={{
+                  bg: 'gray.800',
+                }}
+              >
+                Signup
+              </Button>
+            </Link>
           </Stack>
         </Flex>
         <Collapse in={isOpen} animateOpacity>
@@ -177,7 +180,9 @@ const DesktopNav = () => {
           }}
         >
           <Link href={navItem.href} scroll={false}>
-            <a>{navItem.label}</a>
+            <Button size="sm" variant="ghost">
+              {navItem.label}
+            </Button>
           </Link>
         </Box>
       ))}

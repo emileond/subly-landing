@@ -7,6 +7,7 @@ import {
   Badge,
   ButtonGroup,
   Stack,
+  Text,
 } from '@chakra-ui/react'
 import PlanCard from './PlanCard'
 
@@ -41,6 +42,10 @@ export default function PlansDisplay({ heading, landing }) {
         >
           {heading || 'Simple, transparent pricing'}
         </Heading>
+        <Text>
+          Quality financial management shouldn&apos;t break the bank. Choose a
+          plan that scales with your needs.
+        </Text>
         <HStack>
           <ButtonGroup isAttached>
             <Button

@@ -16,7 +16,7 @@ const CrispChat = () => {
         'text',
         `Hey there 👋, Curious about how Subly works? I'm here to help!`
       )
-    }, 20000)
+    }, 30000)
 
     // save 'crispTrigger: true' to localStorage
     localStorage.setItem('crispTrigger', true)

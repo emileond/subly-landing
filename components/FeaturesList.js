@@ -8,45 +8,57 @@ import {
   Stack,
   HStack,
   VStack,
-} from '@chakra-ui/react';
-import { BiCheck } from 'react-icons/bi';
+} from '@chakra-ui/react'
+import { BiCheck, BiCustomize, BiPieChartAlt2, BiPlug } from 'react-icons/bi'
 
 // Replace test data with your own
-const features = Array.apply(null, Array(8)).map(function (x, i) {
-  return {
-    id: i,
-    title: 'Lorem ipsum dolor sit amet',
-    text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.',
-  };
-});
+const features = [
+  {
+    id: 1,
+    title: 'Project budgets',
+    text: 'Set financial limits, ensure cost control and avoid overspending.',
+    icon: BiPieChartAlt2,
+  },
+  {
+    id: 1,
+    title: 'Seamless Integrations',
+    text: 'Subly fits in your business by integrating with your daily tools.',
+    icon: BiPlug,
+  },
+  {
+    id: 1,
+    title: 'Notes, tags, & categories',
+    text: 'Tailor your dashboard; manage spending your way.',
+    icon: BiCustomize,
+  },
+]
 
 export default function FeaturesList() {
   return (
-    <Box p={4}>
-      <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
-        <Heading fontSize={'3xl'}>This is the headline</Heading>
-        <Text color={'gray.600'} fontSize={'xl'}>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua.
-        </Text>
-      </Stack>
-
-      <Container maxW={'6xl'} mt={10}>
-        <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
+    <Container maxW="container.lg" py={20}>
+      <VStack w="100%" textAlign="center" spacing={8}>
+        <VStack spacing={4}>
+          <Heading textAlign="center" fontSize="3xl">
+            Essential tools for smart spending
+          </Heading>
+          {/* <Text color="gray.600">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua.
+          </Text> */}
+        </VStack>
+        <HStack w="100%" spacing={8} flexDir={['column', 'column', 'row']}>
           {features.map((feature) => (
-            <HStack key={feature.id} align={'top'}>
-              <Box color={'green.400'} px={2}>
-                <Icon as={BiCheck} />
-              </Box>
-              <VStack align={'start'}>
-                <Text fontWeight={600}>{feature.title}</Text>
-                <Text color={'gray.600'}>{feature.text}</Text>
+            <VStack key={feature.id} py={10} w="100%">
+              <Icon color="gray.400" as={feature.icon} fontSize="2.4rem" />
+              <VStack textAlign="center" w="100%" spacing={4}>
+                <Heading size="md">{feature.title}</Heading>
+                <Text>{feature.text}</Text>
               </VStack>
-            </HStack>
+            </VStack>
           ))}
-        </SimpleGrid>
-      </Container>
-    </Box>
-  );
+        </HStack>
+      </VStack>
+    </Container>
+  )
 }

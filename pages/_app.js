@@ -1,10 +1,7 @@
 import { useEffect } from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
 import theme from '../theme'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 import splitbee from '@splitbee/web'
-import './styles.css'
 import { Analytics } from '@vercel/analytics/react'
 import dynamic from 'next/dynamic'
 
@@ -13,13 +10,6 @@ const CrispWithNoSSR = dynamic(() => import('../components/CrispChat'), {
 })
 
 function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    // here you can add your aos options
-    AOS.init({
-      offset: 100,
-    })
-  }, [])
-
   useEffect(() => {
     ;(function (w, r) {
       w._rwq = r

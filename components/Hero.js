@@ -2,14 +2,25 @@ import {
   Box,
   Button,
   Container,
+  HStack,
   Heading,
   Image,
   Stack,
   Text,
+  VStack,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  useDisclosure,
 } from '@chakra-ui/react'
+import { BiPlayCircle } from 'react-icons/bi'
 const { motion } = require('framer-motion')
 
 export default function Hero() {
+  const { isOpen, onOpen, onClose } = useDisclosure()
   const MotionBox = motion(Box)
   return (
     <Container maxW="100%" pos="relative" pt={{ base: 0, md: 10 }}>
@@ -129,8 +140,8 @@ export default function Hero() {
       />
       <MotionBox
         display={['none', 'none', 'flex']}
-        width="58px"
-        height="58px"
+        width="42px"
+        height="42px"
         top="10%"
         left="17%"
         pos="absolute"
@@ -141,16 +152,16 @@ export default function Hero() {
       >
         <Image
           borderRadius="full"
-          src="./spotify.png"
-          alt="Spotify icon"
-          boxSize="38px"
+          src="./intercom.png"
+          alt="Intercom icon"
+          boxSize="40px"
           m="auto"
         />
       </MotionBox>
       <MotionBox
         display={['none', 'none', 'flex']}
-        width="90px"
-        height="90px"
+        width="70px"
+        height="70px"
         top="22%"
         left="10%"
         pos="absolute"
@@ -161,8 +172,8 @@ export default function Hero() {
       >
         <Image
           borderRadius="full"
-          src="./netflix.png"
-          alt="Netflix icon"
+          src="./mailchimp.png"
+          alt="Mailchimp icon"
           boxSize="64px"
           m="auto"
         />
@@ -189,8 +200,8 @@ export default function Hero() {
       </MotionBox>
       <MotionBox
         display={['none', 'none', 'flex']}
-        width="58px"
-        height="58px"
+        width="52px"
+        height="52px"
         top="6%"
         right="15%"
         pos="absolute"
@@ -203,14 +214,14 @@ export default function Hero() {
           borderRadius="full"
           src="./dropbox.png"
           alt="Dropbx icon"
-          boxSize="42px"
+          boxSize="48px"
           m="auto"
         />
       </MotionBox>
       <MotionBox
         display={['none', 'none', 'flex']}
-        width="90px"
-        height="90px"
+        width="80px"
+        height="80px"
         top="22%"
         right="8%"
         pos="absolute"
@@ -221,16 +232,16 @@ export default function Hero() {
       >
         <Image
           borderRadius="full"
-          src="./hulu.png"
-          alt="Hulu icon"
-          boxSize="78px"
+          src="./slack.png"
+          alt="Slack icon"
+          boxSize="60px"
           m="auto"
         />
       </MotionBox>
       <MotionBox
         display={['none', 'none', 'flex']}
-        width="70px"
-        height="70px"
+        width="64px"
+        height="64px"
         top="35%"
         right="20%"
         pos="absolute"
@@ -241,71 +252,76 @@ export default function Hero() {
       >
         <Image
           borderRadius="full"
-          src="./primevideo.png"
-          alt="Prime video icon"
+          src="./github.png"
+          alt="Hithub icon"
           boxSize="58px"
           m="auto"
         />
       </MotionBox>
-      <Stack
-        textAlign={'center'}
-        align={'center'}
-        spacing={{ base: 8, md: 10 }}
-        pt={{ base: 20, md: 40 }}
-        pb={{ base: 20, md: 20 }}
-      >
-        <Heading fontWeight={700} fontSize="6xl" zIndex={5} data-aos="fade-up">
-          All your subscriptions in one place
-        </Heading>
-        <Text
-          fontSize="xl"
-          color={'gray.700'}
-          maxW={'3xl'}
-          zIndex={5}
-          data-aos="fade-up"
-        >
-          Subly helps you take control over your subscriptions.
-        </Text>
-        <Stack
-          spacing={6}
-          direction={'row'}
-          align="center"
-          pb={{ base: 8, md: 32 }}
-        >
-          <Button
-            data-aos="fade-up"
-            as="a"
-            href="https://web.subly.app/signup"
-            size="lg"
-            rounded={'full'}
-            px={6}
-            colorScheme={'blue'}
-            bg={'#6F55FF'}
-            _hover={{ bg: '#5842d8' }}
-          >
-            Get started for free
-          </Button>
-          <Button
-            as="a"
-            size="lg"
-            href="#features"
-            rounded={'full'}
-            px={6}
-            data-aos="fade-up"
-          >
-            Learn more
-          </Button>
-        </Stack>
-        {/* <Flex w={'full'}> */}
-        <Box data-aos="zoom-out-up" data-aos-delay="500">
-          <Image
-            src="./main.png"
-            alt="Screenshot of Subly UI"
-            maxW={['100%', '100%', '4xl']}
-          />
-        </Box>
-        {/* </Flex> */}
-      </Stack>
+      <VStack>
+        <VStack spacing={6} py={20} textAlign="center">
+          <Heading fontWeight={700} fontSize="6xl" zIndex={5}>
+            End Subscription{' '}
+            <Box
+              as="span"
+              bgGradient="linear-gradient(to right, #8E2DE2, #4A00E0)"
+              bgClip="text"
+            >
+              Chaos.
+            </Box>
+          </Heading>
+          <Text fontSize="xl" color={'gray.700'} maxW={'2xl'} zIndex={5}>
+            Experience a new era of financial transparency for your business.
+            <br /> Centralize, monitor, and optimize your subscriptions with
+            ease.
+          </Text>
+          <HStack spacing={6} py={6}>
+            <Button
+              as="a"
+              href="https://web.subly.app/signup"
+              size="lg"
+              rounded="full"
+              colorScheme={'blue'}
+              bg="#363636"
+              _hover={{ bg: '#6F55FF' }}
+            >
+              Get started for free
+            </Button>
+            <Button
+              variant="ghost"
+              size="lg"
+              rounded="full"
+              leftIcon={<BiPlayCircle fontSize="1.4rem" />}
+              onClick={onOpen}
+            >
+              Watch video
+            </Button>
+          </HStack>
+        </VStack>
+        <Image
+          src="./dashboard.png"
+          alt="Screenshot of Subly UI"
+          maxW={['100%', '100%', '5xl']}
+        />
+      </VStack>
+      <Modal isOpen={isOpen} onClose={onClose} size="4xl" isCentered>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalBody>
+            <VStack>
+              <iframe
+                width="850"
+                height="450"
+                src="https://www.youtube.com/embed/aWUitoVAhxA?si=5YfmfgqplVVFDUyI&autoplay=1"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </VStack>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </Container>
   )
 }

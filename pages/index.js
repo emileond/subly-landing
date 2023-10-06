@@ -8,10 +8,11 @@ import FAQ from '../components/FAQ'
 import Footer from '../components/Footer'
 import Pricing from '../components/Pricing'
 import { Box } from '@chakra-ui/react'
+import FeaturesList from '../components/FeaturesList'
 
 export default function Home() {
   return (
-    <Box maxW="100vw">
+    <Box>
       <Head>
         <title>Subly - Subscriptions Tracker</title>
         <meta
@@ -26,30 +27,43 @@ export default function Home() {
         img="features1"
         width={['100%', '80%', '70%', '65%']}
         id="features"
-        heading="Keep track of all your subscriptions"
-        desc="Subly brings all your subscriptions together in a single place so you never lose track of what you're paying for."
+        heading="Centralize your subscriptions"
+        desc="Manage and organize every subscription across teams and projects in your business. Dive into the details or get a broad overview, all in one hub."
+        maxW="380px"
+        inverted
       />
       <FeatureBig
         img="insights"
         width={['100%', '100%', '80%', '80%']}
         heading="Get insights of your costs"
-        desc="Get reports of your subscriptions to see were you are spending the most and how to improve."
+        desc="Dive deep into your spending patterns with detailed reports. Make informed decisions to optimize your expenses."
+        maxW="500px"
+      />
+      <FeatureBig
+        img="currencies"
+        width={['100%', '100%', '80%', '80%']}
+        maxW="550px"
+        heading="Every currency, one dashboard"
+        desc="Track and analyze expenses from any corner of the world, Subly manages currency conversions for you, and presents insights in your preferred currency."
         inverted
       />
       <CTA />
       <FeatureBig
-        img="features3"
+        img="collab"
         width={['100%', '100%', '90%', '90%']}
-        heading="Never pay for an unwanted subscription again"
-        desc="Subly will remind you of upcoming payments before they hit your card so you're never caught off guard."
-      />
-      <FeatureBig
-        img="features4"
-        width={['100%', '100%', '80%', '80%']}
-        heading="Smart Recommendations"
-        desc="Subly provides alternatives to the services you're using, so you can determine if you're using the right solution or if there are better options."
+        maxW="300px"
+        heading="Collaborate with financial clarity"
+        desc="Eliminate surprises with renewal alerts. Stay ahead of every charge and make timely decisions."
         inverted
       />
+      <FeatureBig
+        img="features3"
+        width={['100%', '100%', '90%', '90%']}
+        maxW="500px"
+        heading="No more unexpected charges"
+        desc="Eliminate surprises with renewal alerts. Stay ahead of every charge and make timely decisions."
+      />
+      <FeaturesList />
       <Pricing />
       <FAQ />
       <Footer />
