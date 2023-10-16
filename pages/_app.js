@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
 import theme from '../theme'
 import splitbee from '@splitbee/web'
-import { Analytics } from '@vercel/analytics/react'
 import dynamic from 'next/dynamic'
 
 const CrispWithNoSSR = dynamic(() => import('../components/CrispChat'), {
@@ -37,7 +36,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
       <Component {...pageProps} />
-      <Analytics />
       <CrispWithNoSSR />
     </ChakraProvider>
   )
