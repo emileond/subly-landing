@@ -172,19 +172,24 @@ export default function LargeWithLogoCentered() {
           </Stack>
           <Stack>
             <Heading size="md">Legal</Heading>
-            <Link href="/legal/privacy-policy#intro">
+            <Link href="/legal/privacy-policy">
               <Text cursor="pointer" _hover={{ textDecor: 'underline' }}>
                 Privacy Policy
               </Text>
             </Link>
-            <Link href="/legal/terms#intro">
+            <Link href="/legal/terms">
               <Text cursor="pointer" _hover={{ textDecor: 'underline' }}>
                 Terms of Service
               </Text>
             </Link>
-            <Link href="/legal/cookie-policy#intro">
+            <Link href="/legal/cookie-policy">
               <Text cursor="pointer" _hover={{ textDecor: 'underline' }}>
                 Cookie Policy
+              </Text>
+            </Link>
+            <Link href="/legal/acceptable-use">
+              <Text cursor="pointer" _hover={{ textDecor: 'underline' }}>
+                Acceptable Use
               </Text>
             </Link>
           </Stack>
