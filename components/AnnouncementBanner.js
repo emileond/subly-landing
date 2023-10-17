@@ -34,7 +34,7 @@ const AnnouncementBanner = () => {
     }, 1000)
 
     return () => clearInterval(timer)
-  }, [calculateTimeLeft])
+  })
 
   const hasTimeLeft =
     timeLeft.days > 0 ||

@@ -73,7 +73,7 @@ export default function CurrencyConverter() {
 
     const date = new Date(Date.now() - 3600000)
     setLastUpdated(date.toLocaleString())
-  }, [])
+  }, [firstCurrency.cc, secondCurrency.cc])
 
   const handleFirstInputChange = (value) => {
     setSourceAmount(value)

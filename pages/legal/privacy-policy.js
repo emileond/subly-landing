@@ -24,8 +24,8 @@ export default function PrivacyPolicy() {
       >
         <Heading size="lg">Subly Financial, Inc. Privacy Policy</Heading>
         <p>
-          Your privacy is important to us. It is Subly Financial, Inc.'s policy
-          to respect your privacy and comply with any applicable law and
+          Your privacy is important to us. It is Subly Financial, Inc.&apos;s
+          policy to respect your privacy and comply with any applicable law and
           regulation regarding any personal information we may collect about
           you, including across our website,{' '}
           <a href="https://subly.app">https://subly.app</a>, and other sites we
@@ -143,7 +143,9 @@ export default function PrivacyPolicy() {
           manner that is incompatible with these purposes:
         </p>
         <ul>
-          <li>to provide you with our platform's core features and services</li>
+          <li>
+            to provide you with our platform&apos;s core features and services
+          </li>
           <li>
             to enable you to customize or personalize your experience of our
             website
