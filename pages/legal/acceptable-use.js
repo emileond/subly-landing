@@ -2,16 +2,7 @@ import Head from 'next/head'
 import Nav from '../../components/Nav'
 import Footer from '../../components/Footer'
 
-import {
-  Box,
-  Heading,
-  VStack,
-  Text,
-  List,
-  ListItem,
-  UnorderedList,
-  Container,
-} from '@chakra-ui/react'
+import { Box, Heading, VStack } from '@chakra-ui/react'
 
 export default function AcceptableUse() {
   return (

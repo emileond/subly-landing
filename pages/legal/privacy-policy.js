@@ -1,21 +1,8 @@
 import Head from 'next/head'
 import Nav from '../../components/Nav'
 import Footer from '../../components/Footer'
-import { useEffect } from 'react'
-import Script from 'next/script'
 
-import {
-  Box,
-  Flex,
-  Heading,
-  Image,
-  VStack,
-  Text,
-  List,
-  ListItem,
-  Container,
-  UnorderedList,
-} from '@chakra-ui/react'
+import { Box, Heading, VStack } from '@chakra-ui/react'
 
 export default function PrivacyPolicy() {
   return (

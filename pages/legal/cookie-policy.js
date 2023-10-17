@@ -2,15 +2,7 @@ import Head from 'next/head'
 import Nav from '../../components/Nav'
 import Footer from '../../components/Footer'
 
-import {
-  Box,
-  Heading,
-  VStack,
-  Text,
-  List,
-  ListItem,
-  UnorderedList,
-} from '@chakra-ui/react'
+import { Box, Heading, VStack } from '@chakra-ui/react'
 
 export default function CookiePolicy() {
   return (
@@ -35,8 +27,8 @@ export default function CookiePolicy() {
         <p>
           We use cookies to help improve your experience of our website at{' '}
           <a href="https://subly.app">https://subly.app</a>. This cookie policy
-          is part of Subly Financial, Inc.'s privacy policy. It covers the use
-          of cookies between your device and our site.
+          is part of Subly Financial, Inc.&rsquo;s privacy policy. It covers the
+          use of cookies between your device and our site.
         </p>
         <p>
           We also provide basic information on third-party services we may use,
@@ -75,7 +67,7 @@ export default function CookiePolicy() {
           websites that use the same third-party service.
         </p>
         <Heading size="md">
-          How Can You Control Our Website's Use of Cookies?
+          How Can You Control Our Website&rsquo;s Use of Cookies?
         </Heading>
         <p>
           You have the right to decide whether to accept or reject cookies on
