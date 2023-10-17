@@ -53,7 +53,7 @@ export default function Home() {
         width={['100%', '100%', '90%', '90%']}
         maxW="300px"
         heading="Collaborate with financial clarity"
-        desc="Eliminate surprises with renewal alerts. Stay ahead of every charge and make timely decisions."
+        desc="Working with finances is easier when everyone's in the loop. Share and discuss your spending, subscriptions, and plans clearly and simply. Making decisions faster and with confidence."
         inverted
       />
       <FeatureBig
