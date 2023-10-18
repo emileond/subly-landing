@@ -4,11 +4,11 @@ metaTitle: 'Meet the Subly chrome extension'
 metaDesc: 'Stay on top of your subscriptions while browsing the web with the Subly Chrome Extension. It's a handy tool in your browser, streamlining the way you manage subscriptions'
 author: 'Emilio S'
 date: 'Oct 17, 2023'
-tags:
-  - New Feature
 cover: '23-10-17.png'
 ctaText: 'Install the extension'
-ctaLink: 'https://chrome.google.com/webstore/detail/subly/adkphphbcoohfcgjhajhkedngglechcj'
+ctaLink: 'chrome.google.com/webstore/detail/subly/adkphphbcoohfcgjhajhkedngglechcj'
+tags:
+  - New Feature
 ---
 
 Stay on top of your subscriptions while browsing the web with the Subly Chrome Extension. It's a handy tool in your browser, streamlining the way you manage subscriptions.
