@@ -13,7 +13,7 @@ ctaLink: 'https://chrome.google.com/webstore/detail/subly/adkphphbcoohfcgjhajhke
 
 Stay on top of your subscriptions while browsing the web with the Subly Chrome Extension. It's a handy tool in your browser, streamlining the way you manage subscriptions.
 
-## What Does the Extension Do? 🌐
+## What it does? 🌐
 
 The Subly extension is designed to simplify the process of adding subscriptions to your Subly account while you're browsing the web. Whether you've just completed a checkout or stumbled upon a new service, the extension is here for you:
 
@@ -22,6 +22,6 @@ The Subly extension is designed to simplify the process of adding subscriptions 
 
 - **Seamless Integration**: The extension works hand-in-hand with your Subly account, ensuring that all data is synced and up-to-date.
 
-## Get the Extension Now! 🚀
+## Get the extension now! 🚀
 
 Ready to elevate your browsing experience? [Install the Subly Chrome Extension directly from the Chrome Web Store](chrome.google.com/webstore/detail/subly/adkphphbcoohfcgjhajhkedngglechcj) and
