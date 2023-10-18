@@ -14,12 +14,12 @@ const styles = {
       color: 'gray.800',
     },
     // styles for the `a`
-    a: {
-      color: 'blue.500',
-      _hover: {
-        textDecoration: 'underline',
-      },
-    },
+    // a: {
+    //   color: 'blue.500',
+    //   _hover: {
+    //     textDecoration: 'underline',
+    //   },
+    // },
   },
 }
 

@@ -7,9 +7,9 @@ date: 'Oct 17, 2023'
 tags:
   - New Feature
 cover: '23-10-17.png'
+ctaText: 'Install the extension'
+ctaLink: 'chrome.google.com/webstore/detail/subly/adkphphbcoohfcgjhajhkedngglechcj'
 ---
-
-# Introducing the Subly Chrome Extension: Add Subscriptions while browsing the web! 🚀
 
 Dive into a seamless browsing experience with the newly launched Subly Chrome extension. Designed to be your sidekick on the web, making it easier to manage subscriptions directly from your browser.
 

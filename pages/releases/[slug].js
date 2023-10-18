@@ -1,4 +1,4 @@
-import { Box, Button, Container, Heading, Spacer } from '@chakra-ui/react'
+import { Box, Button, Container, Heading, Spacer, Link } from '@chakra-ui/react'
 import { Prose } from '@nikolovlazar/chakra-ui-prose'
 import fs from 'fs'
 import { useRouter } from 'next/router'
@@ -52,6 +52,16 @@ export default function PostPage({ frontmatter, content }) {
           />
         </Box>
         <Prose dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+        {frontmatter?.ctaLink && (
+          <Button
+            colorScheme="purple"
+            as={Link}
+            href={frontmatter?.ctaLink}
+            isExternal
+          >
+            {frontmatter?.ctaText}
+          </Button>
+        )}
         <Spacer py={8} />
       </Container>
     </>
