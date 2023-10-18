@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }) {
       {process.env.NODE_ENV === 'production' && (
         <Script
           src="https://app.abralytics.com/assets/tracker/index.js"
-          data-domain="web.subly.app"
+          data-domain="subly.app"
         />
       )}
       <Component {...pageProps} />
