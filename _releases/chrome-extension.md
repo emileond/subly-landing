@@ -8,7 +8,7 @@ tags:
   - New Feature
 cover: '23-10-17.png'
 ctaText: 'Install the extension'
-ctaLink: 'chrome.google.com/webstore/detail/subly/adkphphbcoohfcgjhajhkedngglechcj'
+ctaLink: 'https://chrome.google.com/webstore/detail/subly/adkphphbcoohfcgjhajhkedngglechcj'
 ---
 
 Stay on top of your subscriptions while browsing the web with the Subly Chrome Extension. It's a handy tool in your browser, streamlining the way you manage subscriptions.
