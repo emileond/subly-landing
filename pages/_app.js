@@ -3,6 +3,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import theme from '../theme'
 import splitbee from '@splitbee/web'
 import dynamic from 'next/dynamic'
+import Script from 'next/script'
 
 const CrispWithNoSSR = dynamic(() => import('../components/CrispChat'), {
   ssr: false,
@@ -35,6 +36,12 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ChakraProvider theme={theme}>
+      {process.env.NODE_ENV === 'production' && (
+        <Script
+          src="https://app.abralytics.com/assets/tracker/index.js"
+          data-domain="web.subly.app"
+        />
+      )}
       <Component {...pageProps} />
       <CrispWithNoSSR />
     </ChakraProvider>
