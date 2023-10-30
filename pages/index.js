@@ -9,6 +9,7 @@ import Footer from '../components/Footer'
 import Pricing from '../components/Pricing'
 import { Box } from '@chakra-ui/react'
 import FeaturesList from '../components/FeaturesList'
+import Testimonials from '../components/Testimonials'
 
 export default function Home() {
   return (
@@ -65,6 +66,7 @@ export default function Home() {
       />
       <FeaturesList />
       <Pricing />
+      <Testimonials />
       <FAQ />
       <Footer />
     </Box>
