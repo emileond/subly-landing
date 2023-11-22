@@ -29,34 +29,30 @@ export default function PlanCard({ plan, landing, onSale, interval }) {
       overflow="hidden"
     >
       {onSale && (
-        <Box
-          bg="linear-gradient(179.4deg, rgb(12, 20, 69) -16.9%, rgb(71, 30, 84) 119.9%)"
-          color="white"
-          textAlign="center"
-          p={3}
-        >
+        <HStack w="100%" bg="#4A00E0" color="white" p={4}>
           <Heading size="sm" color="white">
-            Limited time offer: <Badge colorScheme="red">20% off</Badge>
+            🔥 Black Friday Sale: 50% off
           </Heading>
-        </Box>
+          {/* <Badge colorScheme="whiteAlpha">40% off</Badge> */}
+        </HStack>
       )}
       <VStack
         align="start"
         pt={8}
         pb={4}
         px={12}
-        bgGradient={
-          plan?.product === 'Team Plan'
-            ? 'linear(to-r, #8E2DE2, #4A00E0)'
-            : 'none'
-        }
-        color={plan?.product === 'Team Plan' ? 'white' : null}
+        // bgGradient={
+        //   plan?.product === 'Team Plan'
+        //     ? 'linear(to-r, #8E2DE2, #4A00E0)'
+        //     : 'none'
+        // }
+        // color={plan?.product === 'Team Plan' ? 'white' : null}
       >
         <VStack align="start">
           <Skeleton isLoaded={plan}>
             <HStack align="center">
               <Heading
-                color={plan?.product === 'Team Plan' ? 'white' : null}
+                // color={plan?.product === 'Team Plan' ? 'white' : null}
                 size={landing ? 'lg' : 'md'}
               >
                 {plan?.product}
@@ -75,16 +71,32 @@ export default function PlanCard({ plan, landing, onSale, interval }) {
               $
             </Text>
             <Heading
-              color={plan?.product === 'Team Plan' ? 'white' : null}
+              // color={plan?.product === 'Team Plan' ? 'white' : null}
               size={landing ? '4xl' : 'xl'}
             >
-              {plan?.product === 'Free' ? '0' : null}
-              {interval === 'month' ? plan?.monthlyPrice : plan?.yearlyPrice}
+              {plan?.product === 'Free' ? '0' : ''}
+              {interval === 'month'
+                ? plan?.product !== 'Free' &&
+                  parseFloat(plan?.monthlyPrice).toFixed(2)
+                : plan?.product !== 'Free' &&
+                  parseFloat(plan?.yearlyPrice).toFixed(2)}
             </Heading>
             <Text fontSize={landing ? '2xl' : 'xl'}>
               / {plan.product === 'Free' ? 'forever' : interval}
             </Text>
           </HStack>
+          {
+            // if there's a sale, show the original price with a strikethrough
+            onSale ? (
+              <Text as="span" color="gray.700" textDecoration="line-through">
+                $
+                {interval === 'month'
+                  ? plan?.monthlyPriceOriginal
+                  : plan?.yearlyPriceOriginal}{' '}
+                / {interval}
+              </Text>
+            ) : null
+          }
         </Skeleton>
       </VStack>
       <Divider />

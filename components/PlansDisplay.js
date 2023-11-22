@@ -25,8 +25,10 @@ export default function PlansDisplay({ heading, landing }) {
     {
       id: '3',
       product: 'Team Plan',
-      monthlyPrice: 19,
-      yearlyPrice: 190,
+      monthlyPrice: 9.5,
+      monthlyPriceOriginal: 19,
+      yearlyPrice: 95,
+      yearlyPriceOriginal: 190,
       description: 'Best for startups, agencies, and SMBs',
     },
   ]
@@ -51,21 +53,40 @@ export default function PlansDisplay({ heading, landing }) {
             <Button
               size={landing ? 'md' : 'sm'}
               variant={interval === 'month' ? 'solid' : 'outline'}
+              color={interval === 'month' ? 'white' : 'blackAlpha.800'}
+              bg={interval === 'month' ? 'blackAlpha.800' : 'transparent'}
+              colorScheme="blackAlpha"
+              _hover={
+                interval === 'month'
+                  ? { bg: 'blackAlpha.800' }
+                  : { bg: 'blackAlpha.100' }
+              }
               onClick={() => setInterval('month')}
-              colorScheme="gray"
             >
               Monthly
             </Button>
             <Button
               size={landing ? 'md' : 'sm'}
               variant={interval === 'year' ? 'solid' : 'outline'}
+              color={interval === 'month' ? 'blackAlpha.800' : 'white'}
+              bg={interval === 'month' ? 'transparent' : 'blackAlpha.800'}
+              colorScheme="blackAlpha"
+              _hover={
+                interval === 'month'
+                  ? { bg: 'blackAlpha.100' }
+                  : { bg: 'blackAlpha.800' }
+              }
               onClick={() => setInterval('year')}
-              colorScheme={interval === 'year' ? 'purple' : 'gray'}
             >
               Yearly
+              <Badge
+                colorScheme={interval === 'year' ? 'whiteAlpha' : 'blackAlpha'}
+                ml={3}
+              >
+                2 months free
+              </Badge>
             </Button>
           </ButtonGroup>
-          <Badge colorScheme="teal">Save 20%</Badge>
         </HStack>
       </VStack>
       <Stack
@@ -78,7 +99,6 @@ export default function PlansDisplay({ heading, landing }) {
           landing={landing}
           plan={{
             product: 'Free',
-            price: 0,
             description: 'For basic needs',
           }}
           interval={interval}
@@ -89,9 +109,14 @@ export default function PlansDisplay({ heading, landing }) {
             key={plan.id}
             plan={plan}
             interval={interval}
+            onSale={plan.product === 'Team Plan'}
           />
         ))}
       </Stack>
+      <Text fontSize="sm">
+        All prices are in USD. You can change your plan or cancel your
+        subscription at any time.
+      </Text>
     </VStack>
   )
 }
