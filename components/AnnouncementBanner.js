@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react'
 const AnnouncementBanner = () => {
   dayjs.extend(duration)
 
-  const END_DATE = dayjs('2023-11-27')
+  const END_DATE = dayjs('2023-11-28')
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
