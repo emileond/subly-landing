@@ -4,7 +4,6 @@ import theme from '../theme'
 import splitbee from '@splitbee/web'
 import dynamic from 'next/dynamic'
 import Script from 'next/script'
-import AnnouncementBanner from '../components/AnnouncementBanner'
 
 const CrispWithNoSSR = dynamic(() => import('../components/CrispChat'), {
   ssr: false,
@@ -43,7 +42,6 @@ function MyApp({ Component, pageProps }) {
           data-domain="subly.app"
         />
       )}
-      <AnnouncementBanner />
       <Component {...pageProps} />
       <CrispWithNoSSR />
     </ChakraProvider>

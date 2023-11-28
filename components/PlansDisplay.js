@@ -109,7 +109,6 @@ export default function PlansDisplay({ heading, landing }) {
             key={plan.id}
             plan={plan}
             interval={interval}
-            onSale={plan.product === 'Team Plan'}
           />
         ))}
       </Stack>
