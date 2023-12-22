@@ -43,7 +43,6 @@ function MyApp({ Component, pageProps }) {
         />
       )}
       <Component {...pageProps} />
-      <CrispWithNoSSR />
     </ChakraProvider>
   )
 }

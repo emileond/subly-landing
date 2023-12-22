@@ -46,7 +46,7 @@ export default function PrivacyPolicy() {
           apply to any of your activities after you leave our site.
         </p>
         <p>This policy is effective as of 16 October 2023</p>
-        <p>Last updated: 16 October 2023</p>
+        <p>Last updated: 22 December 2023</p>
         <Heading size="md">Information We Collect</Heading>
         <p>
           Information we collect falls into one of two categories: “voluntarily
@@ -92,6 +92,7 @@ export default function PrivacyPolicy() {
         <ul>
           <li>Device type</li>
           <li>Operating system</li>
+          <li>Geo-location data</li>
         </ul>
         <p>
           Data we collect can depend on the individual settings of your device
@@ -106,6 +107,7 @@ export default function PrivacyPolicy() {
           the following:
         </p>
         <ul>
+          <li>Name</li>
           <li>Email</li>
         </ul>
         <Heading size="sm">Transaction Data</Heading>
@@ -125,12 +127,18 @@ export default function PrivacyPolicy() {
         </p>
         <Heading size="md">Collection and Use of Information</Heading>
         <p>
-          We may collect personal information from you when you do any of the
-          following on our website:
+          We only collect and use your personal information when we have a
+          legitimate reason for doing so. In which instance, we only collect
+          personal information that is reasonably necessary to provide our
+          services to you.
         </p>
         <ul>
           <li>Register for an account</li>
           <li>Purchase a subscription</li>
+          <li>
+            Sign up to receive updates from us via email or social media
+            channels
+          </li>
           <li>Use a mobile device or web browser to access our content</li>
           <li>
             Contact us via email, social media, or on any similar technologies
@@ -151,6 +159,16 @@ export default function PrivacyPolicy() {
             website
           </li>
           <li>to contact and communicate with you</li>
+          <li>
+            for analytics, market research, and business development, including
+            to operate and improve our website, associated applications, and
+            associated social media platforms
+          </li>
+          <li>
+            to enable you to access and use our website, associated
+            applications, and associated social media platforms
+          </li>
+          <li>for internal record keeping and administrative purposes</li>
         </ul>
         <p>
           We may combine voluntarily provided and automatically collected
@@ -246,6 +264,8 @@ export default function PrivacyPolicy() {
           <li>Abralytics</li>
           <li>Sendgrid</li>
           <li>Bigmailer</li>
+          <li>Crisp Chat</li>
+          <li>Mailbluster</li>
           <li>Stripe</li>
         </ul>
         <Heading size="md">
@@ -385,6 +405,249 @@ export default function PrivacyPolicy() {
           opportunity to opt in to or opt out of, as applicable, any new uses of
           your personal information.
         </p>
+        <Heading size="md">
+          Additional Disclosures for General Data Protection Regulation (GDPR)
+          Compliance (EU)
+        </Heading>
+        <Heading size="sm">Data Controller / Data Processor</Heading>
+        <p>
+          The GDPR distinguishes between organisations that process personal
+          information for their own purposes (known as "data controllers") and
+          organisations that process personal information on behalf of other
+          organisations (known as "data processors"). We, Subly Financial, Inc.,
+          located at the address provided in our Contact Us section, are a Data
+          Controller and/or Processor with respect to the personal information
+          you provide to us.
+        </p>
+        <Heading size="sm">
+          Legal Bases for Processing Your Personal Information
+        </Heading>
+        <p>
+          We will only collect and use your personal information when we have a
+          legal right to do so. In which case, we will collect and use your
+          personal information lawfully, fairly, and in a transparent manner. If
+          we seek your consent to process your personal information, and you are
+          under 16 years of age, we will seek your parent or legal guardian’s
+          consent to process your personal information for that specific
+          purpose.
+        </p>
+        <p>
+          Our lawful bases depend on the services you use and how you use them.
+          This means we only collect and use your information on the following
+          grounds:
+        </p>
+        <Heading size="md">Consent From You</Heading>
+        <p>
+          Where you give us consent to collect and use your personal information
+          for a specific purpose. You may withdraw your consent at any time
+          using the facilities we provide; however this will not affect any use
+          of your information that has already taken place. You may consent to
+          providing your email address for the purpose of receiving marketing
+          emails from us. While you may unsubscribe at any time, we cannot
+          recall any email we have already sent. If you have any further
+          enquiries about how to withdraw your consent, please feel free to
+          enquire using the details provided in the Contact Us section of this
+          privacy policy.
+        </p>
+        <Heading size="md">Performance of a Contract or Transaction</Heading>
+        <p>
+          Where you have entered into a contract or transaction with us, or in
+          order to take preparatory steps prior to our entering into a contract
+          or transaction with you. For example, if you purchase a product,
+          service, or subscription from us, we may need to use your personal and
+          payment information in order to process and deliver your order.
+        </p>
+        <Heading size="md">Our Legitimate Interests</Heading>
+        <p>
+          Where we assess it is necessary for our legitimate interests, such as
+          for us to provide, operate, improve and communicate our services. We
+          consider our legitimate interests to include research and development,
+          understanding our audience, marketing and promoting our services,
+          measures taken to operate our services efficiently, marketing
+          analysis, and measures taken to protect our legal rights and
+          interests.
+        </p>
+        <Heading size="md">Compliance with Law</Heading>
+        <p>
+          In some cases, we may have a legal obligation to use or keep your
+          personal information. Such cases may include (but are not limited to)
+          court orders, criminal investigations, government requests, and
+          regulatory obligations. If you have any further enquiries about how we
+          retain personal information in order to comply with the law, please
+          feel free to enquire using the details provided in the Contact Us
+          section of this privacy policy.
+        </p>
+        <Heading size="sm">
+          International Transfers Outside of the European Economic Area (EEA)
+        </Heading>
+        <p>
+          We will ensure that any transfer of personal information from
+          countries in the European Economic Area (EEA) to countries outside the
+          EEA will be protected by appropriate safeguards, for example by using
+          standard data protection clauses approved by the European Commission,
+          or the use of binding corporate rules or other legally accepted means.
+        </p>
+        <Heading size="sm">
+          Your Rights and Controlling Your Personal Information
+        </Heading>
+        <p>
+          <strong>Restric:</strong> You have the right to request that we
+          restrict the processing of your personal information if (i) you are
+          concerned about the accuracy of your personal information; (ii) you
+          believe your personal information has been unlawfully processed; (iii)
+          you need us to maintain the personal information solely for the
+          purpose of a legal claim; or (iv) we are in the process of considering
+          your objection in relation to processing on the basis of legitimate
+          interests.
+        </p>
+        <p>
+          <strong>Objecting to processing:</strong> You have the right to object
+          to processing of your personal information that is based on our
+          legitimate interests or public interest. If this is done, we must
+          provide compelling legitimate grounds for the processing which
+          overrides your interests, rights, and freedoms, in order to proceed
+          with the processing of your personal information.
+        </p>
+        <p>
+          <strong>Data portability:</strong> You may have the right to request a
+          copy of the personal information we hold about you. Where possible, we
+          will provide this information in CSV format or other easily readable
+          machine format. You may also have the right to request that we
+          transfer this personal information to a third party.
+        </p>
+        <p>
+          <strong>Deletion:</strong> You may have a right to request that we
+          delete the personal information we hold about you at any time, and we
+          will take reasonable steps to delete your personal information from
+          our current records. If you ask us to delete your personal
+          information, we will let you know how the deletion affects your use of
+          our website or products and services. There may be exceptions to this
+          right for specific legal reasons which, if applicable, we will set out
+          for you in response to your request. If you terminate or delete your
+          account, we will delete your personal information within 20 days of
+          the deletion of your account. Please be aware that search engines and
+          similar third parties may still retain copies of your personal
+          information that has been made public at least once, like certain
+          profile information and public comments, even after you have deleted
+          the information from our services or deactivated your account.
+        </p>
+        <Heading size="md">
+          Additional Disclosures for U.S. States Privacy Law Compliance.
+        </Heading>
+        <p>
+          The following section includes provisions that comply with the privacy
+          laws of these states (California, Colorado, Delaware, Florida,
+          Virginia, and Utah) and is applicable only to the residents of those
+          states. Specific references to a particular state (in a heading or in
+          the text) are only a reference to that state's law and applies only to
+          that state's residents. Non-state specific language applies to all of
+          the states listed above.
+        </p>
+        <Heading size="sm">Do Not Track</Heading>
+        <p>
+          Some browsers have a "Do Not Track" feature that lets you tell
+          websites that you do not want to have your online activities tracked.
+          At this time, we do not respond to browser "Do Not Track" signals.
+        </p>
+        <p>
+          We adhere to the standards outlined in this privacy policy, ensuring
+          we collect and process personal information lawfully, fairly,
+          transparently, and with legitimate, legal reasons for doing so.
+        </p>
+        <Heading size="sm">Cookies and Pixels</Heading>
+        <p>
+          At all times, you may decline cookies from our site if your browser
+          permits. Most browsers allow you to activate settings on your browser
+          to refuse the setting of all or some cookies. Accordingly, your
+          ability to limit cookies is based only on your browser’s capabilities.
+          Please refer to the Cookies section of this privacy policy for more
+          information.
+        </p>
+        <Heading size="sm">California Privacy Laws - CPPA</Heading>
+        <p>
+          Under California Civil Code Section 1798.83, if you live in California
+          and your business relationship with us is mainly for personal, family,
+          or household purposes, you may ask us about the information we release
+          to other organizations for their marketing purposes. In accordance
+          with your right to non-discrimination, we may offer you certain
+          financial incentives permitted by the California Consumer Privacy Act,
+          and the California Privacy Rights Act (collectively, CCPA) that can
+          result in different prices, rates, or quality levels for the goods or
+          services we provide. Any CCPA-permitted financial incentive we offer
+          will reasonably relate to the value of your personal information, and
+          we will provide written terms that describe clearly the nature of such
+          an offer. Participation in a financial incentive program requires your
+          prior opt-in consent, which you may revoke at any time.
+        </p>
+        <p>
+          Under California Civil Code Section 1798.83, if you live in California
+          and your business relationship with us is mainly for personal, family,
+          or household purposes, you may ask us about the information we release
+          to other organizations for their marketing purposes. To make such a
+          request, please contact us using the details provided in this privacy
+          policy with “Request for California privacy information” in the
+          subject line. You may make this type of request once every calendar
+          year. We will email you a list of categories of personal information
+          we revealed to other organisations for their marketing purposes in the
+          last calendar year, along with their names and addresses. Not all
+          personal information shared in this way is covered by Section 1798.83
+          of the California Civil Code.
+        </p>
+        <Heading size="sm">California Notice of Collection</Heading>
+        <p>
+          In the past 12 months, we have collected the following categories of
+          personal information enumerated in the CCPA:
+        </p>
+        <ul>
+          <li>
+            Identifiers, such as name, email address, phone number, account
+            name, IP address, and an ID or number assigned to your account.
+          </li>
+          <li>Geolocation data.</li>
+        </ul>
+        <p>
+          For more information on information we collect, including the sources
+          we receive information from, review the “Information We Collect”
+          section. We collect and use these categories of personal information
+          for the business purposes described in the “Collection and Use of
+          Information” section, including to provide and manage our Service.
+        </p>
+        <Heading size="sm">Right to Know and Delete</Heading>
+        <p>
+          You have rights to delete your personal information we collected and
+          know certain information about our data practices in the preceding 12
+          months. In particular, you have the right to request the following
+          from us:
+        </p>
+        <ul>
+          <li>
+            The categories of personal information we have collected about you;
+          </li>
+          <li>
+            The categories of sources from which the personal information was
+            collected;
+          </li>
+          <li>
+            The categories of personal information about you we disclosed for a
+            business purpose or sold;
+          </li>
+          <li>
+            The categories of third parties to whom the personal information was
+            disclosed for a business purpose or sold;
+          </li>
+          <li>
+            The business or commercial purpose for collecting or selling the
+            personal information; and
+          </li>
+          <li>
+            The specific pieces of personal information we have collected about
+            you.
+          </li>
+          <p>
+            To exercise any of these rights, please contact us using the details
+            provided in this privacy policy.
+          </p>
+        </ul>
         <Heading size="md">Contact Us</Heading>
         <p>
           For any questions or concerns regarding your privacy, you may contact
