@@ -235,4 +235,8 @@ const NAV_ITEMS = [
     label: 'FAQ',
     href: '/#faq',
   },
+  {
+    label: 'Blog',
+    href: '/blog',
+  },
 ]

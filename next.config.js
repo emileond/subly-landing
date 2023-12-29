@@ -1,9 +1,9 @@
-module.exports = {
+const withMDX = require('@next/mdx')()
+
+module.exports = withMDX({
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   reactStrictMode: false,
-  // experimental: {
-  //   esmExternals: false,
-  // },
   images: {
     domains: ['getterms.dev'],
   },
-}
+})

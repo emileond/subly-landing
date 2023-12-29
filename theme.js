@@ -13,13 +13,17 @@ const styles = {
     body: {
       color: 'gray.800',
     },
-    // styles for the `a`
-    // a: {
-    //   color: 'blue.500',
-    //   _hover: {
-    //     textDecoration: 'underline',
-    //   },
-    // },
+  },
+  baseStyle: {
+    a: {
+      color: 'blue.500',
+      _hover: {
+        textDecoration: 'underline',
+      },
+    },
+    ul: {
+      listStyle: 'none',
+    },
   },
 }
 
