@@ -25,9 +25,9 @@ export default function PlansDisplay({ heading, landing }) {
     {
       id: '3',
       product: 'Team Plan',
-      monthlyPrice: 9.5,
+      monthlyPrice: 12,
       monthlyPriceOriginal: 19,
-      yearlyPrice: 95,
+      yearlyPrice: 120,
       yearlyPriceOriginal: 190,
       description: 'Best for startups, agencies, and SMBs',
     },
