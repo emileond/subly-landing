@@ -4,7 +4,7 @@
         <title>Subly - Product Updates</title>
         <link>http://localhost:3000</link>
         <description>Your Blog description</description>
-        <lastBuildDate>Wed, 18 Oct 2023 05:44:23 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 25 Jun 2024 17:30:05 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -12,7 +12,7 @@
             <url>http://localhost:3000/favicon.ico</url>
             <link>http://localhost:3000</link>
         </image>
-        <copyright>All rights reserved 2023, Subly</copyright>
+        <copyright>All rights reserved 2024, Subly</copyright>
         <item>
             <title><![CDATA[Introducing Bulk Actions]]></title>
             <link>http://localhost:3000/releases/bulk-actions</link>
@@ -30,10 +30,12 @@
             <enclosure url="http://localhost:3000/release-notes/covers/07-23-22.png" length="0" type="image/png"/>
         </item>
         <item>
+            <title><![CDATA[Meet the Subly chrome extension]]></title>
             <link>http://localhost:3000/releases/chrome-extension</link>
             <guid>http://localhost:3000/releases/chrome-extension</guid>
             <pubDate>Tue, 17 Oct 2023 00:00:00 GMT</pubDate>
-            <enclosure url="http://localhost:3000/release-notes/covers/undefined" length="0" type="image//release-notes/covers/undefined"/>
+            <description><![CDATA[Stay on top of your subscriptions while browsing the web with the Subly Chrome Extension. It is a handy tool in your browser, streamlining the way you manage subscriptions.]]></description>
+            <enclosure url="http://localhost:3000/release-notes/covers/23-10-17.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[New dark mode]]></title>

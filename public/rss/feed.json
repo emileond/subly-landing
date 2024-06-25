@@ -31,8 +31,11 @@
         {
             "id": "http://localhost:3000/releases/chrome-extension",
             "url": "http://localhost:3000/releases/chrome-extension",
-            "image": "http://localhost:3000/release-notes/covers/undefined",
-            "date_modified": "2023-10-17T00:00:00.000Z"
+            "title": "Meet the Subly chrome extension",
+            "summary": "Stay on top of your subscriptions while browsing the web with the Subly Chrome Extension. It is a handy tool in your browser, streamlining the way you manage subscriptions.",
+            "image": "http://localhost:3000/release-notes/covers/23-10-17.png",
+            "date_modified": "2023-10-17T00:00:00.000Z",
+            "author": {}
         },
         {
             "id": "http://localhost:3000/releases/dark-mode",
