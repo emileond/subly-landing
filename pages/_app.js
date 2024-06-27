@@ -38,8 +38,9 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider theme={theme}>
       {process.env.PUBLIC_NODE_ENV === 'production' && (
         <Script
-          src="https://app.abralytics.com/assets/tracker/index.js"
-          data-domain="subly.app"
+          defer
+          src="https://umami.trysubly.com/script.js"
+          data-website-id="f176b6d8-eb97-4ba3-b10e-e5176f947eb9"
         />
       )}
       <Component {...pageProps} />
