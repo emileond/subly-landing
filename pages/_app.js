@@ -36,8 +36,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ChakraProvider theme={theme}>
-      {process.env.PUBLIC_NODE_ENV === 'production' && (
+      {process.env.NEXT_PUBLIC_NODE_ENV === 'production' && (
         <Script
+          id="umami-script"
           defer
           src="https://umami.trysubly.com/script.js"
           data-website-id="f176b6d8-eb97-4ba3-b10e-e5176f947eb9"
