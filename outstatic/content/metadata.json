@@ -1,0 +1,24 @@
+{
+  "commit": "f2753fa664f7f8d8d1bbd2a368d87731cf667bbb",
+  "generated": "Mon, 01 Jul 2024 23:48:38 GMT",
+  "metadata": [
+    {
+      "__outstatic": {
+        "commit": "88294e31ecba81d7521f4c56d488aafb87cf7b75",
+        "hash": "2043251365",
+        "path": "outstatic/content/posts/draft.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/29111636?v=4"
+      },
+      "collection": "posts",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-07-01T23:10:11.908Z",
+      "slug": "draft",
+      "status": "draft",
+      "title": "Draft"
+    }
+  ]
+}
