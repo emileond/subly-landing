@@ -20,13 +20,13 @@ const features = [
     icon: BiPieChartAlt2,
   },
   {
-    id: 1,
+    id: 2,
     title: 'Seamless Integrations',
     text: 'Subly fits in your business by integrating with your daily tools.',
     icon: BiPlug,
   },
   {
-    id: 1,
+    id: 3,
     title: 'Notes, tags, & categories',
     text: 'Tailor your dashboard; manage spending your way.',
     icon: BiCustomize,

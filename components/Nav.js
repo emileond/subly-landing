@@ -1,11 +1,11 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import {
   Box,
   Button,
   Collapse,
   Flex,
-  Icon,
+  HStack,
+  Image,
   Text,
   IconButton,
   Stack,
@@ -14,7 +14,7 @@ import {
   useBreakpointValue,
   useDisclosure,
 } from '@chakra-ui/react'
-import { BiMenu, BiX, BiChevronRight } from 'react-icons/bi'
+import { BiMenu, BiX } from 'react-icons/bi'
 
 export default function Nav() {
   const { isOpen, onToggle } = useDisclosure()
@@ -100,24 +100,27 @@ export default function Nav() {
             justify={{ base: 'center', md: 'start' }}
             align="center"
           >
-            <Button
+            <HStack
               as="a"
               size="lg"
               variant="link"
               href="/"
               fontWeight="bold"
-              textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
+              justify="start"
+              gap={3}
               color={useColorModeValue('gray.800', 'white')}
               _hover={{ textDecoration: 'none' }}
             >
-              <Image
-                src="/logo.svg"
-                alt="subly logo"
-                width="20px"
-                height="30px"
-              />
-              <Text pl={3}>Subly</Text>
-            </Button>
+              <Box>
+                <Image
+                  src="/logo.svg"
+                  alt="subly logo"
+                  width="20px"
+                  height="30px"
+                />
+              </Box>
+              <Text>Subly</Text>
+            </HStack>
 
             <Flex display={{ base: 'none', md: 'flex' }} ml={8}>
               <DesktopNav />
@@ -187,38 +190,6 @@ const DesktopNav = () => {
         </Box>
       ))}
     </Stack>
-  )
-}
-
-const DesktopSubNav = ({ label, href, subLabel }) => {
-  return (
-    <Link href={href}>
-      <a>
-        <Stack direction={'row'} align={'center'}>
-          <Box>
-            <Text
-              transition={'all .3s ease'}
-              _groupHover={{ color: 'pink.400' }}
-              fontWeight={500}
-            >
-              {label}
-            </Text>
-            <Text fontSize={'sm'}>{subLabel}</Text>
-          </Box>
-          <Flex
-            transition={'all .3s ease'}
-            transform={'translateX(-10px)'}
-            opacity={0}
-            _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
-            justify={'flex-end'}
-            align={'center'}
-            flex={1}
-          >
-            <Icon color={'pink.400'} w={5} h={5} as={BiChevronRight} />
-          </Flex>
-        </Stack>
-      </a>
-    </Link>
   )
 }
 

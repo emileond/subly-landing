@@ -23,20 +23,21 @@
     "crisp-sdk-web": "^1.0.21",
     "dayjs": "^1.11.7",
     "feed": "^4.2.2",
-    "framer-motion": "^10.16.4",
+    "framer-motion": "^11.2.12",
     "gray-matter": "^4.0.3",
     "markdown-it": "^14.0.0",
-    "next": "^12.3.1",
-    "next-mdx-remote": "^4.4.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "next": "^13.5.6",
+    "next-mdx-remote": "^5.0.0",
+    "outstatic": "^1.4.9",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-hook-form": "^7.44.3",
-    "react-icons": "^4.7.1"
+    "react-icons": "^5.2.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
     "eslint": "^8.30.0",
-    "eslint-config-next": "^14.0.4",
+    "eslint-config-next": "^13.5.6",
     "typescript": "^5.2.2"
   }
 }
