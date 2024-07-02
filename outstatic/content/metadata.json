@@ -1,12 +1,12 @@
 {
-  "commit": "0a989634fededed3563cc9422c61b365caee06d9",
-  "generated": "2024-07-02T02:01:29.299Z",
+  "commit": "2a65b9c8c099f22a001f6db171df372156d734d1",
+  "generated": "2024-07-02T05:10:01.131Z",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "0a989634fededed3563cc9422c61b365caee06d9",
-        "hash": "1888924777",
-        "path": "outstatic/content/posts/draft.md"
+        "commit": "2a65b9c8c099f22a001f6db171df372156d734d1",
+        "hash": "2840530729",
+        "path": "outstatic/content/posts/introducing-revenue-tracking.md"
       },
       "author": {
         "name": "Emilio S.",
@@ -14,10 +14,10 @@
       },
       "category": "",
       "collection": "posts",
-      "coverImage": "/images/revenue-cover-I0MT.png",
+      "coverImage": "",
       "description": "",
       "publishedAt": "2024-07-01T23:10:11.908Z",
-      "slug": "draft",
+      "slug": "introducing-revenue-tracking",
       "status": "published",
       "tags": [
         {
