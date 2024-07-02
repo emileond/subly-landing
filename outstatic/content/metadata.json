@@ -1,24 +1,31 @@
 {
-  "commit": "a26b5b21e8119047357c264649a18267b77b675d",
-  "generated": "2024-07-02T01:32:35.214Z",
+  "commit": "0a989634fededed3563cc9422c61b365caee06d9",
+  "generated": "2024-07-02T02:01:29.299Z",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "63e72f15956928ccfd317a36f3e68d9704e8c8e2",
-        "hash": "4074888494",
+        "commit": "0a989634fededed3563cc9422c61b365caee06d9",
+        "hash": "1888924777",
         "path": "outstatic/content/posts/draft.md"
       },
       "author": {
-        "name": "",
+        "name": "Emilio S.",
         "picture": "https://avatars.githubusercontent.com/u/29111636?v=4"
       },
+      "category": "",
       "collection": "posts",
-      "coverImage": "",
+      "coverImage": "/images/revenue-cover-I0MT.png",
       "description": "",
       "publishedAt": "2024-07-01T23:10:11.908Z",
       "slug": "draft",
       "status": "published",
-      "title": "Draft"
+      "tags": [
+        {
+          "label": "Product updates",
+          "value": "productUpdates"
+        }
+      ],
+      "title": "Introducing Revenue Tracking: A New Chapter for Subly"
     }
   ]
 }
