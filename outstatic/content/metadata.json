@@ -1,11 +1,11 @@
 {
-  "commit": "a5719f03c40f2bea77877a43edc9c293f4b308e2",
-  "generated": "2024-07-02T05:18:06.752Z",
+  "commit": "7299bb5673ca10966b2e5550c176773b05dd4494",
+  "generated": "2024-07-02T05:19:52.117Z",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "a5719f03c40f2bea77877a43edc9c293f4b308e2",
-        "hash": "2070151770",
+        "commit": "7299bb5673ca10966b2e5550c176773b05dd4494",
+        "hash": "126291594",
         "path": "outstatic/content/posts/introducing-revenue-tracking.md"
       },
       "author": {
@@ -14,7 +14,7 @@
       },
       "category": "",
       "collection": "posts",
-      "coverImage": "",
+      "coverImage": "/images/revenue-cover-Y0Nz.png",
       "description": "",
       "publishedAt": "2024-07-01T23:10:11.908Z",
       "slug": "introducing-revenue-tracking",

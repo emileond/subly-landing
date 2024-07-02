@@ -6,7 +6,7 @@ author:
   picture: 'https://avatars.githubusercontent.com/u/29111636?v=4'
 slug: 'introducing-revenue-tracking'
 description: ''
-coverImage: ''
+coverImage: '/images/revenue-cover-Y0Nz.png'
 category: ''
 tags: [{"label":"Product updates","value":"productUpdates"}]
 publishedAt: '2024-07-01T23:10:11.908Z'
