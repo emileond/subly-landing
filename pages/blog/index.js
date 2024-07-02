@@ -1,30 +1,14 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import fs from 'fs'
 import matter from 'gray-matter'
-import Image from 'next/image'
-import Link from 'next/link'
 import Head from 'next/head'
 import Nav from '../../components/Nav'
 import {
-  Button,
   Container,
   Heading,
-  Box,
-  HStack,
   VStack,
-  Stack,
   Text,
-  Icon,
-  Tag,
-  Divider,
-  Avatar,
-  AvatarGroup,
   useColorModeValue,
-  Tabs,
-  Tab,
-  TabPanels,
-  TabList,
-  TabPanel,
   SimpleGrid,
 } from '@chakra-ui/react'
 import BlogPostCard from '../../components/BlogPostCard'
@@ -54,16 +38,23 @@ const Posts = ({ posts }) => {
         </VStack>
         <VStack spacing={8} w="100%" pb={8}>
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
-            {posts.map(({ slug, frontmatter }, index) => (
-              <BlogPostCard
-                coverImage={`/blog/${frontmatter.cover}`}
-                title={frontmatter.title}
-                desc={frontmatter.metaDesc}
-                date={frontmatter.date}
-                slug={slug}
-                key={index}
-              />
-            ))}
+            {posts
+              .filter((post) => post.status === 'published')
+              .map(
+                (
+                  { slug, title, description, publishedAt, coverImage },
+                  index
+                ) => (
+                  <BlogPostCard
+                    coverImage={`/blog/${coverImage}`}
+                    title={title}
+                    desc={description}
+                    date={publishedAt}
+                    slug={slug}
+                    key={index}
+                  />
+                )
+              )}
           </SimpleGrid>
         </VStack>
       </Container>
@@ -75,18 +66,30 @@ const Posts = ({ posts }) => {
 export default Posts
 
 export async function getStaticProps() {
-  const files = fs.readdirSync('_posts')
+  const files = fs.readdirSync('outstatic/content/posts')
 
-  const posts = files.map((fileName) => {
-    const slug = fileName.replace('.mdx', '')
-    const readFile = fs.readFileSync(`_posts/${fileName}`, 'utf-8')
+  // Filter out unwanted files
+  const mdFiles = files.filter((file) => file.endsWith('.md'))
+
+  const posts = mdFiles.map((fileName) => {
+    const slug = fileName.replace('.md', '')
+    const readFile = fs.readFileSync(
+      `outstatic/content/posts/${fileName}`,
+      'utf-8'
+    )
     const { data: frontmatter } = matter(readFile)
 
     return {
       slug,
-      frontmatter,
+      author: frontmatter.author,
+      coverImage: frontmatter.coverImage,
+      description: frontmatter.description,
+      publishedAt: frontmatter.publishedAt,
+      status: frontmatter.status,
+      title: frontmatter.title,
     }
   })
+
   return {
     props: {
       posts,

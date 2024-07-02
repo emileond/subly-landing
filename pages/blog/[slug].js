@@ -13,14 +13,13 @@ import matter from 'gray-matter'
 import Head from 'next/head'
 import Nav from '../../components/Nav'
 import { BiArrowBack } from 'react-icons/bi'
-import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemote } from 'next-mdx-remote'
 import ProsConsCard from '../../components/ProsConsCard'
 import BlogPostHighlightCard from '../../components/BlogPostHighlightCard'
 import Footer from '../../components/Footer'
 import { useRouter } from 'next/router'
 
-export default function PostPage({ frontmatter, content }) {
+export default function PostPage({ data, content }) {
+  console.log(data, content)
   const router = useRouter()
   const components = {
     ProsConsCard,
@@ -48,22 +47,20 @@ export default function PostPage({ frontmatter, content }) {
             Back
           </Button>
         </Box>
-        <Heading pb={6}>{frontmatter.title}</Heading>
+        <Heading pb={6}>{data?.title}</Heading>
         <Image
           borderRadius="2xl"
           overflow="hidden"
-          src={`/blog/${frontmatter.cover}`}
-          alt={frontmatter.title}
+          src={`/blog/${data?.coverImage}`}
+          alt={data?.title}
         />
-        <Prose>
-          <MDXRemote {...content} components={components} />
-        </Prose>
+        <Prose>{content}</Prose>
         <VStack>
           <Text>
-            <strong>Author:</strong> {frontmatter.author}
+            <strong>Author:</strong> {data?.author?.name}
           </Text>
           <Text fontSize="sm" color="gray.600">
-            {frontmatter.date}
+            {data?.publishedAt}
           </Text>
         </VStack>
       </Container>
@@ -73,11 +70,13 @@ export default function PostPage({ frontmatter, content }) {
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync('_posts')
+  const files = fs.readdirSync('outstatic/content/posts')
 
-  const paths = files.map((fileName) => ({
+  const mdFiles = files.filter((file) => file.endsWith('.md'))
+
+  const paths = mdFiles.map((fileName) => ({
     params: {
-      slug: fileName.replace('.mdx', ''),
+      slug: fileName.replace('.md', ''),
     },
   }))
 
@@ -88,13 +87,16 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const fileName = fs.readFileSync(`_posts/${slug}.mdx`, 'utf-8')
-  const { data: frontmatter, content } = matter(fileName)
-  const mdxSource = await serialize(content)
+  const fileName = fs.readFileSync(
+    `outstatic/content/posts/${slug}.md`,
+    'utf-8'
+  )
+  const { data, content } = matter(fileName)
+
   return {
     props: {
-      frontmatter,
-      content: mdxSource,
+      data,
+      content,
     },
   }
 }

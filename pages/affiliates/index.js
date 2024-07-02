@@ -46,7 +46,7 @@ export default function Home() {
             Partner with us to earn a recurring 30% commission per referral.
           </Text>
           <HStack>
-            <Link href="https://sublyapp.getrewardful.com/signup" isExternal>
+            <Link href="#" isExternal>
               <Button
                 as="span"
                 size="lg"
@@ -59,7 +59,7 @@ export default function Home() {
                 Join Now
               </Button>
             </Link>
-            <Link href="https://sublyapp.getrewardful.com/login" isExternal>
+            <Link href="#" isExternal>
               <Button
                 as="span"
                 variant="outline"
@@ -139,10 +139,10 @@ export default function Home() {
               <Heading size="md">Sales dashboard</Heading>
             </CardHeader>
             <CardBody pt={0}>
-              <Text>
+              {/* <Text>
                 Track your sales in our affiliate dashboard. Powered by
                 Rewardful.
-              </Text>
+              </Text> */}
             </CardBody>
           </Card>
         </SimpleGrid>
@@ -191,7 +191,7 @@ export default function Home() {
               Partner with us to earn a recurring 30% commission per referral.
             </Text>
             <Box>
-              <Link href="https://sublyapp.getrewardful.com/signup" isExternal>
+              <Link href="#" isExternal>
                 <Button
                   as="span"
                   size="lg"
