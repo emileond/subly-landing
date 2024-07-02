@@ -1,25 +1,7 @@
 {
-  "commit": "63e72f15956928ccfd317a36f3e68d9704e8c8e2",
-  "generated": "2024-07-02T01:00:12.249Z",
+  "commit": "a26b5b21e8119047357c264649a18267b77b675d",
+  "generated": "2024-07-02T01:32:35.214Z",
   "metadata": [
-    {
-      "__outstatic": {
-        "commit": "ea575109be63811a57c624342588ddb8a7d8c9fe",
-        "hash": "148752030",
-        "path": "outstatic/content/blogs/el-nuevo-item.md"
-      },
-      "author": {
-        "name": "",
-        "picture": "https://avatars.githubusercontent.com/u/29111636?v=4"
-      },
-      "collection": "blogs",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-07-01T23:31:40.011Z",
-      "slug": "el-nuevo-item",
-      "status": "draft",
-      "title": "el nuevo item"
-    },
     {
       "__outstatic": {
         "commit": "63e72f15956928ccfd317a36f3e68d9704e8c8e2",
