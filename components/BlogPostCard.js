@@ -5,11 +5,13 @@ import {
   CardHeader,
   Heading,
   Image,
+  Tag,
   Text,
 } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
+import dayjs from 'dayjs'
 
-function BlogPostCard({ title, desc, date, slug, coverImage }) {
+function BlogPostCard({ title, desc, date, slug, coverImage, tags, tagColor }) {
   const router = useRouter()
   return (
     <Card
@@ -24,13 +26,16 @@ function BlogPostCard({ title, desc, date, slug, coverImage }) {
     >
       <Image src={coverImage} alt={title} />
       <CardHeader>
+        <Tag mb={2} colorScheme={tagColor}>
+          {tags[0]?.label}
+        </Tag>
         <Heading size="md">{title}</Heading>
       </CardHeader>
       <CardBody>
         <Text>{desc}</Text>
       </CardBody>
       <CardFooter>
-        <Text>{date}</Text>
+        <Text>{dayjs(date).format('MMMM D, YYYY')}</Text>
       </CardFooter>
     </Card>
   )

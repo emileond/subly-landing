@@ -1,30 +1,80 @@
 import {
+  Avatar,
   Box,
   Button,
   Container,
+  Divider,
+  HStack,
   Heading,
   Image,
+  List,
+  ListItem,
+  Tag,
   Text,
   VStack,
 } from '@chakra-ui/react'
-import { Prose } from '@nikolovlazar/chakra-ui-prose'
 import fs from 'fs'
 import matter from 'gray-matter'
 import Head from 'next/head'
 import Nav from '../../components/Nav'
 import { BiArrowBack } from 'react-icons/bi'
-import ProsConsCard from '../../components/ProsConsCard'
-import BlogPostHighlightCard from '../../components/BlogPostHighlightCard'
 import Footer from '../../components/Footer'
 import { useRouter } from 'next/router'
+import dayjs from 'dayjs'
+import ReactMarkdown from 'react-markdown'
+import ChakraUIRenderer from 'chakra-ui-markdown-renderer'
+import { readingTime } from 'reading-time-estimator'
 
 export default function PostPage({ data, content }) {
-  console.log(data, content)
   const router = useRouter()
-  const components = {
-    ProsConsCard,
-    BlogPostHighlightCard,
+
+  const readingTimeEstimate = readingTime(content, 220)
+
+  const newTheme = {
+    p: (props) => {
+      const { children } = props
+      return (
+        <Text mb={8} fontSize={{ base: '16px', md: '18px' }} lineHeight="1.8">
+          {children}
+        </Text>
+      )
+    },
+    h2: (props) => {
+      const { children } = props
+      return (
+        <Heading as="h3" fontSize="2xl" mb={4}>
+          {children}
+        </Heading>
+      )
+    },
+    h3: (props) => {
+      const { children } = props
+      return (
+        <Heading as="h3" fontSize="xl" mb={4}>
+          {children}
+        </Heading>
+      )
+    },
+    ul: (props) => {
+      const { children } = props
+      return (
+        <List pl={8} mb={8}>
+          {children}
+        </List>
+      )
+    },
+    li: (props) => {
+      const { children } = props
+      return (
+        <ListItem mb={6}>
+          <Text fontSize={{ base: '16px', md: '18px' }} lineHeight="1.8">
+            {children}
+          </Text>
+        </ListItem>
+      )
+    },
   }
+
   return (
     <>
       <Head>
@@ -36,31 +86,73 @@ export default function PostPage({ data, content }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <Container pt="5vh" pb="10vh" maxW="800px">
-        <Box pb={2}>
+      <Container pt="4vh" pb="10vh" maxW="container.md">
+        <Box pb={8}>
           <Button
             variant="ghost"
-            colorScheme="blue"
+            size="xs"
             leftIcon={<BiArrowBack fontSize="1rem" />}
             onClick={() => router.back()}
           >
-            Back
+            Back to blog
           </Button>
         </Box>
-        <Heading pb={6}>{data?.title}</Heading>
+
+        <VStack mb={6} align="start">
+          <Tag
+            colorScheme="blue"
+            variant="subtle"
+            py={1}
+            px={2}
+            borderRadius="full"
+            mb={1}
+          >
+            {data?.tags[0]?.label}
+          </Tag>
+          <Heading
+            as="h1"
+            fontSize={{ base: '3xl', md: '4xl' }}
+            fontWeight="bold"
+            lineHeight="shorter"
+            letterSpacing="tight"
+          >
+            {data?.title}
+          </Heading>
+          <HStack w="100%" justify="start" py={4}>
+            <Avatar
+              src={data?.author?.picture}
+              name={data?.author?.name}
+              size="sm"
+            />
+            <Text fontSize="sm">{data?.author?.name}</Text>
+            <HStack>
+              <Text fontSize="sm">
+                {dayjs(data?.publishedAt).format('MMMM D, YYYY')} •
+              </Text>
+              <Text fontSize="sm">{readingTimeEstimate?.text} </Text>
+            </HStack>
+          </HStack>
+        </VStack>
         <Image
-          borderRadius="2xl"
+          borderRadius="3xl"
           overflow="hidden"
-          src={`/blog/${data?.coverImage}`}
+          src={data?.coverImage}
           alt={data?.title}
+          mb={8}
         />
-        <Prose>{content}</Prose>
+        <ReactMarkdown components={ChakraUIRenderer(newTheme)}>
+          {content}
+        </ReactMarkdown>
+        <Divider my={8} />
         <VStack>
-          <Text>
-            <strong>Author:</strong> {data?.author?.name}
-          </Text>
+          <Avatar
+            src={data?.author?.picture}
+            name={data?.author?.name}
+            size="md"
+          />
+          <Text>{data?.author?.name}</Text>
           <Text fontSize="sm" color="gray.600">
-            {data?.publishedAt}
+            {dayjs(data?.publishedAt).format('MMMM D, YYYY')}
           </Text>
         </VStack>
       </Container>

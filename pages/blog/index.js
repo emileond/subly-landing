@@ -3,20 +3,11 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import Head from 'next/head'
 import Nav from '../../components/Nav'
-import {
-  Container,
-  Heading,
-  VStack,
-  Text,
-  useColorModeValue,
-  SimpleGrid,
-} from '@chakra-ui/react'
+import { Container, Heading, VStack, Text, SimpleGrid } from '@chakra-ui/react'
 import BlogPostCard from '../../components/BlogPostCard'
 import Footer from '../../components/Footer'
 
 const Posts = ({ posts }) => {
-  const tagColor = useColorModeValue('blackAlpha', 'gray')
-  const hoverBg = useColorModeValue('gray.200', 'gray.700')
   return (
     <>
       <Head>
@@ -30,10 +21,10 @@ const Posts = ({ posts }) => {
       <Nav />
       <Container maxW="container.xl" minH="80vh">
         <VStack align="start" spacing={3} py={20}>
-          <Heading size="xl">Subly Blog</Heading>
+          <Heading size="xl">Blog</Heading>
           <Text fontSize="lg">
-            Finance Tips, In-Depth Tool Reviews, and Success Stories Tailored
-            for Businesses.
+            Get to know the latest features of Subly, challenges we faced, and
+            tips to get the most out of your financial data.
           </Text>
         </VStack>
         <VStack spacing={8} w="100%" pb={8}>
@@ -42,16 +33,26 @@ const Posts = ({ posts }) => {
               .filter((post) => post.status === 'published')
               .map(
                 (
-                  { slug, title, description, publishedAt, coverImage },
+                  {
+                    slug,
+                    title,
+                    description,
+                    publishedAt,
+                    coverImage,
+                    tags,
+                    tagColor,
+                  },
                   index
                 ) => (
                   <BlogPostCard
-                    coverImage={`/blog/${coverImage}`}
+                    coverImage={coverImage}
                     title={title}
                     desc={description}
                     date={publishedAt}
                     slug={slug}
                     key={index}
+                    tags={tags}
+                    tagColor={tagColor}
                   />
                 )
               )}
@@ -79,6 +80,25 @@ export async function getStaticProps() {
     )
     const { data: frontmatter } = matter(readFile)
 
+    let tagColor = 'gray'
+
+    switch (frontmatter.tags[0]?.label) {
+      case 'Development':
+        tagColor = 'gray'
+        break
+      case 'Product updates':
+        tagColor = 'purple'
+        break
+      case 'Customer stories':
+        tagColor = 'orange'
+        break
+      case 'Resources & guides':
+        tagColor = 'blue'
+        break
+      default:
+        tagColor = 'gray'
+    }
+
     return {
       slug,
       author: frontmatter.author,
@@ -87,6 +107,8 @@ export async function getStaticProps() {
       publishedAt: frontmatter.publishedAt,
       status: frontmatter.status,
       title: frontmatter.title,
+      tags: frontmatter.tags,
+      tagColor,
     }
   })
 
