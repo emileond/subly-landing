@@ -1,11 +1,11 @@
 {
-  "commit": "2a65b9c8c099f22a001f6db171df372156d734d1",
-  "generated": "2024-07-02T05:10:01.131Z",
+  "commit": "a5719f03c40f2bea77877a43edc9c293f4b308e2",
+  "generated": "2024-07-02T05:18:06.752Z",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "2a65b9c8c099f22a001f6db171df372156d734d1",
-        "hash": "2840530729",
+        "commit": "a5719f03c40f2bea77877a43edc9c293f4b308e2",
+        "hash": "2070151770",
         "path": "outstatic/content/posts/introducing-revenue-tracking.md"
       },
       "author": {

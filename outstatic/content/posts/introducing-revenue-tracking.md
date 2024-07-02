@@ -34,3 +34,5 @@ In addition to the revenue tracking feature, we’ve made several other improvem
 ## What's next?
 
 By integrating revenue tracking, we're laying the foundation for more advanced features that will give you deeper insights into your business. For instance, we can now work on generating cashflow forecasts, helping you understand your financial status at a glance and plan for the future more effectively.
+
+There're many exciting things coming to Subly, and we can't wait to share them with you, so stay tuned for updates and more features.
