@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
 import theme from '../theme'
 import splitbee from '@splitbee/web'
@@ -17,12 +16,27 @@ function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
       {process.env.NEXT_PUBLIC_NODE_ENV === 'production' && (
-        <Script
-          id="umami-script"
-          defer
-          src="https://umami.trysubly.com/script.js"
-          data-website-id="f176b6d8-eb97-4ba3-b10e-e5176f947eb9"
-        />
+        <>
+          <Script
+            id="umami-script"
+            defer
+            src="https://umami.trysubly.com/script.js"
+            data-website-id="f176b6d8-eb97-4ba3-b10e-e5176f947eb9"
+          />
+          <Script
+            id="partnero-script"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `(function(p,t,n,e,r,o){ p['__partnerObject']=r;function f(){
+            var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
+            f.q=f.q||[];p[r]=p[r]||f.bind(f.q);p[r].q=p[r].q||f.q;o=t.createElement(n);
+            var _=t.getElementsByTagName(n)[0];o.async=1;o.src=e+'?v'+(~~(new Date().getTime()/1e6));
+            _.parentNode.insertBefore(o,_);})(window, document, 'script', 'https://app.partnero.com/js/universal.js', 'po');
+            po('settings', 'assets_host', 'https://assets.partnero.com');
+            po('program', 'NZCCAGAZ', 'load');`,
+            }}
+          />
+        </>
       )}
       <Component {...pageProps} />
     </ChakraProvider>
