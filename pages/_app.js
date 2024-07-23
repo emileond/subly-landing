@@ -20,8 +20,8 @@ function MyApp({ Component, pageProps }) {
           <Script
             id="umami-script"
             defer
-            src="https://umami.trysubly.com/script.js"
-            data-website-id="f176b6d8-eb97-4ba3-b10e-e5176f947eb9"
+            src="https://umami.subly.app/script.js"
+            data-website-id="985b3243-3bb3-4213-9561-381cde5f2d85"
           />
           <Script
             id="partnero-script"

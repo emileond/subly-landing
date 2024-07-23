@@ -46,7 +46,7 @@ export default function Home() {
             Partner with us to earn a recurring 30% commission per referral.
           </Text>
           <HStack>
-            <Link href="#" isExternal>
+            <Link href="https://affiliates.subly.app/register" isExternal>
               <Button
                 as="span"
                 size="lg"
@@ -59,7 +59,7 @@ export default function Home() {
                 Join Now
               </Button>
             </Link>
-            <Link href="#" isExternal>
+            <Link href="https://affiliates.subly.app/login" isExternal>
               <Button
                 as="span"
                 variant="outline"
@@ -73,7 +73,7 @@ export default function Home() {
           </HStack>
         </VStack>
         <Spacer h="10vh" />
-        <SimpleGrid minChildWidth="200px" spacing={4}>
+        <SimpleGrid minChildWidth="250px" spacing={4}>
           <Card variant="outline">
             <CardHeader>
               <Box
@@ -139,10 +139,10 @@ export default function Home() {
               <Heading size="md">Sales dashboard</Heading>
             </CardHeader>
             <CardBody pt={0}>
-              {/* <Text>
-                Track your sales in our affiliate dashboard. Powered by
-                Rewardful.
-              </Text> */}
+              <Text>
+                Track your sales in your affiliate dashboard. Powered by
+                Partnero.
+              </Text>
             </CardBody>
           </Card>
         </SimpleGrid>
@@ -191,7 +191,7 @@ export default function Home() {
               Partner with us to earn a recurring 30% commission per referral.
             </Text>
             <Box>
-              <Link href="#" isExternal>
+              <Link href="https://affiliates.subly.app" isExternal>
                 <Button
                   as="span"
                   size="lg"

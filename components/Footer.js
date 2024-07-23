@@ -12,8 +12,8 @@ import {
   VStack,
   Heading,
   IconButton,
+  Link,
 } from '@chakra-ui/react'
-import Link from 'next/link'
 import { FaTwitter } from 'react-icons/fa'
 import { SiBuymeacoffee } from 'react-icons/si'
 
@@ -111,16 +111,6 @@ export default function LargeWithLogoCentered() {
             <Heading size="md">Product</Heading>
             <Button
               as="a"
-              href="/releases"
-              variant="link"
-              fontWeight="400"
-              colorScheme="black"
-              justifyContent="start"
-            >
-              Releases
-            </Button>
-            <Button
-              as="a"
               href="/affiliates"
               variant="link"
               fontWeight="400"
@@ -131,7 +121,7 @@ export default function LargeWithLogoCentered() {
             </Button>
             <Button
               as="a"
-              href="https://roadmap.subly.app"
+              href="/roadmap"
               variant="link"
               fontWeight="400"
               colorScheme="black"
@@ -139,26 +129,26 @@ export default function LargeWithLogoCentered() {
             >
               Roadmap
             </Button>
-            <Button
-              as="a"
-              href="https://roadmap.subly.app/feature-requests"
+            <Link
+              isExternal
+              href="https://feedback.subly.app"
               variant="link"
               fontWeight="400"
               colorScheme="black"
               justifyContent="start"
             >
               Suggest a Feature
-            </Button>
-            <Button
-              as="a"
-              href="https://status.subly.app"
+            </Link>
+            <Link
+              isExternal
+              href="https://uptime.subly.app"
               variant="link"
               fontWeight="400"
               colorScheme="black"
               justifyContent="start"
             >
               Status
-            </Button>
+            </Link>
             <Button
               as="a"
               href="/currency-converter"
