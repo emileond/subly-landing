@@ -1,6 +1,6 @@
 ---
 title: 'How to Manage AppSumo Purchases in Subly'
-status: 'draft'
+status: 'published'
 author:
   name: ''
   picture: 'https://avatars.githubusercontent.com/u/29111636?v=4'
@@ -8,7 +8,7 @@ slug: 'how-to-manage-appsumo-purchases-in-subly'
 description: ''
 coverImage: ''
 category: ''
-tags: ''
+tags: []
 publishedAt: '2024-09-19T20:18:30.854Z'
 ---
 
