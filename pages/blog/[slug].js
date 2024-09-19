@@ -9,8 +9,10 @@ import {
   Image,
   List,
   ListItem,
+  OrderedList,
   Tag,
   Text,
+  UnorderedList,
   VStack,
 } from '@chakra-ui/react'
 import fs from 'fs'
@@ -24,6 +26,7 @@ import dayjs from 'dayjs'
 import ReactMarkdown from 'react-markdown'
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer'
 import { readingTime } from 'reading-time-estimator'
+import CTA from '../../components/CTA'
 
 export default function PostPage({ data, content }) {
   const router = useRouter()
@@ -55,23 +58,42 @@ export default function PostPage({ data, content }) {
         </Heading>
       )
     },
+    h4: (props) => {
+      const { children } = props
+      return (
+        <Heading as="h4" fontSize="18px" mb={4}>
+          {children}
+        </Heading>
+      )
+    },
     ul: (props) => {
       const { children } = props
       return (
-        <List pl={8} mb={8}>
+        <UnorderedList pl={8} mb={8}>
           {children}
-        </List>
+        </UnorderedList>
+      )
+    },
+    ol: (props) => {
+      const { children } = props
+      return (
+        <OrderedList pl={8} mb={8}>
+          {children}
+        </OrderedList>
       )
     },
     li: (props) => {
       const { children } = props
       return (
-        <ListItem mb={6}>
+        <ListItem mb={3}>
           <Text fontSize={{ base: '16px', md: '18px' }} lineHeight="1.8">
             {children}
           </Text>
         </ListItem>
       )
+    },
+    hr: (props) => {
+      return <Divider my={8} />
     },
   }
 
@@ -143,6 +165,11 @@ export default function PostPage({ data, content }) {
         <ReactMarkdown components={ChakraUIRenderer(newTheme)}>
           {content}
         </ReactMarkdown>
+        <CTA
+          headline={data?.ctaHeadline}
+          text={data?.ctaText}
+          cta={data?.ctaButtonLabel}
+        />
         <Divider my={8} />
         <VStack>
           <Avatar

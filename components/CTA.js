@@ -8,7 +8,7 @@ import {
   Stack,
 } from '@chakra-ui/react'
 
-export default function CTA() {
+export default function CTA({ headline, text, cta }) {
   return (
     <Container maxW={'6xl'}>
       <Box
@@ -21,10 +21,11 @@ export default function CTA() {
       >
         <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
           <Heading color="white" fontSize={'4xl'}>
-            Get started today
+            {headline || 'Get started today'}
           </Heading>
           <Text color="whiteAlpha.900" fontSize={'xl'}>
-            Signup now and take back control over your subscriptions.
+            {text ||
+              'Signup now and take back control over your subscriptions.'}
           </Text>
           <Box>
             <Button
@@ -37,7 +38,7 @@ export default function CTA() {
               bg={'#6F55FF'}
               _hover={{ bg: '#5842d8' }}
             >
-              Get started for free
+              {cta || 'Get started for free'}
             </Button>
           </Box>
         </Stack>
