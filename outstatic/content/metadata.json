@@ -1,6 +1,6 @@
 {
-  "commit": "de6faa05bb80d6113a510347117ac7c1776e3c3a",
-  "generated": "2024-09-19T22:07:59.431Z",
+  "commit": "d0e28147a64ce45e98a258155485cbcc56a5f5cf",
+  "generated": "2024-09-19T22:09:42.589Z",
   "metadata": [
     {
       "__outstatic": {
@@ -29,8 +29,8 @@
     },
     {
       "__outstatic": {
-        "commit": "de6faa05bb80d6113a510347117ac7c1776e3c3a",
-        "hash": "1303505959",
+        "commit": "d0e28147a64ce45e98a258155485cbcc56a5f5cf",
+        "hash": "1690412279",
         "path": "outstatic/content/posts/how-to-manage-appsumo-purchases-in-subly.md"
       },
       "author": {
@@ -39,15 +39,15 @@
       },
       "category": "",
       "collection": "posts",
-      "coverImage": "/images/appsumo-csv-cover-YxND.png",
+      "coverImage": "",
       "description": "",
       "publishedAt": "2024-09-19T20:18:30.854Z",
       "slug": "how-to-manage-appsumo-purchases-in-subly",
       "status": "published",
       "tags": [
         {
-          "label": "Guides & tutorials",
-          "value": "guides &Tutorials"
+          "label": "Resources & guides",
+          "value": "resources &Guides"
         }
       ],
       "title": "How to Manage AppSumo Purchases in Subly"

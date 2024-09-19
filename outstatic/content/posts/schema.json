@@ -23,6 +23,10 @@
         {
           "value": "guides &Tutorials",
           "label": "Guides & tutorials"
+        },
+        {
+          "value": "resources &Guides",
+          "label": "Resources & guides"
         }
       ]
     }
