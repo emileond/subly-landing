@@ -1,6 +1,6 @@
 {
-  "commit": "d0e28147a64ce45e98a258155485cbcc56a5f5cf",
-  "generated": "2024-09-19T22:09:42.589Z",
+  "commit": "d3bbeec490dcf36003229e7053f038f36e7a6914",
+  "generated": "2024-09-19T22:14:53.290Z",
   "metadata": [
     {
       "__outstatic": {
@@ -29,8 +29,8 @@
     },
     {
       "__outstatic": {
-        "commit": "d0e28147a64ce45e98a258155485cbcc56a5f5cf",
-        "hash": "1690412279",
+        "commit": "d3bbeec490dcf36003229e7053f038f36e7a6914",
+        "hash": "3945524744",
         "path": "outstatic/content/posts/how-to-manage-appsumo-purchases-in-subly.md"
       },
       "author": {

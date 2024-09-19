@@ -16,6 +16,8 @@ If you're an entrepreneur, freelancer, or business owner, you've probably taken 
 
 In this post, we'll show you **how to manage your AppSumo purchases using Subly**, making it easier to organize your software assets and optimize your investments.
 
+---
+
 ## Why Use Subly to Manage Your AppSumo Purchases?
 
 Many users rely on Subly as a vault for their software and lifetime deal purchases. Here's how Subly can help you streamline the management of your AppSumo deals:
