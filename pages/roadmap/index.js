@@ -30,19 +30,19 @@ import { BiCaretRight, BiRightArrow, BiRightArrowAlt } from 'react-icons/bi'
 export default function Roadmap() {
   const items = [
     {
-      title: 'Cashflow report',
+      title: 'Appsumo importer',
       type: 'New feature',
       color: 'green',
       status: 'now',
     },
     {
-      title: 'Webhooks for reminders',
-      type: 'Bug fix',
-      color: 'red',
+      title: 'Reminders for contract renewal date',
+      type: 'Enhancement',
+      color: 'purple',
       status: 'now',
     },
     {
-      title: 'Show past trasnactions for subscriptions',
+      title: 'Show past transactions for subscriptions',
       type: 'Enhancement',
       color: 'purple',
       status: 'now',
@@ -54,7 +54,7 @@ export default function Roadmap() {
       status: 'now',
     },
     {
-      title: 'Logos API',
+      title: 'Notification control in projects',
       type: 'Enhancement',
       color: 'purple',
       status: 'next',
@@ -99,6 +99,12 @@ export default function Roadmap() {
       title: 'AI powered insights',
       type: 'New feature',
       color: 'green',
+      status: 'later',
+    },
+    {
+      title: 'Logos API',
+      type: 'Enhancement',
+      color: 'purple',
       status: 'later',
     },
   ]
