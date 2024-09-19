@@ -29,6 +29,13 @@
           "label": "Resources & guides"
         }
       ]
+    },
+    "ctaHeadline": {
+      "required": false,
+      "description": "",
+      "fieldType": "String",
+      "dataType": "string",
+      "title": "ctaHeadline"
     }
   }
 }
