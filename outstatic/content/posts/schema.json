@@ -36,6 +36,13 @@
       "fieldType": "String",
       "dataType": "string",
       "title": "ctaHeadline"
+    },
+    "ctaText": {
+      "required": false,
+      "description": "",
+      "fieldType": "String",
+      "dataType": "string",
+      "title": "ctaText"
     }
   }
 }
