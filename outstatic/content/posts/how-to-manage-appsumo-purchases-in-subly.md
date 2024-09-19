@@ -9,6 +9,9 @@ description: ''
 coverImage: ''
 category: ''
 tags: [{"label":"Resources & guides","value":"resources &Guides"}]
+ctaHeadline: 'Effortless AppSumo deal management starts here'
+ctaText: 'Take the hassle out of tracking your lifetime deals, get organized and make the most of your software investments.'
+ctaButtonLabel: ''
 publishedAt: '2024-09-19T20:18:30.854Z'
 ---
 
