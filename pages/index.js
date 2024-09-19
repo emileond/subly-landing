@@ -7,7 +7,7 @@ import CTA from '../components/CTA'
 import FAQ from '../components/FAQ'
 import Footer from '../components/Footer'
 import Pricing from '../components/Pricing'
-import { Box } from '@chakra-ui/react'
+import { Box, Container } from '@chakra-ui/react'
 import FeaturesList from '../components/FeaturesList'
 import Testimonials from '../components/Testimonials'
 
@@ -48,7 +48,9 @@ export default function Home() {
         desc="Track and analyze expenses from any corner of the world, Subly manages currency conversions for you, and presents insights in your preferred currency."
         inverted
       />
-      <CTA />
+      <Container maxW="container.lg">
+        <CTA />
+      </Container>
       <FeatureBig
         img="collab"
         width={['100%', '100%', '90%', '90%']}
