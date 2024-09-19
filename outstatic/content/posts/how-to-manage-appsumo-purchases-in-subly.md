@@ -6,7 +6,7 @@ author:
   picture: 'https://avatars.githubusercontent.com/u/29111636?v=4'
 slug: 'how-to-manage-appsumo-purchases-in-subly'
 description: ''
-coverImage: ''
+coverImage: '/images/appsumo-csv-cover--1--k4Nz.png'
 category: ''
 tags: [{"label":"Resources & guides","value":"resources &Guides"}]
 ctaHeadline: 'Effortless AppSumo deal management starts here'
