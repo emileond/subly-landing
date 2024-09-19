@@ -43,6 +43,13 @@
       "fieldType": "String",
       "dataType": "string",
       "title": "ctaText"
+    },
+    "ctaButtonLabel": {
+      "required": false,
+      "description": "",
+      "fieldType": "String",
+      "dataType": "string",
+      "title": "ctaButtonLabel"
     }
   }
 }
