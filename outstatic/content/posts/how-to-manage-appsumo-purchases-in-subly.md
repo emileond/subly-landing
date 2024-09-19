@@ -46,7 +46,7 @@ Many users rely on Subly as a vault for their software and lifetime deal purchas
 
 **Step 2: Import Your Data into Subly**
 
-- Log in to your [Subly account](https://subly.app/).
+- Log in to your [Subly account](https://web.subly.app/).
 - Navigate to the **AppSumo Importer** feature.
 - Upload your CSV file.
 
