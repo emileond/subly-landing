@@ -1,6 +1,6 @@
 {
-  "commit": "7299bb5673ca10966b2e5550c176773b05dd4494",
-  "generated": "2024-07-02T05:19:52.117Z",
+  "commit": "1bfd93e72f732da26f7d9bc5129b9c5e025f24d8",
+  "generated": "2024-09-19T20:58:04.442Z",
   "metadata": [
     {
       "__outstatic": {
@@ -26,6 +26,27 @@
         }
       ],
       "title": "Introducing Revenue Tracking: A New Chapter for Subly"
+    },
+    {
+      "__outstatic": {
+        "commit": "1bfd93e72f732da26f7d9bc5129b9c5e025f24d8",
+        "hash": "1940211534",
+        "path": "outstatic/content/posts/how-to-manage-appsumo-purchases-in-subly.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/29111636?v=4"
+      },
+      "category": "",
+      "collection": "posts",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-09-19T20:18:30.854Z",
+      "slug": "how-to-manage-appsumo-purchases-in-subly",
+      "status": "draft",
+      "tags": [
+      ],
+      "title": "How to Manage AppSumo Purchases in Subly"
     }
   ]
 }
