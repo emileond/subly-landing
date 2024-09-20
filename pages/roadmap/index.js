@@ -6,16 +6,10 @@ import {
   HStack,
   Text,
   VStack,
-  Card,
-  CardHeader,
-  CardBody,
   Icon,
-  SimpleGrid,
   Spacer,
   List,
   ListItem,
-  ListIcon,
-  UnorderedList,
   Link,
   Divider,
   Badge,
@@ -23,20 +17,13 @@ import {
 import Head from 'next/head'
 
 import Nav from '../../components/Nav'
-import { RiCalendar2Fill, RiDashboard2Fill, RiPaypalFill } from 'react-icons/ri'
 import Footer from '../../components/Footer'
-import { BiCaretRight, BiRightArrow, BiRightArrowAlt } from 'react-icons/bi'
+import { BiRightArrowAlt } from 'react-icons/bi'
 
 export default function Roadmap() {
   const items = [
     {
-      title: 'Appsumo importer',
-      type: 'New feature',
-      color: 'green',
-      status: 'now',
-    },
-    {
-      title: 'Reminders for contract renewal date',
+      title: 'Bulk edit reminders',
       type: 'Enhancement',
       color: 'purple',
       status: 'now',
@@ -48,7 +35,7 @@ export default function Roadmap() {
       status: 'now',
     },
     {
-      title: 'Year calendar view',
+      title: 'Connect bank accounts',
       type: 'New feature',
       color: 'green',
       status: 'now',
@@ -57,18 +44,6 @@ export default function Roadmap() {
       title: 'Notification control in projects',
       type: 'Enhancement',
       color: 'purple',
-      status: 'next',
-    },
-    {
-      title: 'Bulk edit reminders',
-      type: 'Enhancement',
-      color: 'purple',
-      status: 'next',
-    },
-    {
-      title: 'Connect bank accounts',
-      type: 'New feature',
-      color: 'green',
       status: 'next',
     },
     {
@@ -81,16 +56,16 @@ export default function Roadmap() {
       title: 'User mentions and assignees',
       type: 'Enhancement',
       color: 'purple',
-      status: 'later',
-    },
-    {
-      title: 'Invoice generator for recurring revenue',
-      type: 'New feature',
-      color: 'green',
-      status: 'later',
+      status: 'next',
     },
     {
       title: 'Files explorer',
+      type: 'New feature',
+      color: 'green',
+      status: 'next',
+    },
+    {
+      title: 'Invoice generator for recurring revenue',
       type: 'New feature',
       color: 'green',
       status: 'later',
