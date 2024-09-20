@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   Avatar,
   Box,
@@ -7,6 +8,7 @@ import {
   HStack,
   Heading,
   Image,
+  IconButton,
   List,
   ListItem,
   OrderedList,
@@ -19,7 +21,7 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import Head from 'next/head'
 import Nav from '../../components/Nav'
-import { BiArrowBack } from 'react-icons/bi'
+import { BiArrowBack, BiLink } from 'react-icons/bi'
 import Footer from '../../components/Footer'
 import { useRouter } from 'next/router'
 import dayjs from 'dayjs'
@@ -30,30 +32,78 @@ import CTA from '../../components/CTA'
 
 export default function PostPage({ data, content }) {
   const router = useRouter()
-
   const readingTimeEstimate = readingTime(content, 220)
+
+  // Function to generate a slug from text
+  const slugify = (text) =>
+    text
+      .toString()
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, '-') // Replace spaces with -
+      .replace(/[^\w\-]+/g, '') // Remove all non-word chars
+      .replace(/\-\-+/g, '-') // Replace multiple - with single -
+
+  // Function to extract text content from children
+  const extractText = (children) => {
+    return React.Children.toArray(children)
+      .map((child) => {
+        if (typeof child === 'string') {
+          return child
+        } else if (child.props && child.props.children) {
+          return extractText(child.props.children)
+        } else {
+          return ''
+        }
+      })
+      .join('')
+  }
 
   const newTheme = {
     p: (props) => {
       const { children } = props
-      return (
-        <Text mb={8} fontSize={{ base: '16px', md: '18px' }} lineHeight="1.8">
-          {children}
-        </Text>
-      )
+      return <Text my={6}>{children}</Text>
     },
     h2: (props) => {
       const { children } = props
+      const text = extractText(children)
+      const id = slugify(text)
+
       return (
-        <Heading as="h3" fontSize="2xl" mb={4}>
-          {children}
-        </Heading>
+        <HStack id={id} align="center" pb={3} pt={12} role="group">
+          <Heading as="h2" fontSize="24px">
+            {children}
+          </Heading>
+          <IconButton
+            opacity={0}
+            size="sm"
+            variant="ghost"
+            color="gray.500"
+            icon={<BiLink fontSize="18px" />}
+            aria-label="Link to this section"
+            onClick={() => {
+              // Update the URL in the address bar
+              window.location.hash = id
+
+              // Optionally scroll to the element smoothly
+              document
+                .getElementById(id)
+                ?.scrollIntoView({ behavior: 'smooth' })
+
+              // Copy the new URL to the clipboard
+              const url = window.location.href
+              navigator.clipboard.writeText(url)
+            }}
+            _hover={{ color: 'gray.700', bg: 'gray.50' }}
+            _groupHover={{ opacity: 1 }}
+          />
+        </HStack>
       )
     },
     h3: (props) => {
       const { children } = props
       return (
-        <Heading as="h3" fontSize="xl" mb={4}>
+        <Heading as="h3" fontSize="lg" mb={4}>
           {children}
         </Heading>
       )
@@ -61,7 +111,7 @@ export default function PostPage({ data, content }) {
     h4: (props) => {
       const { children } = props
       return (
-        <Heading as="h4" fontSize="18px" mb={4}>
+        <Heading as="h4" size="sm" my={6}>
           {children}
         </Heading>
       )
@@ -69,7 +119,7 @@ export default function PostPage({ data, content }) {
     ul: (props) => {
       const { children } = props
       return (
-        <UnorderedList pl={8} mb={8}>
+        <UnorderedList pl={3} my={6}>
           {children}
         </UnorderedList>
       )
@@ -77,7 +127,7 @@ export default function PostPage({ data, content }) {
     ol: (props) => {
       const { children } = props
       return (
-        <OrderedList pl={8} mb={8}>
+        <OrderedList pl={3} my={6}>
           {children}
         </OrderedList>
       )
@@ -85,10 +135,8 @@ export default function PostPage({ data, content }) {
     li: (props) => {
       const { children } = props
       return (
-        <ListItem mb={3}>
-          <Text fontSize={{ base: '16px', md: '18px' }} lineHeight="1.8">
-            {children}
-          </Text>
+        <ListItem mb={2}>
+          <Text>{children}</Text>
         </ListItem>
       )
     },
@@ -100,7 +148,7 @@ export default function PostPage({ data, content }) {
   return (
     <>
       <Head>
-        <title>Subly Blog</title>
+        <title>{data?.title}- Subly</title>
         <meta
           name="description"
           content="Subly brings all your subscriptions in a single place so you never lose track of what you're paying for."
@@ -108,13 +156,19 @@ export default function PostPage({ data, content }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <Container pt="4vh" pb="10vh" maxW="container.md">
+      <Container
+        pt="4vh"
+        pb="10vh"
+        maxW="container.md"
+        fontSize={{ base: '16px', xl: '17px' }}
+        lineHeight="1.75"
+      >
         <Box pb={8}>
           <Button
             variant="ghost"
             size="xs"
             leftIcon={<BiArrowBack fontSize="1rem" />}
-            onClick={() => router.back()}
+            onClick={() => router.push('/blog')}
           >
             Back to blog
           </Button>
