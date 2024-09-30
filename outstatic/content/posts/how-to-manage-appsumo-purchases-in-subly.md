@@ -6,7 +6,7 @@ author:
   picture: 'https://avatars.githubusercontent.com/u/29111636?v=4'
 slug: 'how-to-manage-appsumo-purchases-in-subly'
 description: ''
-coverImage: '/images/appsumo-csv-cover--1--k4Nz.png'
+coverImage: ''
 category: ''
 tags: [{"label":"Resources & guides","value":"resources &Guides"}]
 ctaHeadline: 'Effortless AppSumo deal management starts here'
@@ -45,35 +45,25 @@ Assess the value of your AppSumo purchases within the context of your overall so
 
 ## Step-by-Step Guide: Managing AppSumo Purchases in Subly
 
-#### Step 1: Download your AppSumo purchase data
+#### Step 1: Open the AppSumo Integration
 
-- Log in to your [AppSumo account](https://appsumo.com/account/products/).
-- Navigate to your purchase history.
-- Download your purchases as a CSV file.
+Log in to Subly and navigate to the [integrations page](https://web.subly.app/settings?tab=3), you'll find the AppSumo Integration in the '**Data import'** section.
 
-#### **Step 2: Import Your Data into Subly**
+#### **Step 2:** Select a Project and Enter Your AppSumo Credentials
 
-- Log in to your [Subly account](https://web.subly.app/).
-- Navigate to the **AppSumo Importer** feature.
-- Upload your CSV file.
+Choose the project where you'd like to import your AppSumo purchases.
 
-#### **Step 3: Set Up Refund Reminders**
+Enter your AppSumo login credentials (note: no login data is stored).
 
-- During the import process, choose the reminder offset (e.g., 5 days before the refund deadline).
-- Subly will calculate the reminder dates automatically.
-- Confirm and proceed with the import.
+#### **Step 3: Automatic Import**
 
-#### **Step 4: Review and Organize Your Deals**
+The integration will automatically import all your AppSumo purchases into Subly.
 
-- After the import, review your AppSumo purchases in the dashboard.
-- Edit any details if necessary.
-- Organize your deals using categories or tags.
+You will receive a notification once the import is complete.
 
-#### **Step 5: Monitor and Optimize**
+#### **Step 4:** Automatic Refund Reminders
 
-- Use Subly's analytics to monitor your software usage and expenses.
-- Set up additional reminders or notes as needed.
-- Regularly review your software stack to ensure alignment with your business needs.
+Subly will automatically create reminders for any future refund deadlines, so you don't miss a chance for a refund.
 
 ---
 

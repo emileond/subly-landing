@@ -1,6 +1,6 @@
 {
-  "commit": "01a005019343dcb423955392a0b71f4b620f6408",
-  "generated": "2024-09-19T22:46:43.318Z",
+  "commit": "16900aa862dab9b94f303ad3f84470fa40eaa77c",
+  "generated": "2024-09-30T01:21:07.593Z",
   "metadata": [
     {
       "__outstatic": {
@@ -29,8 +29,8 @@
     },
     {
       "__outstatic": {
-        "commit": "01a005019343dcb423955392a0b71f4b620f6408",
-        "hash": "1336436992",
+        "commit": "16900aa862dab9b94f303ad3f84470fa40eaa77c",
+        "hash": "4143253409",
         "path": "outstatic/content/posts/how-to-manage-appsumo-purchases-in-subly.md"
       },
       "author": {
@@ -39,7 +39,7 @@
       },
       "category": "",
       "collection": "posts",
-      "coverImage": "/images/appsumo-csv-cover--1--k4Nz.png",
+      "coverImage": "",
       "ctaButtonLabel": "",
       "ctaHeadline": "Effortless AppSumo deal management starts here",
       "ctaText": "Take the hassle out of tracking your lifetime deals, get organized and make the most of your software investments.",
