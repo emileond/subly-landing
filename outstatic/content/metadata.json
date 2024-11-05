@@ -1,6 +1,6 @@
 {
-  "commit": "615e4d48af74cceae62cfd164bf8f7beed88efc4",
-  "generated": "2024-11-05T00:19:27.574Z",
+  "commit": "bfdaa2dfeb22bfab0d7335d23a86dbf0e5409bf1",
+  "generated": "2024-11-05T01:07:34.240Z",
   "metadata": [
     {
       "__outstatic": {
@@ -82,6 +82,30 @@
         }
       ],
       "title": "The Ultimate Guide to Cash Flow for SMBs"
+    },
+    {
+      "__outstatic": {
+        "commit": "bfdaa2dfeb22bfab0d7335d23a86dbf0e5409bf1",
+        "hash": "2866234907",
+        "path": "outstatic/content/posts/5-key-tips-for-effective-budgeting-in-2025.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/29111636?v=4"
+      },
+      "category": "",
+      "collection": "posts",
+      "coverImage": "",
+      "ctaButtonLabel": "",
+      "ctaHeadline": "",
+      "ctaText": "",
+      "description": "",
+      "publishedAt": "2024-11-05T00:24:28.570Z",
+      "slug": "5-key-tips-for-effective-budgeting-in-2025",
+      "status": "draft",
+      "tags": [
+      ],
+      "title": "5 Key Tips for Effective Budgeting in 2025"
     }
   ]
 }
