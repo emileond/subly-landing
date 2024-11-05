@@ -1,6 +1,6 @@
 {
-  "commit": "dcebf7bd2bfa37cff30a74ccb54f537c9909e457",
-  "generated": "2024-09-30T02:02:30.488Z",
+  "commit": "15f962ea10b835ae8a32883b27629b6d1bb4cc8b",
+  "generated": "2024-11-05T00:19:15.042Z",
   "metadata": [
     {
       "__outstatic": {
@@ -54,6 +54,34 @@
         }
       ],
       "title": "How to Manage AppSumo Purchases in Subly"
+    },
+    {
+      "__outstatic": {
+        "commit": "15f962ea10b835ae8a32883b27629b6d1bb4cc8b",
+        "hash": "677885403",
+        "path": "outstatic/content/posts/the-ultimate-guide-to-cash-flow-for-smbs.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/29111636?v=4"
+      },
+      "category": "",
+      "collection": "posts",
+      "coverImage": "/images/cash-gxMT.png",
+      "ctaButtonLabel": "Get started",
+      "ctaHeadline": "Plan Ahead with Confidence with Real-Time Cash Flow Forecasts",
+      "ctaText": "See beyond the day-to-day with accurate cash flow forecasting. Make proactive, informed decisions and drive your business forward with confidence.",
+      "description": "",
+      "publishedAt": "2024-10-28T23:15:38.000Z",
+      "slug": "the-ultimate-guide-to-cash-flow-for-smbs",
+      "status": "draft",
+      "tags": [
+        {
+          "label": "Resources & guides",
+          "value": "resources &Guides"
+        }
+      ],
+      "title": "The Ultimate Guide to Cash Flow for SMBs"
     }
   ]
 }
