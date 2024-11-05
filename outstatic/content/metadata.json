@@ -1,6 +1,6 @@
 {
-  "commit": "5c072b925a4bac6acb1c4cd657b3db0454a3471f",
-  "generated": "2024-11-05T01:28:09.238Z",
+  "commit": "cfce1a1de2a53cc38ff4860700b2a82acbff0560",
+  "generated": "2024-11-05T01:28:53.379Z",
   "metadata": [
     {
       "__outstatic": {
@@ -85,8 +85,8 @@
     },
     {
       "__outstatic": {
-        "commit": "5c072b925a4bac6acb1c4cd657b3db0454a3471f",
-        "hash": "3396226655",
+        "commit": "cfce1a1de2a53cc38ff4860700b2a82acbff0560",
+        "hash": "2501576401",
         "path": "outstatic/content/posts/5-key-tips-for-effective-budgeting-in-2025.md"
       },
       "author": {
@@ -95,14 +95,14 @@
       },
       "category": "",
       "collection": "posts",
-      "coverImage": "/images/budget-2025-QxOD.png",
+      "coverImage": "/images/budget-2025-g1OT.png",
       "ctaButtonLabel": "",
       "ctaHeadline": "",
       "ctaText": "",
       "description": "",
       "publishedAt": "2024-11-05T00:24:28.570Z",
       "slug": "5-key-tips-for-effective-budgeting-in-2025",
-      "status": "draft",
+      "status": "published",
       "tags": [
         {
           "label": "Resources & guides",
