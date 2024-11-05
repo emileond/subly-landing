@@ -1,6 +1,6 @@
 {
-  "commit": "cb089c4a906d98b6bc7f4178a92527b0df67f340",
-  "generated": "2024-11-05T01:16:33.953Z",
+  "commit": "5c072b925a4bac6acb1c4cd657b3db0454a3471f",
+  "generated": "2024-11-05T01:28:09.238Z",
   "metadata": [
     {
       "__outstatic": {
@@ -57,30 +57,6 @@
     },
     {
       "__outstatic": {
-        "commit": "bfdaa2dfeb22bfab0d7335d23a86dbf0e5409bf1",
-        "hash": "2866234907",
-        "path": "outstatic/content/posts/5-key-tips-for-effective-budgeting-in-2025.md"
-      },
-      "author": {
-        "name": "",
-        "picture": "https://avatars.githubusercontent.com/u/29111636?v=4"
-      },
-      "category": "",
-      "collection": "posts",
-      "coverImage": "",
-      "ctaButtonLabel": "",
-      "ctaHeadline": "",
-      "ctaText": "",
-      "description": "",
-      "publishedAt": "2024-11-05T00:24:28.570Z",
-      "slug": "5-key-tips-for-effective-budgeting-in-2025",
-      "status": "draft",
-      "tags": [
-      ],
-      "title": "5 Key Tips for Effective Budgeting in 2025"
-    },
-    {
-      "__outstatic": {
         "commit": "cb089c4a906d98b6bc7f4178a92527b0df67f340",
         "hash": "4184750624",
         "path": "outstatic/content/posts/the-ultimate-guide-to-cash-flow-for-smbs.md"
@@ -106,6 +82,34 @@
         }
       ],
       "title": "The Ultimate Guide to Cash Flow for SMBs"
+    },
+    {
+      "__outstatic": {
+        "commit": "5c072b925a4bac6acb1c4cd657b3db0454a3471f",
+        "hash": "3396226655",
+        "path": "outstatic/content/posts/5-key-tips-for-effective-budgeting-in-2025.md"
+      },
+      "author": {
+        "name": "Emilio Sanchez",
+        "picture": "https://avatars.githubusercontent.com/u/29111636?v=4"
+      },
+      "category": "",
+      "collection": "posts",
+      "coverImage": "/images/budget-2025-QxOD.png",
+      "ctaButtonLabel": "",
+      "ctaHeadline": "",
+      "ctaText": "",
+      "description": "",
+      "publishedAt": "2024-11-05T00:24:28.570Z",
+      "slug": "5-key-tips-for-effective-budgeting-in-2025",
+      "status": "draft",
+      "tags": [
+        {
+          "label": "Resources & guides",
+          "value": "resources &Guides"
+        }
+      ],
+      "title": "Budgeting for 2025: 5 Key Tips to Set Your Business Up for Success"
     }
   ]
 }
