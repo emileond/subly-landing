@@ -1,6 +1,6 @@
 {
-  "commit": "bfdaa2dfeb22bfab0d7335d23a86dbf0e5409bf1",
-  "generated": "2024-11-05T01:07:34.240Z",
+  "commit": "cb089c4a906d98b6bc7f4178a92527b0df67f340",
+  "generated": "2024-11-05T01:16:33.953Z",
   "metadata": [
     {
       "__outstatic": {
@@ -57,34 +57,6 @@
     },
     {
       "__outstatic": {
-        "commit": "615e4d48af74cceae62cfd164bf8f7beed88efc4",
-        "hash": "4168928354",
-        "path": "outstatic/content/posts/the-ultimate-guide-to-cash-flow-for-smbs.md"
-      },
-      "author": {
-        "name": "",
-        "picture": "https://avatars.githubusercontent.com/u/29111636?v=4"
-      },
-      "category": "",
-      "collection": "posts",
-      "coverImage": "/images/cash-E5ND.png",
-      "ctaButtonLabel": "Get started",
-      "ctaHeadline": "Plan Ahead with Confidence with Real-Time Cash Flow Forecasts",
-      "ctaText": "See beyond the day-to-day with accurate cash flow forecasting. Make proactive, informed decisions and drive your business forward with confidence.",
-      "description": "",
-      "publishedAt": "2024-10-28T23:15:38.000Z",
-      "slug": "the-ultimate-guide-to-cash-flow-for-smbs",
-      "status": "published",
-      "tags": [
-        {
-          "label": "Resources & guides",
-          "value": "resources &Guides"
-        }
-      ],
-      "title": "The Ultimate Guide to Cash Flow for SMBs"
-    },
-    {
-      "__outstatic": {
         "commit": "bfdaa2dfeb22bfab0d7335d23a86dbf0e5409bf1",
         "hash": "2866234907",
         "path": "outstatic/content/posts/5-key-tips-for-effective-budgeting-in-2025.md"
@@ -106,6 +78,34 @@
       "tags": [
       ],
       "title": "5 Key Tips for Effective Budgeting in 2025"
+    },
+    {
+      "__outstatic": {
+        "commit": "cb089c4a906d98b6bc7f4178a92527b0df67f340",
+        "hash": "4184750624",
+        "path": "outstatic/content/posts/the-ultimate-guide-to-cash-flow-for-smbs.md"
+      },
+      "author": {
+        "name": "Emilio Sanchez",
+        "picture": "https://avatars.githubusercontent.com/u/29111636?v=4"
+      },
+      "category": "",
+      "collection": "posts",
+      "coverImage": "/images/cashfloww-E2MT.png",
+      "ctaButtonLabel": "Get started",
+      "ctaHeadline": "Plan Ahead with Confidence with Real-Time Cash Flow Forecasts",
+      "ctaText": "See beyond the day-to-day with accurate cash flow forecasting. Make proactive, informed decisions and drive your business forward with confidence.",
+      "description": "",
+      "publishedAt": "2024-10-28T23:15:38.000Z",
+      "slug": "the-ultimate-guide-to-cash-flow-for-smbs",
+      "status": "published",
+      "tags": [
+        {
+          "label": "Resources & guides",
+          "value": "resources &Guides"
+        }
+      ],
+      "title": "The Ultimate Guide to Cash Flow for SMBs"
     }
   ]
 }

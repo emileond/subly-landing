@@ -2,11 +2,11 @@
 title: 'The Ultimate Guide to Cash Flow for SMBs'
 status: 'published'
 author:
-  name: ''
+  name: 'Emilio Sanchez'
   picture: 'https://avatars.githubusercontent.com/u/29111636?v=4'
 slug: 'the-ultimate-guide-to-cash-flow-for-smbs'
 description: ''
-coverImage: '/images/cash-E5ND.png'
+coverImage: '/images/cashfloww-E2MT.png'
 category: ''
 ctaHeadline: 'Plan Ahead with Confidence with Real-Time Cash Flow Forecasts'
 ctaText: 'See beyond the day-to-day with accurate cash flow forecasting. Make proactive, informed decisions and drive your business forward with confidence.'
