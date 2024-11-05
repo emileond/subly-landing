@@ -1,6 +1,6 @@
 {
   "commit": "615e4d48af74cceae62cfd164bf8f7beed88efc4",
-  "generated": "2024-11-05T00:19:22.900Z",
+  "generated": "2024-11-05T00:19:27.574Z",
   "metadata": [
     {
       "__outstatic": {
@@ -58,7 +58,7 @@
     {
       "__outstatic": {
         "commit": "615e4d48af74cceae62cfd164bf8f7beed88efc4",
-        "hash": "3390172715",
+        "hash": "4168928354",
         "path": "outstatic/content/posts/the-ultimate-guide-to-cash-flow-for-smbs.md"
       },
       "author": {
@@ -67,14 +67,14 @@
       },
       "category": "",
       "collection": "posts",
-      "coverImage": "/images/cash-EwNj.png",
+      "coverImage": "/images/cash-E5ND.png",
       "ctaButtonLabel": "Get started",
       "ctaHeadline": "Plan Ahead with Confidence with Real-Time Cash Flow Forecasts",
       "ctaText": "See beyond the day-to-day with accurate cash flow forecasting. Make proactive, informed decisions and drive your business forward with confidence.",
       "description": "",
       "publishedAt": "2024-10-28T23:15:38.000Z",
       "slug": "the-ultimate-guide-to-cash-flow-for-smbs",
-      "status": "draft",
+      "status": "published",
       "tags": [
         {
           "label": "Resources & guides",
