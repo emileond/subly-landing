@@ -1,4 +1,4 @@
-import { FakeButton, ServiceLogo, WindowFrame } from '@/components/home/mock'
+import { FakeButton, Flow, ServiceLogo, WindowFrame } from '@/components/home/mock'
 import { LogoMark } from '@/components/site/logo'
 
 const signals = [
@@ -21,9 +21,9 @@ const signals = [
 ] as const
 
 const upcoming = [
-  { date: 'Oct 26', abbr: 'AP', name: 'Affiliate payout', amount: '+$300.00', incoming: true },
+  { date: 'Oct 26', abbr: 'AP', name: 'Affiliate payout', amount: '$300.00', incoming: true },
   { date: 'Oct 28', logo: 'basecamp', name: 'Basecamp', amount: '$15.00' },
-  { date: 'Nov 1', abbr: 'NL', name: 'Northlight retainer', amount: '+$2,500.00', incoming: true },
+  { date: 'Nov 1', abbr: 'NL', name: 'Northlight retainer', amount: '$2,500.00', incoming: true },
   { date: 'Nov 5', logo: 'adobecc', name: 'Adobe Creative Cloud', amount: '$59.99' },
   { date: 'Nov 9', logo: 'zoom', name: 'Zoom', amount: '$15.99' },
   { date: 'Nov 15', logo: 'figma', name: 'Figma', amount: '$15.00' },
@@ -73,15 +73,15 @@ export function TodayScreen({ className = '' }: { className?: string }) {
             <dl className="grid grid-cols-3 gap-3 sm:flex sm:gap-5">
               <div>
                 <dt className="text-[11px] text-faint">Money out <span className="block sm:inline">/ month</span></dt>
-                <dd className="font-mono text-[15px] tabular-nums sm:text-[17px]">$3,420</dd>
+                <dd className="font-mono text-[15px] tabular-nums sm:text-[17px]"><Flow dir="out">$3,420</Flow></dd>
               </div>
               <div>
                 <dt className="text-[11px] text-faint">Money in <span className="block sm:inline">/ month</span></dt>
-                <dd className="font-mono text-[15px] tabular-nums text-money-in sm:text-[17px]">$5,980</dd>
+                <dd className="font-mono text-[15px] tabular-nums sm:text-[17px]"><Flow dir="in">$5,980</Flow></dd>
               </div>
               <div>
                 <dt className="text-[11px] text-faint">Next <span className="block sm:inline">30 days</span></dt>
-                <dd className="font-mono text-[15px] tabular-nums sm:text-[17px]">$4,112</dd>
+                <dd className="font-mono text-[15px] tabular-nums sm:text-[17px]"><Flow dir="out">$4,112</Flow></dd>
               </div>
             </dl>
           </div>
@@ -128,7 +128,9 @@ export function TodayScreen({ className = '' }: { className?: string }) {
                     <span className="font-mono text-[11px] text-faint">{u.date}</span>
                     <ServiceLogo logo={'logo' in u ? u.logo : undefined} abbr={'abbr' in u ? u.abbr : ''} className="h-6 w-6 rounded-md text-[10px]" />
                     <span className="truncate text-[13px]">{u.name}</span>
-                    <span className={`font-mono text-[12.5px] tabular-nums ${'incoming' in u ? 'text-money-in' : ''}`}>{u.amount}</span>
+                    <span className="font-mono text-[12.5px] tabular-nums">
+                      <Flow dir={'incoming' in u ? 'in' : 'out'}>{u.amount}</Flow>
+                    </span>
                   </li>
                 ))}
               </ul>

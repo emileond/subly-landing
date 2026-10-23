@@ -1,5 +1,5 @@
 import { Globe, Receipt, Scale } from 'lucide-react'
-import { ServiceLogo } from '@/components/home/mock'
+import { Flow, ServiceLogo } from '@/components/home/mock'
 import { Section, SectionHeading } from '@/components/ui/section'
 
 const points = [
@@ -21,8 +21,8 @@ const points = [
 ]
 
 const rows = [
-  { abbr: 'NL', name: 'Northlight retainer', note: 'Money in · monthly', amount: '+$2,500.00', incoming: true },
-  { abbr: 'Cb', name: 'Coastline Bakery', note: 'Money in · £1,200 monthly', amount: '+$1,560.00', incoming: true },
+  { abbr: 'NL', name: 'Northlight retainer', note: 'Money in · monthly', amount: '$2,500.00', incoming: true },
+  { abbr: 'Cb', name: 'Coastline Bakery', note: 'Money in · £1,200 monthly', amount: '$1,560.00', incoming: true },
   { logo: 'hetzner', name: 'Hetzner servers', note: 'Money out · €38.00 monthly', amount: '$41.30' },
   { logo: 'appsumo', name: 'Calmy', note: 'Lifetime deal · refundable for 7 more days', amount: '$69.00' },
 ]
@@ -63,7 +63,7 @@ export function MoneyInOut() {
               <div>
                 <div className="flex items-baseline justify-between text-sm">
                   <span className="text-muted-foreground">Money in</span>
-                  <span className="font-mono tabular-nums text-money-in">$5,980</span>
+                  <span className="font-mono tabular-nums"><Flow dir="in">$5,980</Flow></span>
                 </div>
                 <div className="mt-1.5 h-2.5 rounded-full bg-muted">
                   <div className="h-full rounded-full bg-money-in" style={{ width: '100%' }} />
@@ -72,7 +72,7 @@ export function MoneyInOut() {
               <div>
                 <div className="flex items-baseline justify-between text-sm">
                   <span className="text-muted-foreground">Money out</span>
-                  <span className="font-mono tabular-nums">$3,420</span>
+                  <span className="font-mono tabular-nums"><Flow dir="out">$3,420</Flow></span>
                 </div>
                 <div className="mt-1.5 h-2.5 rounded-full bg-muted">
                   <div className="h-full rounded-full bg-foreground/70" style={{ width: '57%' }} />
@@ -91,7 +91,9 @@ export function MoneyInOut() {
                     <p className="truncate text-sm font-medium">{r.name}</p>
                     <p className="truncate text-xs text-muted-foreground">{r.note}</p>
                   </div>
-                  <span className={`font-mono text-sm tabular-nums ${r.incoming ? 'text-money-in' : ''}`}>{r.amount}</span>
+                  <span className="font-mono text-sm tabular-nums">
+                    <Flow dir={'incoming' in r ? 'in' : 'out'}>{r.amount}</Flow>
+                  </span>
                 </li>
               ))}
             </ul>

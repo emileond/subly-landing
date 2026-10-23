@@ -33,7 +33,7 @@ const sections = [
 
 const badge = {
   Enhancement: 'bg-brand-soft text-brand-ink',
-  'New feature': 'bg-money-in-soft text-money-in',
+  'New feature': 'bg-secondary text-secondary-foreground',
 } as const
 
 export default function RoadmapPage() {

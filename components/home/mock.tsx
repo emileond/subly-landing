@@ -104,5 +104,21 @@ export function WindowFrame({
   )
 }
 
+/**
+ * Digits stay in the foreground colour; direction is a small coloured glyph:
+ * green + for money in, rose − for money out. Use it only where money in and
+ * money out share a surface.
+ */
+export function Flow({ dir, children }: { dir: 'in' | 'out'; children: ReactNode }) {
+  return (
+    <span className="whitespace-nowrap">
+      <span aria-hidden="true" className={`mr-px font-semibold ${dir === 'in' ? 'text-money-in' : 'text-problem'}`}>
+        {dir === 'in' ? '+' : '−'}
+      </span>
+      {children}
+    </span>
+  )
+}
+
 export const money = (n: number) =>
   n.toLocaleString('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: n % 1 ? 2 : 0 })
