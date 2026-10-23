@@ -8,8 +8,8 @@ export function Hero({
   eyebrow = 'Subly 2.0 is live',
   title = (
     <>
-      <span className="block">Your money, under control.</span>
-      <span className="block">Your next move, clear.</span>
+      <span className="block">Control your money.</span>
+      <span className="block">Know your next move.</span>
     </>
   ),
   sub = 'Find every charge in two minutes, get warned before it costs you, and see how long your money lasts.',

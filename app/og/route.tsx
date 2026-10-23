@@ -4,7 +4,7 @@ import { ImageResponse } from 'next/og'
 
 const font = (name: string) => readFile(path.join(process.cwd(), 'assets/fonts', name))
 
-const DEFAULT_TITLE = 'Your money, under control. Your next move, clear.'
+const DEFAULT_TITLE = 'Control your money. Know your next move.'
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url)
