@@ -35,3 +35,6 @@ yarn-error.log*
 
 # RSS Feed
  /public/rss 
+# outstatic generated types
+/.outstatic/
+*.tsbuildinfo
