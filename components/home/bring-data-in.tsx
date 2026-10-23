@@ -56,8 +56,8 @@ export function BringDataIn() {
         </p>
         <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
           <Pill tone="attention">4 look forgotten</Pill>
-          <Pill tone="brand">3 renew in the next 30 days</Pill>
-          <Pill tone="problem">1 price increase</Pill>
+          <Pill tone="neutral">3 renew in the next 30 days</Pill>
+          <Pill tone="attention">1 price increase</Pill>
         </div>
       </div>
     </Section>

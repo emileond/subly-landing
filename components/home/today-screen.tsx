@@ -1,37 +1,32 @@
-import { FakeButton, Pill, ServiceLogo, WindowFrame } from '@/components/home/mock'
+import { FakeButton, ServiceLogo, WindowFrame } from '@/components/home/mock'
 import { LogoMark } from '@/components/site/logo'
 
 const signals = [
   {
-    abbr: 'Ai',
-    bg: '#DA1F26',
-    tag: { tone: 'attention', label: 'Renewal' },
+    logo: 'adobecc',
     title: 'Adobe Creative Cloud renews in 13 days',
     body: '$59.99 a month, about $720 a year. It is your most expensive tool and nobody owns it.',
   },
   {
-    abbr: 'N',
-    bg: '#18181B',
-    tag: { tone: 'attention', label: 'Price rise' },
+    logo: 'notion',
     title: 'Notion Plus went up 20%',
     body: 'The last two charges were $12.00. It used to be $10.00. Paying yearly would save $24.',
   },
   {
     abbr: 'Ca',
-    bg: '#EA580C',
-    tag: { tone: 'problem', label: 'Refund window' },
     title: 'The refund window for Calmy closes Friday',
     body: 'AppSumo deal bought 53 days ago. Nobody on the team has used it yet.',
+    problem: true,
   },
 ] as const
 
 const upcoming = [
-  { date: 'Oct 26', abbr: 'AP', bg: '#0F766E', name: 'Affiliate payout', amount: '+$300.00', incoming: true },
-  { date: 'Oct 28', abbr: 'Bc', bg: '#16A34A', name: 'Basecamp', amount: '$15.00' },
-  { date: 'Nov 1', abbr: 'NL', bg: '#0F766E', name: 'Northlight retainer', amount: '+$2,500.00', incoming: true },
-  { date: 'Nov 5', abbr: 'Ai', bg: '#DA1F26', name: 'Adobe Creative Cloud', amount: '$59.99' },
-  { date: 'Nov 9', abbr: 'Zm', bg: '#1D4ED8', name: 'Zoom', amount: '$15.99' },
-  { date: 'Nov 15', abbr: 'Fi', bg: '#7C3AED', name: 'Figma', amount: '$15.00' },
+  { date: 'Oct 26', abbr: 'AP', name: 'Affiliate payout', amount: '+$300.00', incoming: true },
+  { date: 'Oct 28', logo: 'basecamp', name: 'Basecamp', amount: '$15.00' },
+  { date: 'Nov 1', abbr: 'NL', name: 'Northlight retainer', amount: '+$2,500.00', incoming: true },
+  { date: 'Nov 5', logo: 'adobecc', name: 'Adobe Creative Cloud', amount: '$59.99' },
+  { date: 'Nov 9', logo: 'zoom', name: 'Zoom', amount: '$15.99' },
+  { date: 'Nov 15', logo: 'figma', name: 'Figma', amount: '$15.00' },
 ] as const
 
 const nav = [
@@ -47,14 +42,14 @@ export function TodayScreen({ className = '' }: { className?: string }) {
       <div className="grid md:grid-cols-[176px_minmax(0,1fr)]">
         <div className="hidden flex-col gap-0.5 border-r border-border bg-sidebar p-3 md:flex">
           <div className="flex items-center gap-2 px-2 pb-3 pt-1 text-[13px] font-semibold">
-            <LogoMark className="h-4 w-auto text-brand" />
+            <LogoMark className="h-4 w-auto" />
             Oakline Studio
           </div>
           {nav.map((n) => (
             <div
               key={n.label}
               className={`flex items-center justify-between rounded-md px-2 py-1.5 text-[13px] ${
-                n.active ? 'bg-brand-soft font-medium text-brand-ink' : 'text-muted-foreground'
+                n.active ? 'bg-muted font-medium text-foreground' : 'text-muted-foreground'
               }`}
             >
               {n.label}
@@ -102,19 +97,17 @@ export function TodayScreen({ className = '' }: { className?: string }) {
                       i === 2 ? 'hidden sm:grid' : 'grid'
                     }`}
                   >
-                    <ServiceLogo abbr={s.abbr} bg={s.bg} />
+                    <ServiceLogo logo={'logo' in s ? s.logo : undefined} abbr={'abbr' in s ? s.abbr : ''} />
                     <div className="min-w-0">
-                      <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                        <p className="text-[13.5px] font-semibold leading-snug">{s.title}</p>
-                      </div>
+                      <p className="flex items-center gap-2 text-[13.5px] font-semibold leading-snug">
+                        {'problem' in s && <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-attention" aria-hidden="true" />}
+                        {s.title}
+                      </p>
                       <p className="mt-0.5 text-[12.5px] leading-snug text-muted-foreground">{s.body}</p>
                       <div className="mt-2 flex flex-wrap items-center gap-1.5">
                         <FakeButton primary>Keep</FakeButton>
                         <FakeButton>Plan to cancel</FakeButton>
                         <FakeButton>Snooze</FakeButton>
-                        <span className="ml-auto hidden sm:inline-flex">
-                          <Pill tone={s.tag.tone}>{s.tag.label}</Pill>
-                        </span>
                       </div>
                     </div>
                   </div>
@@ -133,7 +126,7 @@ export function TodayScreen({ className = '' }: { className?: string }) {
                     }`}
                   >
                     <span className="font-mono text-[11px] text-faint">{u.date}</span>
-                    <ServiceLogo abbr={u.abbr} bg={u.bg} className="h-6 w-6 rounded-md text-[10px]" />
+                    <ServiceLogo logo={'logo' in u ? u.logo : undefined} abbr={'abbr' in u ? u.abbr : ''} className="h-6 w-6 rounded-md text-[10px]" />
                     <span className="truncate text-[13px]">{u.name}</span>
                     <span className={`font-mono text-[12.5px] tabular-nums ${'incoming' in u ? 'text-money-in' : ''}`}>{u.amount}</span>
                   </li>

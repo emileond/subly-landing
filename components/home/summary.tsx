@@ -58,7 +58,7 @@ export function Summary() {
         <WindowFrame url="web.subly.app/insights/2026-10" label="Mock-up of the October summary: a headline, a short paragraph, three changes and a Share this month button">
           <div className="bg-background p-4 sm:p-6">
             <div className="rounded-xl border border-border bg-card p-5 sm:p-6">
-              <p className="font-mono text-[11px] uppercase tracking-[0.07em] text-brand-ink">October 2026</p>
+              <p className="font-mono text-[11px] uppercase tracking-[0.07em] text-faint">October 2026</p>
               <p className="mt-2 font-display text-xl font-bold leading-snug tracking-tight text-balance sm:text-2xl">
                 Spending is flat, money in is up 6%, and one renewal needs a decision
               </p>
@@ -66,7 +66,7 @@ export function Summary() {
                 You spent <strong className="font-semibold text-foreground">$3,420</strong> on recurring costs, about the
                 same as September. Money in reached <strong className="font-semibold text-foreground">$5,980</strong>, up
                 6% because Northlight moved to a higher tier. That leaves about{' '}
-                <strong className="font-semibold text-brand-ink">$2,560</strong> after costs.
+                <strong className="font-semibold text-foreground">$2,560</strong> after costs.
               </p>
               <ul className="mt-4 divide-y divide-dashed divide-border border-y border-dashed border-border">
                 {changes.map((c) => (

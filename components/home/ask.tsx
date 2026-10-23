@@ -31,7 +31,7 @@ export function Ask() {
           <div aria-hidden="true">
             <p className="font-mono text-[11px] uppercase tracking-[0.07em] text-faint border-b border-border px-5 py-3">In Subly</p>
             <p className="flex items-center gap-2 border-b border-border px-5 py-3.5 text-sm">
-              <Sparkles className="h-4 w-4 text-brand" />
+              <Sparkles className="h-4 w-4 text-muted-foreground" />
               What do we pay for design tools per year?
             </p>
             <div className="border-b border-border px-5 py-4 text-sm leading-relaxed">

@@ -14,7 +14,7 @@ import { Testimonials } from '@/components/home/testimonials'
 import { DEFAULT_DESCRIPTION, SITE_URL } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Subly: your recurring money, on autopilot' },
+  title: { absolute: 'Subly: catch every renewal, price rise and refund deadline' },
   description: DEFAULT_DESCRIPTION,
   alternates: { canonical: '/' },
 }

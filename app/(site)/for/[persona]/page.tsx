@@ -36,7 +36,7 @@ export default async function PersonaPage({ params }: Props) {
 
   return (
     <>
-      <Hero eyebrow={p.eyebrow} title={p.title} sub={p.sub} />
+      <Hero eyebrow={p.eyebrow} title={p.title} sub={p.sub} note="14-day Business trial, and the Free plan stays free." />
 
       <Section tone="sunken">
         <SectionHeading eyebrow="Why it works" title={p.benefitsTitle} />

@@ -21,10 +21,10 @@ const points = [
 ]
 
 const rows = [
-  { abbr: 'NL', bg: '#0F766E', name: 'Northlight retainer', note: 'Money in · monthly', amount: '+$2,500.00', incoming: true },
-  { abbr: 'Cb', bg: '#0F766E', name: 'Coastline Bakery', note: 'Money in · £1,200 monthly', amount: '+$1,560.00', incoming: true },
-  { abbr: 'Hz', bg: '#DC2626', name: 'Hetzner servers', note: 'Money out · €38.00 monthly', amount: '$41.30' },
-  { abbr: 'Ca', bg: '#EA580C', name: 'Calmy', note: 'Lifetime deal · refundable for 7 more days', amount: '$69.00' },
+  { abbr: 'NL', name: 'Northlight retainer', note: 'Money in · monthly', amount: '+$2,500.00', incoming: true },
+  { abbr: 'Cb', name: 'Coastline Bakery', note: 'Money in · £1,200 monthly', amount: '+$1,560.00', incoming: true },
+  { logo: 'hetzner', name: 'Hetzner servers', note: 'Money out · €38.00 monthly', amount: '$41.30' },
+  { logo: 'appsumo', name: 'Calmy', note: 'Lifetime deal · refundable for 7 more days', amount: '$69.00' },
 ]
 
 export function MoneyInOut() {
@@ -75,18 +75,18 @@ export function MoneyInOut() {
                   <span className="font-mono tabular-nums">$3,420</span>
                 </div>
                 <div className="mt-1.5 h-2.5 rounded-full bg-muted">
-                  <div className="h-full rounded-full bg-brand" style={{ width: '57%' }} />
+                  <div className="h-full rounded-full bg-foreground/70" style={{ width: '57%' }} />
                 </div>
               </div>
             </div>
             <p className="mt-4 border-t border-border pt-4 font-display text-xl font-bold tracking-tight">
-              <span className="font-mono text-2xl tabular-nums text-brand-ink">$2,560</span> left over each month
+              <span className="font-mono text-2xl tabular-nums">$2,560</span> left over each month
             </p>
 
             <ul className="mt-5 divide-y divide-border rounded-xl border border-border bg-background">
               {rows.map((r) => (
                 <li key={r.name} className="grid grid-cols-[32px_minmax(0,1fr)_auto] items-center gap-3 px-3 py-2.5">
-                  <ServiceLogo abbr={r.abbr} bg={r.bg} />
+                  <ServiceLogo logo={'logo' in r ? r.logo : undefined} abbr={'abbr' in r ? r.abbr : ''} />
                   <div className="min-w-0">
                     <p className="truncate text-sm font-medium">{r.name}</p>
                     <p className="truncate text-xs text-muted-foreground">{r.note}</p>

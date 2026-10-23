@@ -1,21 +1,36 @@
+import Image from 'next/image'
 import type { ReactNode } from 'react'
 
 /** Small pieces shared by the product mock-ups. Everything here is decorative HTML, not a screenshot. */
 
+/**
+ * A service's real logo (public/services), or a neutral initials tile when we
+ * have none. The logos are the only colour in the lists.
+ */
 export function ServiceLogo({
-  abbr,
-  bg,
+  logo,
+  abbr = '',
   className = 'h-8 w-8 text-xs',
 }: {
-  abbr: string
-  bg: string
+  logo?: string
+  abbr?: string
   className?: string
 }) {
+  if (logo) {
+    return (
+      <Image
+        src={`/services/${logo}.png`}
+        alt=""
+        width={64}
+        height={64}
+        className={`shrink-0 rounded-lg border border-border bg-white object-cover ${className}`}
+      />
+    )
+  }
   return (
     <span
       aria-hidden="true"
-      className={`grid shrink-0 place-items-center rounded-lg font-semibold tracking-tight text-white ${className}`}
-      style={{ background: bg }}
+      className={`grid shrink-0 place-items-center rounded-lg border border-border bg-muted font-semibold tracking-tight text-muted-foreground ${className}`}
     >
       {abbr}
     </span>

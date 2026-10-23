@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { CalendarClock, Clock, TrendingUp, Undo2, Unplug, Timer } from 'lucide-react'
 import { FakeButton, Pill } from '@/components/home/mock'
 import { Section, SectionHeading } from '@/components/ui/section'
@@ -44,12 +45,12 @@ export function Signals() {
             className="rounded-2xl border border-input bg-card p-4 shadow-[0_24px_48px_-32px_rgb(0_0_0/0.3)]"
           >
             <div aria-hidden="true" className="grid grid-cols-[36px_minmax(0,1fr)] gap-3">
-              <span className="grid h-9 w-9 place-items-center rounded-lg bg-primary font-display font-bold text-primary-foreground">S</span>
+              <Image src="/services/slack.png" alt="" width={72} height={72} className="h-9 w-9 rounded-lg border border-border" />
               <div className="min-w-0 text-sm">
                 <p className="font-bold">
                   Subly <span className="ml-1 text-xs font-normal text-faint">APP · 9:02 AM</span>
                 </p>
-                <div className="my-2 border-l-[3px] border-attention pl-3">
+                <div className="my-2 border-l-[3px] border-input pl-3">
                   <p className="font-semibold">Adobe Creative Cloud renews in 3 days</p>
                   <p className="text-muted-foreground">$59.99 a month, about $720 a year. Owner: none. Two other design tools are active.</p>
                 </div>

@@ -25,7 +25,7 @@ export default function ManifestoPage() {
         ))}
       </div>
       <div className="mt-12 flex justify-center">
-        <LogoMark className="h-10 w-auto text-brand" />
+        <LogoMark className="h-10 w-auto" />
       </div>
     </div>
   )
