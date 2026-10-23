@@ -24,9 +24,10 @@ export const metadata: Metadata = {
     title: 'Subly: your recurring money, on autopilot',
     description: DEFAULT_DESCRIPTION,
     locale: 'en_US',
+    images: [{ url: '/og', width: 1200, height: 630, alt: 'Subly: your recurring money, on autopilot' }],
   },
-  twitter: { card: 'summary_large_image', site: '@sublyweb' },
-  icons: { icon: '/favicon.ico' },
+  twitter: { card: 'summary_large_image', site: '@sublyweb', images: ['/og'] },
+  icons: { icon: [{ url: '/favicon.ico' }, { url: '/icon.png', type: 'image/png' }], apple: '/apple-icon.png' },
 }
 
 export const viewport: Viewport = {

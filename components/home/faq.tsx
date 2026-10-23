@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { Section, SectionHeading } from '@/components/ui/section'
 import { faqs } from '@/lib/faq'
 
-export function FaqSection({ limit }: { limit?: number }) {
-  const items = limit ? faqs.slice(0, limit) : faqs
+export function FaqSection({ only }: { only?: string[] }) {
+  const items = only ? faqs.filter((f) => only.some((o) => f.q.startsWith(o))) : faqs
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
