@@ -11,7 +11,7 @@ import '../globals.css'
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Subly: catch every renewal, price rise and refund deadline',
+    default: 'Subly: never overpay for software again',
     template: '%s | Subly',
   },
   description: DEFAULT_DESCRIPTION,
@@ -21,10 +21,10 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: SITE_NAME,
     url: SITE_URL,
-    title: 'Subly: catch every renewal, price rise and refund deadline',
+    title: 'Subly: never overpay for software again',
     description: DEFAULT_DESCRIPTION,
     locale: 'en_US',
-    images: [{ url: '/og', width: 1200, height: 630, alt: 'Subly: catch every renewal, price rise and refund deadline' }],
+    images: [{ url: '/og', width: 1200, height: 630, alt: 'Subly: never overpay for software again' }],
   },
   twitter: { card: 'summary_large_image', site: '@sublyweb', images: ['/og'] },
   icons: { icon: [{ url: '/favicon.ico' }, { url: '/icon.png', type: 'image/png' }], apple: '/apple-icon.png' },

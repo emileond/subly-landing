@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react'
-import { Mark } from '@/components/ui/section'
 
 export type Persona = {
   slug: 'teams' | 'founders' | 'households'
@@ -28,7 +27,7 @@ export const personas: Record<Persona['slug'], Persona> = {
     eyebrow: 'For teams and agencies',
     title: (
       <>
-        An owner on every tool. <Mark>No surprise renewals.</Mark>
+        An owner on every tool. No surprise renewals.
       </>
     ),
     ogTitle: 'An owner on every tool. No surprise renewals.',
@@ -72,7 +71,7 @@ export const personas: Record<Persona['slug'], Persona> = {
     eyebrow: 'For founders and freelancers',
     title: (
       <>
-        Know what is left after the tools <Mark>and the clients.</Mark>
+        Know what is left after the tools and the clients.
       </>
     ),
     ogTitle: 'Know what is left after the tools and the clients.',
@@ -116,7 +115,7 @@ export const personas: Record<Persona['slug'], Persona> = {
     eyebrow: 'For households',
     title: (
       <>
-        Stop paying for things <Mark>you forgot you had.</Mark>
+        Stop paying for things you forgot you had.
       </>
     ),
     ogTitle: 'Stop paying for things you forgot you had.',
