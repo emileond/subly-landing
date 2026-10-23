@@ -38,3 +38,7 @@ yarn-error.log*
 # outstatic generated types
 /.outstatic/
 *.tsbuildinfo
+
+# local tooling
+/AGENTS.md
+/.claude/launch.json

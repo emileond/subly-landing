@@ -1,6 +1,0 @@
-{
-  "version": "0.0.1",
-  "configurations": [
-    { "name": "landing", "runtimeExecutable": "npx", "runtimeArgs": ["next", "dev", "-p", "3111"], "port": 3111 }
-  ]
-}
