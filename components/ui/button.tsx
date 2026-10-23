@@ -37,7 +37,6 @@ type AnchorButtonProps = ComponentProps<'a'> & { variant?: Variant; size?: Size 
 
 /** For links that leave the site (the app, Slack, etc.) */
 export function AnchorButton({ variant, size, className, ...props }: AnchorButtonProps) {
-  // eslint-disable-next-line jsx-a11y/anchor-has-content
   return <a {...props} className={buttonClass(variant, size, className)} />
 }
 

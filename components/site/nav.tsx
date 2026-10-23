@@ -2,7 +2,6 @@
 
 import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { AnchorButton } from '@/components/ui/button'
 import { Logo } from '@/components/site/logo'
@@ -11,9 +10,7 @@ import { LOGIN_URL, NAV_LINKS, SIGNUP_URL } from '@/lib/site'
 
 export function Nav() {
   const [open, setOpen] = useState(false)
-  const pathname = usePathname()
 
-  useEffect(() => setOpen(false), [pathname])
   useEffect(() => {
     if (!open) return
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false)
@@ -74,7 +71,7 @@ export function Nav() {
         <div id="mobile-menu" className="border-t border-border bg-background md:hidden">
           <nav aria-label="Mobile" className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4 sm:px-6">
             {NAV_LINKS.map((l) => (
-              <Link key={l.href} href={l.href} className="rounded-md px-3 py-3 text-base font-medium hover:bg-accent">
+              <Link key={l.href} href={l.href} className="rounded-md px-3 py-3 text-base font-medium hover:bg-accent" onClick={() => setOpen(false)}>
                 {l.label}
               </Link>
             ))}
