@@ -6,7 +6,12 @@ import { SIGNUP_URL } from '@/lib/site'
 
 export function Hero({
   eyebrow = 'Subly 2.0 is live',
-  title = 'Never overpay for software again.',
+  title = (
+    <>
+      <span className="block">Your money, under control.</span>
+      <span className="block">Your next move, clear.</span>
+    </>
+  ),
   sub = 'Find every charge in two minutes, get warned before it costs you, and see how long your money lasts.',
   cta = 'Start free',
   note = "The CFO you can't afford yet. 14-day Business trial, and the Free plan stays free.",
