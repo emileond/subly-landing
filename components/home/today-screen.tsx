@@ -77,15 +77,15 @@ export function TodayScreen({ className = '' }: { className?: string }) {
             </div>
             <dl className="grid grid-cols-3 gap-3 sm:flex sm:gap-5">
               <div>
-                <dt className="text-[11px] text-faint">Money out / month</dt>
+                <dt className="text-[11px] text-faint">Money out <span className="block sm:inline">/ month</span></dt>
                 <dd className="font-mono text-[15px] tabular-nums sm:text-[17px]">$3,420</dd>
               </div>
               <div>
-                <dt className="text-[11px] text-faint">Money in / month</dt>
+                <dt className="text-[11px] text-faint">Money in <span className="block sm:inline">/ month</span></dt>
                 <dd className="font-mono text-[15px] tabular-nums text-money-in sm:text-[17px]">$5,980</dd>
               </div>
               <div>
-                <dt className="text-[11px] text-faint">Next 30 days</dt>
+                <dt className="text-[11px] text-faint">Next <span className="block sm:inline">30 days</span></dt>
                 <dd className="font-mono text-[15px] tabular-nums sm:text-[17px]">$4,112</dd>
               </div>
             </dl>

@@ -157,14 +157,14 @@ export function CurrencyConverter({ updatedAt }: { updatedAt: string }) {
   const rate = convert(1, from, to)
   const updated = new Date(updatedAt).toLocaleDateString('en-US', { dateStyle: 'medium' })
 
-  const field = 'h-12 min-w-0 flex-1 rounded-lg border border-input bg-background px-3 font-mono text-lg tabular-nums'
+  const field = 'h-12 w-0 min-w-0 flex-1 rounded-lg border border-input bg-background px-3 font-mono text-lg tabular-nums'
   const pickBtn =
     'inline-flex h-12 items-center gap-2 rounded-lg border border-input bg-card px-3 font-medium hover:bg-accent'
 
   return (
     <div className="rounded-2xl border border-border bg-card p-4 shadow-xl sm:p-8">
-      <div className="grid items-center gap-3 md:grid-cols-[1fr_auto_1fr]">
-        <div className="flex gap-2">
+      <div className="grid items-center gap-3 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]">
+        <div className="flex min-w-0 gap-2">
           <label htmlFor="amount-from" className="sr-only">
             Amount in {from}
           </label>
@@ -183,7 +183,7 @@ export function CurrencyConverter({ updatedAt }: { updatedAt: string }) {
         >
           <ArrowDownUp className="h-5 w-5 md:rotate-90" aria-hidden="true" />
         </button>
-        <div className="flex gap-2">
+        <div className="flex min-w-0 gap-2">
           <label htmlFor="amount-to" className="sr-only">
             Amount in {to}
           </label>

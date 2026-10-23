@@ -23,7 +23,7 @@ export default function BlogPage() {
       />
       <Container className="py-12 sm:py-16">
         <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.map((p) => (
+          {posts.map((p, i) => (
             <li key={p.slug}>
               <Link
                 href={`/blog/${p.slug}`}
@@ -31,7 +31,7 @@ export default function BlogPage() {
               >
                 <div className="relative aspect-[2/1] bg-muted">
                   {p.coverImage && (
-                    <Image src={p.coverImage} alt="" fill sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw" className="object-cover" />
+                    <Image src={p.coverImage} alt="" fill priority={i === 0} sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw" className="object-cover" />
                   )}
                 </div>
                 <div className="flex flex-1 flex-col p-5">

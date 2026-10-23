@@ -40,14 +40,14 @@ export function PricingPlans() {
           return (
             <li
               key={p.id}
-              className={`flex flex-col rounded-2xl border bg-card p-6 ${p.popular ? 'border-brand ring-1 ring-brand' : 'border-border'}`}
+              className={`relative flex flex-col rounded-2xl border bg-card p-6 ${p.popular ? 'border-brand ring-1 ring-brand' : 'border-border'}`}
             >
-              <div className="flex items-center justify-between">
-                <h2 className="font-display text-xl font-bold tracking-tight">{p.name}</h2>
-                {p.popular && (
-                  <span className="rounded-full bg-brand-soft px-2 py-0.5 text-[11px] font-medium text-brand-ink">Most popular</span>
-                )}
-              </div>
+              {p.popular && (
+                <span className="absolute -top-3 left-6 rounded-full bg-brand px-2.5 py-0.5 text-[11px] font-medium text-brand-foreground">
+                  Most popular
+                </span>
+              )}
+              <h2 className="font-display text-xl font-bold tracking-tight">{p.name}</h2>
               <p className="mt-1 text-sm text-muted-foreground">{p.forWho}</p>
 
               <p className="mt-6">

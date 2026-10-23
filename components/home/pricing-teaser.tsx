@@ -23,14 +23,14 @@ export function PricingTeaser() {
         {PLANS.map((p) => (
           <li
             key={p.id}
-            className={`rounded-xl border bg-card p-5 ${p.popular ? 'border-brand ring-1 ring-brand' : 'border-border'}`}
+            className={`relative rounded-xl border bg-card p-5 ${p.popular ? 'border-brand ring-1 ring-brand' : 'border-border'}`}
           >
-            <div className="flex items-center justify-between">
-              <h3 className="font-display text-lg font-bold tracking-tight">{p.name}</h3>
-              {p.popular && (
-                <span className="rounded-full bg-brand-soft px-2 py-0.5 text-[11px] font-medium text-brand-ink">Most popular</span>
-              )}
-            </div>
+            {p.popular && (
+              <span className="absolute -top-3 left-5 rounded-full bg-brand px-2.5 py-0.5 text-[11px] font-medium text-brand-foreground">
+                Most popular
+              </span>
+            )}
+            <h3 className="font-display text-lg font-bold tracking-tight">{p.name}</h3>
             <p className="mt-3">
               <span className="font-mono text-3xl tabular-nums tracking-tight">${p.month}</span>
               <span className="text-sm text-muted-foreground"> / month</span>
