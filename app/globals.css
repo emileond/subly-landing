@@ -1,0 +1,199 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+/*
+ * Subly v2 tokens, copied from the app (subly-web/app/globals.css).
+ * Neutral surfaces and buttons; violet (--brand) for indicators and decoration;
+ * green, amber and red only where they mean money.
+ */
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --radius: 0.625rem;
+  --background: #fafafa;
+  --foreground: #18181b;
+  --card: #ffffff;
+  --card-foreground: #18181b;
+  --popover: #ffffff;
+  --popover-foreground: #18181b;
+  --primary: #18181b;
+  --primary-foreground: #fafafa;
+  --secondary: #f4f4f5;
+  --secondary-foreground: #18181b;
+  --muted: #f4f4f5;
+  --muted-foreground: #5f5f69;
+  --accent: #f4f4f5;
+  --accent-foreground: #18181b;
+  --destructive: #be123c;
+  --border: #e6e6e9;
+  --input: #e4e4e7;
+  --ring: #6f55ff;
+  --brand: #6f55ff;
+  --brand-ink: #5a41f0;
+  --brand-foreground: #ffffff;
+  --brand-soft: #efecff;
+  --money-in: #15803d;
+  --money-in-soft: #e8f6ec;
+  --attention: #b45309;
+  --attention-soft: #fdf3e3;
+  --problem: #be123c;
+  --problem-soft: #fdecef;
+  --sidebar: #ffffff;
+  --faint: #6f6f7a;
+}
+
+.dark {
+  --background: #0e0e10;
+  --foreground: #f2f2f4;
+  --card: #161619;
+  --card-foreground: #f2f2f4;
+  --popover: #1c1c20;
+  --popover-foreground: #f2f2f4;
+  --primary: #f2f2f4;
+  --primary-foreground: #0e0e10;
+  --secondary: #1c1c20;
+  --secondary-foreground: #f2f2f4;
+  --muted: #1c1c20;
+  --muted-foreground: #a5a5b0;
+  --accent: #232328;
+  --accent-foreground: #f2f2f4;
+  --destructive: #fb7185;
+  --border: #2a2a30;
+  --input: #2a2a30;
+  --ring: #8c78ff;
+  --brand: #8c78ff;
+  --brand-ink: #a898ff;
+  --brand-foreground: #ffffff;
+  --brand-soft: #231e3f;
+  --money-in: #4ade80;
+  --money-in-soft: #132a1c;
+  --attention: #f5b454;
+  --attention-soft: #2d2312;
+  --problem: #fb7185;
+  --problem-soft: #2e1419;
+  --sidebar: #121215;
+  --faint: #8a8a96;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 10px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-brand: var(--brand);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-soft: var(--brand-soft);
+  --color-money-in: var(--money-in);
+  --color-money-in-soft: var(--money-in-soft);
+  --color-attention: var(--attention);
+  --color-attention-soft: var(--attention-soft);
+  --color-problem: var(--problem);
+  --color-problem-soft: var(--problem-soft);
+  --color-sidebar: var(--sidebar);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: 'ss01';
+    overflow-x: clip;
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  ::selection {
+    background: var(--brand-soft);
+    color: var(--foreground);
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Rendered markdown (blog, changelog): the prose plugin on the Subly tokens */
+.prose {
+  --tw-prose-body: var(--foreground);
+  --tw-prose-headings: var(--foreground);
+  --tw-prose-lead: var(--muted-foreground);
+  --tw-prose-links: var(--brand-ink);
+  --tw-prose-bold: var(--foreground);
+  --tw-prose-counters: var(--muted-foreground);
+  --tw-prose-bullets: var(--faint);
+  --tw-prose-hr: var(--border);
+  --tw-prose-quotes: var(--foreground);
+  --tw-prose-quote-borders: var(--brand);
+  --tw-prose-captions: var(--muted-foreground);
+  --tw-prose-code: var(--foreground);
+  --tw-prose-pre-code: var(--foreground);
+  --tw-prose-pre-bg: var(--muted);
+  --tw-prose-th-borders: var(--border);
+  --tw-prose-td-borders: var(--border);
+}
+.prose :where(h1, h2, h3, h4) {
+  font-family: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.015em;
+}
+.prose :where(img) {
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+}
+.prose :where(a) {
+  text-underline-offset: 3px;
+}
+.prose :where(pre) {
+  border: 1px solid var(--border);
+}
+
+/* Violet soft glow behind the hero visual */
+.hero-glow {
+  background:
+    radial-gradient(60% 50% at 50% 0%, color-mix(in srgb, var(--brand) 16%, transparent), transparent 70%),
+    radial-gradient(40% 40% at 90% 20%, color-mix(in srgb, var(--brand) 8%, transparent), transparent 70%);
+}
