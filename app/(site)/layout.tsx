@@ -61,6 +61,16 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
               src="https://umami.subly.app/script.js"
               data-website-id="985b3243-3bb3-4213-9561-381cde5f2d85"
             />
+            {/* Traks (self-hosted on Cloudflare, cookieless); runs alongside Umami until the comparison on 10 Nov */}
+            <Script id="traks-shim" strategy="beforeInteractive">
+              {'window.traks=window.traks||function(){(window.traks.q=window.traks.q||[]).push(arguments)}'}
+            </Script>
+            <Script
+              id="traks-script"
+              defer
+              src="https://analytics-collect.subly.ai/t.js"
+              data-site="pb_live_klxmq9rdar7tho6k14u3ni7z"
+            />
             <Script
               id="partnero-script"
               strategy="afterInteractive"
