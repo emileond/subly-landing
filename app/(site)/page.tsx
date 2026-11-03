@@ -2,20 +2,20 @@ import type { Metadata } from 'next'
 import { Agents } from '@/components/home/agents'
 import { BringDataIn } from '@/components/home/bring-data-in'
 import { ClosingCta } from '@/components/home/closing-cta'
-import { Everything } from '@/components/home/everything'
 import { FaqSection } from '@/components/home/faq'
 import { Hero } from '@/components/home/hero'
 import { Outcomes } from '@/components/home/outcomes'
 import { PricingTeaser } from '@/components/home/pricing-teaser'
+import { ProofStrip } from '@/components/home/proof-strip'
 import { InlineCta } from '@/components/home/inline-cta'
 import { SmartFeatures } from '@/components/home/smart-features'
-import { SmartBand } from '@/components/home/smart-band'
 import { Teams } from '@/components/home/teams'
 import { Testimonials } from '@/components/home/testimonials'
-import { DEFAULT_DESCRIPTION, SITE_URL } from '@/lib/site'
+import { Trust } from '@/components/home/trust'
+import { DEFAULT_DESCRIPTION, HOME_TITLE, SITE_URL } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Subly: clarity that used to take a finance team' },
+  title: { absolute: HOME_TITLE },
   description: DEFAULT_DESCRIPTION,
   alternates: { canonical: '/' },
 }
@@ -47,18 +47,18 @@ export default function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Hero />
+      <ProofStrip />
       <Outcomes />
       <BringDataIn />
+      <Trust />
       <InlineCta title="Two minutes from now, you could see the whole picture." />
-      <SmartBand />
       <SmartFeatures />
-      <Agents />
       <Teams />
-      <Everything />
-      <PricingTeaser />
-      <ClosingCta />
+      <Agents compact />
       <Testimonials />
+      <PricingTeaser />
       <FaqSection />
+      <ClosingCta />
     </>
   )
 }

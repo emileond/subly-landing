@@ -9,6 +9,8 @@ const columns = [
     links: [
       { label: 'How it works', href: '/#how-it-works' },
       { label: 'Pricing', href: '/pricing' },
+      { label: 'Claude and agents', href: '/agents' },
+      { label: 'Security', href: '/#security' },
       { label: 'Changelog', href: '/releases' },
       { label: 'Roadmap', href: '/roadmap' },
       { label: 'Currency converter', href: '/currency-converter' },
@@ -55,6 +57,7 @@ export function Footer() {
             </p>
             <a
               href={SIGNUP_URL}
+              data-cta="footer"
               className="mt-4 inline-block text-sm font-medium text-foreground underline underline-offset-4 hover:text-brand-ink"
             >
               Start free trial

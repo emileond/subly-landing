@@ -55,7 +55,7 @@ export function Testimonials() {
         align="center"
         eyebrow="Customers"
         title="Hear from people who use it"
-        lede="Subly is trusted by thousands of businesses, freelancers and solopreneurs worldwide."
+        lede="More than 26,000 founders, freelancers and small teams have opened a Subly account. Here are a few of them."
       />
 
       <figure className="hero-glow relative mt-12 overflow-hidden rounded-3xl border border-border bg-card px-6 py-10 sm:px-12 sm:py-14">

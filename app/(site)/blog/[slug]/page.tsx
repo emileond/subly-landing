@@ -93,7 +93,7 @@ export default async function PostPage({ params }: Props) {
           <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
             {post.ctaText || 'Upload one statement and see your recurring money in a couple of minutes.'}
           </p>
-          <AnchorButton href={SIGNUP_URL} size="lg" className="mt-6">
+          <AnchorButton href={SIGNUP_URL} data-cta="blog-post" size="lg" className="mt-6">
             {post.ctaButtonLabel || 'Start free'}
           </AnchorButton>
         </aside>

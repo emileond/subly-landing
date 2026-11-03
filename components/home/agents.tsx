@@ -1,4 +1,5 @@
 import { ArrowRight, Code2, Webhook, Workflow } from 'lucide-react'
+import Link from 'next/link'
 import { AgentDemo } from '@/components/home/agent-demo'
 import { ClaudeMark } from '@/components/home/mock'
 import { Container } from '@/components/ui/section'
@@ -16,9 +17,10 @@ const ways = [
   { icon: Workflow, title: 'Zapier and Make', body: 'Send a renewal to your task board or a late payment to your CRM. No code.' },
 ]
 
-export function Agents() {
+/** `compact` is the home page band: plain words and a link to /agents, which shows the demo and the developer details. */
+export function Agents({ compact = false, as: Heading = 'h2' }: { compact?: boolean; as?: 'h1' | 'h2' }) {
   return (
-    <section id="agents" className="relative isolate overflow-hidden bg-[#0b0b0e] py-20 text-white sm:py-28">
+    <section id="agents" className={`relative isolate overflow-hidden bg-[#0b0b0e] text-white ${compact ? 'py-16 sm:py-20' : 'py-20 sm:py-28'}`}>
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10"
@@ -42,24 +44,39 @@ export function Agents() {
         <div className="mx-auto max-w-3xl text-center">
           <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.05] py-1 pl-1 pr-3 font-mono text-[11px] font-medium uppercase tracking-[0.08em] text-white/75">
             <span className="rounded-full bg-[#8c78ff] px-2 py-0.5 text-white">New in 2.0</span>
-            Built for agents · MCP
+            {compact ? 'Works with Claude' : 'Built for agents · MCP'}
           </p>
-          <h2 className="mt-6 font-display text-[2.5rem] font-bold leading-[1.02] tracking-tight text-balance sm:text-6xl lg:text-7xl">
+          <Heading className="mt-6 font-display text-[2.5rem] font-bold leading-[1.02] tracking-tight text-balance sm:text-6xl lg:text-7xl">
             Your AI finally <span className="text-[#a898ff]">knows your money.</span>
-          </h2>
+          </Heading>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-pretty text-white/70 sm:text-xl">
-            Connect <span className="inline-flex items-baseline gap-1.5 whitespace-nowrap font-medium text-white"><ClaudeMark className="h-4 w-4 self-center" />Claude</span> or any MCP-compatible agent to Subly. Ask about renewals, spend and cash. Add items. Assign owners.
-            Your agents work from the real numbers, and check with you before they change anything.
+            {compact ? (
+              <>
+                Connect <span className="inline-flex items-baseline gap-1.5 whitespace-nowrap font-medium text-white"><ClaudeMark className="h-4 w-4 self-center" />Claude</span> and ask about renewals, spend and cash in plain words. It works from your real numbers, and checks with you before it changes anything.
+              </>
+            ) : (
+              <>
+                Connect <span className="inline-flex items-baseline gap-1.5 whitespace-nowrap font-medium text-white"><ClaudeMark className="h-4 w-4 self-center" />Claude</span> or any MCP-compatible agent to Subly. Ask about renewals, spend and cash. Add items. Assign owners.
+                Your agents work from the real numbers, and check with you before they change anything.
+              </>
+            )}
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3">
             <a
               href={SIGNUP_URL}
+              data-cta={compact ? 'agents-band' : 'agents-page'}
               className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-white px-6 text-base font-medium text-[#0b0b0e] transition-colors hover:bg-white/90 sm:w-auto"
             >
               Start free trial
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
-            <p className="text-sm text-white/55">14 days of Business, free. The Claude connector and API start at Personal.</p>
+            {compact ? (
+              <Link href="/agents" className="inline-flex items-center gap-1.5 text-sm font-medium text-white/80 underline decoration-white/30 underline-offset-4 hover:text-white">
+                See what your AI can do with Subly <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            ) : (
+              <p className="text-sm text-white/55">14 days of Business, free, no credit card. The Claude connector and API start at Personal.</p>
+            )}
           </div>
         </div>
 
@@ -67,21 +84,25 @@ export function Agents() {
           <AgentDemo />
         </div>
 
-        <ul className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {ways.map(({ icon: Icon, title, body }) => (
-            <li key={title} className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 transition-colors hover:border-[#8c78ff]/50 hover:bg-white/[0.06]">
-              <span className="grid h-10 w-10 place-items-center rounded-lg bg-[#8c78ff]/20 text-[#b9adff]">
-                {Icon ? <Icon className="h-5 w-5" aria-hidden="true" /> : <ClaudeMark className="h-5 w-5" />}
-              </span>
-              <h3 className="mt-4 font-display text-lg font-bold tracking-tight">{title}</h3>
-              <p className="mt-1.5 text-sm text-white/65">{body}</p>
-            </li>
-          ))}
-        </ul>
+        {!compact && (
+          <>
+            <ul className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {ways.map(({ icon: Icon, title, body }) => (
+                <li key={title} className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 transition-colors hover:border-[#8c78ff]/50 hover:bg-white/[0.06]">
+                  <span className="grid h-10 w-10 place-items-center rounded-lg bg-[#8c78ff]/20 text-[#b9adff]">
+                    {Icon ? <Icon className="h-5 w-5" aria-hidden="true" /> : <ClaudeMark className="h-5 w-5" />}
+                  </span>
+                  <h3 className="mt-4 font-display text-lg font-bold tracking-tight">{title}</h3>
+                  <p className="mt-1.5 text-sm text-white/65">{body}</p>
+                </li>
+              ))}
+            </ul>
 
-        <p className="mt-8 text-center text-xs text-white/45">
-          The Claude connector and API are part of Personal, Business and Team, and of the AI &amp; Automation add-on for lifetime deals.
-        </p>
+            <p className="mt-8 text-center text-xs text-white/45">
+              The Claude connector and API are part of Personal, Business and Team, and of the AI &amp; Automation add-on for lifetime deals.
+            </p>
+          </>
+        )}
       </Container>
     </section>
   )

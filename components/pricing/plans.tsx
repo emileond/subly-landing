@@ -3,7 +3,7 @@
 import { ArrowRight, Check } from 'lucide-react'
 import { useState } from 'react'
 import { AnchorButton } from '@/components/ui/button'
-import { type Interval, PLANS, monthsFree, perMonthWhenYearly } from '@/lib/plans'
+import { type Interval, PLANS, perMonthWhenYearly } from '@/lib/plans'
 import { SIGNUP_URL } from '@/lib/site'
 
 export function PricingPlans() {
@@ -14,7 +14,7 @@ export function PricingPlans() {
       <div className="flex flex-col items-center gap-3">
         <p className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-sm">
           <span className="h-1.5 w-1.5 rounded-full bg-money-in" aria-hidden="true" />
-          Every new account starts with a free 14-day Business trial
+          Every new account starts with a free 14-day Business trial. No card needed.
         </p>
         <div role="group" aria-label="Billing period" className="inline-flex rounded-lg border border-border bg-card p-1">
           {(['month', 'year'] as const).map((i) => (
@@ -39,7 +39,8 @@ export function PricingPlans() {
       <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:items-stretch">
         {PLANS.map((p) => {
           const free = p.month === 0
-          const price = interval === 'year' ? p.year : p.month
+          // Yearly shows the monthly equivalent big, so plans compare on the same unit
+          const price = interval === 'year' ? perMonthWhenYearly(p) : p.month
           return (
             <li
               key={p.id}
@@ -57,23 +58,26 @@ export function PricingPlans() {
 
               <p className="mt-5">
                 <span className="font-mono text-4xl tabular-nums tracking-tight">${price}</span>
-                <span className="text-sm text-muted-foreground">
-                  {free ? '' : interval === 'year' ? ' / year' : ' / month'}
-                </span>
+                <span className="text-sm text-muted-foreground">{free ? '' : ' / month'}</span>
               </p>
               <p className="mt-1 h-5 text-xs text-faint">
                 {free
                   ? 'Free for good'
                   : interval === 'year'
-                    ? `About $${perMonthWhenYearly(p)} a month, ${monthsFree(p)} months free`
+                    ? `$${p.year} billed yearly`
                     : `or $${p.year} a year`}
               </p>
 
-              <AnchorButton href={SIGNUP_URL} variant={p.popular ? 'primary' : 'outline'} className="mt-5 w-full">
+              <AnchorButton
+                href={SIGNUP_URL}
+                data-cta={`pricing-${p.id}`}
+                variant={p.popular ? 'primary' : 'outline'}
+                className="mt-5 w-full"
+              >
                 {free ? 'Start free' : 'Start free trial'}
                 {p.popular && <ArrowRight className="h-4 w-4" aria-hidden="true" />}
               </AnchorButton>
-              <p className="mt-2 h-4 text-center text-xs text-faint">{free ? '' : '14 days free, then pick a plan'}</p>
+              <p className="mt-2 h-4 text-center text-xs text-faint">{free ? 'No card needed' : 'Trial runs on Business, no card'}</p>
 
               <div className="mt-5 flex-1 border-t border-border pt-5">
                 {p.includes && <p className="mb-3 text-sm font-semibold">{p.includes}</p>}

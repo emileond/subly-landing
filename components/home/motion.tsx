@@ -84,9 +84,15 @@ export function useCycle(count: number, ms: number) {
   }
 }
 
-/** Counts up to `to` when `active` turns true. */
+const noop = () => () => {}
+
+/**
+ * Counts up to `to` when `active` turns true. The server render and hydration show the final
+ * value, so crawlers, link previews and no-JS readers never see a zero.
+ */
 export function useCountUp(to: number, active: boolean, ms = 1100) {
   const reduced = usePrefersReducedMotion()
+  const hydrated = useSyncExternalStore(noop, () => true, () => false)
   const [value, setValue] = useState(0)
   useEffect(() => {
     if (!active || reduced) return
@@ -100,7 +106,7 @@ export function useCountUp(to: number, active: boolean, ms = 1100) {
     raf = requestAnimationFrame(tick)
     return () => cancelAnimationFrame(raf)
   }, [to, active, ms, reduced])
-  if (reduced) return to
+  if (reduced || !hydrated) return to
   return active ? value : 0
 }
 

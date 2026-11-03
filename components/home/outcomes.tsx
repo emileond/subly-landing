@@ -34,8 +34,8 @@ export function Outcomes() {
     <Section id="value">
       <SectionHeading
         eyebrow="What you get"
-        title="Everything you need to run your money with confidence"
-        lede="Subly is the part of your business that watches every payment, remembers every date and tells you what to do next, so you can spend your attention on the work."
+        title="What changes when Subly watches your money"
+        lede="One picture of everything, a heads-up before it matters and the numbers in front of you when you decide, so you can spend your attention on the work."
       />
       <ul className="mt-10 grid gap-4 sm:grid-cols-2">
         {outcomes.map(({ icon: Icon, title, body, proof }) => (

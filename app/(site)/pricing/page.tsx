@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ClosingCta } from '@/components/home/closing-cta'
+import { Everything } from '@/components/home/everything'
 import { FaqSection } from '@/components/home/faq'
 import { FeatureTable } from '@/components/pricing/feature-table'
 import { Lifetime } from '@/components/pricing/lifetime'
@@ -38,6 +39,7 @@ export default function PricingPage() {
       <Section tone="sunken">
         <FeatureTable />
       </Section>
+      <Everything />
       <Section>
         <Lifetime />
       </Section>
@@ -45,6 +47,7 @@ export default function PricingPage() {
         only={[
           'How many items',
           'What plan should I choose',
+          'Do I need a credit card',
           'Is there a contract',
           'I have a lifetime deal',
           'Does Subly pay for itself',

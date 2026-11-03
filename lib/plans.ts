@@ -44,7 +44,7 @@ export const PLANS: Plan[] = [
   {
     id: 'personal',
     name: 'Personal',
-    forWho: 'For one person who wants it automatic',
+    forWho: 'For one business or household, on autopilot',
     month: 5,
     year: 48,
     includes: 'Everything in Free, plus',

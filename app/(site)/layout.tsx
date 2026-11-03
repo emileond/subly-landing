@@ -3,14 +3,15 @@ import Script from 'next/script'
 import { ThemeProvider } from 'next-themes'
 import { Footer } from '@/components/site/footer'
 import { Nav } from '@/components/site/nav'
+import { Tracking } from '@/components/site/tracking'
 import { display, mono, sans } from '@/lib/fonts'
-import { DEFAULT_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/site'
+import { DEFAULT_DESCRIPTION, HOME_TITLE, SITE_NAME, SITE_URL } from '@/lib/site'
 import '../globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Subly: clarity that used to take a finance team',
+    default: HOME_TITLE,
     template: '%s | Subly',
   },
   description: DEFAULT_DESCRIPTION,
@@ -20,10 +21,10 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: SITE_NAME,
     url: SITE_URL,
-    title: 'Subly: clarity that used to take a finance team',
+    title: HOME_TITLE,
     description: DEFAULT_DESCRIPTION,
     locale: 'en_US',
-    images: [{ url: '/og', width: 1200, height: 630, alt: 'Subly: clarity that used to take a finance team' }],
+    images: [{ url: '/og', width: 1200, height: 630, alt: HOME_TITLE }],
   },
   twitter: { card: 'summary_large_image', site: '@sublyweb', images: ['/og'] },
   icons: { icon: [{ url: '/favicon.ico' }, { url: '/icon.png', type: 'image/png' }], apple: '/apple-icon.png' },
@@ -46,6 +47,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
           <Nav />
           <main id="main">{children}</main>
           <Footer />
+          <Tracking />
         </ThemeProvider>
         <Script
           src="https://app.getterms.io/cookie-consent/embed/fe9ce7ea-2b79-4c36-9276-c1514bc42c61"

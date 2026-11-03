@@ -6,7 +6,7 @@ import { SIGNUP_URL } from '@/lib/site'
 /** A slim call to action between sections. */
 export function InlineCta({
   title = 'Try it on your own numbers.',
-  body = 'Free for 14 days, with the full Business plan. Keep the Free plan afterwards.',
+  body = 'Free for 14 days with the full Business plan, no credit card needed. Keep the Free plan afterwards.',
   label = 'Start free trial',
 }: {
   title?: string
@@ -21,7 +21,7 @@ export function InlineCta({
             <p className="font-display text-lg font-bold tracking-tight">{title}</p>
             <p className="text-sm text-muted-foreground">{body}</p>
           </div>
-          <AnchorButton href={SIGNUP_URL} size="lg" className="w-full shrink-0 sm:w-auto">
+          <AnchorButton href={SIGNUP_URL} data-cta="inline" size="lg" className="w-full shrink-0 sm:w-auto">
             {label}
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </AnchorButton>

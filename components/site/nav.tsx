@@ -47,12 +47,15 @@ export function Nav() {
           <a href={LOGIN_URL} className={linkClass}>
             Sign in
           </a>
-          <AnchorButton href={SIGNUP_URL} size="sm">
+          <AnchorButton href={SIGNUP_URL} data-cta="nav" size="sm">
             Start free trial
           </AnchorButton>
         </div>
 
         <div className="flex items-center gap-1 md:hidden">
+          <AnchorButton href={SIGNUP_URL} data-cta="nav-mobile" size="sm" className="mr-1">
+            Start free
+          </AnchorButton>
           <ThemeToggle />
           <button
             type="button"
@@ -78,7 +81,7 @@ export function Nav() {
             <a href={LOGIN_URL} className="rounded-md px-3 py-3 text-base font-medium hover:bg-accent">
               Sign in
             </a>
-            <AnchorButton href={SIGNUP_URL} size="lg" className="mt-2 w-full">
+            <AnchorButton href={SIGNUP_URL} data-cta="nav-menu" size="lg" className="mt-2 w-full">
               Start free trial
             </AnchorButton>
           </nav>

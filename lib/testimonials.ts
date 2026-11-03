@@ -9,13 +9,6 @@ export type Testimonial = {
 /** Quotes use **bold** for the line to highlight and a blank line between paragraphs. */
 export const testimonials: Testimonial[] = [
   {
-    name: "Katharina Tolle",
-    company: "Birth story writer",
-    quote: "**Subly changed my life.** No need any more to update excel sheets to find out where my money is flowing. I used Subly for my company at first, but now I use it for our family too.\n\nIt is a great tool to find and cut unnecessary expenses.",
-    url: "geburtsgeschichte.de/birthstory/",
-    logo: "/testimonials/logos/katharina-tolle.png",
-  },
-  {
     name: "Sharon Wingron, CPTD",
     company: "DISC Learning Solutions",
     quote: "Subly is an excellent tool that helps us **manage our bottom line**. As a small business, it is easy to lose control of your subscription-based expenses. Subly keeps them organized and notifies us of pending renewals so we stay in control!",
@@ -56,6 +49,13 @@ export const testimonials: Testimonial[] = [
     quote: "Subly has helped me **stop paying for subscriptions I don't need** anymore or decide if I still want to keep them.\n\nIf forgotten recurring subscriptions are draining your wallet, Subly is your go-to solution.",
     url: "kevinrod.com",
     logo: "/testimonials/logos/kr.png",
+  },
+  {
+    name: "Katharina Tolle",
+    company: "Birth story writer",
+    quote: "**Subly changed my life.** No need any more to update excel sheets to find out where my money is flowing. I used Subly for my company at first, but now I use it for our family too.\n\nIt is a great tool to find and cut unnecessary expenses.",
+    url: "geburtsgeschichte.de/birthstory/",
+    logo: "/testimonials/logos/katharina-tolle.png",
   },
   {
     name: "Saikat Pyne",

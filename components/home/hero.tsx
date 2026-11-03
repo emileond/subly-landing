@@ -5,16 +5,11 @@ import { TodayScreen } from '@/components/home/today-screen'
 import { SIGNUP_URL } from '@/lib/site'
 
 export function Hero({
-  eyebrow = 'Subly 2.0 is live',
-  title = (
-    <>
-      <span className="block">Clarity that used to</span>
-      <span className="block">take a finance team.</span>
-    </>
-  ),
-  sub = 'Subly brings every payment, in and out, into one clear picture, warns you before it matters, and tells you your next move. Built into how you work.',
+  eyebrow = 'For founders, freelancers and small teams',
+  title = 'Everything you need to run your money with confidence.',
+  sub = 'Subly is the part of your business that watches every payment, remembers every date and tells you what to do next.',
   cta = 'Start free trial',
-  note = 'Free for 14 days with the full Business plan. The Free plan is yours to keep.',
+  note = '14 days of the full Business plan, no credit card needed. The Free plan is yours to keep.',
 }: {
   eyebrow?: string
   title?: React.ReactNode
@@ -29,12 +24,12 @@ export function Hero({
           <p className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 font-mono text-[11px] font-medium uppercase tracking-[0.08em] text-brand-ink">
             {eyebrow}
           </p>
-          <h1 className="mt-6 font-display text-[2.6rem] font-bold leading-[1.04] tracking-tight text-balance sm:text-6xl lg:text-7xl">
+          <h1 className="mt-6 font-display text-[2.3rem] font-bold leading-[1.06] tracking-tight text-balance sm:text-6xl lg:text-7xl">
             {title}
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-pretty text-muted-foreground sm:text-xl">{sub}</p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <AnchorButton href={SIGNUP_URL} size="lg" className="w-full sm:w-auto">
+            <AnchorButton href={SIGNUP_URL} data-cta="hero" size="lg" className="w-full sm:w-auto">
               {cta}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </AnchorButton>
