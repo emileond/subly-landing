@@ -30,7 +30,7 @@ const columns = [
       { label: 'Blog', href: '/blog' },
       { label: 'Manifesto', href: '/manifesto' },
       { label: 'Affiliate program', href: '/affiliates' },
-      { label: 'Suggest a feature', href: 'https://roadmap.subly.app/feature-requests', external: true },
+      { label: 'Suggest a feature', href: 'https://web.subly.app/feedback', external: true },
       { label: 'Status', href: 'https://uptime.subly.app', external: true },
     ],
   },

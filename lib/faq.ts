@@ -55,7 +55,7 @@ export const faqs: Faq[] = [
   },
   {
     q: 'I have feedback or a feature request. Where do I send it?',
-    a: 'Post it on the feedback board at roadmap.subly.app/feature-requests. It is a direct line to the team, and we prioritize by what people ask for.',
+    a: 'Post it on the feedback board in the app (Help → Feedback, or web.subly.app/feedback). It is a direct line to the team, and we prioritize by what people ask for.',
   },
   {
     q: 'Do you have an affiliate program?',

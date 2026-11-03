@@ -1,7 +1,8 @@
 export const SITE_URL = 'https://subly.app'
 export const APP_URL = 'https://web.subly.app'
 export const SIGNUP_URL = `${APP_URL}/signup`
-export const LOGIN_URL = `${APP_URL}/login`
+// Sign-in is the app's root page; /login does not exist
+export const LOGIN_URL = `${APP_URL}/`
 
 export const SITE_NAME = 'Subly'
 export const HOME_TITLE = 'Subly: track subscriptions, bills and cash flow for your business'
