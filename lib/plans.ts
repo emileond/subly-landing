@@ -12,6 +12,8 @@ export type Plan = {
   forWho: string
   month: number
   year: number
+  /** Lead-in above the highlights, e.g. "Everything in Free, plus" */
+  includes?: string
   highlights: string[]
   popular?: boolean
   limits: {
@@ -27,28 +29,32 @@ export const PLANS: Plan[] = [
   {
     id: 'free',
     name: 'Free',
-    forWho: 'For trying it out',
+    forWho: 'To see what you really pay',
     month: 0,
     year: 0,
     highlights: [
-      'Up to 20 items',
-      '1 statement read',
+      'Up to 20 items, money in and out',
+      'Any currency',
+      '1 statement read by Subly',
       'Renewal and price alerts by email',
-      'Monthly summary',
+      'Monthly summary in plain words',
     ],
     limits: { items: '20', people: 1, banks: 0, storage: '100 MB', webhooks: 0 },
   },
   {
     id: 'personal',
     name: 'Personal',
-    forWho: 'For individuals who want it automatic',
+    forWho: 'For one person who wants it automatic',
     month: 5,
     year: 48,
+    includes: 'Everything in Free, plus',
     highlights: [
-      'Unlimited items',
-      'Statement reading and receipt forwarding',
-      'Ask Subly about your numbers',
-      '3 people and 1 bank connection',
+      'Unlimited items and statement reading',
+      'Receipt forwarding to your own address',
+      'Ask Subly and reports',
+      'Claude connector (MCP) and API',
+      'Alerts by email, push and chat apps',
+      '3 people, 1 bank connection',
     ],
     limits: { items: 'Unlimited', people: 3, banks: 1, storage: '1 GB', webhooks: 3 },
   },
@@ -59,14 +65,15 @@ export const PLANS: Plan[] = [
     month: 19,
     year: 190,
     popular: true,
+    includes: 'Everything in Personal, plus',
     highlights: [
-      'Everything in Personal',
-      '8 people and 3 bank connections',
       'Slack app with buttons',
-      '13-week "how long your money lasts"',
-      'Claude connector and API',
+      '13-week cash forecast with what-ifs',
+      'Import recurring revenue from Stripe',
+      '10 people, 5 bank connections',
+      'Priority support',
     ],
-    limits: { items: 'Unlimited', people: 8, banks: 3, storage: '5 GB', webhooks: 5 },
+    limits: { items: 'Unlimited', people: 10, banks: 5, storage: '5 GB', webhooks: 5 },
   },
   {
     id: 'team',
@@ -74,11 +81,12 @@ export const PLANS: Plan[] = [
     forWho: 'For agencies and growing teams',
     month: 49,
     year: 490,
+    includes: 'Everything in Business, plus',
     highlights: [
-      'Everything in Business',
       '20 people',
       '10 bank connections',
-      'Priority support',
+      '20 GB of file storage',
+      '10 outgoing webhooks',
     ],
     limits: { items: 'Unlimited', people: 20, banks: 10, storage: '20 GB', webhooks: 10 },
   },

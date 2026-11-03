@@ -5,10 +5,10 @@ export const LOGIN_URL = `${APP_URL}/login`
 
 export const SITE_NAME = 'Subly'
 export const DEFAULT_DESCRIPTION =
-  'Subly watches your recurring money, in and out, and tells you what needs a decision. For small teams, solo founders and freelancers.'
+  'Subly brings every payment, in and out, into one clear picture, warns you before it matters and tells you your next move. Built into how you work, and ready for your agents.'
 
 export const NAV_LINKS = [
-  { label: 'Product', href: '/#how-it-works' },
+  { label: 'Product', href: '/#value' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Blog', href: '/blog' },
   { label: 'Changelog', href: '/releases' },

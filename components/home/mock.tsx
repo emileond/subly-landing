@@ -37,6 +37,12 @@ export function ServiceLogo({
   )
 }
 
+/** The Claude mark, from the brand's own asset */
+export function ClaudeMark({ className = 'h-5 w-5' }: { className?: string }) {
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img src="/services/claude.svg" alt="" aria-hidden="true" className={`shrink-0 ${className}`} />
+}
+
 type Tone = 'brand' | 'attention' | 'problem' | 'money' | 'neutral'
 
 const tones: Record<Tone, string> = {

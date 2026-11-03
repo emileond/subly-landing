@@ -1,21 +1,23 @@
 'use client'
 
+import { Quote as QuoteIcon } from 'lucide-react'
 import Image from 'next/image'
 import { Fragment, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Section, SectionHeading } from '@/components/ui/section'
-import { testimonials } from '@/lib/testimonials'
+import { type Testimonial, testimonials } from '@/lib/testimonials'
 
-function Quote({ text }: { text: string }) {
+/** Quotes mark the line to pick out with **bold**; it gets a soft highlight so the card can be skimmed. */
+function Quote({ text, large = false }: { text: string; large?: boolean }) {
   return (
     <>
       {text.split('\n\n').map((para, i) => (
-        <p key={i} className={i ? 'mt-3' : ''}>
+        <p key={i} className={i ? (large ? 'mt-5' : 'mt-3') : ''}>
           {para.split('**').map((chunk, j) =>
             j % 2 ? (
-              <strong key={j} className="font-semibold">
+              <mark key={j} className="rounded bg-brand-soft px-1 py-0.5 font-semibold text-foreground [box-decoration-break:clone]">
                 {chunk}
-              </strong>
+              </mark>
             ) : (
               <Fragment key={j}>{chunk}</Fragment>
             ),
@@ -26,42 +28,66 @@ function Quote({ text }: { text: string }) {
   )
 }
 
+function Person({ t, large = false }: { t: Testimonial; large?: boolean }) {
+  return (
+    <figcaption className="flex items-center gap-3">
+      <span
+        className={`relative shrink-0 overflow-hidden rounded-full border border-border bg-white ${large ? 'h-12 w-12' : 'h-10 w-10'}`}
+      >
+        <Image src={t.logo} alt="" fill sizes="48px" className="object-contain p-1" />
+      </span>
+      <span className="min-w-0">
+        <span className="block truncate font-semibold">{t.name}</span>
+        <span className="block truncate text-sm text-muted-foreground">{t.company}</span>
+      </span>
+    </figcaption>
+  )
+}
+
 export function Testimonials() {
   const [all, setAll] = useState(false)
-  const shown = all ? testimonials : testimonials.slice(0, 6)
+  const [featured, ...rest] = testimonials
+  const shown = all ? rest : rest.slice(0, 6)
 
   return (
-    <Section id="testimonials" tone="sunken">
+    <Section id="testimonials">
       <SectionHeading
         align="center"
         eyebrow="Customers"
         title="Hear from people who use it"
         lede="Subly is trusted by thousands of businesses, freelancers and solopreneurs worldwide."
       />
-      <ul className="mt-12 columns-1 gap-4 md:columns-2 lg:columns-3 [&>li]:mb-4">
+
+      <figure className="hero-glow relative mt-12 overflow-hidden rounded-3xl border border-border bg-card px-6 py-10 sm:px-12 sm:py-14">
+        <QuoteIcon className="h-9 w-9 text-brand" aria-hidden="true" />
+        <blockquote className="mt-5 max-w-3xl font-display text-xl leading-snug tracking-tight text-pretty text-foreground sm:text-3xl sm:leading-snug">
+          <Quote text={featured.quote} large />
+        </blockquote>
+        <div className="mt-8">
+          <Person t={featured} large />
+        </div>
+      </figure>
+
+      <ul className="mt-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {shown.map((t) => (
-          <li key={t.name} className="break-inside-avoid rounded-xl border border-border bg-card p-5">
-            <figure>
-            <blockquote className="text-sm leading-relaxed text-card-foreground">
-              <Quote text={t.quote} />
-            </blockquote>
-            <figcaption className="mt-5 flex items-center gap-3">
-              <span className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full border border-border bg-background">
-                <Image src={t.logo} alt="" fill sizes="40px" className="object-contain p-1" />
-              </span>
-              <span className="min-w-0 text-sm">
-                <span className="block truncate font-medium">{t.name}</span>
-                <span className="block truncate text-xs text-muted-foreground">{t.company}</span>
-              </span>
-            </figcaption>
+          <li key={t.name} className="h-full">
+            <figure className="flex h-full flex-col rounded-2xl border border-border bg-card p-6">
+              <QuoteIcon className="h-5 w-5 text-brand" aria-hidden="true" />
+              <blockquote className="mt-4 flex-1 text-[15px] leading-relaxed text-foreground">
+                <Quote text={t.quote} />
+              </blockquote>
+              <div className="mt-6 border-t border-border pt-5">
+                <Person t={t} />
+              </div>
             </figure>
           </li>
         ))}
       </ul>
-      {!all && (
+
+      {!all && rest.length > 6 && (
         <div className="mt-8 text-center">
-          <Button variant="outline" onClick={() => setAll(true)}>
-            Show more
+          <Button variant="outline" size="lg" onClick={() => setAll(true)}>
+            Show more stories
           </Button>
         </div>
       )}

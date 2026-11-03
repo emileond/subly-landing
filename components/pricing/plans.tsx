@@ -1,9 +1,8 @@
 'use client'
 
-import { Check } from 'lucide-react'
+import { ArrowRight, Check } from 'lucide-react'
 import { useState } from 'react'
 import { AnchorButton } from '@/components/ui/button'
-import { Container } from '@/components/ui/section'
 import { type Interval, PLANS, monthsFree, perMonthWhenYearly } from '@/lib/plans'
 import { SIGNUP_URL } from '@/lib/site'
 
@@ -11,8 +10,12 @@ export function PricingPlans() {
   const [interval, setInterval] = useState<Interval>('year')
 
   return (
-    <Container>
-      <div className="flex justify-center">
+    <div>
+      <div className="flex flex-col items-center gap-3">
+        <p className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-sm">
+          <span className="h-1.5 w-1.5 rounded-full bg-money-in" aria-hidden="true" />
+          Every new account starts with a free 14-day Business trial
+        </p>
         <div role="group" aria-label="Billing period" className="inline-flex rounded-lg border border-border bg-card p-1">
           {(['month', 'year'] as const).map((i) => (
             <button
@@ -33,24 +36,26 @@ export function PricingPlans() {
         </div>
       </div>
 
-      <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:items-stretch">
         {PLANS.map((p) => {
           const free = p.month === 0
           const price = interval === 'year' ? p.year : p.month
           return (
             <li
               key={p.id}
-              className={`relative flex flex-col rounded-2xl border bg-card p-6 ${p.popular ? 'border-brand ring-1 ring-brand' : 'border-border'}`}
+              className={`relative flex flex-col rounded-2xl border bg-card p-6 ${
+                p.popular ? 'border-brand shadow-[0_24px_60px_-30px_color-mix(in_srgb,var(--brand)_60%,transparent)] ring-1 ring-brand lg:-my-3 lg:py-9' : 'border-border'
+              }`}
             >
               {p.popular && (
                 <span className="absolute -top-3 left-6 rounded-full bg-brand px-2.5 py-0.5 text-[11px] font-medium text-brand-foreground">
                   Most popular
                 </span>
               )}
-              <h2 className="font-display text-xl font-bold tracking-tight">{p.name}</h2>
-              <p className="mt-1 text-sm text-muted-foreground">{p.forWho}</p>
+              <h3 className="font-display text-xl font-bold tracking-tight">{p.name}</h3>
+              <p className="mt-1 min-h-10 text-sm text-muted-foreground">{p.forWho}</p>
 
-              <p className="mt-6">
+              <p className="mt-5">
                 <span className="font-mono text-4xl tabular-nums tracking-tight">${price}</span>
                 <span className="text-sm text-muted-foreground">
                   {free ? '' : interval === 'year' ? ' / year' : ' / month'}
@@ -64,25 +69,28 @@ export function PricingPlans() {
                     : `or $${p.year} a year`}
               </p>
 
-              <AnchorButton href={SIGNUP_URL} variant={p.popular ? 'primary' : 'outline'} className="mt-6 w-full">
-                {free ? 'Start free' : `Try ${p.name}`}
+              <AnchorButton href={SIGNUP_URL} variant={p.popular ? 'primary' : 'outline'} className="mt-5 w-full">
+                {free ? 'Start free' : 'Start free trial'}
+                {p.popular && <ArrowRight className="h-4 w-4" aria-hidden="true" />}
               </AnchorButton>
+              <p className="mt-2 h-4 text-center text-xs text-faint">{free ? '' : '14 days free, then pick a plan'}</p>
 
-              <ul className="mt-6 space-y-2.5 border-t border-border pt-6 text-sm">
-                {p.highlights.map((h) => (
-                  <li key={h} className="flex items-start gap-2.5">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-ink" aria-hidden="true" />
-                    <span>{h}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="mt-5 flex-1 border-t border-border pt-5">
+                {p.includes && <p className="mb-3 text-sm font-semibold">{p.includes}</p>}
+                <ul className="space-y-2.5 text-sm">
+                  {p.highlights.map((h) => (
+                    <li key={h} className="flex items-start gap-2.5">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-ink" aria-hidden="true" />
+                      <span>{h}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </li>
           )
         })}
       </ul>
-      <p className="mt-6 text-center text-sm text-muted-foreground">
-        Every new account starts with a 14-day Business trial. Prices are in US dollars.
-      </p>
-    </Container>
+      <p className="mt-8 text-center text-sm text-muted-foreground">Prices are in US dollars. Cancel any time.</p>
+    </div>
   )
 }

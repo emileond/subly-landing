@@ -4,7 +4,7 @@ import { ImageResponse } from 'next/og'
 
 const font = (name: string) => readFile(path.join(process.cwd(), 'assets/fonts', name))
 
-const DEFAULT_TITLE = 'Control your money. Know your next move.'
+const DEFAULT_TITLE = 'Clarity that used to take a finance team.'
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url)
@@ -55,7 +55,7 @@ export async function GET(request: Request) {
 
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ fontFamily: 'Geist', fontSize: 30, color: '#A5A5B0', display: 'flex' }}>
-            The finance teammate for small teams
+            Built into how you work
           </div>
           <div style={{ fontFamily: 'GeistMono', fontSize: 28, color: '#A898FF', display: 'flex' }}>subly.app</div>
         </div>

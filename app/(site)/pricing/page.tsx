@@ -28,7 +28,7 @@ export default function PricingPage() {
                 One caught renewal <Mark>pays for it.</Mark>
               </>
             }
-            lede="Start free and upgrade when you need more people, banks or alerts. Yearly plans cost about two months less."
+            lede="Try everything free for 14 days. Then keep the Free plan, or upgrade when you need more people, banks or agents."
           />
         </Container>
       </section>
@@ -47,7 +47,7 @@ export default function PricingPage() {
           'What plan should I choose',
           'Is there a contract',
           'I have a lifetime deal',
-          'Why pay for a subscription',
+          'Does Subly pay for itself',
           'Does Subly connect to my bank',
         ]}
       />

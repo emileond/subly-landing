@@ -55,7 +55,7 @@ export const personas: Record<Persona['slug'], Persona> = {
     ],
     plan: {
       name: 'Business or Team',
-      line: 'Business covers 8 people and 3 banks for $19 a month. Team covers 20 people and 10 banks for $49.',
+      line: 'Business covers 10 people and 5 banks for $19 a month. Team covers 20 people and 10 banks for $49.',
     },
     closing: {
       title: 'Give every tool a name.',
@@ -99,7 +99,7 @@ export const personas: Record<Persona['slug'], Persona> = {
     ],
     plan: {
       name: 'Personal or Business',
-      line: 'Personal is $5 a month. Business is $19 a month and adds more banks, the Slack app, the 13-week view of how long your money lasts, and the Claude connector.',
+      line: 'Personal is $5 a month. Business is $19 a month and adds more people and banks, the Slack app, the 13-week view of how long your money lasts and priority support. The Claude connector and API are already in Personal.',
     },
     closing: {
       title: 'See what is left, in plain words.',
@@ -143,7 +143,7 @@ export const personas: Record<Persona['slug'], Persona> = {
     ],
     plan: {
       name: 'Free or Personal',
-      line: 'Free tracks up to 20 items. Personal is $5 a month or $48 a year, with unlimited items, 3 people and statement reading.',
+      line: 'Free tracks up to 20 items. Personal is $5 a month or $48 a year, with unlimited items, 3 people, statement reading and the Claude connector.',
     },
     closing: {
       title: 'Find out what you really pay for.',

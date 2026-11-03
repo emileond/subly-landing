@@ -1,20 +1,21 @@
 import type { Metadata } from 'next'
-import { Ask } from '@/components/home/ask'
+import { Agents } from '@/components/home/agents'
 import { BringDataIn } from '@/components/home/bring-data-in'
 import { ClosingCta } from '@/components/home/closing-cta'
+import { Everything } from '@/components/home/everything'
 import { FaqSection } from '@/components/home/faq'
 import { Hero } from '@/components/home/hero'
-import { MoneyInOut } from '@/components/home/money-in-out'
-import { PlainWords } from '@/components/home/plain-words'
+import { Outcomes } from '@/components/home/outcomes'
 import { PricingTeaser } from '@/components/home/pricing-teaser'
-import { Signals } from '@/components/home/signals'
-import { Summary } from '@/components/home/summary'
+import { InlineCta } from '@/components/home/inline-cta'
+import { SmartFeatures } from '@/components/home/smart-features'
+import { SmartBand } from '@/components/home/smart-band'
 import { Teams } from '@/components/home/teams'
 import { Testimonials } from '@/components/home/testimonials'
 import { DEFAULT_DESCRIPTION, SITE_URL } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Subly: control your money, know your next move' },
+  title: { absolute: 'Subly: clarity that used to take a finance team' },
   description: DEFAULT_DESCRIPTION,
   alternates: { canonical: '/' },
 }
@@ -46,17 +47,18 @@ export default function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Hero />
+      <Outcomes />
       <BringDataIn />
-      <Signals />
-      <MoneyInOut />
-      <Summary />
-      <Ask />
+      <InlineCta title="Two minutes from now, you could see the whole picture." />
+      <SmartBand />
+      <SmartFeatures />
+      <Agents />
       <Teams />
-      <PlainWords />
+      <Everything />
       <PricingTeaser />
+      <ClosingCta />
       <Testimonials />
       <FaqSection />
-      <ClosingCta />
     </>
   )
 }

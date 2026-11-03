@@ -57,7 +57,7 @@ export function Footer() {
               href={SIGNUP_URL}
               className="mt-4 inline-block text-sm font-medium text-foreground underline underline-offset-4 hover:text-brand-ink"
             >
-              Start free
+              Start free trial
             </a>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">

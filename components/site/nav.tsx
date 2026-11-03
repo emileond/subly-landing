@@ -48,7 +48,7 @@ export function Nav() {
             Sign in
           </a>
           <AnchorButton href={SIGNUP_URL} size="sm">
-            Start free
+            Start free trial
           </AnchorButton>
         </div>
 
@@ -79,7 +79,7 @@ export function Nav() {
               Sign in
             </a>
             <AnchorButton href={SIGNUP_URL} size="lg" className="mt-2 w-full">
-              Start free
+              Start free trial
             </AnchorButton>
           </nav>
         </div>

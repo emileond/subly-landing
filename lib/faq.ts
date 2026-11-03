@@ -2,8 +2,12 @@ export type Faq = { q: string; a: string }
 
 export const faqs: Faq[] = [
   {
-    q: 'Why pay for a subscription to manage subscriptions? Isn’t that ironic?',
-    a: 'It is a little. It is also about return on investment. Subly pays for itself the first time it catches a renewal you forgot, a price rise you missed, or a refund window that was about to close. The subscription also lets us keep building.',
+    q: 'Does Subly pay for itself?',
+    a: 'That is the idea. Subly pays for itself the first time it catches a renewal you forgot, a price rise you missed, or a refund window that was about to close, or a slow week for cash that you saw coming. That is also what lets us keep building.',
+  },
+  {
+    q: 'Can I use Subly with Claude or my own agents?',
+    a: 'Yes. Subly has a connector for Claude (it speaks MCP, so other compatible agents can use it too), a REST API with an OpenAPI spec, and signed webhooks for every signal. Ask what renews this quarter, add an item or assign an owner without opening the app. The connector and API are part of Personal, Business and Team, and of the AI & Automation add-on for lifetime deals.',
   },
   {
     q: 'What can Subly keep track of?',
@@ -23,7 +27,7 @@ export const faqs: Faq[] = [
   },
   {
     q: 'What plan should I choose?',
-    a: 'Start with Free. Personal ($5 a month) is for individuals who want statement reading, receipt forwarding and Ask. Business ($19 a month) is for founders, freelancers and small teams: more people and banks, the Slack app, the 13-week view of how long your money lasts, and the Claude connector and API. Team ($49 a month) is for agencies and growing teams. New accounts start with a 14-day Business trial.',
+    a: 'Start with Free. Personal ($5 a month) is for individuals who want statement reading, receipt forwarding, Ask and the Claude connector and API. Business ($19 a month) is for founders, freelancers and small teams: 10 people and 5 banks, the Slack app, the 13-week view of how long your money lasts, Stripe import and priority support. Team ($49 a month) is for agencies and growing teams. New accounts start with a 14-day Business trial.',
   },
   {
     q: 'Is there a contract or long-term commitment?',

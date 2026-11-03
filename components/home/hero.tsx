@@ -8,13 +8,13 @@ export function Hero({
   eyebrow = 'Subly 2.0 is live',
   title = (
     <>
-      <span className="block">Control your money.</span>
-      <span className="block">Know your next move.</span>
+      <span className="block">Clarity that used to</span>
+      <span className="block">take a finance team.</span>
     </>
   ),
-  sub = 'Find every charge in two minutes, get warned before it costs you, and see how long your money lasts.',
-  cta = 'Start free',
-  note = "The CFO you can't afford yet. 14-day Business trial, and the Free plan stays free.",
+  sub = 'Subly brings every payment, in and out, into one clear picture, warns you before it matters, and tells you your next move. Built into how you work.',
+  cta = 'Start free trial',
+  note = 'Free for 14 days with the full Business plan. The Free plan is yours to keep.',
 }: {
   eyebrow?: string
   title?: React.ReactNode
@@ -32,14 +32,14 @@ export function Hero({
           <h1 className="mt-6 font-display text-[2.6rem] font-bold leading-[1.04] tracking-tight text-balance sm:text-6xl lg:text-7xl">
             {title}
           </h1>
-          <p className="mx-auto mt-5 max-w-xl text-lg text-pretty text-muted-foreground sm:text-xl">{sub}</p>
+          <p className="mx-auto mt-5 max-w-2xl text-lg text-pretty text-muted-foreground sm:text-xl">{sub}</p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <AnchorButton href={SIGNUP_URL} size="lg" className="w-full sm:w-auto">
               {cta}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </AnchorButton>
             <a
-              href="#how-it-works"
+              href="#value"
               className="inline-flex h-12 items-center justify-center rounded-lg px-4 text-base font-medium text-foreground underline decoration-border underline-offset-4 hover:decoration-brand"
             >
               See how it works

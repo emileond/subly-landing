@@ -4,8 +4,8 @@ import { Container } from '@/components/ui/section'
 import { SIGNUP_URL } from '@/lib/site'
 
 export function ClosingCta({
-  title = 'Find out what you really pay for.',
-  body = 'Upload one statement and see your recurring money in a couple of minutes.',
+  title = 'Run your money like the company you are becoming.',
+  body = 'Upload one statement, connect a bank or just start typing. In two minutes you will see the whole picture.',
 }: {
   title?: string
   body?: string
@@ -19,10 +19,10 @@ export function ClosingCta({
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground sm:text-lg">{body}</p>
           <AnchorButton href={SIGNUP_URL} size="lg" className="mt-8 w-full sm:w-auto">
-            Start free
+            Start free trial
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </AnchorButton>
-          <p className="mt-3 text-sm text-faint">14-day Business trial. Free plan stays free.</p>
+          <p className="mt-3 text-sm text-faint">Free for 14 days with the full Business plan. The Free plan is yours to keep.</p>
         </div>
       </Container>
     </section>

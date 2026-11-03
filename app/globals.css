@@ -197,3 +197,108 @@
     radial-gradient(60% 50% at 50% 0%, color-mix(in srgb, var(--brand) 16%, transparent), transparent 70%),
     radial-gradient(40% 40% at 90% 20%, color-mix(in srgb, var(--brand) 8%, transparent), transparent 70%);
 }
+
+/* Motion for the home page demos. Everything ends in its final state, so reduced motion simply shows the result. */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes pop {
+  0% { opacity: 0; transform: scale(0.82); }
+  65% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes scan {
+  from { top: 0; }
+  to { top: calc(100% - 2px); }
+}
+@keyframes draw {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes grow-x {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes caret {
+  50% { border-color: transparent; }
+}
+@keyframes highlight {
+  to { background-color: color-mix(in srgb, var(--brand) 28%, transparent); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--brand) 55%, transparent); }
+  100% { box-shadow: 0 0 0 10px transparent; }
+}
+@keyframes drift {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.anim-rise { animation: rise 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: var(--d, 0ms); }
+.anim-pop { animation: pop 0.5s cubic-bezier(0.2, 0.8, 0.3, 1) both; animation-delay: var(--d, 0ms); }
+.anim-fade { animation: fade-in 0.6s ease both; animation-delay: var(--d, 0ms); }
+.anim-draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw var(--t, 1.4s) ease-out forwards; animation-delay: var(--d, 0ms); }
+.anim-grow { transform-origin: left; animation: grow-x 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: var(--d, 0ms); }
+.anim-highlight { animation: highlight 0.4s ease both; animation-delay: var(--d, 0ms); }
+.anim-type {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: bottom;
+  border-right: 2px solid var(--brand);
+  animation: typing var(--t, 1.4s) steps(var(--steps, 24), end) both, caret 0.8s step-end 3;
+  animation-delay: var(--d, 0ms);
+}
+
+/* Demos wait until they scroll into view */
+[data-play='false'] * { animation-play-state: paused !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-draw { stroke-dashoffset: 0; }
+}
+
+@keyframes fade-out {
+  to { opacity: 0; visibility: hidden; }
+}
+@keyframes pressed {
+  60% { transform: scale(0.94); }
+  to {
+    transform: scale(1);
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--primary-foreground);
+  }
+}
+@keyframes knob {
+  to { transform: translateX(14px); }
+}
+@keyframes track-on {
+  to { background-color: var(--brand); }
+}
+@keyframes dot {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.35; }
+  30% { transform: translateY(-3px); opacity: 1; }
+}
+@keyframes ping {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--money-in) 55%, transparent); }
+  100% { box-shadow: 0 0 0 8px transparent; }
+}
+.anim-out { animation: fade-out 0.4s ease forwards; animation-delay: var(--d, 0ms); }
+.anim-pressed { animation: pressed 0.45s ease forwards; animation-delay: var(--d, 0ms); }
+.anim-knob { animation: knob 0.3s ease forwards; animation-delay: var(--d, 0ms); }
+.anim-track { animation: track-on 0.3s ease forwards; animation-delay: var(--d, 0ms); }
+.anim-dot { animation: dot 1s ease-in-out infinite; }
+.anim-ping { animation: ping 1.6s ease-out infinite; }
+
+@keyframes grow-y {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
