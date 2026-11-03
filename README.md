@@ -1,32 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Subly website
 
-## Getting Started
+Marketing site for [Subly](https://subly.app). Next.js 16 (App Router), React 19, Tailwind CSS v4.
 
-First, run the development server:
+Needs Node 22 (`.tool-versions`; Next 16 needs 20.9 or newer).
 
 ```bash
-npm run dev
+npm install
+npm run dev     # http://localhost:3000
+npm run build
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How it is put together
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- `app/(site)` is the website: home, `/pricing`, `/for/[persona]`, blog, changelog (`/releases`), roadmap, affiliates, legal, manifesto and the currency converter. It has its own root layout (fonts, theme, nav, footer, Crisp, analytics).
+- `app/(cms)` and `app/api/outstatic` are the Outstatic dashboard at `/outstatic`. It has a separate root layout so its styles never reach the site. Blog posts are Markdown in `outstatic/content/posts`; the site reads them from disk at build time (`lib/content.ts`). The changelog reads `_releases/*.md`.
+- `app/globals.css` holds the design tokens, copied from the app (`subly-web/app/globals.css`). Neutral surfaces and buttons, violet (`brand`) for indicators and decoration, green/amber/red only where they mean money. Dark mode is `.dark`, driven by `next-themes` (system by default, with a toggle in the nav).
+- Fonts: Bricolage Grotesque (display), Geist (body), Geist Mono (numbers), loaded with `next/font/google`.
+- `lib/plans.ts` and `lib/plan-features.ts` mirror `subly-web/lib/plans.ts`. Change prices or limits there first, then here.
+- `app/og/route.tsx` draws the Open Graph image with `next/og` (fonts in `assets/fonts`). `lib/seo.ts` builds per-page metadata and canonical URLs on subly.app.
+- `data/currencies.json` is rewritten twice a day by `.github/workflows/fetch-currencies-data.yml`; the converter reads it at build time.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Product visuals on the home page are plain HTML and CSS (`components/home`), not screenshots.
