@@ -24,4 +24,4 @@ The Subly extension is designed to simplify the process of adding subscriptions 
 
 ## Get the extension now! 🚀
 
-Ready to elevate your browsing experience? [Install the Subly Chrome Extension directly from the Chrome Web Store](chrome.google.com/webstore/detail/subly/adkphphbcoohfcgjhajhkedngglechcj) and
+Ready to elevate your browsing experience? [Install the Subly Chrome Extension directly from the Chrome Web Store](https://chrome.google.com/webstore/detail/subly/adkphphbcoohfcgjhajhkedngglechcj) and
