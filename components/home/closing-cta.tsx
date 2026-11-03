@@ -18,11 +18,11 @@ export function ClosingCta({
             {title}
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground sm:text-lg">{body}</p>
-          <AnchorButton href={SIGNUP_URL} size="lg" className="mt-8 w-full sm:w-auto">
+          <AnchorButton href={SIGNUP_URL} data-cta="closing" size="lg" className="mt-8 w-full sm:w-auto">
             Start free trial
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </AnchorButton>
-          <p className="mt-3 text-sm text-faint">Free for 14 days with the full Business plan. The Free plan is yours to keep.</p>
+          <p className="mt-3 text-sm text-faint">Free for 14 days with the full Business plan, no credit card needed. The Free plan is yours to keep.</p>
         </div>
       </Container>
     </section>

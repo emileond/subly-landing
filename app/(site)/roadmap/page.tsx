@@ -43,7 +43,7 @@ export default function RoadmapPage() {
         <div className="text-center">
           <h1 className="font-display text-5xl font-bold tracking-tight sm:text-6xl">Roadmap</h1>
           <p className="mt-4 text-lg text-muted-foreground">What’s on the horizon for Subly</p>
-          <AnchorButton href={SIGNUP_URL} variant="outline" size="lg" className="mt-8 rounded-full">
+          <AnchorButton href={SIGNUP_URL} data-cta="roadmap" variant="outline" size="lg" className="mt-8 rounded-full">
             Get started for free <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </AnchorButton>
         </div>

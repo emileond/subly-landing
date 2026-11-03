@@ -19,7 +19,7 @@ export const faqs: Faq[] = [
   },
   {
     q: 'Does Subly connect to my bank?',
-    a: 'If you want it to. Bank connections work in the US, Canada and Europe. You do not need one: uploading a statement works anywhere and needs no bank login.',
+    a: 'If you want it to. Bank connections work in the US, Canada and Europe and go through Plaid, so your bank login never reaches Subly. The connection is read-only: Subly can see transactions but cannot move money. You do not need one: uploading a statement works anywhere and needs no bank login.',
   },
   {
     q: 'How many items can I track?',
@@ -28,6 +28,10 @@ export const faqs: Faq[] = [
   {
     q: 'What plan should I choose?',
     a: 'Start with Free. Personal ($5 a month) is for individuals who want statement reading, receipt forwarding, Ask and the Claude connector and API. Business ($19 a month) is for founders, freelancers and small teams: 10 people and 5 banks, the Slack app, the 13-week view of how long your money lasts, Stripe import and priority support. Team ($49 a month) is for agencies and growing teams. New accounts start with a 14-day Business trial.',
+  },
+  {
+    q: 'Do I need a credit card to start?',
+    a: 'No. The 14-day Business trial starts without a card. When it ends you keep the Free plan, unless you choose a paid one.',
   },
   {
     q: 'Is there a contract or long-term commitment?',
@@ -43,7 +47,7 @@ export const faqs: Faq[] = [
   },
   {
     q: 'How is my data handled?',
-    a: 'Your data is yours. We respect your privacy and make sure your data is never used for any other purpose. You can download all your data at any time, and if you ever decide to leave Subly, your data is deleted from our servers.',
+    a: 'Your data is yours. It is encrypted in transit and at rest, never sold and never used for any other purpose. Bank connections are read-only. You can download all your data at any time, and if you ever decide to leave Subly, your data is deleted from our servers.',
   },
   {
     q: 'Is Subly available in my language?',

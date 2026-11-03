@@ -4,8 +4,9 @@ export const SIGNUP_URL = `${APP_URL}/signup`
 export const LOGIN_URL = `${APP_URL}/login`
 
 export const SITE_NAME = 'Subly'
+export const HOME_TITLE = 'Subly: track subscriptions, bills and cash flow for your business'
 export const DEFAULT_DESCRIPTION =
-  'Subly brings every payment, in and out, into one clear picture, warns you before it matters and tells you your next move. Built into how you work, and ready for your agents.'
+  'Subly watches every payment in and out, remembers every renewal and tells you what to do next. For founders, freelancers and small teams. Free 14-day trial, no credit card needed.'
 
 export const NAV_LINKS = [
   { label: 'Product', href: '/#value' },
