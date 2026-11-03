@@ -4,14 +4,20 @@ import { testimonials } from '@/lib/testimonials'
 
 /**
  * Real numbers from the Subly database (2 Nov 2026), rounded down. Update them
- * from time to time; never round up. Savings: recurring money-out items marked
- * inactive, as a yearly amount in USD, leaving out items over $10k a year
- * (outliers and test data): $5.29M across 9,776 items.
+ * from time to time; never round up.
+ *
+ * Savings, kept deliberately conservative: recurring money-out items people marked
+ * inactive, as a yearly amount in USD (currency_rates). Bank-synced streams are left
+ * out (they switch off on their own), as are transfers, rent, loans, payroll, taxes
+ * and insurance. The same name in one workspace counts once, each item is capped at
+ * $2,400 a year ($200 a month) and each workspace at the 95th percentile ($15k a
+ * year), so a few large or test accounts cannot carry the number. Result: $3.09M a
+ * year across 8,900 items in 1,082 workspaces, median $161 a year per item.
  */
 const stats = [
   { value: '26,000+', label: 'accounts opened' },
   { value: '95,000+', label: 'recurring payments tracked' },
-  { value: '$5M+', label: 'a year saved in cancelled charges' },
+  { value: '$3M+', label: 'a year saved in cancelled subscriptions' },
 ]
 
 const logos = testimonials.slice(1, 7)
