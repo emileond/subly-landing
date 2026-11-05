@@ -115,6 +115,62 @@ export const TOOLS = {
       { q: 'Is there a limit?', a: 'You can scan 3 statements a day here. In Subly, the Free plan reads one statement and paid plans read as many as you like.' },
     ],
   }),
+  stack: tool({
+    slug: 'stack-cost-calculator',
+    name: 'Software stack cost calculator',
+    title: 'Software stack cost calculator: what your tools cost',
+    description: 'Pick the software your business pays for, with plans and seats, and see the monthly and yearly total, the cost per person and what paying yearly would save.',
+    eyebrow: 'Free tool',
+    h1: 'What does your software stack cost?',
+    lede: 'Pick the tools you pay for, choose the plan and seats, and see your monthly and yearly total, the cost per person and what yearly billing would save. Share the stack with one link.',
+    blurb: 'Add your tools, plans and seats and see the monthly and yearly total and what yearly billing would save.',
+    answer: {
+      question: 'How do I work out what our software costs?',
+      paragraphs: [
+        'List every tool, its plan and how many seats you pay for, then turn each one into a monthly cost: per-seat price times seats, and yearly plans divided by 12. Add them up and multiply by 12 for the year. Divide by the number of people on the team to see the cost per person, a useful number when you hire or budget.',
+        'The calculator above does the arithmetic with list prices from each vendor. Two things are worth checking once you see the total: seats nobody uses any more, and monthly plans you have kept for a year or more, since most tools charge less a month on yearly billing.',
+      ],
+    },
+    steps: [
+      { title: 'Add your tools', body: 'Search the list or type a tool that is not on it, with your own price.' },
+      { title: 'Set plans and seats', body: 'Pick the plan you are on, the seats you pay for and how you are billed.' },
+      { title: 'See the total', body: 'Monthly and yearly cost, cost per person and what yearly billing would save. Copy a link to share it.' },
+    ],
+    faq: [
+      { q: 'Where do the prices come from?', a: 'From each vendor’s own pricing page, in US dollars, checked on the date shown under the total. Prices change, and taxes or discounts are not included, so use the plan menu to match what you actually pay.' },
+      { q: 'Is my stack saved anywhere?', a: 'Only in the link. The tools you pick are kept in the page address, so a copied link opens the same stack. Nothing is stored unless you press the button to send it to Subly.' },
+      { q: 'How much should a small business spend on software?', a: 'There is no standard number; it depends on the work. The useful checks are the cost per person, whether each tool has someone who decides on it, and whether monthly plans you have kept for a year would be cheaper billed yearly.' },
+      { q: 'Can Subly track this for me?', a: 'Yes. Send the stack to Subly and check the items before they are added. Subly tells you before each renewal and price rise and lets you put an owner on every tool. The Free plan tracks up to 20 items.' },
+    ],
+  }),
+  builder: tool({
+    slug: 'stack-builder',
+    name: 'Software stack builder',
+    title: 'Software stack builder: tools and costs for a new business',
+    description: 'Pick the kind of business you are setting up and your team size, and see a common software stack for it with what it costs a month, a year and per person.',
+    eyebrow: 'Free tool',
+    h1: 'What software will your business need, and what will it cost?',
+    lede: 'Choose what you are setting up and how many people it is for. You will see the jobs your software has to do, a common pick for each, and the monthly and yearly cost before you sign up for anything.',
+    blurb: 'Pick a kind of business and team size and see a typical stack with its monthly and yearly cost.',
+    answer: {
+      question: 'What software does a small business need?',
+      paragraphs: [
+        'Most small businesses start with the same core: email, calendar and documents, a place for the team to talk, accounting, and a password manager. On top of that comes the software for the work itself, like design tools for a studio, code hosting for a software team or a store for an online shop.',
+        'Cost depends less on which tools you pick than on how many people need a seat and whether you pay monthly or yearly. Start each tool on the plan you need today, put the yearly renewal dates somewhere you will see them, and review the list every few months as the team grows.',
+      ],
+    },
+    steps: [
+      { title: 'Pick what you are setting up', body: 'An agency, a software startup, an online store, freelance work, a marketing team or a services firm.' },
+      { title: 'Set the team size', body: 'Per-seat tools are priced for everyone. Choose lean or standard plans.' },
+      { title: 'Swap and compare', body: 'Change any pick to see the difference, then fine-tune it in the stack calculator.' },
+    ],
+    faq: [
+      { q: 'Are these recommendations sponsored?', a: 'No. They are common choices for each kind of business, and no vendor pays to be listed. Swap any of them for the tool you prefer.' },
+      { q: 'How accurate are the costs?', a: 'They use list prices in US dollars from each vendor’s pricing page, on the date shown. Taxes, discounts and add-ons are not included, so treat the total as a planning number.' },
+      { q: 'Should I pay monthly or yearly?', a: 'Monthly while you are still deciding, yearly once a tool has earned its place: most vendors charge less a month on yearly billing. Note each yearly renewal date, since that charge is large and easy to forget.' },
+      { q: 'What happens if I send the stack to Subly?', a: 'You check the tools before anything is added. Subly then tells you before each renewal and price rise, and you can give every tool an owner. The Free plan tracks up to 20 items.' },
+    ],
+  }),
 } satisfies Record<string, Tool>
 
 export type ToolKey = keyof typeof TOOLS

@@ -45,7 +45,8 @@ export function signupHref(tool: string, handoff?: string) {
 /** Stores the items and goes to sign-up. Resolves only if it could not leave the page. */
 export async function sendToSubly(kind: ToolKind, items: ToolItem[], meta: Record<string, string | number> = {}) {
   const tool = window.location.pathname
-  send('tool_handoff', { tool, kind, items: String(items.length) })
+  // `tool` is the same short key the tool's other events use (stack, appsumo, runway, builder, scan)
+  send('tool_handoff', { tool: kind, items: String(items.length) })
   let id: string | undefined
   try {
     const response = await fetch(`${APP_URL}/api/public/handoff`, {

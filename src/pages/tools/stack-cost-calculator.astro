@@ -1,0 +1,9 @@
+---
+import { StackTracker } from '@/components/tools/stack-tracker'
+import { TOOLS } from '@/lib/tools'
+import Tool from '@/src/layouts/Tool.astro'
+---
+
+<Tool tool={TOOLS.stack}>
+  <StackTracker client:load />
+</Tool>
