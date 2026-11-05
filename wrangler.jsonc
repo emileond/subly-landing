@@ -18,5 +18,8 @@
     { "pattern": "www.subly.app", "custom_domain": true }
   ],
   "workers_dev": true,
-  "preview_urls": true
+  "preview_urls": true,
+  // Workers Builds runs `wrangler preview` for every branch other than main, which needs this block.
+  // Empty: the site has no bindings or variables, and production routes never apply to previews.
+  "previews": {}
 }
