@@ -84,6 +84,37 @@ export const TOOLS = {
       { q: 'How is this different from Subly’s forecast?', a: 'This calculator spreads everything evenly across the weeks. Subly’s 13-week forecast is built from each item’s real dates and lets you test a cancel or a price change before you commit. It is part of the Business and Team plans.' },
     ],
   }),
+  scan: tool({
+    slug: 'find-subscriptions',
+    name: 'Subscription finder',
+    title: 'Find every subscription on your bank statement, free',
+    description: 'Upload a bank or card statement and see every recurring charge, what it costs a year, what went up in price and what renews soon. Free, no bank login.',
+    eyebrow: 'Free tool',
+    h1: 'Find every subscription on your statement',
+    lede: 'Upload a bank or card statement as a PDF or CSV. In about a minute you will see everything that repeats, what it costs a year, what went up and what renews in the next two weeks.',
+    blurb: 'Upload a statement and see every recurring charge, with price rises and renewals coming up.',
+    answer: {
+      question: 'How do I find all my subscriptions?',
+      paragraphs: [
+        'Start with a bank or card statement that covers two or three months. Anything that appears at the same amount every week, month or year is a subscription or a bill; a charge that grew between months is a price rise. Check every card and account you pay from, since subscriptions spread out across them.',
+        'Doing that by hand means reading every line. The finder above reads the statement for you, groups the charges that repeat, and lists each one with what it costs a year, sorted by cost, so the expensive ones you forgot are at the top.',
+      ],
+    },
+    steps: [
+      { title: 'Download a statement', body: 'From your bank or card app, export a PDF or CSV covering a month or more. Two or three months shows more.' },
+      { title: 'Upload it here', body: 'No bank login. The file is read and then deleted.' },
+      { title: 'See what repeats', body: 'Every recurring charge with its yearly cost, price rises and what renews in the next two weeks.' },
+    ],
+    faq: [
+      {
+        q: 'What happens to my statement?',
+        a: 'The file is read by an AI model, the same way Subly reads statements in the app, and deleted right after. The recurring charges it found are kept for up to 7 days so you can add them after signing up, then deleted. Nobody at Subly looks at them.',
+      },
+      { q: 'Do I need to connect my bank?', a: 'No. Upload a PDF or CSV statement you download yourself. Subly never needs your bank login for this.' },
+      { q: 'Which statements work?', a: 'Most bank and credit card statements, as a PDF or a CSV export, up to 5 MB. A statement that covers two or three months finds more, since a charge has to repeat to count.' },
+      { q: 'Is there a limit?', a: 'You can scan 3 statements a day here. In Subly, the Free plan reads one statement and paid plans read as many as you like.' },
+    ],
+  }),
 } satisfies Record<string, Tool>
 
 export type ToolKey = keyof typeof TOOLS

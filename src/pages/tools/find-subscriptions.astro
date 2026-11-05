@@ -1,0 +1,9 @@
+---
+import { StatementScanner } from '@/components/tools/statement-scanner'
+import { TOOLS } from '@/lib/tools'
+import Tool from '@/src/layouts/Tool.astro'
+---
+
+<Tool tool={TOOLS.scan}>
+  <StatementScanner client:load />
+</Tool>
