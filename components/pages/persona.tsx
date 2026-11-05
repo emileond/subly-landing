@@ -1,4 +1,5 @@
 import { Hero } from '@/components/home/hero'
+import { Check } from 'lucide-react'
 import { Section, SectionHeading } from '@/components/ui/section'
 import { type Persona, personas } from '@/lib/personas'
 
@@ -8,6 +9,28 @@ export default function PersonaIntro({ slug }: { slug: Persona['slug'] }) {
   return (
     <>
       <Hero eyebrow={p.eyebrow} title={p.title} sub={p.sub} note="14-day Business trial, no credit card needed. The Free plan stays free." />
+
+      {/* The short answer, first: what search engines and AI assistants quote */}
+      <Section className="pt-4! sm:pt-6! lg:pt-8!">
+        <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
+          <div className="max-w-2xl">
+            <h2 className="font-display text-2xl font-bold leading-tight tracking-tight text-balance sm:text-3xl">{p.answer.question}</h2>
+            {p.answer.paragraphs.map((text) => (
+              <p key={text} className="mt-4 text-pretty text-muted-foreground sm:text-lg">
+                {text}
+              </p>
+            ))}
+          </div>
+          <ul className="space-y-3 self-center rounded-xl border border-border bg-card p-6">
+            {p.answer.points.map((point) => (
+              <li key={point} className="flex gap-3">
+                <Check className="mt-1 h-4 w-4 shrink-0 text-brand-ink" aria-hidden="true" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Section>
 
       <Section tone="sunken">
         <SectionHeading eyebrow="Why it works" title={p.benefitsTitle} />

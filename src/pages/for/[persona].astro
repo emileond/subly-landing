@@ -20,6 +20,6 @@ const p = personas[slug]
   <PersonaIntro slug={slug} />
   <BringDataIn client:visible />
   <PricingTeaser client:visible />
-  <FaqSection only={['What can Subly keep track of', 'How do I get my data in', 'How is my data handled', 'Is there a contract']} />
+  <FaqSection extra={p.faq} only={['How is my data handled', 'Is there a contract']} />
   <ClosingCta title={p.closing.title} body={p.closing.body} />
 </Site>

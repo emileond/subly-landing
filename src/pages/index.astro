@@ -13,29 +13,21 @@ import { Teams } from '@/components/home/teams'
 import { Testimonials } from '@/components/home/testimonials'
 import { Trust } from '@/components/home/trust'
 import { PAGES } from '@/lib/pages'
+import { ORG_ID } from '@/lib/seo'
 import { DEFAULT_DESCRIPTION, SITE_URL } from '@/lib/site'
 import Site from '@/src/layouts/Site.astro'
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Organization',
-      name: 'Subly',
-      url: SITE_URL,
-      logo: `${SITE_URL}/icon.png`,
-      sameAs: ['https://twitter.com/sublyweb'],
-    },
-    {
-      '@type': 'SoftwareApplication',
-      name: 'Subly',
-      applicationCategory: 'FinanceApplication',
-      operatingSystem: 'Web',
-      url: SITE_URL,
-      description: DEFAULT_DESCRIPTION,
-      offers: { '@type': 'AggregateOffer', priceCurrency: 'USD', lowPrice: '0', highPrice: '49' },
-    },
-  ],
+  '@type': 'SoftwareApplication',
+  name: 'Subly',
+  alternateName: 'Subly.app',
+  applicationCategory: 'FinanceApplication',
+  operatingSystem: 'Web',
+  url: SITE_URL,
+  description: DEFAULT_DESCRIPTION,
+  publisher: { '@id': ORG_ID },
+  offers: { '@type': 'AggregateOffer', priceCurrency: 'USD', lowPrice: '0', highPrice: '49' },
 }
 ---
 

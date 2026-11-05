@@ -19,6 +19,7 @@ const columns = [
     title: 'For',
     links: [
       { label: 'Teams', href: '/for/teams' },
+      { label: 'Agencies', href: '/for/agencies' },
       { label: 'Founders and freelancers', href: '/for/founders' },
       { label: 'Households', href: '/for/households' },
     ],

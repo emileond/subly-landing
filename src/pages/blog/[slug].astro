@@ -3,7 +3,7 @@ import BlogPost from '@/components/pages/blog-post'
 import { getAuthor } from '@/lib/authors'
 import { type Post, getPosts, relatedPosts } from '@/lib/content'
 import { postMeta } from '@/lib/routes'
-import { ogImagePath } from '@/lib/seo'
+import { ORG_ID, ogImagePath } from '@/lib/seo'
 import { SITE_NAME, SITE_URL, absoluteUrl } from '@/lib/site'
 import Site from '@/src/layouts/Site.astro'
 
@@ -29,7 +29,7 @@ const jsonLd = {
       articleSection: post.category,
       keywords: post.tags.join(', ') || undefined,
       author: { '@type': 'Person', name: author.name, jobTitle: author.role, image: absoluteUrl(author.avatar) },
-      publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL, logo: { '@type': 'ImageObject', url: `${SITE_URL}/icon.png` } },
+      publisher: { '@id': ORG_ID },
     },
     {
       '@type': 'BreadcrumbList',

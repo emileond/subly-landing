@@ -1,9 +1,10 @@
 import { ChevronDown } from 'lucide-react'
 import { Section, SectionHeading } from '@/components/ui/section'
-import { faqs } from '@/lib/faq'
+import { type Faq, faqs } from '@/lib/faq'
 
-export function FaqSection({ only }: { only?: string[] }) {
-  const items = only ? faqs.filter((f) => only.some((o) => f.q.startsWith(o))) : faqs
+/** The shared questions (all, or those starting with one of `only`), after any page-specific `extra` ones */
+export function FaqSection({ only, extra = [] }: { only?: string[]; extra?: Faq[] }) {
+  const items = [...extra, ...(only ? faqs.filter((f) => only.some((o) => f.q.startsWith(o))) : faqs)]
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
