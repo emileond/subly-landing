@@ -31,6 +31,8 @@ export async function renderOgImage(headline?: string): Promise<Uint8Array> {
         style={{
           width: '100%',
           height: '100%',
+          // satori 0.63 sizes boxes as content-box; next/og's satori used border-box
+          boxSizing: 'border-box',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',

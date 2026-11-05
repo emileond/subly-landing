@@ -16,6 +16,18 @@ export function readTheme(): Theme {
   }
 }
 
+const CHANGE = 'subly:theme'
+
+/** For useSyncExternalStore: the toggle re-reads the choice when it changes here or in another tab */
+export function subscribeTheme(onChange: () => void) {
+  window.addEventListener(CHANGE, onChange)
+  window.addEventListener('storage', onChange)
+  return () => {
+    window.removeEventListener(CHANGE, onChange)
+    window.removeEventListener('storage', onChange)
+  }
+}
+
 export function applyTheme(theme: Theme) {
   try {
     localStorage.setItem(THEME_KEY, theme)
@@ -33,4 +45,5 @@ export function applyTheme(theme: Theme) {
   root.style.colorScheme = dark ? 'dark' : 'light'
   void getComputedStyle(document.body).opacity
   setTimeout(() => freeze.remove(), 1)
+  window.dispatchEvent(new Event(CHANGE))
 }

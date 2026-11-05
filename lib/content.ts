@@ -94,4 +94,6 @@ export function getRelease(slug: string): Release | null {
   }
 }
 
-export const formatDate = (value: string) => dayjs(value).format('MMMM D, YYYY')
+// In UTC, so the date does not depend on the time zone of the machine that builds the site
+export const formatDate = (value: string) =>
+  new Date(value).toLocaleDateString('en-US', { timeZone: 'UTC', year: 'numeric', month: 'long', day: 'numeric' })
