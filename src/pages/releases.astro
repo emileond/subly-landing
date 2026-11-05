@@ -1,0 +1,11 @@
+---
+import ReleasesIndex from '@/components/pages/releases-index'
+import { getReleases } from '@/lib/content'
+import { PAGES } from '@/lib/pages'
+import { absoluteUrl } from '@/lib/site'
+import Site from '@/src/layouts/Site.astro'
+---
+
+<Site meta={PAGES.releases} feeds={[{ type: 'application/rss+xml', href: absoluteUrl('/rss/feed.xml') }]}>
+  <ReleasesIndex releases={getReleases()} />
+</Site>

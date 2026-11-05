@@ -1,5 +1,4 @@
 import { ChevronDown } from 'lucide-react'
-import Link from 'next/link'
 import { Section, SectionHeading } from '@/components/ui/section'
 import { faqs } from '@/lib/faq'
 
@@ -32,9 +31,9 @@ export function FaqSection({ only }: { only?: string[] }) {
                 {f.q.startsWith('Do you have an affiliate') && (
                   <>
                     {' '}
-                    <Link href="/affiliates" className="font-medium text-brand-ink underline underline-offset-4">
+                    <a href="/affiliates" className="font-medium text-brand-ink underline underline-offset-4">
                       See the affiliate program
-                    </Link>
+                    </a>
                     .
                   </>
                 )}

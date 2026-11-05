@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import type { ComponentProps } from 'react'
 
 type Variant = 'primary' | 'outline' | 'ghost'
@@ -23,22 +22,14 @@ export function buttonClass(variant: Variant = 'primary', size: Size = 'md', cla
   return `${base} ${variants[variant]} ${sizes[size]} ${className}`.trim()
 }
 
-type LinkButtonProps = Omit<ComponentProps<typeof Link>, 'className'> & {
-  variant?: Variant
-  size?: Size
-  className?: string
-}
-
-export function LinkButton({ variant, size, className, ...props }: LinkButtonProps) {
-  return <Link {...props} className={buttonClass(variant, size, className)} />
-}
-
 type AnchorButtonProps = ComponentProps<'a'> & { variant?: Variant; size?: Size }
 
-/** For links that leave the site (the app, Slack, etc.) */
+/** A link styled as a button, inside the site or out of it (the app, Slack, etc.) */
 export function AnchorButton({ variant, size, className, ...props }: AnchorButtonProps) {
   return <a {...props} className={buttonClass(variant, size, className)} />
 }
+
+export const LinkButton = AnchorButton
 
 type ButtonProps = ComponentProps<'button'> & { variant?: Variant; size?: Size }
 

@@ -1,10 +1,10 @@
 import { defineConfig, globalIgnores } from 'eslint/config'
-import nextVitals from 'eslint-config-next/core-web-vitals'
-import nextTs from 'eslint-config-next/typescript'
+import reactHooks from 'eslint-plugin-react-hooks'
+import tseslint from 'typescript-eslint'
 
+// .astro files are type-checked by `npm run check` (astro check); this lints the React and TS.
 export default defineConfig([
-  ...nextVitals,
-  ...nextTs,
-  { rules: { 'react/no-unescaped-entities': 'off' } },
-  globalIgnores(['.next/**', 'out/**', 'next-env.d.ts', '.outstatic/**']),
+  ...tseslint.configs.recommended,
+  reactHooks.configs.flat.recommended,
+  globalIgnores(['dist/**', '.astro/**', '.wrangler/**', 'node_modules/**']),
 ])

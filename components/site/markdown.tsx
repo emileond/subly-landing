@@ -12,7 +12,6 @@ export function Markdown({ children, className = '' }: { children: string; class
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeSlug]}
         components={{
-          // eslint-disable-next-line @next/next/no-img-element
           img: ({ src, alt }) => <img src={typeof src === 'string' ? src : undefined} alt={alt ?? ''} loading="lazy" decoding="async" />,
           a: ({ href, children }) => {
             const external = !!href && /^https?:/.test(href)

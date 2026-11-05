@@ -1,5 +1,4 @@
 import { ArrowRight } from 'lucide-react'
-import Link from 'next/link'
 import { PricingPlans } from '@/components/pricing/plans'
 import { Section, SectionHeading } from '@/components/ui/section'
 
@@ -12,12 +11,12 @@ export function PricingTeaser() {
           title="Simple pricing that grows with you"
           lede="Start with a free 14-day trial of Business, the full thing. Keep the Free plan afterwards, or pick the one that fits."
         />
-        <Link
+        <a
           href="/pricing"
           className="inline-flex shrink-0 items-center gap-1.5 text-sm font-medium underline decoration-border underline-offset-4 hover:decoration-brand"
         >
           Compare every feature <ArrowRight className="h-4 w-4" aria-hidden="true" />
-        </Link>
+        </a>
       </div>
       <div className="mt-10">
         <PricingPlans />

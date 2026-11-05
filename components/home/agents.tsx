@@ -1,5 +1,4 @@
 import { ArrowRight, Code2, Webhook, Workflow } from 'lucide-react'
-import Link from 'next/link'
 import { AgentDemo } from '@/components/home/agent-demo'
 import { ClaudeMark } from '@/components/home/mock'
 import { Container } from '@/components/ui/section'
@@ -71,9 +70,9 @@ export function Agents({ compact = false, as: Heading = 'h2' }: { compact?: bool
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
             {compact ? (
-              <Link href="/agents" className="inline-flex items-center gap-1.5 text-sm font-medium text-white/80 underline decoration-white/30 underline-offset-4 hover:text-white">
+              <a href="/agents" className="inline-flex items-center gap-1.5 text-sm font-medium text-white/80 underline decoration-white/30 underline-offset-4 hover:text-white">
                 See what your AI can do with Subly <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </Link>
+              </a>
             ) : (
               <p className="text-sm text-white/55">14 days of Business, free, no credit card. The Claude connector and API start at Personal.</p>
             )}

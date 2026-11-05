@@ -1,0 +1,16 @@
+---
+import ReleasePage from '@/components/pages/release'
+import { type Release, getReleases } from '@/lib/content'
+import { releaseMeta } from '@/lib/routes'
+import Site from '@/src/layouts/Site.astro'
+
+export function getStaticPaths() {
+  return getReleases().map((release) => ({ params: { slug: release.slug }, props: { release } }))
+}
+
+const { release } = Astro.props as { release: Release }
+---
+
+<Site meta={releaseMeta(release)}>
+  <ReleasePage release={release} />
+</Site>

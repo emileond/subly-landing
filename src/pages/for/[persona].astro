@@ -1,0 +1,25 @@
+---
+import { BringDataIn } from '@/components/home/bring-data-in'
+import { ClosingCta } from '@/components/home/closing-cta'
+import { FaqSection } from '@/components/home/faq'
+import { PricingTeaser } from '@/components/home/pricing-teaser'
+import PersonaIntro from '@/components/pages/persona'
+import { type Persona, personaSlugs, personas } from '@/lib/personas'
+import { personaMeta } from '@/lib/routes'
+import Site from '@/src/layouts/Site.astro'
+
+export function getStaticPaths() {
+  return personaSlugs.map((persona) => ({ params: { persona } }))
+}
+
+const slug = Astro.params.persona as Persona['slug']
+const p = personas[slug]
+---
+
+<Site meta={personaMeta(slug)}>
+  <PersonaIntro slug={slug} />
+  <BringDataIn client:visible />
+  <PricingTeaser client:visible />
+  <FaqSection only={['What can Subly keep track of', 'How do I get my data in', 'How is my data handled', 'Is there a contract']} />
+  <ClosingCta title={p.closing.title} body={p.closing.body} />
+</Site>

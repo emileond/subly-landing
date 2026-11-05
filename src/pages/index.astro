@@ -1,0 +1,56 @@
+---
+import { Agents } from '@/components/home/agents'
+import { BringDataIn } from '@/components/home/bring-data-in'
+import { ClosingCta } from '@/components/home/closing-cta'
+import { FaqSection } from '@/components/home/faq'
+import { Hero } from '@/components/home/hero'
+import { InlineCta } from '@/components/home/inline-cta'
+import { Outcomes } from '@/components/home/outcomes'
+import { PricingTeaser } from '@/components/home/pricing-teaser'
+import { ProofStrip } from '@/components/home/proof-strip'
+import { SmartFeatures } from '@/components/home/smart-features'
+import { Teams } from '@/components/home/teams'
+import { Testimonials } from '@/components/home/testimonials'
+import { Trust } from '@/components/home/trust'
+import { PAGES } from '@/lib/pages'
+import { DEFAULT_DESCRIPTION, SITE_URL } from '@/lib/site'
+import Site from '@/src/layouts/Site.astro'
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      name: 'Subly',
+      url: SITE_URL,
+      logo: `${SITE_URL}/icon.png`,
+      sameAs: ['https://twitter.com/sublyweb'],
+    },
+    {
+      '@type': 'SoftwareApplication',
+      name: 'Subly',
+      applicationCategory: 'FinanceApplication',
+      operatingSystem: 'Web',
+      url: SITE_URL,
+      description: DEFAULT_DESCRIPTION,
+      offers: { '@type': 'AggregateOffer', priceCurrency: 'USD', lowPrice: '0', highPrice: '49' },
+    },
+  ],
+}
+---
+
+<Site meta={PAGES.home} jsonLd={jsonLd}>
+  <Hero />
+  <ProofStrip />
+  <Outcomes />
+  <BringDataIn client:visible />
+  <Trust />
+  <InlineCta title="Two minutes from now, you could see the whole picture." />
+  <SmartFeatures client:visible />
+  <Teams client:visible />
+  <Agents compact client:visible />
+  <Testimonials client:visible />
+  <PricingTeaser client:visible />
+  <FaqSection />
+  <ClosingCta />
+</Site>

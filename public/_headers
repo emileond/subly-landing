@@ -1,0 +1,24 @@
+# Cloudflare applies these to every file it serves from dist/ (Workers static assets).
+# Same headers the Next.js site sent from next.config (PR 17):
+# - HSTS covers subly.app only. includeSubDomains (and preload) would force HTTPS on every
+#   subdomain, including ones not served here (email link tracking, umami, affiliates);
+#   add it once each of those is known to answer on HTTPS.
+# - The CSP is not a script allowlist: GetTerms, Umami, Traks and Partnero load further hosts
+#   of their own, and a missed one breaks silently. It stops other sites framing the site
+#   (clickjacking), <base> hijacking and plugin content, and upgrades stray http:// requests.
+/*
+  Strict-Transport-Security: max-age=63072000
+  Content-Security-Policy: frame-ancestors 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
+
+# Astro's bundles and fonts have a content hash in the file name
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# RSS readers expect the feed type, not plain XML
+/rss/feed.xml
+  Content-Type: application/rss+xml; charset=utf-8

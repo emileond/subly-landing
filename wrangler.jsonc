@@ -1,0 +1,22 @@
+// subly.app: a static site. `npm run build` (Astro) writes dist/; Cloudflare serves it as
+// Workers static assets with no Worker script, so no request runs code.
+// Headers and redirects: public/_headers and public/_redirects.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "subly-landing",
+  "compatibility_date": "2026-11-04",
+  "assets": {
+    "directory": "./dist",
+    // dist/pricing.html answers /pricing; /pricing/ redirects to it
+    "html_handling": "drop-trailing-slash",
+    // Unknown paths get dist/404.html with a 404 status
+    "not_found_handling": "404-page"
+  },
+  // Cloudflare owns the DNS for these hostnames (replaced the CloudFront records on 4 Nov 2026)
+  "routes": [
+    { "pattern": "subly.app", "custom_domain": true },
+    { "pattern": "www.subly.app", "custom_domain": true }
+  ],
+  "workers_dev": true,
+  "preview_urls": true
+}

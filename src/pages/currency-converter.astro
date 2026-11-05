@@ -1,0 +1,23 @@
+---
+import { CurrencyConverter } from '@/components/converter/currency-converter'
+import ConverterMore from '@/components/pages/currency-converter'
+import { Container } from '@/components/ui/section'
+import { ratesUpdatedAt } from '@/lib/convert'
+import { PAGES } from '@/lib/pages'
+import Site from '@/src/layouts/Site.astro'
+---
+
+<Site meta={PAGES.currencyConverter}>
+  <section class="hero-glow border-b border-border pb-28 pt-12 sm:pt-20">
+    <Container>
+      <div class="mx-auto max-w-2xl text-center">
+        <h1 class="font-display text-4xl font-bold leading-[1.05] tracking-tight text-balance sm:text-6xl">Currency converter</h1>
+        <p class="mt-4 text-lg text-muted-foreground sm:text-xl">Convert any currency amount at real exchange rates.</p>
+      </div>
+      <div class="mx-auto mt-10 max-w-3xl">
+        <CurrencyConverter updatedAt={ratesUpdatedAt} client:load />
+      </div>
+    </Container>
+  </section>
+  <ConverterMore />
+</Site>

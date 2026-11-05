@@ -1,0 +1,10 @@
+---
+import BlogIndex from '@/components/pages/blog-index'
+import { getPosts } from '@/lib/content'
+import { PAGES } from '@/lib/pages'
+import Site from '@/src/layouts/Site.astro'
+---
+
+<Site meta={PAGES.blog}>
+  <BlogIndex posts={getPosts()} />
+</Site>

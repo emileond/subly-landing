@@ -1,0 +1,3 @@
+# The Next.js site drew Open Graph cards on request at /og?title=…; they are now files
+# built per page (/og/<page>.png). Old links, and caches holding them, get the default card.
+/og /og/default.png 301

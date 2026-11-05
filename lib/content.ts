@@ -4,13 +4,12 @@ import dayjs from 'dayjs'
 import matter from 'gray-matter'
 
 /**
- * Blog posts are Outstatic's Markdown files (outstatic/content/posts), written to
- * the repo by the Outstatic dashboard at /outstatic. Changelog entries live in
- * _releases. Both are read straight from disk at build time.
+ * Blog posts (content/posts) and changelog entries (content/releases) are Markdown files
+ * with front matter, edited in the repo. Both are read straight from disk at build time.
  */
 
-const POSTS_DIR = path.join(process.cwd(), 'outstatic/content/posts')
-const RELEASES_DIR = path.join(process.cwd(), '_releases')
+const POSTS_DIR = path.join(process.cwd(), 'content/posts')
+const RELEASES_DIR = path.join(process.cwd(), 'content/releases')
 
 export type Tag = { label: string; value: string }
 
@@ -95,4 +94,6 @@ export function getRelease(slug: string): Release | null {
   }
 }
 
-export const formatDate = (value: string) => dayjs(value).format('MMMM D, YYYY')
+// In UTC, so the date does not depend on the time zone of the machine that builds the site
+export const formatDate = (value: string) =>
+  new Date(value).toLocaleDateString('en-US', { timeZone: 'UTC', year: 'numeric', month: 'long', day: 'numeric' })
