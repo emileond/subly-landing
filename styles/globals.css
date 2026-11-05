@@ -309,3 +309,200 @@
   from { transform: scaleY(0); }
   to { transform: scaleY(1); }
 }
+
+/* ---------- Blog posts ---------- */
+
+/* Reading size: 18px body, comfortable line length and rhythm */
+.blog-body {
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+.blog-body :where(h2) {
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+.blog-body :where(h3) {
+  font-size: 1.3rem;
+}
+.blog-body :where(p, ul, ol) {
+  color: color-mix(in srgb, var(--foreground) 88%, transparent);
+}
+.blog-body :where(a) {
+  font-weight: 500;
+  text-decoration-color: color-mix(in srgb, var(--brand) 45%, transparent);
+}
+.blog-body :where(a:hover) {
+  text-decoration-color: var(--brand);
+}
+.blog-body :where(strong) {
+  font-weight: 600;
+}
+
+/* :::steps — a numbered procedure */
+.blog-steps ol {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+.blog-steps li {
+  counter-increment: step;
+  position: relative;
+  padding: 1rem 1.25rem 1rem 3.75rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--card);
+  line-height: 1.65;
+}
+.blog-steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 1.1rem;
+  top: 1rem;
+  display: grid;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 999px;
+  background: var(--brand-soft);
+  color: var(--brand-ink);
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.blog-steps li > p {
+  margin: 0;
+}
+.blog-steps li > p + p {
+  margin-top: 0.35rem;
+}
+
+/* :::checklist — things to tick off */
+.blog-checklist ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+.blog-checklist li {
+  position: relative;
+  padding-left: 2.1rem;
+  line-height: 1.6;
+}
+.blog-checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 0.4rem;
+  border: 1.5px solid var(--input);
+  background: var(--background);
+}
+.blog-checklist li::after {
+  content: '';
+  position: absolute;
+  left: 0.3rem;
+  top: 0.45rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  background: var(--foreground);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.blog-checklist li > p {
+  margin: 0;
+}
+
+/* :::stats — numbers worth remembering */
+.blog-stats ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+}
+.blog-stats li {
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--card);
+  color: var(--muted-foreground);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  border-top: 3px solid var(--brand);
+}
+.blog-stats li strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--foreground);
+  font-family: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.blog-stats li > p {
+  margin: 0;
+}
+
+/* Tables: a card with a hairline grid */
+.blog-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.975rem;
+  line-height: 1.5;
+}
+.blog-table th {
+  background: var(--secondary);
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+}
+.blog-table th,
+.blog-table td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.blog-table tr:last-child td {
+  border-bottom: 0;
+}
+.blog-table td {
+  color: color-mix(in srgb, var(--foreground) 88%, transparent);
+}
+.blog-table td:first-child {
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+/* "In this article": the section being read */
+.blog-toc a[aria-current='true'] {
+  color: var(--foreground);
+  border-color: var(--brand);
+  font-weight: 500;
+}
+
+/* Blog index topic filter: neutral chips, the selected one in the foreground colour */
+.blog-filter {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.375rem 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  background: var(--card);
+  transition: color 0.15s, border-color 0.15s;
+}
+.blog-filter:hover {
+  color: var(--foreground);
+}
+.blog-filter[aria-pressed='true'] {
+  color: var(--foreground);
+  border-color: var(--foreground);
+}

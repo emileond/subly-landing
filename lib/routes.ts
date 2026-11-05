@@ -16,7 +16,9 @@ export const postMeta = (post: ReturnType<typeof getPosts>[number]): PageMeta =>
   description: post.description || 'From the Subly blog.',
   path: `/blog/${post.slug}`,
   type: 'article',
+  ogEyebrow: `Blog · ${post.category}`,
   publishedTime: post.publishedAt,
+  modifiedTime: post.updatedAt,
 })
 
 export const releaseMeta = (r: ReturnType<typeof getReleases>[number]): PageMeta => ({
@@ -34,7 +36,7 @@ export function allRoutes(): Route[] {
   // Personas right after /agents, as the Next.js sitemap listed them
   const pages = [...fixed.slice(0, at('/agents') + 1), ...personaRoutes, ...fixed.slice(at('/agents') + 1)]
 
-  const posts = getPosts().map((p) => ({ ...postMeta(p), priority: 0.6, lastModified: new Date(p.publishedAt) }))
+  const posts = getPosts().map((p) => ({ ...postMeta(p), priority: 0.6, lastModified: new Date(p.updatedAt ?? p.publishedAt) }))
   const releases = getReleases().map((r) => ({ ...releaseMeta(r), priority: 0.4, lastModified: dayjs(r.date).toDate() }))
   return [...pages, ...posts, ...releases]
 }

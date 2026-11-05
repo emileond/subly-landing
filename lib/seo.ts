@@ -11,7 +11,10 @@ export type PageMeta = {
   type?: 'website' | 'article'
   /** The headline drawn on the Open Graph image, when it should differ from the title */
   ogTitle?: string
+  /** A small label on the Open Graph card in place of the tagline (e.g. the blog category) */
+  ogEyebrow?: string
   publishedTime?: string
+  modifiedTime?: string
 }
 
 export const HOME_META: PageMeta = { title: HOME_TITLE, description: DEFAULT_DESCRIPTION, path: '/', ogTitle: '' }
@@ -35,5 +38,6 @@ export function headTags(meta: PageMeta) {
     image: absoluteUrl(ogImagePath(meta.path)),
     imageAlt: meta.title,
     publishedTime: meta.publishedTime,
+    modifiedTime: meta.modifiedTime,
   }
 }

@@ -8,3 +8,16 @@ import Site from '@/src/layouts/Site.astro'
 <Site meta={PAGES.blog}>
   <BlogIndex posts={getPosts()} />
 </Site>
+
+<script>
+  // Topic filter on the blog index: show the posts of one category
+  const buttons = [...document.querySelectorAll<HTMLButtonElement>('[data-filter]')]
+  const cards = [...document.querySelectorAll<HTMLElement>('[data-posts] > li')]
+  for (const b of buttons) {
+    b.addEventListener('click', () => {
+      const f = b.dataset.filter
+      for (const o of buttons) o.setAttribute('aria-pressed', String(o === b))
+      for (const c of cards) c.hidden = f !== 'all' && c.dataset.category !== f
+    })
+  }
+</script>

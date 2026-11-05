@@ -1,0 +1,9 @@
+Name,Category,Owner,Amount,Currency,Billing cycle,Next renewal,Payment method,Cancel by,Notes
+Figma,Design,Dana,45.00,USD,monthly,2026-11-15,Company Visa,,"Professional, 3 editor seats at $15"
+Notion,Productivity,Sam,12.00,USD,monthly,2026-11-20,Company Visa,,Plus plan; was $10 until September
+Google Workspace,Productivity,Maya,84.00,USD,monthly,2026-12-01,Company Visa,,6 users at $14; remove seats when people leave
+Adobe Creative Cloud,Design,,59.99,USD,monthly,2026-12-05,Company Amex,,"Annual plan, paid monthly; check the cancellation terms before the anniversary"
+Zoom,Communication,Dana,191.88,USD,yearly,2027-03-09,Company Visa,2027-03-02,Pro plan for 1 host
+oaklinestudio.com,Domains,Sam,15.00,USD,yearly,2027-06-14,PayPal,,Auto-renew is on at the registrar
+Business insurance,Insurance,Maya,1140.00,USD,yearly,2027-02-01,Bank transfer,2027-01-02,"General liability; 30 days notice to cancel, get new quotes in December"
+Hetzner Cloud server,Hosting,Sam,9.50,EUR,monthly,2026-11-30,Company Visa,,Staging server for client sites

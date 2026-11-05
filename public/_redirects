@@ -1,3 +1,7 @@
 # The Next.js site drew Open Graph cards on request at /og?title=…; they are now files
 # built per page (/og/<page>.png). Old links, and caches holding them, get the default card.
 /og /og/default.png 301
+
+# Blog posts rewritten under a new address (Nov 2026)
+/blog/5-key-tips-for-effective-budgeting-in-2025 /blog/budgeting-for-2027 301
+/blog/introducing-revenue-tracking /blog/track-recurring-revenue 301

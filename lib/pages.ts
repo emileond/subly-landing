@@ -24,7 +24,7 @@ export const PAGES = {
   },
   blog: {
     title: 'Blog',
-    description: 'Product news, what we are learning, and plain advice on recurring money for small teams.',
+    description: 'Practical guides on subscriptions, renewals, cash flow and software spend for founders, freelancers and small teams.',
     path: '/blog',
     priority: 0.7,
   },
