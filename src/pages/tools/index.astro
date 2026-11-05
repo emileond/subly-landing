@@ -1,0 +1,35 @@
+---
+import { ArrowRight } from 'lucide-react'
+import { Container } from '@/components/ui/section'
+import { PAGES } from '@/lib/pages'
+import { TOOLS } from '@/lib/tools'
+import Site from '@/src/layouts/Site.astro'
+
+const tools = [...Object.values(TOOLS), { name: 'Currency converter', blurb: 'Convert between more than 100 currencies at current rates.', meta: PAGES.currencyConverter }]
+---
+
+<Site meta={PAGES.tools}>
+  <section class="hero-glow border-b border-border pb-20 pt-12 sm:pt-16">
+    <Container>
+      <div class="mx-auto max-w-2xl text-center">
+        <h1 class="font-display text-4xl font-bold leading-[1.05] tracking-tight text-balance sm:text-5xl">Free tools for your recurring money</h1>
+        <p class="mt-4 text-lg text-pretty text-muted-foreground">Quick answers about what you pay for, with no sign-up. When you want it kept current, send it to Subly in one click.</p>
+      </div>
+      <ul class="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-2">
+        {
+          tools.map((t) => (
+            <li>
+              <a href={t.meta.path} class="group flex h-full flex-col rounded-xl border border-border bg-card p-6 transition-colors hover:bg-accent/40">
+                <span class="font-display text-xl font-bold tracking-tight">{t.name}</span>
+                <span class="mt-2 flex-1 text-muted-foreground">{t.blurb}</span>
+                <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium">
+                  Open <ArrowRight class="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </Container>
+  </section>
+</Site>

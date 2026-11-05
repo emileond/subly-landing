@@ -15,7 +15,7 @@ declare global {
   }
 }
 
-function send(name: string, props?: Record<string, string>) {
+export function send(name: string, props?: Record<string, string>) {
   try {
     window.traks?.(name, props)
   } catch {
@@ -81,6 +81,17 @@ export function sourceOf(url: URL, referrer: string): Source {
     source.utm_medium = mediumOf(source.utm_source.replace(/^www\./, ''))
   }
   return source
+}
+
+/** The visit's source as captured on its first page (for links built in code, like the free tools' buttons) */
+export function currentSource(): Source {
+  try {
+    const saved = sessionStorage.getItem(SOURCE_KEY)
+    if (saved) return JSON.parse(saved) as Source
+  } catch {
+    // storage blocked
+  }
+  return sourceOf(new URL(window.location.href), document.referrer)
 }
 
 function firstTouch(): Source {

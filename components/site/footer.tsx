@@ -12,6 +12,7 @@ const columns = [
       { label: 'Security', href: '/#security' },
       { label: 'Changelog', href: '/releases' },
       { label: 'Roadmap', href: '/roadmap' },
+      { label: 'Free tools', href: '/tools' },
       { label: 'Currency converter', href: '/currency-converter' },
     ],
   },
