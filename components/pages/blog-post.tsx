@@ -166,12 +166,7 @@ export default function BlogPost({ post, author, related }: { post: Post; author
               <p className="mt-1 font-display text-xl font-bold tracking-tight">{author.name}</p>
               <p className="text-sm text-muted-foreground">{author.role}</p>
               <p className="mt-3 leading-relaxed text-muted-foreground">{author.bio}</p>
-              <p className="mt-3 flex flex-wrap gap-x-4 text-sm">
-                {author.links.map((l) => (
-                  <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer me" className="font-medium underline decoration-border underline-offset-4 hover:decoration-brand">
-                    {l.label}
-                  </a>
-                ))}
+              <p className="mt-3 text-sm">
                 <a href="/manifesto" className="font-medium underline decoration-border underline-offset-4 hover:decoration-brand">
                   Why we build Subly
                 </a>

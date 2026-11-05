@@ -28,7 +28,7 @@ const jsonLd = {
       mainEntityOfPage: url,
       articleSection: post.category,
       keywords: post.tags.join(', ') || undefined,
-      author: { '@type': 'Person', name: author.name, jobTitle: author.role, image: author.avatar, sameAs: author.links.map((l) => l.href) },
+      author: { '@type': 'Person', name: author.name, jobTitle: author.role, image: absoluteUrl(author.avatar) },
       publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL, logo: { '@type': 'ImageObject', url: `${SITE_URL}/icon.png` } },
     },
     {
