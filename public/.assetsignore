@@ -1,2 +1,3 @@
-_worker.js
-_routes.json
+# Files in dist/ that Wrangler must not upload as public assets (gitignore syntax).
+# Finder writes .DS_Store into any folder opened on a Mac; they list folder contents.
+.DS_Store
