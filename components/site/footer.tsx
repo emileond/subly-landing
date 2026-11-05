@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { Logo } from '@/components/site/logo'
 import { Container } from '@/components/ui/section'
 import { SIGNUP_URL } from '@/lib/site'
@@ -80,9 +79,9 @@ export function Footer() {
                           {l.label}
                         </a>
                       ) : (
-                        <Link href={l.href} className="text-sm text-muted-foreground hover:text-foreground">
+                        <a href={l.href} className="text-sm text-muted-foreground hover:text-foreground">
                           {l.label}
-                        </Link>
+                        </a>
                       )}
                     </li>
                   ))}

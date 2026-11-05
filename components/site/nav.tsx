@@ -1,7 +1,6 @@
 'use client'
 
 import { Menu, X } from 'lucide-react'
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { AnchorButton } from '@/components/ui/button'
 import { Logo } from '@/components/site/logo'
@@ -30,15 +29,15 @@ export function Nav() {
         Skip to content
       </a>
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <Link href="/" aria-label="Subly home" className="-m-1 rounded-md p-1">
+        <a href="/" aria-label="Subly home" className="-m-1 rounded-md p-1">
           <Logo />
-        </Link>
+        </a>
 
         <nav aria-label="Main" className="hidden items-center gap-1 md:flex">
           {NAV_LINKS.map((l) => (
-            <Link key={l.href} href={l.href} className={linkClass}>
+            <a key={l.href} href={l.href} className={linkClass}>
               {l.label}
-            </Link>
+            </a>
           ))}
         </nav>
 
@@ -74,9 +73,9 @@ export function Nav() {
         <div id="mobile-menu" className="border-t border-border bg-background md:hidden">
           <nav aria-label="Mobile" className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4 sm:px-6">
             {NAV_LINKS.map((l) => (
-              <Link key={l.href} href={l.href} className="rounded-md px-3 py-3 text-base font-medium hover:bg-accent" onClick={() => setOpen(false)}>
+              <a key={l.href} href={l.href} className="rounded-md px-3 py-3 text-base font-medium hover:bg-accent" onClick={() => setOpen(false)}>
                 {l.label}
-              </Link>
+              </a>
             ))}
             <a href={LOGIN_URL} className="rounded-md px-3 py-3 text-base font-medium hover:bg-accent">
               Sign in

@@ -1,7 +1,6 @@
 'use client'
 
 import { Quote as QuoteIcon } from 'lucide-react'
-import Image from 'next/image'
 import { Fragment, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Section, SectionHeading } from '@/components/ui/section'
@@ -34,7 +33,7 @@ function Person({ t, large = false }: { t: Testimonial; large?: boolean }) {
       <span
         className={`relative shrink-0 overflow-hidden rounded-full border border-border bg-white ${large ? 'h-12 w-12' : 'h-10 w-10'}`}
       >
-        <Image src={t.logo} alt="" fill sizes="48px" className="object-contain p-1" />
+        <img src={t.logo} alt="" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-contain p-1" />
       </span>
       <span className="min-w-0">
         <span className="block truncate font-semibold">{t.name}</span>

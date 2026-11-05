@@ -1,21 +1,21 @@
 'use client'
 
 import { Monitor, Moon, Sun } from 'lucide-react'
-import { useTheme } from 'next-themes'
-import { useSyncExternalStore } from 'react'
+import { useEffect, useState } from 'react'
+import { applyTheme, readTheme, type Theme } from '@/lib/theme'
 
 const order = ['system', 'light', 'dark'] as const
 const labels = { system: 'Match my device', light: 'Light', dark: 'Dark' } as const
 
 export function ThemeToggle({ className = '' }: { className?: string }) {
-  const { theme = 'system', setTheme } = useTheme()
-  const mounted = useSyncExternalStore(
-    () => () => {},
-    () => true,
-    () => false,
-  )
+  // 'system' on the server and the first client render, then the stored choice
+  const [current, setCurrent] = useState<Theme>('system')
+  useEffect(() => setCurrent(readTheme()), [])
+  const setTheme = (t: Theme) => {
+    applyTheme(t)
+    setCurrent(t)
+  }
 
-  const current = (mounted && order.includes(theme as (typeof order)[number]) ? theme : 'system') as (typeof order)[number]
   const next = order[(order.indexOf(current) + 1) % order.length]
   const Icon = current === 'light' ? Sun : current === 'dark' ? Moon : Monitor
 

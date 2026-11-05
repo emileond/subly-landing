@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import type { ReactNode } from 'react'
 
 /** Small pieces shared by the product mock-ups. Everything here is decorative HTML, not a screenshot. */
@@ -18,11 +17,13 @@ export function ServiceLogo({
 }) {
   if (logo) {
     return (
-      <Image
+      <img
         src={`/services/${logo}.png`}
         alt=""
         width={64}
         height={64}
+        loading="lazy"
+        decoding="async"
         className={`shrink-0 rounded-lg border border-border bg-white object-cover ${className}`}
       />
     )
@@ -39,7 +40,6 @@ export function ServiceLogo({
 
 /** The Claude mark, from the brand's own asset */
 export function ClaudeMark({ className = 'h-5 w-5' }: { className?: string }) {
-  // eslint-disable-next-line @next/next/no-img-element
   return <img src="/services/claude.svg" alt="" aria-hidden="true" className={`shrink-0 ${className}`} />
 }
 

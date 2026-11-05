@@ -1,0 +1,122 @@
+---
+import { Footer } from '@/components/site/footer'
+import { Nav } from '@/components/site/nav'
+import { type PageMeta, headTags } from '@/lib/seo'
+import { SITE_NAME } from '@/lib/site'
+import '@/styles/globals.css'
+
+interface Props {
+  meta: PageMeta
+  /** schema.org data for this page */
+  jsonLd?: Record<string, unknown>
+  /** <link rel="alternate"> feeds */
+  feeds?: { type: string; href: string; title?: string }[]
+  noindex?: boolean
+}
+
+const { meta, jsonLd, feeds = [], noindex = false } = Astro.props
+const tags = headTags(meta)
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0e0e10" media="(prefers-color-scheme: dark)" />
+    <title>{tags.title}</title>
+    <meta name="description" content={tags.description} />
+    <meta name="application-name" content={SITE_NAME} />
+    {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={tags.canonical} />}
+
+    <meta property="og:title" content={tags.title} />
+    <meta property="og:description" content={tags.description} />
+    <meta property="og:url" content={tags.canonical} />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content={tags.image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={tags.imageAlt} />
+    <meta property="og:type" content={tags.type} />
+    {tags.publishedTime && <meta property="article:published_time" content={tags.publishedTime} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@sublyweb" />
+    <meta name="twitter:title" content={tags.title} />
+    <meta name="twitter:description" content={tags.description} />
+    <meta name="twitter:image" content={tags.image} />
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-icon.png" />
+    {feeds.map((f) => <link rel="alternate" type={f.type} href={f.href} title={f.title} />)}
+
+    <!-- Light, dark or the device's choice before first paint (see lib/theme.ts) -->
+    <script is:inline>
+      ;(function () {
+        var t = 'system'
+        try {
+          t = localStorage.getItem('theme') || 'system'
+        } catch (e) {}
+        var dark = t === 'dark' || (t !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches)
+        var r = document.documentElement
+        r.classList.add(dark ? 'dark' : 'light')
+        r.style.colorScheme = dark ? 'dark' : 'light'
+      })()
+    </script>
+
+    <!--
+      Analytics run on subly.app only, never on previews or local builds.
+      Traks (self-hosted on Cloudflare, cookieless) runs alongside Umami until the comparison on 10 Nov.
+    -->
+    <script is:inline>
+      ;(function () {
+        if (location.hostname !== 'subly.app') return
+        window.traks =
+          window.traks ||
+          function () {
+            ;(window.traks.q = window.traks.q || []).push(arguments)
+          }
+        function add(src, attrs) {
+          var s = document.createElement('script')
+          s.src = src
+          s.defer = true
+          for (var k in attrs) s.setAttribute(k, attrs[k])
+          document.head.appendChild(s)
+        }
+        add('https://umami.subly.app/script.js', { 'data-website-id': '985b3243-3bb3-4213-9561-381cde5f2d85' })
+        add('https://analytics-collect.subly.ai/t.js', { 'data-site': 'pb_live_klxmq9rdar7tho6k14u3ni7z' })
+        ;(function (p, t, n, e, r, o) {
+          p['__partnerObject'] = r
+          function f() {
+            var c = { a: arguments, q: [] }
+            var r = this.push(c)
+            return 'number' != typeof r ? r : f.bind(c.q)
+          }
+          f.q = f.q || []
+          p[r] = p[r] || f.bind(f.q)
+          p[r].q = p[r].q || f.q
+          o = t.createElement(n)
+          var _ = t.getElementsByTagName(n)[0]
+          o.async = 1
+          o.src = e + '?v' + ~~(new Date().getTime() / 1e6)
+          _.parentNode.insertBefore(o, _)
+        })(window, document, 'script', 'https://app.partnero.com/js/universal.js', 'po')
+        po('settings', 'assets_host', 'https://assets.partnero.com')
+        po('program', 'NZCCAGAZ', 'load')
+      })()
+    </script>
+    {jsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+  </head>
+  <body>
+    <Nav client:load />
+    <main id="main"><slot /></main>
+    <Footer />
+    <script is:inline async src="https://app.getterms.io/cookie-consent/embed/fe9ce7ea-2b79-4c36-9276-c1514bc42c61"></script>
+    <script>
+      import { startTracking } from '@/lib/tracking'
+      startTracking()
+    </script>
+  </body>
+</html>

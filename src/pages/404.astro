@@ -1,0 +1,8 @@
+---
+import NotFound from '@/components/pages/not-found'
+import Site from '@/src/layouts/Site.astro'
+---
+
+<Site meta={{ title: 'Page not found', path: '/404', description: 'That page is not here.' }} noindex>
+  <NotFound />
+</Site>

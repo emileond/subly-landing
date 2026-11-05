@@ -1,0 +1,13 @@
+---
+import { Agents } from '@/components/home/agents'
+import { ClosingCta } from '@/components/home/closing-cta'
+import { FaqSection } from '@/components/home/faq'
+import { PAGES } from '@/lib/pages'
+import Site from '@/src/layouts/Site.astro'
+---
+
+<Site meta={PAGES.agents}>
+  <Agents as="h1" client:load />
+  <FaqSection only={['Can I use Subly with Claude', 'How is my data handled', 'What plan should I choose']} />
+  <ClosingCta />
+</Site>

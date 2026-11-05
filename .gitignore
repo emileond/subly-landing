@@ -8,9 +8,10 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
+# astro and cloudflare
+/dist/
+/.astro/
+/.wrangler/
 
 # production
 /build
@@ -30,15 +31,12 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# vercel
-.vercel
-
-# RSS Feed
- /public/rss 
-# outstatic generated types
-/.outstatic/
 *.tsbuildinfo
 
 # local tooling
 /AGENTS.md
 /.claude/launch.json
+
+.dev.vars*
+!.dev.vars.example
+!.env.example

@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { Container } from '@/components/ui/section'
 import { testimonials } from '@/lib/testimonials'
 
@@ -43,7 +42,7 @@ export function ProofStrip() {
                 title={t.company}
                 className="relative h-12 w-12 overflow-hidden rounded-full border border-border bg-white"
               >
-                <Image src={t.logo} alt={t.company} fill sizes="48px" className="object-contain p-1.5" />
+                <img src={t.logo} alt={t.company} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-contain p-1.5" />
               </li>
             ))}
           </ul>

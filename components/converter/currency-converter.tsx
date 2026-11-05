@@ -1,7 +1,6 @@
 'use client'
 
 import { ArrowDownUp, ChevronDown, LineChart, Clock, Search, X } from 'lucide-react'
-import Image from 'next/image'
 import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import { currencies } from '@/lib/currenciesList'
 import { convert, hasRate } from '@/lib/convert'
@@ -13,12 +12,13 @@ const fmt = (n: number | null) => (n === null ? '' : String(n))
 
 function Flag({ cc, size = 24 }: { cc: string; size?: number }) {
   return (
-    <Image
+    <img
       src={`/flags/${cc.toLowerCase()}.svg`}
       alt=""
       width={size}
       height={size}
-      unoptimized
+      loading="lazy"
+      decoding="async"
       className="shrink-0 rounded-full border border-border object-cover"
       style={{ width: size, height: size }}
     />
