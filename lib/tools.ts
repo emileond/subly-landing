@@ -56,6 +56,34 @@ export const TOOLS = {
       { q: 'Can Subly remind me before a refund window closes?', a: 'Yes. Subly tracks lifetime deals on every plan, Free included, and tells you before a refund window closes. The Free plan tracks up to 20 items.' },
     ],
   }),
+  runway: tool({
+    slug: 'runway-calculator',
+    name: 'Cash runway calculator',
+    title: 'Cash runway calculator for small businesses',
+    description: 'Enter your cash, what comes in and what goes out each month, and see how many weeks your money lasts, week by week for the next 13 weeks. Free, no sign-up.',
+    eyebrow: 'Free tool',
+    h1: 'How long will your cash last?',
+    lede: 'Enter what is in the bank and what comes in and goes out on repeat. You will see your runway and the next 13 weeks, and you can switch off a cost to see what cancelling it changes.',
+    blurb: 'See how many weeks your cash lasts, and what cancelling a cost would change.',
+    answer: {
+      question: 'How do you calculate cash runway?',
+      paragraphs: [
+        'Runway is the cash you have divided by how much more you spend than you take in each month. With $30,000 in the bank, $8,000 coming in and $11,000 going out, you burn $3,000 a month, so the cash lasts 10 months. If more comes in than goes out, there is no runway to count: your cash grows.',
+        'The number is only as good as the list behind it. Count every recurring cost, including the yearly ones (divide them by 12), and only the income you can rely on, like retainers and subscriptions. A 13-week view, week by week, shows the dip before a big renewal that a monthly average hides.',
+      ],
+    },
+    steps: [
+      { title: 'Start with your cash', body: 'Enter what is in the bank today, across your business accounts.' },
+      { title: 'List what repeats', body: 'Add what comes in and goes out each week, month or year. Yearly costs are spread across the months.' },
+      { title: 'Test a change', body: 'Switch a line off to see how a cancel or a lost client moves your runway.' },
+    ],
+    faq: [
+      { q: 'What is a good cash runway for a small business?', a: 'There is no single number. Plan for several months of costs, and more when income is uneven. What matters most is seeing a shortfall weeks ahead, while you can still act on it.' },
+      { q: 'Should yearly subscriptions count in my runway?', a: 'Yes. Divide a yearly charge by 12 so it counts every month. In Subly, the 13-week forecast also shows the week a yearly charge actually lands.' },
+      { q: 'Is anything I enter saved?', a: 'No. The calculator runs in your browser and nothing is stored unless you press the button to send your numbers to Subly.' },
+      { q: 'How is this different from Subly’s forecast?', a: 'This calculator spreads everything evenly across the weeks. Subly’s 13-week forecast is built from each item’s real dates and lets you test a cancel or a price change before you commit. It is part of the Business and Team plans.' },
+    ],
+  }),
 } satisfies Record<string, Tool>
 
 export type ToolKey = keyof typeof TOOLS

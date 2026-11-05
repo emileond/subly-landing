@@ -1,0 +1,9 @@
+---
+import { RunwayCalculator } from '@/components/tools/runway-calculator'
+import { TOOLS } from '@/lib/tools'
+import Tool from '@/src/layouts/Tool.astro'
+---
+
+<Tool tool={TOOLS.runway}>
+  <RunwayCalculator client:load />
+</Tool>
