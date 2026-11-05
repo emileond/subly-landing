@@ -58,7 +58,7 @@ description: 'One sentence, 140–160 characters, that answers the question.'
 lede: 'One or two sentences under the title.'
 slug: 'find-recurring-charges-on-bank-statement'
 status: 'published'
-category: 'Subscriptions'   # Subscriptions · Cash flow · Teams · Lifetime deals · AI and agents
+category: 'Subscriptions'   # Subscriptions · Cash flow · Teams · Lifetime deals · AI and agents · Comparisons
 tags: ['subscriptions', 'bank statements']
 author: 'emilio'
 publishedAt: '2026-11-04T12:00:00.000Z'
