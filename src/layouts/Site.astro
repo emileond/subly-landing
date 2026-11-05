@@ -41,6 +41,7 @@ const tags = headTags(meta)
     <meta property="og:image:alt" content={tags.imageAlt} />
     <meta property="og:type" content={tags.type} />
     {tags.publishedTime && <meta property="article:published_time" content={tags.publishedTime} />}
+    {tags.modifiedTime && <meta property="article:modified_time" content={tags.modifiedTime} />}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@sublyweb" />
     <meta name="twitter:title" content={tags.title} />

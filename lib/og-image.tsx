@@ -19,7 +19,7 @@ const assets = (async () => {
   return { logo, display, sans, mono }
 })()
 
-export async function renderOgImage(headline?: string): Promise<Uint8Array> {
+export async function renderOgImage(headline?: string, eyebrow?: string): Promise<Uint8Array> {
   const title = (headline || DEFAULT_TITLE).slice(0, 90)
   const size = title.length > 60 ? 64 : title.length > 36 ? 76 : 92
 
@@ -63,7 +63,7 @@ export async function renderOgImage(headline?: string): Promise<Uint8Array> {
 
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ fontFamily: 'Geist', fontSize: 30, color: '#A5A5B0', display: 'flex' }}>
-            Built into how you work
+            {eyebrow ?? 'Built into how you work'}
           </div>
           <div style={{ fontFamily: 'GeistMono', fontSize: 28, color: '#A898FF', display: 'flex' }}>subly.app</div>
         </div>

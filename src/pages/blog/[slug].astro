@@ -1,7 +1,10 @@
 ---
 import BlogPost from '@/components/pages/blog-post'
-import { type Post, getPosts } from '@/lib/content'
+import { getAuthor } from '@/lib/authors'
+import { type Post, getPosts, relatedPosts } from '@/lib/content'
 import { postMeta } from '@/lib/routes'
+import { ogImagePath } from '@/lib/seo'
+import { SITE_NAME, SITE_URL, absoluteUrl } from '@/lib/site'
 import Site from '@/src/layouts/Site.astro'
 
 export function getStaticPaths() {
@@ -9,8 +12,79 @@ export function getStaticPaths() {
 }
 
 const { post } = Astro.props as { post: Post }
+const author = getAuthor(post.author)
+const url = absoluteUrl(`/blog/${post.slug}`)
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      headline: post.title,
+      description: post.description,
+      datePublished: post.publishedAt,
+      dateModified: post.updatedAt ?? post.publishedAt,
+      image: absoluteUrl(ogImagePath(`/blog/${post.slug}`)),
+      mainEntityOfPage: url,
+      articleSection: post.category,
+      keywords: post.tags.join(', ') || undefined,
+      author: { '@type': 'Person', name: author.name, jobTitle: author.role, image: absoluteUrl(author.avatar) },
+      publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL, logo: { '@type': 'ImageObject', url: `${SITE_URL}/icon.png` } },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: absoluteUrl('/') },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: absoluteUrl('/blog') },
+        { '@type': 'ListItem', position: 3, name: post.title, item: url },
+      ],
+    },
+    ...(post.faq.length
+      ? [
+          {
+            '@type': 'FAQPage',
+            mainEntity: post.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+          },
+        ]
+      : []),
+  ],
+}
 ---
 
-<Site meta={postMeta(post)}>
-  <BlogPost post={post} />
+<Site meta={postMeta(post)} jsonLd={jsonLd}>
+  <BlogPost post={post} author={author} related={relatedPosts(post)} />
 </Site>
+
+<script>
+  // "In this article": mark the section being read
+  const links = [...document.querySelectorAll<HTMLAnchorElement>('.blog-toc a')]
+  const sections = links
+    .map((a) => document.getElementById(decodeURIComponent(a.hash.slice(1))))
+    .filter((el): el is HTMLElement => !!el)
+  const mark = (id: string) => {
+    for (const a of links) a.setAttribute('aria-current', String(decodeURIComponent(a.hash.slice(1)) === id))
+  }
+  if (sections.length) {
+    const onScroll = () => {
+      // The last heading above the top quarter of the window is the one being read
+      const line = window.innerHeight * 0.25
+      let current = sections[0].id
+      for (const s of sections) if (s.getBoundingClientRect().top <= line) current = s.id
+      mark(current)
+    }
+    let ticking = false
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (ticking) return
+        ticking = true
+        requestAnimationFrame(() => {
+          onScroll()
+          ticking = false
+        })
+      },
+      { passive: true },
+    )
+    onScroll()
+  }
+</script>
