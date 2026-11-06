@@ -22,6 +22,14 @@ export const PAGES = {
     ogTitle: 'Your AI finally knows your money.',
     priority: 0.8,
   },
+  tools: {
+    title: 'Free tools for small business money',
+    description:
+      'Free tools for founders, freelancers and small teams: check AppSumo refund windows, see what your software stack costs and more. No sign-up needed.',
+    path: '/tools',
+    ogTitle: 'Free tools for your recurring money.',
+    priority: 0.8,
+  },
   blog: {
     title: 'Blog',
     description: 'Practical guides on subscriptions, renewals, cash flow and software spend for founders, freelancers and small teams.',

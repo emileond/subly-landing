@@ -1,0 +1,9 @@
+---
+import { StackBuilder } from '@/components/tools/stack-builder'
+import { TOOLS } from '@/lib/tools'
+import Tool from '@/src/layouts/Tool.astro'
+---
+
+<Tool tool={TOOLS.builder}>
+  <StackBuilder client:load />
+</Tool>

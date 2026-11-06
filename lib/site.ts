@@ -18,6 +18,7 @@ export const NAV_LINKS = [
 
 export const PERSONAS = [
   { slug: 'teams', label: 'Teams' },
+  { slug: 'agencies', label: 'Agencies' },
   { slug: 'founders', label: 'Founders and freelancers' },
   { slug: 'households', label: 'Households' },
 ] as const

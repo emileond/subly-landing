@@ -28,7 +28,7 @@ export default function PrivacyPolicyPage() {
           apply to any of your activities after you leave our site.
         </p>
         <p>This policy is effective as of 16 October 2023</p>
-        <p>Last updated: 22 December 2023</p>
+        <p>Last updated: 5 November 2026</p>
         <h2>Information We Collect</h2>
         <p>
           Information we collect falls into one of two categories: “voluntarily
@@ -196,6 +196,21 @@ export default function PrivacyPolicyPage() {
           compliance with a legal, accounting, or reporting obligation or for
           archiving purposes in the public interest, scientific, or historical
           research purposes or statistical purposes.
+        </p>
+        <h3>Free Tools on This Website</h3>
+        <p>
+          The free tools at subly.app/tools work without an account. The AppSumo refund checker, the
+          software stack calculator and the cash runway calculator run in your browser: what you enter
+          stays on your device unless you choose to send it to Subly. When you do, we keep it for up to
+          7 days so you can add it to an account after signing up, and then delete it.
+        </p>
+        <p>
+          The subscription finder reads the statement you upload with an AI model, the same way Subly
+          reads statements for account holders. The file is deleted as soon as it has been read. The
+          recurring charges it finds are kept for up to 7 days so you can add them after signing up,
+          and then deleted. To limit misuse, we store a hash of your IP address that changes every day (so visits on different days can’t be linked),
+          never the address itself, and use Cloudflare Turnstile to check
+          that a person is using the tool.
         </p>
         <h2>Children’s Privacy</h2>
         <p>

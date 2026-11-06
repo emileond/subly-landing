@@ -12,6 +12,7 @@ const columns = [
       { label: 'Security', href: '/#security' },
       { label: 'Changelog', href: '/releases' },
       { label: 'Roadmap', href: '/roadmap' },
+      { label: 'Free tools', href: '/tools' },
       { label: 'Currency converter', href: '/currency-converter' },
     ],
   },
@@ -19,6 +20,7 @@ const columns = [
     title: 'For',
     links: [
       { label: 'Teams', href: '/for/teams' },
+      { label: 'Agencies', href: '/for/agencies' },
       { label: 'Founders and freelancers', href: '/for/founders' },
       { label: 'Households', href: '/for/households' },
     ],

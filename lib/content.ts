@@ -13,7 +13,7 @@ const POSTS_DIR = path.join(process.cwd(), 'content/posts')
 const RELEASES_DIR = path.join(process.cwd(), 'content/releases')
 
 /** The blog's categories, in the order the blog index lists them */
-export const CATEGORIES = ['Subscriptions', 'Cash flow', 'Teams', 'Lifetime deals', 'AI and agents', 'Product'] as const
+export const CATEGORIES = ['Subscriptions', 'Cash flow', 'Teams', 'Lifetime deals', 'AI and agents', 'Comparisons', 'Product'] as const
 export type Category = (typeof CATEGORIES)[number]
 
 export type Heading = { id: string; text: string }

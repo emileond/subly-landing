@@ -14,6 +14,7 @@ const SIDE_CTA: Record<Category, { title: string; body: string }> = {
   Teams: { title: 'Give every tool an owner', body: 'Renewals reach the person who can decide, in Slack, Teams or email.' },
   'Lifetime deals': { title: 'Never miss a refund window', body: 'Import your AppSumo export and see the days left on every deal.' },
   'AI and agents': { title: 'Ask Claude about your money', body: 'Connect Subly and ask what renews, where it goes and who owns it.' },
+  Comparisons: { title: 'Try it on your own numbers', body: 'Upload one statement and compare for yourself. 14 days of Business, no card.' },
   Product: { title: 'See the whole picture', body: 'Everything that repeats, in and out, in one place that stays current.' },
 }
 

@@ -1,0 +1,2493 @@
+{
+  "checked": "2026-11-05",
+  "tools": [
+    {
+      "id": "google-workspace",
+      "name": "Google Workspace",
+      "website": "workspace.google.com",
+      "category": "productivity",
+      "pricingUrl": "https://workspace.google.com/pricing",
+      "plans": [
+        {
+          "name": "Business Starter",
+          "price": 8.4,
+          "yearlyPrice": 7,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business Standard",
+          "price": 16.8,
+          "yearlyPrice": 14,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business Plus",
+          "price": 26.4,
+          "yearlyPrice": 22,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. USD prices from Google's help page 'Compare Flexible and Annual/Fixed-Term payment plans' (knowledge.workspace.google.com); price = Flexible plan, yearlyPrice = Annual/Fixed-Term plan. The live pricing page served MXN from our location. Enterprise is contact sales."
+    },
+    {
+      "id": "microsoft-365",
+      "name": "Microsoft 365 (Business)",
+      "website": "microsoft.com",
+      "category": "productivity",
+      "pricingUrl": "https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-plans-and-pricing",
+      "plans": [
+        {
+          "name": "Business Basic",
+          "price": 8.4,
+          "yearlyPrice": 7,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business Standard",
+          "price": 16.8,
+          "yearlyPrice": 14,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business Premium",
+          "price": 26.4,
+          "yearlyPrice": 22,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business Standard with Copilot",
+          "price": null,
+          "yearlyPrice": 23.5,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. price = 'buy with a monthly subscription' figure from each plan's product page; yearlyPrice = 'paid yearly' (annual subscription). Teams is included in these plans. Standard with Copilot shows only a paid-yearly price; Premium with Copilot is $32.00 paid yearly."
+    },
+    {
+      "id": "microsoft-teams",
+      "name": "Microsoft Teams Essentials",
+      "website": "microsoft.com",
+      "category": "communication",
+      "pricingUrl": "https://www.microsoft.com/en-us/microsoft-teams/essentials",
+      "plans": [
+        {
+          "name": "Teams Essentials",
+          "price": null,
+          "yearlyPrice": 4,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Standalone Teams. Only the paid-yearly price ($4.00 user/month, annual subscription) is shown; no monthly-billing price found. Teams is also bundled in Microsoft 365 Business plans."
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "website": "slack.com",
+      "category": "communication",
+      "pricingUrl": "https://slack.com/pricing",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Pro",
+          "price": 8.75,
+          "yearlyPrice": 7.25,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business+",
+          "price": 18,
+          "yearlyPrice": 15,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise+",
+          "price": null,
+          "yearlyPrice": 45,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. List prices; a limited 50% promo on monthly Pro/Business+ for new teams is ignored. Enterprise+ is shown only with an annual price."
+    },
+    {
+      "id": "zoom",
+      "name": "Zoom Workplace",
+      "website": "zoom.com",
+      "category": "communication",
+      "pricingUrl": "https://zoom.us/pricing",
+      "plans": [
+        {
+          "name": "Basic",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Pro",
+          "price": 16.99,
+          "yearlyPrice": 14.16,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business",
+          "price": 21.99,
+          "yearlyPrice": 18.33,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. USD from the server-rendered page; after load the page switched to MXN for our location. Enterprise is contact sales."
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "website": "notion.com",
+      "category": "productivity",
+      "pricingUrl": "https://www.notion.com/pricing",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Plus",
+          "price": 12,
+          "yearlyPrice": 10,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business",
+          "price": 24,
+          "yearlyPrice": 20,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Monthly prices read from the page's embedded USD price data (plus_monthly 1200, business_monthly 2400 cents). Enterprise is custom pricing."
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "website": "figma.com",
+      "category": "design",
+      "pricingUrl": "https://www.figma.com/pricing/",
+      "plans": [
+        {
+          "name": "Starter",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Professional (Full seat)",
+          "price": 20,
+          "yearlyPrice": 16,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Professional (Dev seat)",
+          "price": 15,
+          "yearlyPrice": 12,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Professional (Collab seat)",
+          "price": 5,
+          "yearlyPrice": 3,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Professional seat prices via the page's Monthly/Annual toggle. Organization is annual only: Full $55, Dev $25, Collab $5 per seat/month."
+    },
+    {
+      "id": "adobe-creative-cloud",
+      "name": "Adobe Creative Cloud",
+      "website": "adobe.com",
+      "category": "design",
+      "pricingUrl": "https://www.adobe.com/creativecloud/plans.html",
+      "plans": [
+        {
+          "name": "Creative Cloud Pro (formerly All Apps)",
+          "price": null,
+          "yearlyPrice": 69.99,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Creative Cloud Standard",
+          "price": null,
+          "yearlyPrice": 54.99,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Photoshop (single app)",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. yearlyPrice = Adobe's 'annual contract, billed monthly' USD price, from Adobe's help page 'Changes to Creative Cloud for individuals plans'. The live plans page served MXN from our location. Month-to-month (no contract) prices could not be confirmed on an Adobe page, so price is null. Photoshop single-app USD price could not be confirmed on a current Adobe page: null."
+    },
+    {
+      "id": "canva",
+      "name": "Canva",
+      "website": "canva.com",
+      "category": "design",
+      "pricingUrl": "https://www.canva.com/pricing/",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Pro",
+          "price": 18,
+          "yearlyPrice": 12,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Business",
+          "price": 25,
+          "yearlyPrice": 20.83,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Pro is a single-person plan. USD figures from Canva's own comparison page (canva.com/learn/canva-pro-vs-canva-enterprise) via search; the live pricing page served MXN from our location, so recheck from a US connection."
+    },
+    {
+      "id": "loom",
+      "name": "Loom",
+      "website": "loom.com",
+      "category": "video",
+      "pricingUrl": "https://www.loom.com/pricing",
+      "plans": [
+        {
+          "name": "Starter",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business",
+          "price": 18,
+          "yearlyPrice": 15,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business + AI",
+          "price": 24,
+          "yearlyPrice": 20,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Yearly figures from the page's embedded USD offering data (annual $180 and $240 per seat per year). Volume discounts apply at higher seat counts."
+    },
+    {
+      "id": "calendly",
+      "name": "Calendly",
+      "website": "calendly.com",
+      "category": "scheduling",
+      "pricingUrl": "https://calendly.com/pricing",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Standard",
+          "price": 12,
+          "yearlyPrice": 10,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Teams",
+          "price": 20,
+          "yearlyPrice": 16,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Enterprise starts at $15k/year (50+ seats), listed as null."
+    },
+    {
+      "id": "hubspot",
+      "name": "HubSpot (Starter Customer Platform)",
+      "website": "hubspot.com",
+      "category": "sales",
+      "pricingUrl": "https://www.hubspot.com/products/crm/starter",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Starter Customer Platform",
+          "price": 20,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. HubSpot says Starter is 'normally priced at $20/month per seat' (used as price). A limited new-customer offer shows $7/seat/month with annual commitment or $10/seat/month month-to-month. The regular annual-billing list price is not stated separately, so yearlyPrice is null."
+    },
+    {
+      "id": "mailchimp",
+      "name": "Mailchimp",
+      "website": "mailchimp.com",
+      "category": "marketing",
+      "pricingUrl": "https://mailchimp.com/pricing/marketing/",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Essentials",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Standard",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Premium",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Prices could not be confirmed for a US visitor: the page served MXN from our location, and its USD option showed region-converted figures (e.g. Standard 'starts at $19.06/month'), not US list prices. Search results quoting Mailchimp pages conflict. Prices also scale with contact count."
+    },
+    {
+      "id": "kit",
+      "name": "Kit (ConvertKit)",
+      "website": "kit.com",
+      "category": "marketing",
+      "pricingUrl": "https://kit.com/pricing",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Creator",
+          "price": 39,
+          "yearlyPrice": 32.5,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Pro",
+          "price": 79,
+          "yearlyPrice": 66,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Prices for 1,000 subscribers; they rise with list size. Creator yearly = $390/year. Pro yearly list is $66/mo (a first-year promo shows $50)."
+    },
+    {
+      "id": "webflow",
+      "name": "Webflow",
+      "website": "webflow.com",
+      "category": "website",
+      "pricingUrl": "https://webflow.com/pricing",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Basic",
+          "price": 25,
+          "yearlyPrice": 15,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Premium",
+          "price": 39,
+          "yearlyPrice": 25,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Team",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Site plans, priced per site. Premium price is for its base bandwidth tier. Team is a platform plan at $2,500/mo with an annual contract required. Team: the page shows a yearly figure that reads as a total, not a per-month price, so it is left out (contact sales)."
+    },
+    {
+      "id": "framer",
+      "name": "Framer",
+      "website": "framer.com",
+      "category": "website",
+      "pricingUrl": "https://www.framer.com/pricing",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Basic",
+          "price": null,
+          "yearlyPrice": 10,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Pro",
+          "price": null,
+          "yearlyPrice": 30,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Yearly figures from the server-rendered USD page ('Yearly billing' default). The monthly-billing price could not be confirmed: after load the page switched to MXN for our location. Additional editors are $20/editor/month."
+    },
+    {
+      "id": "squarespace",
+      "name": "Squarespace",
+      "website": "squarespace.com",
+      "category": "website",
+      "pricingUrl": "https://www.squarespace.com/pricing",
+      "plans": [
+        {
+          "name": "Basic",
+          "price": 25,
+          "yearlyPrice": 19,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Core",
+          "price": 39,
+          "yearlyPrice": 29,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Plus",
+          "price": 65,
+          "yearlyPrice": 49,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Advanced",
+          "price": 139,
+          "yearlyPrice": 99,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. USD figures from squarespace.com pricing pages as indexed for US search. The live page served MXN from our location, so recheck from a US connection."
+    },
+    {
+      "id": "wix",
+      "name": "Wix",
+      "website": "wix.com",
+      "category": "website",
+      "pricingUrl": "https://www.wix.com/plans",
+      "plans": [
+        {
+          "name": "Light",
+          "price": null,
+          "yearlyPrice": 17,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Core",
+          "price": null,
+          "yearlyPrice": 29,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Business",
+          "price": null,
+          "yearlyPrice": 39,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Business Elite",
+          "price": null,
+          "yearlyPrice": 159,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Yearly prices confirmed on Wix's own blog post 'Wix Premium Plans' (billed annually). Monthly-billing prices could not be confirmed on a Wix page, so price is null. The live plans page did not render prices from our location."
+    },
+    {
+      "id": "shopify",
+      "name": "Shopify",
+      "website": "shopify.com",
+      "category": "ecommerce",
+      "pricingUrl": "https://www.shopify.com/pricing",
+      "plans": [
+        {
+          "name": "Basic",
+          "price": 39,
+          "yearlyPrice": 29,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Grow",
+          "price": 105,
+          "yearlyPrice": 79,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Advanced",
+          "price": 399,
+          "yearlyPrice": 299,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Plus",
+          "price": null,
+          "yearlyPrice": 2300,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. USD figures from shopify.com/pricing as indexed for US search; the live page served MXN from our location, so recheck from a US connection. Plus starts at $2,300/mo on a 3-year term (USD shown on the live page). Card processing fees are extra."
+    },
+    {
+      "id": "wordpress-com",
+      "name": "WordPress.com",
+      "website": "wordpress.com",
+      "category": "website",
+      "pricingUrl": "https://wordpress.com/pricing/",
+      "plans": [
+        {
+          "name": "Personal",
+          "price": 9,
+          "yearlyPrice": 4,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Premium",
+          "price": 18,
+          "yearlyPrice": 8,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Business",
+          "price": 40,
+          "yearlyPrice": 25,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Commerce",
+          "price": 70,
+          "yearlyPrice": 45,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. yearlyPrice = 1-year term. Longer terms are cheaper (e.g. Business $20/mo for 2 years, $17.50 for 3 years)."
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "website": "github.com",
+      "category": "development",
+      "pricingUrl": "https://github.com/pricing",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Team",
+          "price": 4,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise",
+          "price": 21,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Per user/month. The page shows no separate yearly price, so yearlyPrice is null. Codespaces, Actions minutes beyond quota and LFS are extra."
+    },
+    {
+      "id": "gitlab",
+      "name": "GitLab",
+      "website": "gitlab.com",
+      "category": "development",
+      "pricingUrl": "https://about.gitlab.com/pricing/",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Premium",
+          "price": null,
+          "yearlyPrice": 29,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Ultimate",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Premium is $29 per user/month billed annually only (no monthly option shown). Ultimate is contact sales."
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "website": "vercel.com",
+      "category": "hosting",
+      "pricingUrl": "https://vercel.com/pricing",
+      "plans": [
+        {
+          "name": "Hobby",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Pro",
+          "price": 20,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Pro is $20/month per developer seat and includes $20 of usage credit; viewer seats are free. Usage beyond included amounts is extra. No yearly option shown."
+    },
+    {
+      "id": "netlify",
+      "name": "Netlify",
+      "website": "netlify.com",
+      "category": "hosting",
+      "pricingUrl": "https://www.netlify.com/pricing/",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Personal",
+          "price": 9,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Pro",
+          "price": 20,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Flat prices, not per seat (Pro includes unlimited members). Prices shown are the entry credit tier; higher credit tiers cost more. No yearly option shown."
+    },
+    {
+      "id": "linear",
+      "name": "Linear",
+      "website": "linear.app",
+      "category": "development",
+      "pricingUrl": "https://linear.app/pricing",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Basic",
+          "price": 12,
+          "yearlyPrice": 10,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business",
+          "price": 18,
+          "yearlyPrice": 16,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Monthly prices via the page's 'Billed yearly' toggle."
+    },
+    {
+      "id": "jira",
+      "name": "Jira",
+      "website": "atlassian.com",
+      "category": "development",
+      "pricingUrl": "https://www.atlassian.com/software/jira/pricing",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Standard",
+          "price": 9.7,
+          "yearlyPrice": 7.92,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Premium",
+          "price": 19.6,
+          "yearlyPrice": 16.25,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Prices depend on team size; figures are for 10 users. Monthly: $9.70 and $19.60 per user. Annual is a flat tier price ($950/year and $1,950/year for 1-10 users), converted here to per user/month at 10 users. Free covers up to 10 users."
+    },
+    {
+      "id": "asana",
+      "name": "Asana",
+      "website": "asana.com",
+      "category": "productivity",
+      "pricingUrl": "https://asana.com/pricing",
+      "plans": [
+        {
+          "name": "Personal",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Starter",
+          "price": 13.49,
+          "yearlyPrice": 10.99,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Advanced",
+          "price": 30.49,
+          "yearlyPrice": 24.99,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly."
+    },
+    {
+      "id": "trello",
+      "name": "Trello",
+      "website": "trello.com",
+      "category": "productivity",
+      "pricingUrl": "https://trello.com/pricing",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Standard",
+          "price": 6,
+          "yearlyPrice": 5,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Premium",
+          "price": 12.5,
+          "yearlyPrice": 10,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": 17.5,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Enterprise $17.50 per user/month billed annually (price for 50 users; decreases with more users)."
+    },
+    {
+      "id": "clickup",
+      "name": "ClickUp",
+      "website": "clickup.com",
+      "category": "productivity",
+      "pricingUrl": "https://clickup.com/pricing",
+      "plans": [
+        {
+          "name": "Free Forever",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Core",
+          "price": 12,
+          "yearlyPrice": 9,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business",
+          "price": 25,
+          "yearlyPrice": 17,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "MAX",
+          "price": 120,
+          "yearlyPrice": 100,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly."
+    },
+    {
+      "id": "monday",
+      "name": "monday.com (Work Management)",
+      "website": "monday.com",
+      "category": "productivity",
+      "pricingUrl": "https://monday.com/pricing",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Basic",
+          "price": 12,
+          "yearlyPrice": 9,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Standard",
+          "price": 14,
+          "yearlyPrice": 12,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Pro",
+          "price": 24,
+          "yearlyPrice": 19,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. USD figures from monday.com pricing page/structured data as indexed for US search; the live page served MXN from our location, so recheck from a US connection. Paid plans are sold in seat buckets (3-seat minimum)."
+    },
+    {
+      "id": "airtable",
+      "name": "Airtable",
+      "website": "airtable.com",
+      "category": "productivity",
+      "pricingUrl": "https://www.airtable.com/pricing",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Team",
+          "price": 24,
+          "yearlyPrice": 20,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business",
+          "price": 54,
+          "yearlyPrice": 45,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise Scale",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Yearly from the pricing page; monthly from Airtable's support article 'Airtable plans overview'."
+    },
+    {
+      "id": "miro",
+      "name": "Miro",
+      "website": "miro.com",
+      "category": "productivity",
+      "pricingUrl": "https://miro.com/pricing/",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Starter",
+          "price": 10,
+          "yearlyPrice": 8,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business",
+          "price": 25,
+          "yearlyPrice": 20,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly."
+    },
+    {
+      "id": "1password",
+      "name": "1Password (Business)",
+      "website": "1password.com",
+      "category": "security",
+      "pricingUrl": "https://1password.com/pricing/business",
+      "plans": [
+        {
+          "name": "Teams Starter Pack",
+          "price": 2.99,
+          "yearlyPrice": 2.49,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business",
+          "price": 10.99,
+          "yearlyPrice": 8.99,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Teams Starter Pack has a 10-user minimum (up to 20): yearly it is a flat $24.95/month ($299.40/year) for 10 users. Individual plan lists $3.99/mo (promo $2.99)."
+    },
+    {
+      "id": "bitwarden",
+      "name": "Bitwarden (Business)",
+      "website": "bitwarden.com",
+      "category": "security",
+      "pricingUrl": "https://bitwarden.com/pricing/business/",
+      "plans": [
+        {
+          "name": "Free (Personal)",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Teams",
+          "price": null,
+          "yearlyPrice": 4,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": 6,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Teams and Enterprise prices are 'per month / per user billed annually'. Bitwarden's help says monthly billing is available, but no monthly price is published, so price is null."
+    },
+    {
+      "id": "dropbox",
+      "name": "Dropbox",
+      "website": "dropbox.com",
+      "category": "storage",
+      "pricingUrl": "https://www.dropbox.com/plans",
+      "plans": [
+        {
+          "name": "Plus",
+          "price": 11.99,
+          "yearlyPrice": 9.99,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Standard",
+          "price": 18,
+          "yearlyPrice": 15,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Advanced",
+          "price": 30,
+          "yearlyPrice": 24,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Plus is for one person. Standard and Advanced are per user (team minimum applies)."
+    },
+    {
+      "id": "box",
+      "name": "Box",
+      "website": "box.com",
+      "category": "storage",
+      "pricingUrl": "https://www.box.com/pricing",
+      "plans": [
+        {
+          "name": "Business Starter",
+          "price": 7,
+          "yearlyPrice": 5,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business",
+          "price": 20,
+          "yearlyPrice": 15,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business Plus",
+          "price": 33,
+          "yearlyPrice": 25,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. USD figures from box.com/pricing as indexed for US search (page markup lists monthly price, then annual old/new price). The live page served MXN from our location, so recheck from a US connection. Minimum of 3 users."
+    },
+    {
+      "id": "quickbooks-online",
+      "name": "QuickBooks Online",
+      "website": "quickbooks.intuit.com",
+      "category": "finance",
+      "pricingUrl": "https://quickbooks.intuit.com/pricing/",
+      "plans": [
+        {
+          "name": "Simple Start",
+          "price": 38,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Essentials",
+          "price": 85,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Plus",
+          "price": 140,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Advanced",
+          "price": 340,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. List monthly prices (a 50%-off-for-3-months promo is ignored). Users included: 1 / 3 / 5 / 25. No yearly price shown."
+    },
+    {
+      "id": "xero",
+      "name": "Xero",
+      "website": "xero.com",
+      "category": "finance",
+      "pricingUrl": "https://www.xero.com/us/pricing-plans/",
+      "plans": [
+        {
+          "name": "Early",
+          "price": 27,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Growing",
+          "price": 59,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Established",
+          "price": 97,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. US plans, monthly billing (an 80%-off-for-3-months promo is ignored). Payroll via Gusto is extra ($36/mo + $6 per person)."
+    },
+    {
+      "id": "freshbooks",
+      "name": "FreshBooks",
+      "website": "freshbooks.com",
+      "category": "finance",
+      "pricingUrl": "https://www.freshbooks.com/pricing",
+      "plans": [
+        {
+          "name": "Lite",
+          "price": 23,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Plus",
+          "price": 43,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Premium",
+          "price": 70,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Select",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. List monthly prices (an 80%-off promo is ignored). The yearly view shows list $276/$516/$840 per year (same as 12x monthly) plus a promotional 10% discount; a standing yearly discount could not be confirmed, so yearlyPrice is null. Team members are +$11/mo per user. Select is custom."
+    },
+    {
+      "id": "gusto",
+      "name": "Gusto",
+      "website": "gusto.com",
+      "category": "hr",
+      "pricingUrl": "https://gusto.com/product/pricing",
+      "plans": [
+        {
+          "name": "Simple",
+          "price": 49,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Plus",
+          "price": 80,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Premium",
+          "price": 180,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Price is the monthly base fee; each plan adds a per-person fee: Simple +$6, Plus +$12, Premium +$22 per person per month. No yearly option shown."
+    },
+    {
+      "id": "docusign",
+      "name": "Docusign eSignature",
+      "website": "docusign.com",
+      "category": "documents",
+      "pricingUrl": "https://ecom.docusign.com/plans-and-pricing/esignature",
+      "plans": [
+        {
+          "name": "Personal",
+          "price": 15,
+          "yearlyPrice": 10,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Standard",
+          "price": 45,
+          "yearlyPrice": 25,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business Pro",
+          "price": 65,
+          "yearlyPrice": 40,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enhanced",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. USD list prices from Docusign's own 'Docusign plans and pricing' blog (Oct 2026). price = monthly with no annual contract; yearlyPrice = billed annually upfront. Annual contract paid monthly is $11 / $30 / $45. The live pricing page served MXN from our location."
+    },
+    {
+      "id": "pandadoc",
+      "name": "PandaDoc",
+      "website": "pandadoc.com",
+      "category": "documents",
+      "pricingUrl": "https://www.pandadoc.com/pricing/",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Starter",
+          "price": 35,
+          "yearlyPrice": 19,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business",
+          "price": 65,
+          "yearlyPrice": 49,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly."
+    },
+    {
+      "id": "grammarly",
+      "name": "Grammarly",
+      "website": "grammarly.com",
+      "category": "productivity",
+      "pricingUrl": "https://www.grammarly.com/plans",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Pro",
+          "price": 30,
+          "yearlyPrice": 12,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Pro prices from grammarly.com/pro ($12 per member/month billed annually, $30 billed monthly)."
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "website": "chatgpt.com",
+      "category": "ai",
+      "pricingUrl": "https://chatgpt.com/pricing",
+      "plans": [
+        {
+          "name": "Plus",
+          "price": 20,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business (Standard seat)",
+          "price": 25,
+          "yearlyPrice": 20,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business (Premium seat)",
+          "price": 125,
+          "yearlyPrice": 100,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. USD from OpenAI help center ('What is ChatGPT Plus?', 'ChatGPT Business overview'); the live pricing page served MXN from our location. Plus has no annual billing. Business needs at least 2 seats."
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "website": "claude.com",
+      "category": "ai",
+      "pricingUrl": "https://claude.com/pricing",
+      "plans": [
+        {
+          "name": "Pro",
+          "price": 20,
+          "yearlyPrice": 17,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Max",
+          "price": 100,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Team (Standard seat)",
+          "price": 25,
+          "yearlyPrice": 20,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Team (Premium seat)",
+          "price": 125,
+          "yearlyPrice": 100,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Pro yearly = $200 billed up front. Max shows only a monthly price. Ultra is $200/month. Enterprise is $20/seat/month billed annually plus usage at API rates."
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "website": "cursor.com",
+      "category": "ai",
+      "pricingUrl": "https://cursor.com/pricing",
+      "plans": [
+        {
+          "name": "Plus",
+          "price": 8,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Premium",
+          "price": 30,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Super",
+          "price": 100,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Teams (Premium seat)",
+          "price": 30,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Individual plans: Plus $8, Premium $30, Super $100, Ultra $200 per month. Teams lets you mix Premium/Super/Ultra seats. Third-party models are billed separately by usage. No yearly prices shown."
+    },
+    {
+      "id": "midjourney",
+      "name": "Midjourney",
+      "website": "midjourney.com",
+      "category": "ai",
+      "pricingUrl": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+      "plans": [
+        {
+          "name": "Basic",
+          "price": 10,
+          "yearlyPrice": 8,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Standard",
+          "price": 30,
+          "yearlyPrice": 24,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Pro",
+          "price": 60,
+          "yearlyPrice": 48,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Mega",
+          "price": 120,
+          "yearlyPrice": 96,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. From Midjourney's 'Comparing Midjourney Plans' doc (annual: $96 / $288 / $576 / $1,152 per year)."
+    },
+    {
+      "id": "intercom",
+      "name": "Intercom",
+      "website": "intercom.com",
+      "category": "support",
+      "pricingUrl": "https://www.intercom.com/pricing",
+      "plans": [
+        {
+          "name": "Essential",
+          "price": 39,
+          "yearlyPrice": 29,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Advanced",
+          "price": 99,
+          "yearlyPrice": 85,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Expert",
+          "price": 139,
+          "yearlyPrice": 132,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Per seat/month. Fin AI Agent is extra at $0.99 per outcome. New-customer discounts are ignored."
+    },
+    {
+      "id": "zendesk",
+      "name": "Zendesk",
+      "website": "zendesk.com",
+      "category": "support",
+      "pricingUrl": "https://www.zendesk.com/pricing/",
+      "plans": [
+        {
+          "name": "Support Team",
+          "price": 25,
+          "yearlyPrice": 19,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Suite Team",
+          "price": 69,
+          "yearlyPrice": 55,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Suite Professional",
+          "price": 149,
+          "yearlyPrice": 115,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Suite Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Per agent/month, from the pricing page's annual vs monthly subscription table (page rendered in Spanish, prices in US$)."
+    },
+    {
+      "id": "help-scout",
+      "name": "Help Scout",
+      "website": "helpscout.com",
+      "category": "support",
+      "pricingUrl": "https://www.helpscout.com/pricing/",
+      "plans": [
+        {
+          "name": "Standard",
+          "price": 30,
+          "yearlyPrice": 25,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Plus",
+          "price": 54,
+          "yearlyPrice": 45,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Pro",
+          "price": 90,
+          "yearlyPrice": 75,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Per user/month. AI Answers (Envoy) add-on is $0.75 per resolution."
+    },
+    {
+      "id": "typeform",
+      "name": "Typeform",
+      "website": "typeform.com",
+      "category": "forms",
+      "pricingUrl": "https://www.typeform.com/pricing/",
+      "plans": [
+        {
+          "name": "Basic",
+          "price": 39,
+          "yearlyPrice": 28,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Plus",
+          "price": 79,
+          "yearlyPrice": 56,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Business",
+          "price": 129,
+          "yearlyPrice": 91,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Flat plan prices with included users (1 / 3 / 5)."
+    },
+    {
+      "id": "tally",
+      "name": "Tally",
+      "website": "tally.so",
+      "category": "forms",
+      "pricingUrl": "https://tally.so/pricing",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Pro",
+          "price": 29,
+          "yearlyPrice": 24,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Business",
+          "price": 89,
+          "yearlyPrice": 74,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly."
+    },
+    {
+      "id": "zapier",
+      "name": "Zapier",
+      "website": "zapier.com",
+      "category": "automation",
+      "pricingUrl": "https://zapier.com/pricing",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Professional",
+          "price": 29.99,
+          "yearlyPrice": 19.99,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Team",
+          "price": 103.5,
+          "yearlyPrice": 69,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. 'Starting from' prices at the entry task tier; higher task volumes cost more."
+    },
+    {
+      "id": "make",
+      "name": "Make",
+      "website": "make.com",
+      "category": "automation",
+      "pricingUrl": "https://www.make.com/en/pricing",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Core",
+          "price": 10.59,
+          "yearlyPrice": 9,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Pro",
+          "price": 18.82,
+          "yearlyPrice": 16,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Teams",
+          "price": 34.12,
+          "yearlyPrice": 29,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Prices for 10,000 credits/month; they scale with credits."
+    },
+    {
+      "id": "ahrefs",
+      "name": "Ahrefs",
+      "website": "ahrefs.com",
+      "category": "marketing",
+      "pricingUrl": "https://ahrefs.com/pricing",
+      "plans": [
+        {
+          "name": "Lite",
+          "price": 129,
+          "yearlyPrice": 107.5,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Standard",
+          "price": 249,
+          "yearlyPrice": 207.5,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Advanced",
+          "price": 449,
+          "yearlyPrice": 374.17,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Annual: $1,290 / $2,490 / $4,490 per year (page rounds to $108 / $208 / $374 per month). One user included; extra users $40 / $60 / $80 per month."
+    },
+    {
+      "id": "semrush",
+      "name": "Semrush",
+      "website": "semrush.com",
+      "category": "marketing",
+      "pricingUrl": "https://www.semrush.com/pricing/seo-ai-search/",
+      "plans": [
+        {
+          "name": "SEO",
+          "price": 139,
+          "yearlyPrice": 117.33,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Starter (SEO + AI Search)",
+          "price": 199,
+          "yearlyPrice": 165.17,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Pro+ (SEO + AI Search)",
+          "price": 299,
+          "yearlyPrice": 248.17,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Advanced",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. SEO + AI Search toolkit plans. Advanced is custom (request demo)."
+    },
+    {
+      "id": "hotjar",
+      "name": "Hotjar",
+      "website": "hotjar.com",
+      "category": "analytics",
+      "pricingUrl": "https://www.hotjar.com/pricing/",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Growth",
+          "price": 49,
+          "yearlyPrice": 39,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Pro",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Growth price is the entry tier (7k monthly sessions); higher session tiers cost more. Pro is custom."
+    },
+    {
+      "id": "descript",
+      "name": "Descript",
+      "website": "descript.com",
+      "category": "video",
+      "pricingUrl": "https://www.descript.com/pricing",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Hobbyist",
+          "price": 24,
+          "yearlyPrice": 16,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Creator",
+          "price": 35,
+          "yearlyPrice": 24,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business",
+          "price": 65,
+          "yearlyPrice": 50,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly."
+    },
+    {
+      "id": "toggl-track",
+      "name": "Toggl Track",
+      "website": "toggl.com",
+      "category": "productivity",
+      "pricingUrl": "https://toggl.com/track/pricing/",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Starter",
+          "price": 12,
+          "yearlyPrice": 9,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Premium",
+          "price": 24,
+          "yearlyPrice": 16,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly."
+    },
+    {
+      "id": "harvest",
+      "name": "Harvest",
+      "website": "getharvest.com",
+      "category": "productivity",
+      "pricingUrl": "https://www.getharvest.com/pricing",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Pro",
+          "price": 11,
+          "yearlyPrice": 9,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Premium",
+          "price": 17.5,
+          "yearlyPrice": 14,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Per seat/month ('starting from'). Annual: $108 and $168 per seat per year."
+    },
+    {
+      "id": "buffer",
+      "name": "Buffer",
+      "website": "buffer.com",
+      "category": "marketing",
+      "pricingUrl": "https://buffer.com/pricing",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Essentials",
+          "price": 6,
+          "yearlyPrice": 5,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        },
+        {
+          "name": "Team",
+          "price": 12,
+          "yearlyPrice": 10,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": false
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Priced per connected social channel per month, not per user. Annual: $60 and $120 per channel per year."
+    },
+    {
+      "id": "superhuman",
+      "name": "Superhuman",
+      "website": "superhuman.com",
+      "category": "productivity",
+      "pricingUrl": "https://superhuman.com/plans",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Pro",
+          "price": 15,
+          "yearlyPrice": 12,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business",
+          "price": 40,
+          "yearlyPrice": 33,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Per member/month."
+    },
+    {
+      "id": "otter",
+      "name": "Otter.ai",
+      "website": "otter.ai",
+      "category": "ai",
+      "pricingUrl": "https://otter.ai/pricing",
+      "plans": [
+        {
+          "name": "Basic",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Pro",
+          "price": 16.99,
+          "yearlyPrice": 8.33,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Business",
+          "price": 30,
+          "yearlyPrice": 19.99,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Per user/month list prices; temporary promo discounts shown on the page are ignored."
+    },
+    {
+      "id": "cal-com",
+      "name": "Cal.com",
+      "website": "cal.com",
+      "category": "scheduling",
+      "pricingUrl": "https://cal.com/pricing",
+      "plans": [
+        {
+          "name": "Free",
+          "price": 0,
+          "yearlyPrice": 0,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Teams",
+          "price": 16,
+          "yearlyPrice": 12,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Organizations",
+          "price": 37,
+          "yearlyPrice": 28,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        },
+        {
+          "name": "Enterprise",
+          "price": null,
+          "yearlyPrice": null,
+          "currency": "USD",
+          "period": "month",
+          "perSeat": true
+        }
+      ],
+      "notes": "yearlyPrice = the per-month price when billed yearly. Monthly via the page's Yearly toggle (Teams) and the page's embedded monthlyPrice data (Organizations $37)."
+    }
+  ]
+}

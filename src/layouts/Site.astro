@@ -1,7 +1,7 @@
 ---
 import { Footer } from '@/components/site/footer'
 import { Nav } from '@/components/site/nav'
-import { type PageMeta, headTags } from '@/lib/seo'
+import { type PageMeta, SITE_JSONLD, headTags } from '@/lib/seo'
 import { SITE_NAME } from '@/lib/site'
 import '@/styles/globals.css'
 
@@ -108,6 +108,7 @@ const tags = headTags(meta)
         po('program', 'NZCCAGAZ', 'load')
       })()
     </script>
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(SITE_JSONLD)} />
     {jsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
   </head>
   <body>
