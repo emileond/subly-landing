@@ -80,8 +80,8 @@ export const TOOLS = {
     faq: [
       { q: 'What is a good cash runway for a small business?', a: 'There is no single number. Plan for several months of costs, and more when income is uneven. What matters most is seeing a shortfall weeks ahead, while you can still act on it.' },
       { q: 'Should yearly subscriptions count in my runway?', a: 'Yes. Divide a yearly charge by 12 so it counts every month. In Subly, the 13-week forecast also shows the week a yearly charge actually lands.' },
-      { q: 'Is anything I enter saved?', a: 'No. The calculator runs in your browser and nothing is stored unless you press the button to send your numbers to Subly.' },
-      { q: 'How is this different from Subly’s forecast?', a: 'This calculator spreads everything evenly across the weeks. Subly’s 13-week forecast is built from each item’s real dates and lets you test a cancel or a price change before you commit. It is part of the Business and Team plans.' },
+      { q: 'Is anything I enter saved?', a: 'Only in the page address, so a copied link opens the same numbers. The calculator runs in your browser and nothing is stored unless you press the button to send your numbers to Subly.' },
+      { q: 'How is this different from Subly’s forecast?', a: 'This calculator spreads monthly and weekly amounts evenly across the weeks, and puts a yearly charge in its own week when you give it a date. Subly’s 13-week forecast is built from every item’s real dates, updates itself as charges come in, and lets you test a cancel or a price change before you commit. It is part of the Business and Team plans.' },
     ],
   }),
   scan: tool({

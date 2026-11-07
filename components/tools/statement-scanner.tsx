@@ -1,5 +1,6 @@
-import { ArrowRight, FileUp, Loader2 } from 'lucide-react'
+import { ArrowRight, Eye, FileUp, Loader2, RotateCcw } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
+import { type Finding, Findings, SendToSubly, SublyPreview } from '@/components/tools/report'
 import { AnchorButton, Button } from '@/components/ui/button'
 import { logoUrl, signupHref } from '@/lib/handoff'
 import { APP_URL } from '@/lib/site'
@@ -47,6 +48,21 @@ const money = (amount: number, currency: string) =>
 const every = (r: ScanRow) =>
   r.billingRange === 'year' ? 'a year' : r.billingRange === 'week' ? (r.billingFreq === 2 ? 'every 2 weeks' : 'a week') : r.billingFreq === 1 ? 'a month' : `every ${r.billingFreq} months`
 
+/** What a result looks like, for anyone who wants to see one before uploading their own statement */
+const inDays = (days: number) => new Date(Date.now() + days * 24 * 60 * 60 * 1000).toISOString().slice(0, 10)
+const example = (): ScanRow[] => [
+  { name: 'Adobe Creative Cloud', direction: 'out', amount: 59.99, currency: 'USD', billingFreq: 1, billingRange: 'month', nextDate: inDays(6), occurrences: 3, previousAmount: null, website: 'adobe.com' },
+  { name: 'Google Workspace', direction: 'out', amount: 42, currency: 'USD', billingFreq: 1, billingRange: 'month', nextDate: inDays(18), occurrences: 3, previousAmount: null, website: 'workspace.google.com' },
+  { name: 'Slack', direction: 'out', amount: 26.25, currency: 'USD', billingFreq: 1, billingRange: 'month', nextDate: inDays(21), occurrences: 3, previousAmount: null, website: 'slack.com' },
+  { name: 'Zoom', direction: 'out', amount: 15.99, currency: 'USD', billingFreq: 1, billingRange: 'month', nextDate: inDays(9), occurrences: 3, previousAmount: null, website: 'zoom.us' },
+  { name: 'Notion', direction: 'out', amount: 12, currency: 'USD', billingFreq: 1, billingRange: 'month', nextDate: inDays(25), occurrences: 3, previousAmount: 10, website: 'notion.so' },
+  { name: 'Figma', direction: 'out', amount: 16, currency: 'USD', billingFreq: 1, billingRange: 'month', nextDate: inDays(12), occurrences: 3, previousAmount: null, website: 'figma.com' },
+  { name: 'Canva', direction: 'out', amount: 15, currency: 'USD', billingFreq: 1, billingRange: 'month', nextDate: inDays(3), occurrences: 2, previousAmount: 12.99, website: 'canva.com' },
+  { name: 'Dropbox', direction: 'out', amount: 11.99, currency: 'USD', billingFreq: 1, billingRange: 'month', nextDate: inDays(27), occurrences: 3, previousAmount: null, website: 'dropbox.com' },
+  { name: 'Calendly', direction: 'out', amount: 12, currency: 'USD', billingFreq: 1, billingRange: 'month', nextDate: inDays(15), occurrences: 3, previousAmount: null, website: 'calendly.com' },
+  { name: 'Northlight retainer', direction: 'in', amount: 2500, currency: 'USD', billingFreq: 1, billingRange: 'month', nextDate: inDays(8), occurrences: 3, previousAmount: null, website: null },
+]
+
 function loadTurnstile() {
   if (window.turnstile) return Promise.resolve()
   return new Promise<void>((resolve, reject) => {
@@ -72,6 +88,8 @@ export function StatementScanner() {
   const [token, setToken] = useState('')
   // Two weeks from when the result came in, for "renews soon"
   const [soonUntil, setSoonUntil] = useState('')
+  const [isExample, setIsExample] = useState(false)
+  const [before, setBefore] = useState<Phase>('ready')
   const box = useRef<HTMLDivElement>(null)
   const fileInput = useRef<HTMLInputElement>(null)
   const widget = useRef<string | null>(null)
@@ -140,12 +158,49 @@ export function StatementScanner() {
     }
   }
 
+  const showExample = () => {
+    send('tool_example', { tool: 'scan' })
+    setBefore(phase)
+    setRows(example())
+    setHandoff(null)
+    setIsExample(true)
+    setSoonUntil(inDays(14))
+    setPhase('done')
+  }
+  const backToUpload = () => {
+    setIsExample(false)
+    setRows([])
+    setPhase(before === 'off' ? 'off' : 'ready')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   const out = rows.filter((r) => r.direction === 'out').sort((a, b) => monthly(b) - monthly(a))
   const incoming = rows.filter((r) => r.direction === 'in')
   const currency = out[0]?.currency ?? 'USD'
   const total = out.filter((r) => r.currency === currency).reduce((sum, r) => sum + monthly(r), 0)
   const rises = out.filter((r) => r.previousAmount && r.previousAmount < r.amount)
   const soon = out.filter((r) => r.nextDate <= soonUntil)
+  const sameCurrency = (r: ScanRow) => r.currency === currency
+  const riseYear = rises.filter(sameCurrency).reduce((sum, r) => sum + (monthly(r) - monthly({ ...r, amount: r.previousAmount! })) * 12, 0)
+  const findings: Finding[] = [
+    ...rises.slice(0, 2).map((r): Finding => ({
+      kind: 'rise',
+      title: `${r.name} went up ${Math.round(((r.amount - r.previousAmount!) / r.previousAmount!) * 100)}%`,
+      body: `${money(r.previousAmount!, r.currency)} → ${money(r.amount, r.currency)} ${every(r)}. Worth checking the plan, or asking for the old price.`,
+      amount: `+${money((monthly(r) - monthly({ ...r, amount: r.previousAmount! })) * 12, r.currency)}/yr`,
+    })),
+    ...(soon.length
+      ? [{ kind: 'soon' as const, title: `${soon.length} ${soon.length === 1 ? 'renews' : 'renew'} in the next two weeks`, body: `${soon.slice(0, 3).map((r) => r.name).join(', ')}${soon.length > 3 ? ` and ${soon.length - 3} more` : ''}. Cancel now anything you no longer use.` }]
+      : []),
+    ...(out.length >= 3
+      ? [{ kind: 'info' as const, title: `${out[0].name} is the biggest`, body: `${money(monthly(out[0]) * 12, out[0].currency)} a year, ${Math.round((monthly(out[0]) / Math.max(total, 1)) * 100)}% of what repeats. Make sure someone still needs it.` }]
+      : []),
+    ...(incoming.length ? [{ kind: 'save' as const, title: `${incoming.length} coming in on repeat`, body: `${incoming.map((r) => `${r.name} (${money(r.amount, r.currency)} ${every(r)})`).join(', ')}. Subly tracks these next to your costs.` }] : []),
+  ]
+  const signals = [
+    ...rises.map((r) => ({ title: `${r.name} went up ${Math.round(((r.amount - r.previousAmount!) / r.previousAmount!) * 100)}%`, body: `${money(r.previousAmount!, r.currency)} → ${money(r.amount, r.currency)} ${every(r)}.`, website: r.website, tone: 'attention' as const })),
+    ...soon.map((r) => ({ title: `${r.name} renews ${new Date(`${r.nextDate}T00:00:00Z`).toLocaleDateString('en-US', { timeZone: 'UTC', month: 'short', day: 'numeric' })}`, body: `${money(r.amount, r.currency)} ${every(r)}, about ${money(monthly(r) * 12, r.currency)} a year.`, website: r.website })),
+  ]
 
   return (
     <div className="rounded-2xl border border-border bg-card p-5 shadow-sm sm:p-8">
@@ -166,9 +221,14 @@ export function StatementScanner() {
             <>
               <p className="font-medium">{ERRORS.off}</p>
               <p className="mt-1 text-sm text-muted-foreground">Every Subly account can read a statement, Free included.</p>
-              <AnchorButton href={signupHref('/tools/find-subscriptions')} size="lg" className="mt-4">
-                Read it in Subly <ArrowRight className="h-4 w-4" aria-hidden />
-              </AnchorButton>
+              <div className="mt-4 flex flex-col justify-center gap-3 sm:flex-row">
+                <AnchorButton href={signupHref('/tools/find-subscriptions')} size="lg">
+                  Read it in Subly <ArrowRight className="h-4 w-4" aria-hidden />
+                </AnchorButton>
+                <Button variant="outline" size="lg" onClick={showExample}>
+                  <Eye className="h-4 w-4" aria-hidden /> See an example result
+                </Button>
+              </div>
             </>
           ) : (
             <>
@@ -181,6 +241,11 @@ export function StatementScanner() {
                   ? 'This takes about a minute. Keep this page open.'
                   : 'A bank or card statement covering a month or more. No bank login needed.'}
               </p>
+              {phase === 'ready' && (
+                <button type="button" onClick={showExample} className="mt-2 text-sm font-medium text-muted-foreground underline underline-offset-4 hover:text-foreground">
+                  Not ready to upload? See an example result
+                </button>
+              )}
             </>
           )}
           <div ref={box} className="mt-3 flex justify-center" />
@@ -190,6 +255,17 @@ export function StatementScanner() {
 
       {phase === 'done' && (
         <div aria-live="polite">
+          {isExample && (
+            <div className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-dashed border-border px-4 py-2.5 text-sm">
+              <span>
+                <span className="mr-2 rounded-full bg-muted px-2 py-0.5 font-mono text-[11px] uppercase tracking-[0.05em] text-muted-foreground">Example</span>
+                A made-up agency statement, to show what you get.
+              </span>
+              <button type="button" onClick={backToUpload} className="inline-flex items-center gap-1.5 font-medium underline underline-offset-4">
+                <RotateCcw className="h-3.5 w-3.5" aria-hidden /> Try your own
+              </button>
+            </div>
+          )}
           <p className="font-display text-2xl font-bold tracking-tight text-balance sm:text-3xl">
             {out.length
               ? `${out.length} recurring ${out.length === 1 ? 'charge' : 'charges'}, about ${money(total, currency)} a month`
@@ -231,23 +307,29 @@ export function StatementScanner() {
               ))}
             </ul>
           )}
-          {incoming.length > 0 && (
-            <p className="mt-3 text-sm text-muted-foreground">
-              Also coming in on repeat: {incoming.map((r) => `${r.name} (${money(r.amount, r.currency)} ${every(r)})`).join(', ')}.
-            </p>
-          )}
 
-          <div className="mt-6 flex flex-col gap-4 rounded-xl border border-border bg-secondary/60 p-5 sm:flex-row sm:items-center">
-            <div className="flex-1">
-              <p className="font-medium">Save these and get a heads-up before each one renews.</p>
-              <p className="mt-1 text-sm text-muted-foreground">
-                Subly tells you before renewals and price rises, and when something you cancelled charges again. These come with you, and you check them before anything is added.
-              </p>
-            </div>
-            <AnchorButton href={signupHref('/tools/find-subscriptions', handoff ?? undefined)} size="lg" className="shrink-0" onClick={() => send('tool_handoff', { tool: 'scan', items: String(rows.length) })}>
-              Save them in Subly <ArrowRight className="h-4 w-4" aria-hidden />
-            </AnchorButton>
-          </div>
+          <Findings title={riseYear > 0 ? `What we found · price rises cost you ${money(riseYear, currency)} more a year` : 'What we found'} findings={findings} />
+
+          <SendToSubly
+            title={isExample ? 'See this for your own business.' : 'Save these and get a heads-up before each one renews.'}
+            body={
+              isExample
+                ? 'Upload a statement in Subly, Free included, and it lists every recurring charge, then keeps watching: renewals, price rises, and charges after you cancel.'
+                : 'Subly tells you before renewals and price rises, and when something you cancelled charges again. These come with you, and you check them before anything is added.'
+            }
+            button={isExample ? 'Find yours in Subly' : 'Save them in Subly'}
+            href={signupHref('/tools/find-subscriptions', isExample ? undefined : (handoff ?? undefined))}
+            onHrefClick={() => send('tool_handoff', { tool: 'scan', items: String(isExample ? 0 : rows.length), example: String(isExample) })}
+            preview={
+              <SublyPreview
+                total={out.length ? `${money(total, currency)}/mo` : undefined}
+                signals={signals}
+                rows={[...incoming.map((r) => ({ r, incoming: true })), ...out.map((r) => ({ r, incoming: false }))]
+                  .sort((a, b) => a.r.nextDate.localeCompare(b.r.nextDate))
+                  .map(({ r, incoming }) => ({ name: r.name, amount: money(r.amount, r.currency), when: new Date(`${r.nextDate}T00:00:00Z`).toLocaleDateString('en-US', { timeZone: 'UTC', month: 'short', day: 'numeric' }), website: r.website, incoming }))}
+              />
+            }
+          />
         </div>
       )}
     </div>
