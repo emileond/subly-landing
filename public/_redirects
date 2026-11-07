@@ -5,3 +5,9 @@
 # Blog posts rewritten under a new address (Nov 2026)
 /blog/5-key-tips-for-effective-budgeting-in-2025 /blog/budgeting-for-2027 301
 /blog/introducing-revenue-tracking /blog/track-recurring-revenue 301
+
+# Comparison posts became structured pages under /compare (Nov 2026)
+/blog/best-subscription-tracker-small-business /compare 301
+/blog/trackmysubs-alternatives /compare/trackmysubs 301
+/blog/rocket-money-for-business-alternative /compare/rocket-money 301
+/blog/saas-management-for-small-business /compare/cledara 301

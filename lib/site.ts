@@ -12,8 +12,9 @@ export const DEFAULT_DESCRIPTION =
 export const NAV_LINKS = [
   { label: 'Product', href: '/#value' },
   { label: 'Pricing', href: '/pricing' },
+  { label: 'Compare', href: '/compare' },
+  { label: 'Free tools', href: '/tools' },
   { label: 'Blog', href: '/blog' },
-  { label: 'Changelog', href: '/releases' },
 ] as const
 
 export const PERSONAS = [
