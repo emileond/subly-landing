@@ -1,6 +1,7 @@
-import { ArrowRight, Loader2 } from 'lucide-react'
+import { Calculator } from 'lucide-react'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { AnchorButton, Button } from '@/components/ui/button'
+import { SendToSubly, SublyPreview } from '@/components/tools/report'
+import { AnchorButton } from '@/components/ui/button'
 import { logoUrl, sendToSubly } from '@/lib/handoff'
 import { type Line, billedYearly, cost, encode, money, nextKey, perMonthPrice, usablePlans } from '@/lib/stack-link'
 import { TEMPLATES, resolveTemplate } from '@/lib/stack-templates'
@@ -164,23 +165,31 @@ export function StackBuilder() {
         <p className="mt-3 text-xs text-faint">
           Common choices for this kind of business, not endorsements; no vendor pays to be listed. List prices in USD from each vendor’s pricing page, checked {PRICES_CHECKED}.
         </p>
-        <div className="mt-6 flex flex-col gap-4 rounded-xl border border-border bg-secondary/60 p-5 sm:flex-row sm:items-center">
-          <div className="flex-1">
-            <p className="font-medium">Start tracking it from the first renewal.</p>
-            <p className="mt-1 text-sm text-muted-foreground">
-              Subly tells you before each renewal and price rise and puts an owner on every tool. These tools come with you, and you check them before anything is added.
-            </p>
-          </div>
-          <div className="flex shrink-0 flex-col gap-2 sm:items-end">
-            <Button size="lg" onClick={sendStack} disabled={sending}>
-              {sending ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden /> : null}
-              Track it in Subly <ArrowRight className="h-4 w-4" aria-hidden />
-            </Button>
-            <AnchorButton href={calculatorHref} variant="ghost" size="sm">
-              Open in the stack calculator
+        <SendToSubly
+          title="Start tracking it from the first renewal."
+          body="Subly tells the owner of each tool before it renews or goes up in price, so the stack you set up today doesn’t quietly grow. These tools come with you, and you check them before anything is added."
+          button="Track it in Subly"
+          onSend={sendStack}
+          sending={sending}
+          keep={
+            <AnchorButton href={calculatorHref} variant="ghost">
+              <Calculator className="h-4 w-4" aria-hidden /> Fine-tune it in the calculator
             </AnchorButton>
-          </div>
-        </div>
+          }
+          preview={
+            <SublyPreview
+              total={`${money(monthly)}/mo`}
+              rowsTitle="Your stack"
+              signals={[...lines]
+                .map((l, i) => ({ l, c: costs[i] }))
+                .filter(({ c }) => c.monthly > 0)
+                .sort((a, b) => b.c.monthly - a.c.monthly)
+                .slice(0, 2)
+                .map(({ l, c }) => ({ title: `Who owns ${l.tool.name}?`, body: `${money(c.monthly)} a month for ${l.job.toLowerCase()}. Its owner hears before each renewal.`, website: l.tool.website }))}
+              rows={lines.map((l, i) => ({ name: l.tool.name, amount: `${money(costs[i].monthly)}/mo`, when: l.job, website: l.tool.website })).filter((_, i) => costs[i].monthly > 0)}
+            />
+          }
+        />
       </div>
     </div>
   )

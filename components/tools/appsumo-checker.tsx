@@ -1,11 +1,13 @@
-import { ArrowRight, FileUp, Loader2, Plus, Trash2 } from 'lucide-react'
+import { CalendarPlus, FileUp, Plus, Trash2 } from 'lucide-react'
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { type Finding, Findings, SendToSubly, SublyPreview } from '@/components/tools/report'
 import { Button } from '@/components/ui/button'
 import { REFUND_DAYS, parseAppsumoExport } from '@/lib/appsumo-export'
 import { sendToSubly } from '@/lib/handoff'
+import { downloadIcs } from '@/lib/ics'
 import { send } from '@/lib/tracking'
 
-type Deal = { id: string; name: string; purchasedOn: string; amount: number; currency: string; plan?: string; website?: string; ended?: boolean }
+type Deal = { id: string; name: string; purchasedOn: string; amount: number; currency: string; plan?: string; website?: string; ended?: boolean; /** Marked by the visitor: not using it, so a refund candidate */ unused?: boolean }
 
 const DAY = 24 * 60 * 60 * 1000
 const todayIso = () => {
@@ -51,6 +53,40 @@ export function AppsumoChecker() {
   const open = rows.filter((r) => r.open)
   const refundable = open.filter((r) => r.currency === 'USD').reduce((sum, r) => sum + r.amount, 0)
   const spent = rows.filter((r) => r.currency === 'USD').reduce((sum, r) => sum + r.amount, 0)
+  const candidates = open.filter((r) => r.unused)
+  const candidateTotal = candidates.filter((r) => r.currency === 'USD').reduce((sum, r) => sum + r.amount, 0)
+  const thisWeek = open.filter((r) => r.left <= 7)
+
+  const findings: Finding[] = []
+  if (thisWeek.length)
+    findings.push({
+      kind: 'soon',
+      title: `${thisWeek.length} ${thisWeek.length === 1 ? 'window closes' : 'windows close'} this week`,
+      body: `${thisWeek.map((r) => r.name).slice(0, 3).join(', ')}${thisWeek.length > 3 ? ` and ${thisWeek.length - 3} more` : ''}. Decide now: once a window closes, the deal is yours either way.`,
+    })
+  if (candidates.length)
+    findings.push({
+      kind: 'save',
+      title: `${candidates.length} you are not using, still refundable`,
+      body: `${candidates.map((r) => r.name).slice(0, 3).join(', ')}. Ask AppSumo for the refund before ${formatDate(candidates[0].closes)}.`,
+      ...(candidateTotal ? { amount: money(candidateTotal, 'USD') } : {}),
+    })
+  else if (open.length)
+    findings.push({ kind: 'info', title: 'Mark the ones you are not using', body: 'Tick “Not using it” on a deal above and we will add up what you could still get back.' })
+
+  const addToCalendar = () => {
+    send('tool_keep', { tool: 'appsumo', how: 'ics', deals: String(open.length) })
+    downloadIcs(
+      'appsumo-refund-deadlines.ics',
+      'AppSumo refund deadlines',
+      open.map((r) => ({
+        title: `Last day to refund ${r.name} on AppSumo`,
+        date: r.closes,
+        description: `Bought ${formatDate(r.purchasedOn)}${r.amount ? ` for ${money(r.amount, r.currency)}` : ''}. AppSumo refunds most deals within ${REFUND_DAYS} days of purchase. From subly.app/tools/appsumo-refund-checker`,
+        remindDaysBefore: 3,
+      })),
+    )
+  }
 
   useEffect(() => {
     if (!rows.length || reported.current) return
@@ -94,7 +130,7 @@ export function AppsumoChecker() {
     await sendToSubly(
       'appsumo',
       rows.filter((r) => !r.ended).map((r) => ({ name: r.name, amount: r.amount, currency: r.currency, purchasedOn: r.purchasedOn, plan: r.plan, website: r.website })),
-      { deals: rows.length, open: open.length },
+      { deals: rows.length, open: open.length, unused: candidates.length },
     )
     setSending(false)
   }
@@ -168,6 +204,12 @@ export function AppsumoChecker() {
                     {r.amount > 0 && ` · ${money(r.amount, r.currency)}`}
                   </p>
                 </div>
+                {r.open && (
+                  <label className="flex shrink-0 cursor-pointer items-center gap-1.5 text-xs text-muted-foreground">
+                    <input type="checkbox" className="h-3.5 w-3.5 accent-[var(--color-brand)]" checked={!!r.unused} onChange={(e) => setDeals((list) => list.map((d) => (d.id === r.id ? { ...d, unused: e.target.checked } : d)))} />
+                    Not using it
+                  </label>
+                )}
                 <span
                   className={`shrink-0 rounded-full px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.05em] ${
                     r.open ? (r.left <= 7 ? 'bg-amber-500/15 text-amber-700 dark:text-amber-300' : 'bg-brand/10 text-brand-ink') : 'bg-secondary text-muted-foreground'
@@ -187,19 +229,35 @@ export function AppsumoChecker() {
             ))}
           </ul>
 
+          <Findings title="What to do" findings={findings} />
+
           {/* 3. The next step */}
-          <div className="mt-6 flex flex-col gap-4 rounded-xl border border-border bg-secondary/60 p-5 sm:flex-row sm:items-center">
-            <div className="flex-1">
-              <p className="font-medium">Get a reminder before each refund window closes.</p>
-              <p className="mt-1 text-sm text-muted-foreground">
-                Subly tracks your deals on every plan, Free included, and tells you before a window closes. Your deals come with you, and you check them before anything is added.
-              </p>
-            </div>
-            <Button size="lg" onClick={sendDeals} disabled={sending} className="shrink-0">
-              {sending ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden /> : null}
-              Send my deals to Subly <ArrowRight className="h-4 w-4" aria-hidden />
-            </Button>
-          </div>
+          <SendToSubly
+            title="Get a heads-up before each refund window closes."
+            body="Subly tracks your deals on every plan, Free included, and tells you a few days before a window closes, next to everything else you pay for. Your deals come with you."
+            button="Send my deals to Subly"
+            onSend={sendDeals}
+            sending={sending}
+            keep={
+              open.length > 0 && (
+                <Button variant="ghost" onClick={addToCalendar}>
+                  <CalendarPlus className="h-4 w-4" aria-hidden /> Add the deadlines to my calendar
+                </Button>
+              )
+            }
+            preview={
+              <SublyPreview
+                total={`${open.length} open`}
+                signals={open.slice(0, 3).map((r) => ({
+                  title: `The refund window for ${r.name} closes ${r.left === 0 ? 'today' : r.left === 1 ? 'tomorrow' : `in ${r.left} days`}`,
+                  body: `AppSumo deal bought ${daysBetween(r.purchasedOn, today)} days ago${r.amount ? ` for ${money(r.amount, r.currency)}` : ''}.`,
+                  website: r.website,
+                  tone: r.left <= 7 ? ('attention' as const) : ('neutral' as const),
+                }))}
+                rows={rows.filter((r) => !r.ended).slice(0, 5).map((r) => ({ name: r.name, amount: r.amount ? money(r.amount, r.currency) : 'Lifetime', when: r.open ? `refund by ${formatDate(r.closes)}` : 'kept', website: r.website }))}
+              />
+            }
+          />
         </div>
       )}
     </div>

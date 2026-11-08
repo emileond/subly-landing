@@ -1,8 +1,10 @@
-import { ArrowRight, Check, Link2, Loader2, Plus, Search, Trash2 } from 'lucide-react'
+import { Check, Link2, Plus, Search, Timer, Trash2 } from 'lucide-react'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { Button } from '@/components/ui/button'
+import { Findings, SendToSubly, SublyPreview } from '@/components/tools/report'
+import { AnchorButton, Button } from '@/components/ui/button'
 import { logoUrl, sendToSubly } from '@/lib/handoff'
 import { type Line, billedYearly, cost, decode, encode, hasChoice, money, nextKey, perMonthPrice, usablePlans } from '@/lib/stack-link'
+import { stackInsights } from '@/lib/stack-insights'
 import { PRICES_CHECKED, POPULAR, TOOLS_BY_ID, type PricedTool, searchTools } from '@/lib/tool-prices'
 import { send } from '@/lib/tracking'
 
@@ -61,6 +63,9 @@ export function StackTracker() {
   const saving = costs.reduce((sum, c) => sum + c.saving, 0)
   const ranked = lines.map((l, i) => ({ line: l, monthly: costs[i].monthly })).sort((a, b) => b.monthly - a.monthly)
   const topShare = monthly > 0 ? ranked.slice(0, 3).reduce((sum, r) => sum + r.monthly, 0) / monthly : 0
+  const insight = useMemo(() => stackInsights(lines, team), [lines, team])
+  const lineName = (l: Line) => ('custom' in l ? l.custom : (TOOLS_BY_ID[l.id]?.name ?? ''))
+  const lineSite = (l: Line) => ('id' in l ? TOOLS_BY_ID[l.id]?.website : undefined)
 
   useEffect(() => {
     if (lines.length < 3 || reported.current) return
@@ -99,7 +104,7 @@ export function StackTracker() {
         }
       })
       .filter((item): item is NonNullable<typeof item> => !!item)
-    await sendToSubly('stack', items, { tools: lines.length, team })
+    await sendToSubly('stack', items, { tools: lines.length, team, findings: insight.findings.length, savings: Math.round(insight.savingsYear) })
     setSending(false)
   }
 
@@ -238,18 +243,31 @@ export function StackTracker() {
             </div>
             <p className="mt-3 text-xs text-faint">List prices in USD from each vendor’s pricing page, checked {PRICES_CHECKED}. Taxes and discounts not included.</p>
 
-            <div className="mt-6 flex flex-col gap-4 rounded-xl border border-border bg-secondary/60 p-5 sm:flex-row sm:items-center">
-              <div className="flex-1">
-                <p className="font-medium">Track this stack and hear before each renewal.</p>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  Subly tells you before renewals and price rises, and puts an owner on every tool so someone decides before it renews. Your {lines.length} {lines.length === 1 ? 'tool comes' : 'tools come'} with you, and you check them first.
-                </p>
-              </div>
-              <Button size="lg" onClick={sendStack} disabled={sending} className="shrink-0">
-                {sending ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden /> : null}
-                Track it in Subly <ArrowRight className="h-4 w-4" aria-hidden />
-              </Button>
-            </div>
+            <Findings
+              title={insight.savingsYear >= 12 ? `What we found · up to ${money(insight.savingsYear)} a year to look at` : 'What we found'}
+              findings={insight.findings}
+            />
+
+            <SendToSubly
+              title="Keep this stack current, and hear before each renewal."
+              body={`Subly tells the owner of each tool before it renews or goes up in price, and finds new ones whenever you upload a statement or connect a bank. Your ${lines.length} ${lines.length === 1 ? 'tool comes' : 'tools come'} with you.`}
+              button="Track it in Subly"
+              onSend={sendStack}
+              sending={sending}
+              keep={
+                <AnchorButton variant="ghost" href={`/tools/runway-calculator#software=${Math.round(monthly)}`} onClick={() => send('tool_chain', { tool: 'stack', to: 'runway' })}>
+                  <Timer className="h-4 w-4" aria-hidden /> See what it does to your runway
+                </AnchorButton>
+              }
+              preview={
+                <SublyPreview
+                  total={`${money(monthly)}/mo`}
+                  rowsTitle="Your tools, biggest first"
+                  signals={insight.signals}
+                  rows={ranked.filter((r) => r.monthly > 0).map((r) => ({ name: lineName(r.line), amount: `${money(r.monthly)}/mo`, website: lineSite(r.line) }))}
+                />
+              }
+            />
           </div>
         </>
       )}

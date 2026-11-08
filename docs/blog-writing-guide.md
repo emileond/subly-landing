@@ -49,6 +49,8 @@ Links: sign up `https://web.subly.app/signup` (the `::cta` component already lin
 - **`faq`:** 3–5 questions people actually ask, answered in 1–3 sentences each. They become an FAQ block and FAQ structured data, so do not repeat the body word for word.
 - **Internal links:** 2–4 links to other posts or site pages where they help.
 
+Comparisons with other products are not blog posts. They are pages under `/compare`, built from the facts in `lib/compare.ts` (see the rules at the top of that file). Link to them from a post as `/compare` or `/compare/<product>`.
+
 ## Front matter
 
 ```yaml
@@ -58,7 +60,7 @@ description: 'One sentence, 140–160 characters, that answers the question.'
 lede: 'One or two sentences under the title.'
 slug: 'find-recurring-charges-on-bank-statement'
 status: 'published'
-category: 'Subscriptions'   # Subscriptions · Cash flow · Teams · Lifetime deals · AI and agents · Comparisons
+category: 'Subscriptions'   # Subscriptions · Cash flow · Teams · Lifetime deals · AI and agents · Product
 tags: ['subscriptions', 'bank statements']
 author: 'emilio'
 publishedAt: '2026-11-04T12:00:00.000Z'

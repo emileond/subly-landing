@@ -1,29 +1,53 @@
 ---
-import { ArrowRight } from 'lucide-react'
-import { Container } from '@/components/ui/section'
+import { ArrowRight, CalendarClock, FileSearch, Gift, Layers, LineChart, Repeat } from 'lucide-react'
+import { Container, Section } from '@/components/ui/section'
 import { PAGES } from '@/lib/pages'
 import { TOOLS } from '@/lib/tools'
 import Site from '@/src/layouts/Site.astro'
 
-const tools = [...Object.values(TOOLS), { name: 'Currency converter', blurb: 'Convert between more than 100 currencies at current rates.', meta: PAGES.currencyConverter }]
+/**
+ * The hub leads with the question each tool answers and shows the kind of answer you get, so a
+ * visitor picks by problem, not by tool name. The statement finder comes first: it is the one
+ * that finds what you didn't know you pay for.
+ */
+const cards = [
+  { tool: TOOLS.scan, icon: FileSearch, question: 'What am I still paying for?', answer: '9 recurring charges, about $211 a month. 2 went up in price, 4 renew in the next two weeks.', keep: 'No bank login' },
+  { tool: TOOLS.stack, icon: Layers, question: 'What does our software cost, and where can we cut?', answer: '$1,240 a month. Two tools for team chat, $312 a year cheaper on yearly billing.', keep: 'Share it with a link' },
+  { tool: TOOLS.runway, icon: LineChart, question: 'How long will our cash last?', answer: 'About 7 months at this rate. Insurance lands in week 5 and is your lowest point.', keep: 'Share it with a link' },
+  { tool: TOOLS.appsumo, icon: Gift, question: 'Which AppSumo deals can I still refund?', answer: '3 of 14 deals can still be refunded. The next window closes in 4 days.', keep: 'Deadlines in your calendar' },
+  { tool: TOOLS.builder, icon: CalendarClock, question: 'What software will a new business need?', answer: 'A 5-person agency: 8 tools, about $410 a month at list prices.', keep: 'Open it in the calculator' },
+]
 ---
 
 <Site meta={PAGES.tools}>
-  <section class="hero-glow border-b border-border pb-20 pt-12 sm:pt-16">
+  <section class="hero-glow border-b border-border pb-16 pt-12 sm:pb-20 sm:pt-16">
     <Container>
       <div class="mx-auto max-w-2xl text-center">
-        <h1 class="font-display text-4xl font-bold leading-[1.05] tracking-tight text-balance sm:text-5xl">Free tools for your recurring money</h1>
-        <p class="mt-4 text-lg text-pretty text-muted-foreground">Quick answers about what you pay for, with no sign-up. When you want it kept current, send it to Subly in one click.</p>
+        <p class="font-mono text-xs font-medium uppercase tracking-[0.08em] text-brand-ink">Free tools · no sign-up</p>
+        <h1 class="mt-3 font-display text-4xl font-bold leading-[1.05] tracking-tight text-balance sm:text-5xl">Answers about your recurring money, in a minute</h1>
+        <p class="mt-4 text-lg text-pretty text-muted-foreground">Each tool answers one question with your own numbers, in your browser. Keep the answer, or send it to Subly and it stays current from then on.</p>
       </div>
-      <ul class="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-2">
+      <ul class="mx-auto mt-12 grid max-w-5xl gap-4 md:grid-cols-2">
         {
-          tools.map((t) => (
-            <li>
-              <a href={t.meta.path} class="group flex h-full flex-col rounded-xl border border-border bg-card p-6 transition-colors hover:bg-accent/40">
-                <span class="font-display text-xl font-bold tracking-tight">{t.name}</span>
-                <span class="mt-2 flex-1 text-muted-foreground">{t.blurb}</span>
-                <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium">
-                  Open <ArrowRight class="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+          cards.map((c, i) => (
+            <li class={i === 0 ? 'md:col-span-2' : ''}>
+              <a href={c.tool.meta.path} class="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 transition-colors hover:bg-accent/40 sm:p-7">
+                <span class="flex items-center gap-3">
+                  <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-brand-soft text-brand-ink">
+                    <c.icon className="h-4 w-4" aria-hidden="true" />
+                  </span>
+                  <span class="text-sm font-medium text-muted-foreground">{c.tool.name}</span>
+                </span>
+                <span class={`mt-4 font-display font-bold leading-tight tracking-tight text-balance ${i === 0 ? 'text-2xl sm:text-3xl' : 'text-xl sm:text-2xl'}`}>{c.question}</span>
+                <span class="mt-4 flex-1 rounded-xl border border-dashed border-border px-4 py-3 text-sm text-muted-foreground">
+                  <span class="mr-1.5 font-mono text-[11px] uppercase tracking-[0.05em] text-faint">For example</span>
+                  {c.answer}
+                </span>
+                <span class="mt-5 flex items-center justify-between gap-3 text-sm">
+                  <span class="text-faint">{c.keep}</span>
+                  <span class="inline-flex items-center gap-1 font-medium">
+                    Open <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+                  </span>
                 </span>
               </a>
             </li>
@@ -32,4 +56,22 @@ const tools = [...Object.values(TOOLS), { name: 'Currency converter', blurb: 'Co
       </ul>
     </Container>
   </section>
+  <Section>
+    <div class="mx-auto flex max-w-5xl flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+      <a href={PAGES.currencyConverter.path} class="group flex items-center gap-3">
+        <span class="grid h-9 w-9 place-items-center rounded-lg bg-muted text-muted-foreground"><Repeat className="h-4 w-4" aria-hidden="true" /></span>
+        <span>
+          <span class="block font-medium group-hover:underline group-hover:underline-offset-4">Currency converter</span>
+          <span class="block text-sm text-muted-foreground">More than 100 currencies at current rates.</span>
+        </span>
+      </a>
+      <a href="/compare" class="group flex items-center gap-3">
+        <span class="grid h-9 w-9 place-items-center rounded-lg bg-muted text-muted-foreground"><Layers className="h-4 w-4" aria-hidden="true" /></span>
+        <span>
+          <span class="block font-medium group-hover:underline group-hover:underline-offset-4">Choosing a subscription tracker?</span>
+          <span class="block text-sm text-muted-foreground">Subly and seven others, side by side.</span>
+        </span>
+      </a>
+    </div>
+  </Section>
 </Site>

@@ -3,6 +3,7 @@ import { getPosts, getReleases } from '@/lib/content'
 import { PAGES } from '@/lib/pages'
 import { personaSlugs, personas } from '@/lib/personas'
 import type { PageMeta } from '@/lib/seo'
+import { COMPARISONS, HUB } from '@/lib/compare'
 import { TOOLS } from '@/lib/tools'
 
 export type Route = PageMeta & { priority: number; lastModified?: Date }
@@ -36,7 +37,8 @@ export function allRoutes(): Route[] {
   const personaRoutes = personaSlugs.map((s) => ({ ...personaMeta(s), priority: 0.8 }))
   // Personas right after /agents, as the Next.js sitemap listed them
   const toolRoutes = Object.values(TOOLS).map((t) => ({ ...t.meta, priority: 0.8 }))
-  const pages = [...fixed.slice(0, at('/agents') + 1), ...personaRoutes, ...fixed.slice(at('/agents') + 1, at('/tools') + 1), ...toolRoutes, ...fixed.slice(at('/tools') + 1)]
+  const compareRoutes = [HUB.meta, ...COMPARISONS.map((c) => c.meta)].map((m) => ({ ...m, priority: 0.8 }))
+  const pages = [...fixed.slice(0, at('/agents') + 1), ...personaRoutes, ...fixed.slice(at('/agents') + 1, at('/tools') + 1), ...toolRoutes, ...compareRoutes, ...fixed.slice(at('/tools') + 1)]
 
   const posts = getPosts().map((p) => ({ ...postMeta(p), priority: 0.6, lastModified: new Date(p.updatedAt ?? p.publishedAt) }))
   const releases = getReleases().map((r) => ({ ...releaseMeta(r), priority: 0.4, lastModified: dayjs(r.date).toDate() }))
