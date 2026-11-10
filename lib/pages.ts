@@ -60,6 +60,14 @@ export const PAGES = {
     path: '/affiliates',
     priority: 0.5,
   },
+  about: {
+    title: 'About Subly: what it is and who makes it',
+    description:
+      'Subly (subly.app) is an independent web app, built since 2021, that tracks subscriptions, bills, recurring revenue and cash flow for founders, freelancers and small teams.',
+    path: '/about',
+    ogTitle: 'About Subly',
+    priority: 0.6,
+  },
   manifesto: {
     title: 'Manifesto',
     description: 'Why Subly is an independent, bootstrapped product that answers to the people who use it.',

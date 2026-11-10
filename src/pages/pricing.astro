@@ -8,10 +8,11 @@ import { Lifetime } from '@/components/pricing/lifetime'
 import { PricingPlans } from '@/components/pricing/plans'
 import { Section } from '@/components/ui/section'
 import { PAGES } from '@/lib/pages'
+import { SOFTWARE_JSONLD } from '@/lib/seo'
 import Site from '@/src/layouts/Site.astro'
 ---
 
-<Site meta={PAGES.pricing}>
+<Site meta={PAGES.pricing} jsonLd={SOFTWARE_JSONLD}>
   <PricingHero />
   <Section className="!pt-10 sm:!pt-12">
     <PricingPlans client:load />

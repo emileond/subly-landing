@@ -60,11 +60,11 @@ export function PricingPlans() {
                 <span className="font-mono text-4xl tabular-nums tracking-tight">${price}</span>
                 <span className="text-sm text-muted-foreground">{free ? '' : ' / month'}</span>
               </p>
-              <p className="mt-1 h-5 text-xs text-faint">
+              <p className="mt-1 min-h-5 text-xs text-faint">
                 {free
                   ? 'Free for good'
                   : interval === 'year'
-                    ? `$${p.year} billed yearly`
+                    ? `$${p.year} a year, or $${p.month} monthly`
                     : `or $${p.year} a year`}
               </p>
 

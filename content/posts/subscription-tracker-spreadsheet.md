@@ -145,4 +145,6 @@ If you have a dozen subscriptions, all in one currency, and you enjoy a monthly 
 You do not have to start over. Subly imports a CSV or Excel list, and the template's headers (Name, Amount, Currency, Billing cycle, Next renewal, Category) are matched to the right fields; you confirm the matches before anything is added. The Free plan tracks up to 20 items and reads one statement, so you can import the sheet, upload last month's statement and see what the sheet missed. Every new account also starts with a 14-day Business trial, no credit card needed.
 :::
 
+For the full picture, [Subly next to a spreadsheet](/compare/spreadsheet) goes line by line through where a sheet is enough and where it stops.
+
 Whichever you pick, the habit is what saves the money: every charge on one list, a date next to each one, and a look at what renews before it does.

@@ -123,3 +123,5 @@ With every recurring charge on one list and its yearly cost next to it, you can 
 :::subly[How Subly reads your statement]
 Upload a PDF or CSV statement from your bank or card and Subly finds the recurring charges for you, for example "23 recurring charges, about $1,184 a month: 4 look forgotten, 3 renew soon, 1 price increase." If something keeps charging after you cancelled it, Subly raises that as a signal too. It's read-only and needs no bank login, so it works with any bank, anywhere. It works for a home as well as a business; see [Subly for households](/for/households).
 :::
+
+To try it without an account, the free [subscription finder](/tools/find-subscriptions) reads one statement and lists what repeats. If you are choosing a tracker, [Subly next to seven other options](/compare) shows which ones read a statement and which need typing.

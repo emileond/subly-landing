@@ -127,4 +127,6 @@ From there, each deal is an item like any other, with what you paid and the days
 When a refund window is about to close, the deal shows up on **Today**, the home screen that lists what needs a decision this week, with Keep, Plan to cancel and Snooze on it. Give each deal an **owner** so the person who would use it is the one who decides, and leave **notes** and mentions on the item ("did the export work for you?") so the conversation sits next to the tool. Your deals live in the same picture as your subscriptions and client retainers, so you see the whole stack in one place. More on how this fits [founders and freelancers](/for/founders).
 :::
 
+To check your refund windows right now, the free [AppSumo refund checker](/tools/appsumo-refund-checker) reads your export in the browser and shows the days left on every deal, with no account.
+
 The AppSumo import is included on every plan, Free included; see [pricing](/pricing) for the rest. And if you bought Subly itself on AppSumo, your deal stays exactly as you bought it.

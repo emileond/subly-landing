@@ -126,6 +126,8 @@ A budget tells you how much; it does not tell you when. If your money in arrives
 Upload a bank or card statement (PDF or CSV, no bank login needed) and Subly lists every recurring charge with what it costs a year, so your baseline is ready before you open the budget sheet. Group items by category or by project, set a monthly budget for each, and Subly speaks up at 80% and again when one is crossed. The monthly summary says in plain words what changed, and on the Business and Team plans the 13-week cash forecast shows the start of the year week by week.
 :::
 
+To price your software line before you set its budget, the free [software stack cost calculator](/tools/stack-cost-calculator) adds up list prices by plan and seat, monthly and yearly.
+
 :::checklist
 - Twelve months of statements are in one place
 - Recurring and one-off costs are separated

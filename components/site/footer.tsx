@@ -29,6 +29,7 @@ const columns = [
   {
     title: 'Company',
     links: [
+      { label: 'About', href: '/about' },
       { label: 'Blog', href: '/blog' },
       { label: 'Manifesto', href: '/manifesto' },
       { label: 'Affiliate program', href: '/affiliates' },

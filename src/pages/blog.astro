@@ -5,7 +5,7 @@ import { PAGES } from '@/lib/pages'
 import Site from '@/src/layouts/Site.astro'
 ---
 
-<Site meta={PAGES.blog}>
+<Site meta={PAGES.blog} feeds={[{ type: 'application/rss+xml', href: '/blog/feed.xml', title: 'Subly blog' }]}>
   <BlogIndex posts={getPosts()} />
 </Site>
 

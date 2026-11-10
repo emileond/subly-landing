@@ -136,6 +136,8 @@ For a quick check of what a payment is worth today, the [currency converter](/cu
 Subly keeps your money in next to your money out: retainers, payouts and subscriptions you sell sit beside every tool and service you pay for, so you see what is left each month. Each item keeps its own currency, out of 150+, with totals in yours and rates refreshed daily. When a client is late, it shows up as a signal ("Coastline Bakery is 3 days late. £1,200 was due on the 1st."). On the Business and Team plans, you can import recurring revenue from Stripe instead of typing it in.
 :::
 
+To see what that revenue means for the months ahead, the free [runway calculator](/tools/runway-calculator) puts money in against money out and shows how long your cash lasts.
+
 ## Spreadsheet or app?
 
 A spreadsheet works well for a handful of retainers. Use the columns above, update the last payment date each week, and add a formula for days late.

@@ -11,3 +11,6 @@
 /blog/trackmysubs-alternatives /compare/trackmysubs 301
 /blog/rocket-money-for-business-alternative /compare/rocket-money 301
 /blog/saas-management-for-small-business /compare/cledara 301
+
+# The changelog lives at /releases
+/changelog /releases 301

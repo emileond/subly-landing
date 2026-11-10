@@ -142,3 +142,5 @@ Your audit is done when you can tick every line:
 :::subly[How Subly helps]
 Upload a PDF or CSV statement and Subly lists every recurring charge with what it costs a year, and points out the ones that look forgotten, renew soon or went up. Give each item an owner and renewals go to the person who can decide. **Today** shows what needs a decision this week, with Keep, Plan to cancel and Snooze, and items without an owner show up there too. From then on, renewals and price rises come to you, and the quarterly audit becomes a look at what changed.
 :::
+
+To put a number on the stack before you start, the free [software stack cost calculator](/tools/stack-cost-calculator) adds up list prices by plan and seat. If you are choosing a tool to keep the list, [subscription trackers compared](/compare) sets them side by side.
