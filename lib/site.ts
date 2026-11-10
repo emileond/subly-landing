@@ -4,6 +4,13 @@ export const SIGNUP_URL = `${APP_URL}/signup`
 // Sign-in is the app's root page; /login does not exist
 export const LOGIN_URL = `${APP_URL}/`
 
+/**
+ * The day the product pages (home, pricing, agents, about, tools, /for) last changed in a way
+ * a reader would notice: a price, a plan, a claim. The sitemap sends it as their <lastmod>, and
+ * crawlers stop trusting a date that moves on every deploy, so move it by hand.
+ */
+export const PAGES_UPDATED = '2026-11-09'
+
 export const SITE_NAME = 'Subly'
 export const HOME_TITLE = 'Subly: track subscriptions, bills and cash flow for your business'
 export const DEFAULT_DESCRIPTION =

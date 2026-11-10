@@ -1,8 +1,9 @@
 import { Section, SectionHeading } from '@/components/ui/section'
-import type { Tool } from '@/lib/tools'
+import { TOOL_RELATED, type Tool } from '@/lib/tools'
 
 /** Under a tool: the short answer to its question, and how it works */
 export function ToolMore({ tool }: { tool: Tool }) {
+  const related = TOOL_RELATED[tool.slug] ?? []
   return (
     <>
       <Section>
@@ -13,6 +14,17 @@ export function ToolMore({ tool }: { tool: Tool }) {
               {text}
             </p>
           ))}
+          {related.length > 0 && (
+            <ul className="mt-6 flex flex-col gap-2 text-sm sm:flex-row sm:flex-wrap sm:gap-x-6">
+              {related.map((r) => (
+                <li key={r.href}>
+                  <a href={r.href} className="text-brand-ink underline-offset-4 hover:underline">
+                    {r.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </Section>
       <Section tone="sunken">

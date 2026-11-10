@@ -116,4 +116,6 @@ A common setup is to let webhooks push the urgent things (a renewal in seven day
 The Claude connector and the API are part of Personal ($5 a month), Business and Team, and of the AI & Automation add-on for lifetime deals. Inside the app, **Ask Subly** answers the same kind of question in plain words, and every answer links to the charges behind it. Every new account starts with a 14-day Business trial, no credit card needed, so you can upload a statement, connect Claude and try it on your own numbers. More on the [agents page](/agents).
 :::
 
+If you are comparing tools for this, [subscription trackers compared](/compare) shows which ones have an API or an AI assistant at all.
+
 Before connecting anything, get your recurring charges into one place; the assistant can only be as good as the list behind it. The [SaaS subscription audit guide](/blog/saas-subscription-audit) is a good first pass, and if your team shares tools, [giving each tool an owner](/blog/saas-ownership-for-small-teams) makes answers like "who owns Webflow?" worth asking.

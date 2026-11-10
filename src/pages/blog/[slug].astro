@@ -3,7 +3,7 @@ import BlogPost from '@/components/pages/blog-post'
 import { getAuthor } from '@/lib/authors'
 import { type Post, getPosts, relatedPosts } from '@/lib/content'
 import { postMeta } from '@/lib/routes'
-import { ORG_ID, ogImagePath } from '@/lib/seo'
+import { FOUNDER_ID, ORG_ID, ogImagePath } from '@/lib/seo'
 import { SITE_NAME, SITE_URL, absoluteUrl } from '@/lib/site'
 import Site from '@/src/layouts/Site.astro'
 
@@ -28,7 +28,7 @@ const jsonLd = {
       mainEntityOfPage: url,
       articleSection: post.category,
       keywords: post.tags.join(', ') || undefined,
-      author: { '@type': 'Person', name: author.name, jobTitle: author.role, image: absoluteUrl(author.avatar) },
+      author: { '@type': 'Person', ...(post.author === 'emilio' ? { '@id': FOUNDER_ID } : {}), name: author.name, jobTitle: author.role, image: absoluteUrl(author.avatar), url: absoluteUrl('/about') },
       publisher: { '@id': ORG_ID },
     },
     {

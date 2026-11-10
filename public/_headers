@@ -19,6 +19,21 @@
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
+# The Markdown twin of each page and the two llms files are for AI assistants that fetch a
+# page to read it (lib/machine-pages.ts). The HTML page stays the one search engines list.
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+  X-Robots-Tag: noindex
+/llms-full.txt
+  Content-Type: text/plain; charset=utf-8
+  X-Robots-Tag: noindex
+/*.md
+  Content-Type: text/markdown; charset=utf-8
+  X-Robots-Tag: noindex
+
+/blog/feed.xml
+  Content-Type: application/rss+xml; charset=utf-8
+
 # RSS readers expect the feed type, not plain XML
 /rss/feed.xml
   Content-Type: application/rss+xml; charset=utf-8

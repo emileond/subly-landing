@@ -1,0 +1,30 @@
+---
+import { ClosingCta } from '@/components/home/closing-cta'
+import Page from '@/components/pages/about'
+import { ABOUT } from '@/lib/about'
+import { PAGES } from '@/lib/pages'
+import { FOUNDER_ID, ORG_ID } from '@/lib/seo'
+import { absoluteUrl } from '@/lib/site'
+import Site from '@/src/layouts/Site.astro'
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'AboutPage', '@id': absoluteUrl('/about'), url: absoluteUrl('/about'), name: PAGES.about.title, description: ABOUT.lede, about: { '@id': ORG_ID } },
+    {
+      '@type': 'Person',
+      '@id': FOUNDER_ID,
+      name: 'Emilio Sanchez',
+      jobTitle: 'Founder of Subly',
+      image: absoluteUrl('/authors/emilio.png'),
+      url: absoluteUrl('/about'),
+      worksFor: { '@id': ORG_ID },
+    },
+  ],
+}
+---
+
+<Site meta={PAGES.about} jsonLd={jsonLd}>
+  <Page />
+  <ClosingCta />
+</Site>

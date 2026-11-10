@@ -1,6 +1,7 @@
 ---
 import { Footer } from '@/components/site/footer'
 import { Nav } from '@/components/site/nav'
+import { hasMarkdown, markdownPath } from '@/lib/machine-pages'
 import { type PageMeta, SITE_JSONLD, headTags } from '@/lib/seo'
 import { SITE_NAME } from '@/lib/site'
 import '@/styles/globals.css'
@@ -52,6 +53,8 @@ const tags = headTags(meta)
     <link rel="icon" href="/icon.png" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-icon.png" />
     {feeds.map((f) => <link rel="alternate" type={f.type} href={f.href} title={f.title} />)}
+    {/* The same page as plain Markdown, for AI assistants (lib/machine-pages.ts) */}
+    {!noindex && hasMarkdown(meta.path) && <link rel="alternate" type="text/markdown" href={markdownPath(meta.path)} />}
 
     <!-- Light, dark or the device's choice before first paint (see lib/theme.ts) -->
     <script is:inline>

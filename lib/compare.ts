@@ -14,6 +14,8 @@ import type { PageMeta } from '@/lib/seo'
 
 export const CHECKED = 'November 5, 2026'
 export const CHECKED_SHORT = 'Nov 2026'
+/** The same day, for the sitemap and structured data */
+export const CHECKED_ISO = '2026-11-05'
 
 /** yes: does it · partial: some of it, or only with a workaround · no: doesn't · unknown: its site doesn't say */
 export type Mark = 'yes' | 'partial' | 'no' | 'unknown'

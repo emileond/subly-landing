@@ -145,6 +145,8 @@ Write the threshold down where everyone can see it. The number matters less than
 Upload a bank or card statement and Subly finds the recurring charges, so the shared list starts from what you really pay rather than from memory. Every item can have an owner, and items without one show up on **Today** until someone takes them. Teammates can leave notes and mention each other on an item ("is anyone still using this?"), and it shows up in that person's **For you** feed. Renewals go to the owner. On Business and Team, the Slack app lets them press Keep, Plan to cancel or Snooze right from the message; from Personal, alerts can also go to Microsoft Teams. Budgets per category or project speak up at 80% and again when crossed.
 :::
 
+If you are still choosing where the shared list lives, [subscription trackers compared](/compare) shows which ones give every item an owner and what each costs for 3 or 10 people.
+
 Personal covers 3 people, Business 10 and Team 20; see [Subly for teams](/for/teams) for how a typical week looks.
 
 Whatever you use, the habit is the same: one name per tool, renewals to that name, and a short look at the whole list every quarter. That is enough to keep a small team's software spend from running itself.

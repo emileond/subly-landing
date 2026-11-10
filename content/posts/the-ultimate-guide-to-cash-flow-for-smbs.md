@@ -118,6 +118,8 @@ When the real numbers differ from the plan, note why. After a month you will kno
 Subly keeps your money in next to your money out: client retainers, payouts and subscriptions you sell beside every tool you pay for, in any currency. It tells you when a client runs late ("Harbor & Co is 5 days late. $1,800 was due on the 15th.") and before a renewal or a price rise hits. On the Business and Team plans, you get a 13-week cash forecast, and you can test a cancel or a price change against the coming weeks before you commit.
 :::
 
+For a quick answer today, the free [runway calculator](/tools/runway-calculator) turns your balance, what comes in and what goes out into the number of months your money lasts.
+
 ## Which habits keep cash flow healthy?
 
 A forecast shows the problem. These habits make it smaller.

@@ -174,3 +174,27 @@ export const TOOLS = {
 } satisfies Record<string, Tool>
 
 export type ToolKey = keyof typeof TOOLS
+
+/** Under each tool's answer: the guide that goes deeper, and where Subly fits. Keyed by slug. */
+export const TOOL_RELATED: Record<string, { label: string; href: string }[]> = {
+  'appsumo-refund-checker': [
+    { label: 'Guide: keeping track of AppSumo purchases', href: '/blog/how-to-manage-appsumo-purchases-in-subly' },
+    { label: 'Pricing: lifetime deals are tracked on every plan', href: '/pricing' },
+  ],
+  'runway-calculator': [
+    { label: 'Guide: cash flow for small businesses', href: '/blog/the-ultimate-guide-to-cash-flow-for-smbs' },
+    { label: 'Guide: tracking recurring revenue', href: '/blog/track-recurring-revenue' },
+  ],
+  'find-subscriptions': [
+    { label: 'Guide: finding recurring charges on a bank statement', href: '/blog/find-recurring-charges-on-bank-statement' },
+    { label: 'Subscription trackers compared', href: '/compare' },
+  ],
+  'stack-cost-calculator': [
+    { label: 'Guide: a 30-minute software subscription audit', href: '/blog/saas-subscription-audit' },
+    { label: 'Subscription trackers compared', href: '/compare' },
+  ],
+  'stack-builder': [
+    { label: 'Guide: an owner for every tool on a small team', href: '/blog/saas-ownership-for-small-teams' },
+    { label: 'Guide: budgeting for 2027', href: '/blog/budgeting-for-2027' },
+  ],
+}
